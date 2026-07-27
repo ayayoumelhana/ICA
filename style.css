@@ -2470,32 +2470,184 @@ label {
     line-height: 1.6;
 }
 
-/* Section Qui sommes-nous */
+/* Section Qui sommes-nous - Modern Corporate Design */
+.about-modern-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+    border-radius: 24px;
+    padding: 50px 45px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E2E8F0;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
 .about-pdf-grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 40px;
+    grid-template-columns: 420px 1fr;
+    gap: 45px;
     align-items: center;
+}
+
+.about-modern-img-wrapper {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 16px 35px rgba(7, 43, 73, 0.16);
+    overflow: visible;
 }
 
 .about-pdf-img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 20px;
+    display: block;
+    border: 3px solid #FFFFFF;
+    transition: transform 0.35s ease;
 }
 
-.pdf-section-title {
-    font-size: 1.8rem;
-    font-weight: 700;
+.about-modern-img-wrapper:hover .about-pdf-img {
+    transform: scale(1.02);
+}
+
+/* Floating Glass Badges */
+.about-glass-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 10px 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.about-glass-badge:hover {
+    transform: translateY(-4px);
+}
+
+.badge-top-right {
+    top: -15px;
+    right: -15px;
+}
+
+.badge-bottom-left {
+    bottom: -15px;
+    left: -15px;
+}
+
+.badge-icon {
+    font-size: 1.5rem;
     color: #00AEEF;
+}
+
+.badge-icon-gold {
+    font-size: 1.5rem;
+    color: #F59E0B;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.badge-text strong {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #072B49;
+}
+
+.badge-text span {
+    font-size: 0.75rem;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.about-badge-pill {
+    display: inline-block;
+    background: rgba(0, 174, 239, 0.12);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.about-title-main {
+    font-size: 2.3rem;
+    color: #072B49 !important;
     margin-bottom: 15px;
 }
 
+.about-highlight-p {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #00AEEF;
+    line-height: 1.45;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
 .about-pdf-desc {
-    font-size: 0.95rem;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 12px;
+    font-size: 0.96rem;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.about-pillars-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.about-pillars-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.93rem;
+    color: #334155;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.pillar-icon {
+    color: #00AEEF;
+    font-size: 1.15rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.about-cta-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline-navy {
+    background: transparent;
+    color: #072B49;
+    border: 1.5px solid #072B49;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+.btn-outline-navy:hover {
+    background: #072B49;
+    color: #FFFFFF;
 }
 
 /* Testimonial PDF - Modern Card Container */
