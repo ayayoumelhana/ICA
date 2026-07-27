@@ -44,77 +44,31 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll(); // Initial check on load
 
     /* ==========================================================================
-       Hero Slider (Dynamic Data Structure {photo, titre, sous-titre})
+       Hero Slider PDF (.hero-pdf-slide & .hero-dot)
        ========================================================================== */
-    const heroSlidesData = [
-        {
-            photo: 'assets/images/slider-immigration-scaled.png',
-            titre: 'Entrée Express',
-            sous-titre: 'Immigrez et réalisez vos rêves avec notre soutien'
-        },
-        {
-            photo: 'assets/images/Image2-1-scaled.jpg',
-            titre: 'Étudier au Canada',
-            sous-titre: 'Votre avenir commence maintenant'
-        },
-        {
-            photo: 'assets/images/formation-cec-concours.png',
-            titre: 'Formations & Expertise',
-            sous-titre: 'Préparation certifiante aux concours & cycles spécialisés'
-        }
-    ];
+    const pdfSlides = document.querySelectorAll('.hero-pdf-slide');
+    const pdfDots = document.querySelectorAll('.hero-dot');
+    let currentPdfSlide = 0;
 
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentSlide = 0;
-    let slideInterval;
+    const showPdfSlide = (index) => {
+        pdfSlides.forEach(slide => slide.classList.remove('active'));
+        pdfDots.forEach(dot => dot.classList.remove('active'));
 
-    const showSlide = (index) => {
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        // Update first slide dynamically from heroSlidesData structure if on slide 0
-        if (index === 0 && slides[0]) {
-            const bgElement = slides[0].querySelector('.slide-bg');
-            const titleElement = slides[0].querySelector('.slide-title');
-            const subtitleElement = slides[0].querySelector('.slide-subtitle');
-            
-            if (bgElement) bgElement.style.backgroundImage = `url('${heroSlidesData[0].photo}')`;
-            if (titleElement) titleElement.textContent = heroSlidesData[0].titre;
-            if (subtitleElement) subtitleElement.textContent = heroSlidesData[0].sous-titre;
-        }
-
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        currentSlide = index;
+        if (pdfSlides[index]) pdfSlides[index].classList.add('active');
+        if (pdfDots[index]) pdfDots[index].classList.add('active');
+        currentPdfSlide = index;
     };
 
-    const nextSlide = () => {
-        let next = currentSlide + 1;
-        if (next >= slides.length) next = 0;
-        showSlide(next);
-    };
+    if (pdfSlides.length > 0) {
+        setInterval(() => {
+            let next = currentPdfSlide + 1;
+            if (next >= pdfSlides.length) next = 0;
+            showPdfSlide(next);
+        }, 5000);
 
-    const startSlideShow = () => {
-        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    };
-
-    const stopSlideShow = () => {
-        clearInterval(slideInterval);
-    };
-
-    // Dot navigation click
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            stopSlideShow();
-            showSlide(index);
-            startSlideShow();
+        pdfDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showPdfSlide(index));
         });
-    });
-
-    // Initialize Slider
-    if (slides.length > 0) {
-        startSlideShow();
     }
 
     /* ==========================================================================

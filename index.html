@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intelliquest Canada Academy Bureau d'immigration Canada – Intelliquest Canada Academy (ICA)</title>
-    <meta name="description" content="Intelliquest Canada Academy Besoin d'un bureau d'immigration pour le Canada ? ICA vous accompagne depuis Casablanca dans vos démarches d'immigration, d'études ou de travail au Canada">
+    <title>IntelliQuest Canada Academy (ICA) – Accueil</title>
+    <meta name="description" content="IntelliQuest Canada Academy vous accompagne dans vos démarches d'études et d'immigration au Canada depuis Casablanca.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,25 +21,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top Scroll Progress Bar -->
-    <div id="scroll-progress"></div>
 
-    <!-- Dynamic Top Announcement Banner (Editable by Admin) -->
-    <div id="announcement-banner" class="announcement-banner">
-        <div class="container announcement-container">
-            <div class="announcement-content">
-                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
-                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes pour les sessions d'Août & Septembre !</span>
-                <a id="banner-btn-display" href="contact.html" class="announcement-btn">S'inscrire / Contacter <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
-        </div>
-    </div>
-
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header class="site-header">
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
             </a>
             
@@ -55,372 +41,260 @@
                     <li><a href="a-propos.html">À propos</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="temoignages.html">Témoignages</a></li>
-                    <li><a href="contact.html">Contactez-Nous</a></li>
+                    <li><a href="contact.html">Contactez-Nou</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Slider Section -->
-    <section id="accueil" class="hero-slider-container">
-        <div class="slider">
+    <!-- Hero Section (Entrée Express) -->
+    <section id="hero-pdf" class="hero-pdf-section">
+        <div class="hero-pdf-slider">
             <!-- Slide 1 -->
-            <div class="slide active">
-                <div class="slide-bg" style="background-image: url('assets/images/Image2-1-scaled.jpg');"></div>
-                <div class="slide-overlay"></div>
-                <div class="slide-content text-center">
-                    <img src="assets/images/Artboard-7.png" alt="Artboard Logo" class="slide-artboard animate-in">
-                    <div class="slide-actions animate-in delay-2">
-                        <a href="#contact" class="btn btn-primary btn-large">Demande d'informations</a>
+            <div class="hero-pdf-slide active">
+                <div class="hero-pdf-bg" style="background-image: url('assets/images/slider-immigration-scaled.png');"></div>
+                <div class="hero-pdf-overlay"></div>
+                <div class="container hero-pdf-container">
+                    <div class="hero-pdf-content">
+                        <h1 class="hero-pdf-title">Entrée Express</h1>
+                        <p class="hero-pdf-subtitle">Immigrez et réalisez vos rêves<br>avec notre soutien</p>
+                        <a href="contact.html" class="btn btn-cyan">Demande d'informations</a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Slide 2 -->
-            <div class="slide">
-                <div class="slide-bg" style="background-image: url('assets/images/Image2-1-scaled.jpg');"></div>
-                <div class="slide-overlay"></div>
-                <div class="slide-content text-center">
-                    <h1 class="slide-title animate-in">Étudier au Canada, réussir demain.</h1>
-                    <div class="slide-actions animate-in delay-2">
-                        <a href="#contact" class="btn btn-primary btn-large">Demande d'informations</a>
+            <div class="hero-pdf-slide">
+                <div class="hero-pdf-bg" style="background-image: url('assets/images/Image2-1-scaled.jpg');"></div>
+                <div class="hero-pdf-overlay"></div>
+                <div class="container hero-pdf-container">
+                    <div class="hero-pdf-content">
+                        <h1 class="hero-pdf-title">Étudier au Canada</h1>
+                        <p class="hero-pdf-subtitle">Votre avenir commence maintenant<br>avec un accompagnement complet</p>
+                        <a href="contact.html" class="btn btn-cyan">Demande d'informations</a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Slide 3 -->
-            <div class="slide">
-                <div class="slide-bg" style="background-image: url('assets/images/slider-immigration-scaled.png');"></div>
-                <div class="slide-overlay"></div>
-                <div class="slide-content text-center">
-                    <h1 class="slide-title animate-in">Immigrez et réalisez vos rêves avec notre soutien</h1>
-                    <div class="slide-actions animate-in delay-2">
-                        <a href="#contact" class="btn btn-primary btn-large">Demande d'informations</a>
+            <div class="hero-pdf-slide">
+                <div class="hero-pdf-bg" style="background-image: url('assets/images/formation-cec-concours.png');"></div>
+                <div class="hero-pdf-overlay"></div>
+                <div class="container hero-pdf-container">
+                    <div class="hero-pdf-content">
+                        <h1 class="hero-pdf-title">Formations Certifiantes</h1>
+                        <p class="hero-pdf-subtitle">Préparation aux concours DU<br>et cycles d'expertise comptable</p>
+                        <a href="contact.html" class="btn btn-cyan">Demande d'informations</a>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Slider Controls -->
-        <div class="slider-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
+
+        <!-- Slider Dots -->
+        <div class="hero-pdf-dots">
+            <span class="hero-dot active" data-slide="0"></span>
+            <span class="hero-dot" data-slide="1"></span>
+            <span class="hero-dot" data-slide="2"></span>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="a-propos" class="about section">
+    <!-- Section Qui sommes-nous? -->
+    <section class="about-pdf-section section">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text animate-on-scroll">
-                    <div class="divider-line"></div>
-                    <h2 class="section-title">QUI SOMMES-NOUS?</h2>
-                    <p class="lead-text">
+            <div class="about-pdf-grid">
+                <div class="about-pdf-img-col">
+                    <img src="assets/images/CAP0.png" alt="Bureau IntelliQuest Canada Academy" class="about-pdf-img">
+                </div>
+                <div class="about-pdf-text-col">
+                    <h2 class="pdf-section-title">Qui sommes-nous?</h2>
+                    <p class="about-pdf-desc">
                         IntelliQuest Canada Academy accompagne les étudiants souhaitant poursuivre des études au Canada en leur offrant un encadrement complet, de l’admission jusqu’à l’intégration.
                     </p>
-                    <p>
+                    <p class="about-pdf-desc">
                         Nous guidons également les personnes désireuses d’immigrer au Canada, avec un accompagnement expert à chaque étape de leur projet.
                     </p>
                 </div>
-                <div class="about-img-container animate-on-scroll delay-1" style="display: flex; justify-content: center;">
-                    <img src="assets/images/00-191x300.png" alt="ICA Canada" class="about-img" style="max-width: 191px; width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SERVICE 1: Étudier au Canada -->
+    <section class="service-block-section">
+        <div class="container">
+            <!-- Red Horizontal Line Divider -->
+            <div class="pdf-red-divider">
+                <span>Services dédiés pour les études au canada</span>
+            </div>
+
+            <!-- Banner 1: Blue -->
+            <div class="pdf-banner banner-blue-bg">
+                <div class="pdf-banner-content">
+                    <h2 class="pdf-banner-main-title">ÉTUDIER<br>AU CANADA</h2>
+                    <p class="pdf-banner-sub-title">Votre avenir commence maintenant</p>
+                </div>
+                <div class="pdf-banner-img-box">
+                    <img src="assets/images/Image2-1-scaled.jpg" alt="Étudier au Canada" class="pdf-banner-img">
+                </div>
+            </div>
+
+            <!-- 4 Horizontal Step Badges / Pills -->
+            <div class="pdf-steps-row">
+                <span class="pdf-step-pill active-red">Étape 1 : Orientation</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : préparation de dossier</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : dépôt</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : après l'arrivée</span>
+            </div>
+
+            <!-- Content Grid: Placeholder Square + Title/Text -->
+            <div class="pdf-service-content-grid">
+                <div class="pdf-placeholder-square"></div>
+                <div class="pdf-service-info">
+                    <h3 class="pdf-service-title">Orientation Scolaire et<br>académique</h3>
+                    <p class="pdf-service-desc">
+                        Notre équipe vous accompagne avec des conseils personnalisés pour faire les bons choix d'études, découvrir les meilleures opportunités académiques et bâtir un parcours cohérent vers la réussite.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Dedicated to Studies -->
-    <section id="services-etudes" class="services-tabs-section section bg-light">
+    <!-- SECTION SERVICE 2: Entrée Express (Immigration) -->
+    <section class="service-block-section">
         <div class="container">
-            <h2 class="partner-title text-center" style="margin-bottom: 25px; text-transform: uppercase;">Services dédiés pour les études au canada</h2>
-            
-            <!-- Banner 1: Étudier au Canada -->
-            <div class="service-full-banner banner-blue animate-on-scroll" style="background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 60%, #60A5FA 100%); border-radius: 16px; overflow: hidden; margin-bottom: 25px; color: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 40px; position: relative;">
-                <div class="banner-text" style="max-width: 60%; z-index: 2;">
-                    <h1 style="font-size: 2.4rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Étudier<br>au Canada</h1>
-                    <p style="font-size: 1.1rem; opacity: 0.95; font-weight: 600;">Votre avenir commence maintenant</p>
+            <!-- Red Horizontal Line Divider -->
+            <div class="pdf-red-divider">
+                <span>Services dédiés pour l'immigration au canada</span>
+            </div>
+
+            <!-- Banner 2: Red/Orange -->
+            <div class="pdf-banner banner-red-bg">
+                <div class="pdf-banner-content">
+                    <h2 class="pdf-banner-main-title">ENTRÉE<br>EXPRESS</h2>
+                    <p class="pdf-banner-sub-title">Si vous répondez aux critères suivants,<br>vous pourriez être éligible :</p>
                 </div>
-                <div class="banner-img" style="position: absolute; right: 0; top: 0; bottom: 0; width: 45%; overflow: hidden;">
-                    <img src="assets/images/Image2-1-scaled.jpg" alt="Étudier au Canada" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                <div class="pdf-banner-img-box">
+                    <img src="assets/images/slider-immigration-scaled.png" alt="Entrée Express" class="pdf-banner-img">
                 </div>
             </div>
 
-            <!-- 4 Red Step Badges / Pills -->
-            <div class="steps-pills-row animate-on-scroll" style="display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; justify-content: space-between;">
-                <span class="step-pill active" style="background: #E11D48; color: #FFFFFF; padding: 10px 20px; border-radius: 30px; font-weight: 700; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px; box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);">Étape 1 : Orientation</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 2 : préparation de dossier</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 3 : dépôt</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 4 : après l'arrivée</span>
+            <!-- 4 Horizontal Step Badges / Pills -->
+            <div class="pdf-steps-row">
+                <span class="pdf-step-pill active-red">Étape 1 : Orientation</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : préparation de dossier</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : dépôt</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : après l'arrivée</span>
             </div>
 
-            <!-- Service Content Block: Placeholder Box + Description -->
-            <div class="service-content-card animate-on-scroll" style="background: #FFFFFF; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: grid; grid-template-columns: 240px 1fr; gap: 30px; align-items: center;">
-                <div class="placeholder-box-blue" style="background: #93C5FD; border-radius: 12px; height: 180px; width: 100%; display: flex; align-items: center; justify-content: center; color: #1E3A8A; font-size: 2.5rem;">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="service-detail-text">
-                    <h3 style="font-size: 1.5rem; color: #1E3A8A; font-weight: 700; margin-bottom: 12px;">Orientation Scolaire et académique</h3>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.6; margin-bottom: 20px;">Notre équipe vous accompagne avec des conseils personnalisés pour faire les bons choix d'études, découvrir les meilleures opportunités académiques et bâtir un parcours cohérent vers la réussite.</p>
-                    <a href="services.html#acc-item-etudes" class="btn btn-primary">Voir les détails du Pôle Étude <i class="fas fa-arrow-right"></i></a>
+            <!-- Content Grid: Placeholder Square + Title/Text -->
+            <div class="pdf-service-content-grid">
+                <div class="pdf-placeholder-square"></div>
+                <div class="pdf-service-info">
+                    <h3 class="pdf-service-title">Intégration et soutien<br>post-arrivée</h3>
+                    <p class="pdf-service-desc">
+                        Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une intégration harmonieuse.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Dedicated to Immigration -->
-    <section id="services-immigration" class="services-tabs-section section bg-white">
+    <!-- SECTION SERVICE 3: Formation Préparatoire -->
+    <section class="service-block-section">
         <div class="container">
-            <h2 class="partner-title text-center" style="margin-bottom: 25px; text-transform: uppercase;">Services dédiés pour l'immigration au canada</h2>
-            
-            <!-- Banner 2: Entrée Express -->
-            <div class="service-full-banner banner-red animate-on-scroll" style="background: linear-gradient(135deg, #BE123C 0%, #E11D48 60%, #FB7185 100%); border-radius: 16px; overflow: hidden; margin-bottom: 25px; color: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 40px; position: relative;">
-                <div class="banner-text" style="max-width: 60%; z-index: 2;">
-                    <h1 style="font-size: 2.4rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Entrée<br>Express</h1>
-                    <p style="font-size: 1rem; opacity: 0.95; font-weight: 600;">Si vous répondez aux critères suivants, vous pourriez être éligible :</p>
+            <!-- Red Horizontal Line Divider -->
+            <div class="pdf-red-divider">
+                <span>Services dédiés pour l'immigration au canada</span>
+            </div>
+
+            <!-- Banner 3: Purple -->
+            <div class="pdf-banner banner-purple-bg">
+                <div class="pdf-banner-content">
+                    <h2 class="pdf-banner-main-title">FORMATION<br>PRÉPARATOIRE AU<br>CONCOURS DU</h2>
+                    <p class="pdf-banner-sub-title">Cycle d'expertise<br>comptable</p>
                 </div>
-                <div class="banner-img" style="position: absolute; right: 0; top: 0; bottom: 0; width: 45%; overflow: hidden;">
-                    <img src="assets/images/slider-immigration-scaled.png" alt="Entrée Express Immigration" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                <div class="pdf-banner-img-box">
+                    <img src="assets/images/formation-cec-concours.png" alt="Formation Concours DU" class="pdf-banner-img">
                 </div>
             </div>
 
-            <!-- 4 Red Step Badges / Pills -->
-            <div class="steps-pills-row animate-on-scroll" style="display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; justify-content: space-between;">
-                <span class="step-pill active" style="background: #E11D48; color: #FFFFFF; padding: 10px 20px; border-radius: 30px; font-weight: 700; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px; box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);">Étape 1 : Orientation</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 2 : préparation de dossier</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 3 : dépôt</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 4 : après l'arrivée</span>
+            <!-- 4 Horizontal Step Badges / Pills -->
+            <div class="pdf-steps-row">
+                <span class="pdf-step-pill active-red">Étape 1 : Orientation</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : préparation de dossier</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : dépôt</span>
+                <span class="pdf-step-pill border-blue">Étape 1 : après l'arrivée</span>
             </div>
 
-            <!-- Service Content Block: Placeholder Box + Description -->
-            <div class="service-content-card animate-on-scroll" style="background: #F8FAFC; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: grid; grid-template-columns: 240px 1fr; gap: 30px; align-items: center; border: 1px solid #E2E8F0;">
-                <div class="placeholder-box-blue" style="background: #93C5FD; border-radius: 12px; height: 180px; width: 100%; display: flex; align-items: center; justify-content: center; color: #1E3A8A; font-size: 2.5rem;">
-                    <i class="fas fa-passport"></i>
-                </div>
-                <div class="service-detail-text">
-                    <h3 style="font-size: 1.5rem; color: #0F172A; font-weight: 700; margin-bottom: 12px;">Intégration et soutien post-arrivée</h3>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.6; margin-bottom: 20px;">Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une intégration harmonieuse.</p>
-                    <a href="services.html#acc-item-immigration" class="btn btn-primary">Voir les détails du Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+            <!-- Content Grid: Placeholder Square + Title/Text -->
+            <div class="pdf-service-content-grid">
+                <div class="pdf-placeholder-square"></div>
+                <div class="pdf-service-info">
+                    <h3 class="pdf-service-title">Intégration et soutien<br>post-arrivée</h3>
+                    <p class="pdf-service-desc">
+                        Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une intégration harmonieuse.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Dedicated to Formations -->
-    <section id="services-formations" class="services-tabs-section section bg-light">
+    <!-- Section Témoignage de Rachid El Ouali -->
+    <section class="testimonial-pdf-section section">
         <div class="container">
-            <h2 class="partner-title text-center" style="margin-bottom: 25px; text-transform: uppercase;">Services dédiés pour l'immigration au canada</h2>
-            
-            <!-- Banner 3: Formation Préparatoire -->
-            <div class="service-full-banner banner-purple animate-on-scroll" style="background: linear-gradient(135deg, #4C1D95 0%, #6D28D9 60%, #8B5CF6 100%); border-radius: 16px; overflow: hidden; margin-bottom: 25px; color: #FFFFFF; display: flex; align-items: center; justify-content: space-between; padding: 40px; position: relative;">
-                <div class="banner-text" style="max-width: 60%; z-index: 2;">
-                    <h1 style="font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 10px; text-transform: uppercase; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Formation<br>Préparatoire au<br>Concours DU</h1>
-                    <p style="font-size: 1.1rem; opacity: 0.95; font-weight: 600;">Cycle d'expertise comptable</p>
-                </div>
-                <div class="banner-img" style="position: absolute; right: 0; top: 0; bottom: 0; width: 45%; overflow: hidden;">
-                    <img src="assets/images/formation-cec-concours.png" alt="Formation Concours DU" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
-                </div>
-            </div>
-
-            <!-- 4 Red Step Badges / Pills -->
-            <div class="steps-pills-row animate-on-scroll" style="display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; justify-content: space-between;">
-                <span class="step-pill active" style="background: #E11D48; color: #FFFFFF; padding: 10px 20px; border-radius: 30px; font-weight: 700; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px; box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);">Étape 1 : Orientation</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 2 : préparation de dossier</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 3 : dépôt</span>
-                <span class="step-pill" style="background: #FFFFFF; color: #1E293B; border: 1.5px solid #CBD5E1; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-size: 0.88rem; flex: 1; text-align: center; min-width: 180px;">Étape 4 : après l'arrivée</span>
-            </div>
-
-            <!-- Service Content Block: Placeholder Box + Description -->
-            <div class="service-content-card animate-on-scroll" style="background: #FFFFFF; border-radius: 16px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: grid; grid-template-columns: 240px 1fr; gap: 30px; align-items: center; border: 1px solid #E2E8F0;">
-                <div class="placeholder-box-blue" style="background: #93C5FD; border-radius: 12px; height: 180px; width: 100%; display: flex; align-items: center; justify-content: center; color: #1E3A8A; font-size: 2.5rem;">
-                    <i class="fas fa-book-reader"></i>
-                </div>
-                <div class="service-detail-text">
-                    <h3 style="font-size: 1.5rem; color: #0F172A; font-weight: 700; margin-bottom: 12px;">Intégration et soutien post-arrivée</h3>
-                    <p style="font-size: 1rem; color: #475569; line-height: 1.6; margin-bottom: 20px;">Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une intégration harmonieuse.</p>
-                    <a href="services.html#acc-item-formation" class="btn btn-primary">Voir les détails de la Formation <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial (Rachid El Ouali) -->
-    <section id="temoignages" class="testimonial-section section">
-        <div class="container">
-            <div class="testimonial-grid">
-                <div class="testimonial-text animate-on-scroll">
-                    <h3 class="testimonial-sub" style="font-size: 1.8rem; font-weight: 800; color: #0F172A; margin-bottom: 10px;">Témoignage de Rachid El Ouali</h3>
-                    <h2 class="testimonial-quote" style="font-size: 1.2rem; font-weight: 700; color: #0F172A; margin-bottom: 15px;">"Avec ICA, vos enfants atteindront leurs rêves !"</h2>
-                    <p class="testimonial-desc" style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin-bottom: 25px;">
+            <div class="testimonial-pdf-grid">
+                <div class="testimonial-pdf-text-col">
+                    <h2 class="pdf-section-title">Témoignage de<br>Rachid El Ouali</h2>
+                    <p class="pdf-quote-bold">"Avec ICA, vos enfants atteindront leurs rêves !"</p>
+                    <p class="pdf-testimonial-p">
                         Le célèbre acteur marocain Rachid El Ouali soutient notre mission d’accompagner les jeunes vers la réussite au Canada. Découvrez pourquoi il fait confiance à ICA pour guider la nouvelle génération vers un avenir prometteur.
                     </p>
-                    <a href="#contact" class="btn btn-primary btn-large">Demande d'informations</a>
+                    <a href="contact.html" class="btn btn-cyan">Demande d'informations</a>
                 </div>
-                <div class="testimonial-img-col animate-on-scroll delay-1">
-                    <div class="video-thumbnail-container" style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                        <img src="assets/images/0cd820c4-819d-4e2e-956d-1a5d13c58f6c.png.jpg" alt="Témoignage Rachid El Ouali ICA" class="testimonial-img" style="width: 100%; display: block; border-radius: 16px;">
-                        <button id="video-play-btn" class="play-btn-overlay" aria-label="Lire la vidéo Rachid El Ouali" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: #E11D48; border-radius: 50%; border: none; color: #FFFFFF; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(225, 29, 72, 0.5); transition: transform 0.3s ease;"><i class="fas fa-play" style="margin-left: 4px;"></i></button>
+                <div class="testimonial-pdf-img-col">
+                    <div class="pdf-video-card">
+                        <img src="assets/images/0cd820c4-819d-4e2e-956d-1a5d13c58f6c.png.jpg" alt="Témoignage Rachid El Ouali ICA" class="pdf-video-img">
+                        <div class="pdf-video-quote-overlay">
+                            <p class="pdf-darija-text">كلنا كنضربو تمارة على ولاداتنا باش نوصلوهم فين بغينا حنا ولكن مع ICA غادي يعاونوهم باش يوصلوهم فين هما بغاو</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Google Places Live Auto-Fetched Reviews Section (Native Custom Design) -->
-    <section class="google-reviews-section section" id="google-reviews-section">
-        <div class="container text-center">
-            <h2 class="section-title" style="color: var(--secondary-color); margin-bottom: 15px;">AVIS GOOGLE REVIEWS EN DIRECT</h2>
-            <div id="google-rating-badge" class="animate-on-scroll"></div>
-            
-            <!-- Native Custom Swiper Carousel Component (No 3rd-party widgets) -->
-            <div class="swiper google-reviews-swiper animate-on-scroll delay-1" style="margin-top: 25px;">
-                <div id="google-reviews-wrapper" class="swiper-wrapper">
-                    <!-- Dynamic Native Google Places Reviews loaded via api/google_reviews.php -->
-                </div>
-                <div class="swiper-pagination" style="position: relative; margin-top: 24px;"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners Carousel Section -->
-    <section class="partners-section section bg-white">
-        <div class="container text-center">
-            <h2 class="partner-title">Accès aux grandes écoles et universités canadiennes</h2>
-            <div class="swiper partners-swiper animate-on-scroll">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/images/Artboard-12-3-300x241.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-14-3-300x159.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-15-3-300x216.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-17-2-300x246.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-19-2-300x246.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-20-2-300x203.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-21-3-300x198.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-22-3-300x186.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-23-3-300x201.png" alt="Partner"></div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Navigation -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            
-            <div class="divider-line center" style="margin: 40px auto 30px auto;"></div>
-            
-            <h2 class="partner-title">NOS AUTRES PARTENAIRES</h2>
-            <div class="swiper partners-swiper animate-on-scroll">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/images/Artboard-24-3-300x190.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-25-3-259x300.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-13-3-300x189.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-16-3-300x224.png" alt="Partner"></div>
-                    <div class="swiper-slide"><img src="assets/images/Artboard-18-2-300x300.png" alt="Partner"></div>
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Navigation -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contact" class="contact-section section">
+    <!-- Section Logos Universités Canadiennes -->
+    <section class="partners-pdf-section">
         <div class="container">
-            <div class="divider-line center"></div>
-            <h2 class="section-title text-center">CONTACTEZ-NOUS</h2>
-            <p class="text-center text-muted text-required">(*) Champs obligatoires</p>
-            
-            <div class="contact-grid">
-                <div class="contact-form-container animate-on-scroll">
-                    <form class="oscar-form">
-                        <!-- Email -->
-                        <div class="form-group">
-                            <label for="email">Adresse email pour vous joindre <sup style="color: #dc3545;">(*)</sup></label>
-                            <input type="email" id="email" required class="form-control">
-                        </div>
+            <!-- Red Horizontal Line Divider -->
+            <div class="pdf-red-divider">
+                <span>Accès aux grandes écoles et universités canadiennes</span>
+            </div>
 
-                        <!-- Prénom -->
-                        <div class="form-group">
-                            <label for="prenom">Votre prénom officiel <sup style="color: #dc3545;">(*)</sup></label>
-                            <input type="text" id="prenom" required class="form-control">
-                        </div>
-
-                        <!-- Nom -->
-                        <div class="form-group">
-                            <label for="nom">Votre nom officiel <sup style="color: #dc3545;">(*)</sup></label>
-                            <input type="text" id="nom" required class="form-control">
-                            <small class="form-text text-muted">Nom de famille</small>
-                        </div>
-
-                        <!-- Pays -->
-                        <div class="form-group">
-                            <label for="pays">Votre pays de résidence actuel <sup style="color: #dc3545;">(*)</sup></label>
-                            <select id="pays" required class="form-control">
-                                <option value="">...</option>
-                                <option value="60257">MAROC</option>
-                                <option value="60167">ALGÉRIE</option>
-                                <option value="60312">TUNISIE</option>
-                                <option value="60216">FRANCE</option>
-                                <option value="60191">CANADA</option>
-                                <option value="60322">ETATS-UNIS</option>
-                                <option value="104696">AUTRE</option>
-                            </select>
-                        </div>
-
-                        <!-- Téléphone -->
-                        <div class="form-group">
-                            <label for="telephone">Téléphone cellulaire <sup style="color: #dc3545;">(*)</sup></label>
-                            <input type="tel" id="telephone" required class="form-control">
-                        </div>
-
-                        <!-- Études -->
-                        <div class="form-group">
-                            <label for="etudes">Niveau d'études réussies le plus élevé <sup style="color: #dc3545;">(*)</sup></label>
-                            <select id="etudes" required class="form-control">
-                                <option value="">...</option>
-                                <option value="12">(Equivalent de la) Seconde</option>
-                                <option value="13">Première</option>
-                                <option value="14">(Equivalent de la) Terminale</option>
-                                <option value="47">Bachelier</option>
-                                <option value="20">Collège</option>
-                                <option value="21">AUTRES</option>
-                            </select>
-                        </div>
-
-                        <!-- Projet -->
-                        <div class="form-group">
-                            <label for="projet">Sur quoi porte votre projet ? <sup style="color: #dc3545;">(*)</sup></label>
-                            <select id="projet" required class="form-control">
-                                <option value="">...</option>
-                                <option value="98">Études</option>
-                                <option value="99">Immigration</option>
-                                <option value="100">Autre</option>
-                            </select>
-                            <small class="form-text text-muted">Champ ICA</small>
-                        </div>
-
-                        <!-- Champs obligatoires -->
-                        <div class="oscar_input_required" style="margin-top: 15px; margin-bottom: 20px;">
-                            <span style="color: #dc3545; font-weight: bold;">(*)</span> Champs obligatoires
-                        </div>
-
-                        <!-- Bouton -->
-                        <div class="form-btn">
-                            <button type="submit" class="btn btn-primary">Envoyer</button>
-                        </div>
-                    </form>
+            <div class="swiper partners-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/Artboard-12-3-300x241.png" alt="Concordia University" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-14-3-300x159.png" alt="uOttawa" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-15-3-300x216.png" alt="LCI Education" class="partner-pdf-img"></div>
                 </div>
-                
-                <div class="map-container animate-on-scroll delay-1">
-                    <iframe loading="lazy"
-                            src="https://maps.google.com/maps?q=156%2C%20Bd%20Anfa%2C%20%C3%A9tage%203%2C%20Casablanca%2C%20Maroc&#038;t=m&#038;z=16&#038;output=embed&#038;iwloc=near"
-                            title="156, Bd Anfa, étage 3, Casablanca, Maroc"
-                            aria-label="156, Bd Anfa, étage 3, Casablanca, Maroc"
-                            class="google-map-iframe"
-                    ></iframe>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- Red Horizontal Line Divider -->
+            <div class="pdf-red-divider" style="margin-top: 50px;">
+                <span>Nos autres partenaires</span>
+            </div>
+
+            <div class="swiper partners-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/Artboard-24-3-300x190.png" alt="Allianz" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-25-3-259x300.png" alt="TuGo" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-13-3-300x189.png" alt="Desjardins Bank" class="partner-pdf-img"></div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -441,13 +315,13 @@
                         <li><i class="fas fa-phone-alt"></i> +212 522 36 40 40</li>
                         <li><i class="fas fa-phone-alt"></i> +1 (514) 619-7534</li>
                         <li><i class="fas fa-envelope"></i> contact@intelliquestcanada.ca</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 156, Bd Anfa, etage 3, Casblanca, Maroc</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 156, Bd Anfa, etage 3, Casablanca, Maroc</li>
                     </ul>
                 </div>
                 
                 <div class="footer-social-col">
                     <h3>Restons connectés !</h3>
-                    <p>Connectez-vous avec des entrepreneurs,developpez votre reseau, faites de belles affaires.</p>
+                    <p>Connectez-vous avec des entrepreneurs, développez votre réseau, faites de belles affaires.</p>
                     <div class="footer-social-links">
                         <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
@@ -478,61 +352,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Start of ChatBot (www.chatbot.com) code -->
-    <script>
-        window.__ow = window.__ow || {};
-        window.__ow.organizationId = "21d68b87-72ee-4594-90a8-c40ace454e47";
-        window.__ow.template_id = "3a6afe19-f012-4133-a055-c18181d18c7b";
-        window.__ow.integration_name = "manual_settings";
-        window.__ow.product_name = "chatbot";
-        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
-    </script>
-    <noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
-    <!-- End of ChatBot code -->
-
-    <!-- Floating Admin Gear Button (For Website Administrator) -->
-    <button id="admin-trigger-btn" class="admin-trigger-btn" title="Modifier le Bandeau d'Annonce (Admin)">
-        <i class="fas fa-cog"></i>
-    </button>
-
-    <!-- Admin Modal Editor Window -->
-    <div id="admin-modal-overlay" class="admin-modal-overlay">
-        <div class="admin-modal-card">
-            <div class="admin-modal-header">
-                <h3><i class="fas fa-bullhorn" style="color: #E11D48;"></i> Gestion du Bandeau d'Annonce</h3>
-                <button id="admin-close-modal" class="announcement-close-btn" style="color: #64748B;">&times;</button>
-            </div>
-            <form id="admin-banner-form">
-                <div class="admin-form-group">
-                    <label class="admin-checkbox-label">
-                        <input type="checkbox" id="admin-banner-show" checked>
-                        Afficher le bandeau d'annonce en haut du site
-                    </label>
-                </div>
-                <div class="admin-form-group">
-                    <label for="admin-banner-tag">Badge / Label (ex: NOUVEAU, PROCHAINE SESSION)</label>
-                    <input type="text" id="admin-banner-tag" class="admin-input" value="NOUVEAU">
-                </div>
-                <div class="admin-form-group">
-                    <label for="admin-banner-text">Texte de l'Annonce</label>
-                    <textarea id="admin-banner-text" class="admin-textarea" rows="3">📜 Nouvelles Formations Certifiantes 100H (CEC & DSCG) — Inscriptions ouvertes pour les sessions d'Août & Septembre !</textarea>
-                </div>
-                <div class="admin-form-group">
-                    <label for="admin-banner-btn-text">Texte du Bouton d'Action</label>
-                    <input type="text" id="admin-banner-btn-text" class="admin-input" value="S'inscrire">
-                </div>
-                <div class="admin-form-group">
-                    <label for="admin-banner-btn-link">Lien du Bouton (Page / Section)</label>
-                    <input type="text" id="admin-banner-btn-link" class="admin-input" value="services.html#services-formations">
-                </div>
-                <div class="admin-modal-actions">
-                    <button type="submit" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 12px;"><i class="fas fa-check-circle"></i> Publier l'Annonce</button>
-                    <button type="button" id="admin-reset-btn" class="btn btn-outline" style="padding: 12px;"><i class="fas fa-undo"></i> Défaut</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
+    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
 </html>

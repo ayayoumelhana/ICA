@@ -2068,14 +2068,353 @@ label {
     box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.15);
 }
 
-.admin-checkbox-label {
+/* ==========================================================================
+   PDF Plan_de_travail_1.pdf Faithful Exact Styling
+   ========================================================================== */
+
+/* Hero Slider PDF */
+.hero-pdf-section {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+}
+
+.hero-pdf-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-pdf-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
     display: flex;
     align-items: center;
+}
+
+.hero-pdf-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-pdf-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center right;
+}
+
+.hero-pdf-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7, 43, 73, 0.85) 0%, rgba(7, 43, 73, 0.4) 60%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.hero-pdf-container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-pdf-content {
+    max-width: 550px;
+    color: #FFFFFF;
+}
+
+.hero-pdf-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.hero-pdf-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #F1F5F9;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.hero-pdf-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
     gap: 10px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #072B49;
+    z-index: 10;
+}
+
+.hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero-dot.active {
+    background: #00AEEF;
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* Button Cyan */
+.btn-cyan {
+    background-color: #00AEEF;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 174, 239, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-cyan:hover {
+    background-color: #009BD5;
+    transform: translateY(-2px);
+}
+
+/* PDF Red Divider Line */
+.pdf-red-divider {
+    position: relative;
+    text-align: center;
+    margin: 45px 0 25px 0;
+}
+
+.pdf-red-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #F20D0D;
+    z-index: 1;
+}
+
+.pdf-red-divider span {
+    position: relative;
+    z-index: 2;
+    background-color: #FFFFFF;
+    padding: 0 20px;
+    color: #00AEEF;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* PDF Banners */
+.pdf-banner {
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 45px;
+    position: relative;
+    min-height: 220px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.banner-blue-bg {
+    background: linear-gradient(135deg, #1A56B0 0%, #00AEEF 100%);
+}
+
+.banner-red-bg {
+    background: linear-gradient(135deg, #C8102E 0%, #F44336 100%);
+}
+
+.banner-purple-bg {
+    background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 100%);
+}
+
+.pdf-banner-content {
+    max-width: 55%;
+    z-index: 2;
+}
+
+.pdf-banner-main-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pdf-banner-sub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.95;
+    line-height: 1.3;
+}
+
+.pdf-banner-img-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+}
+
+.pdf-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* PDF Step Badges Row */
+.pdf-steps-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.pdf-step-pill {
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.pdf-step-pill.active-red {
+    background-color: #F20D0D;
+    color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(242, 13, 13, 0.3);
+}
+
+.pdf-step-pill.border-blue {
+    background-color: #FFFFFF;
+    color: #00AEEF;
+    border: 1.5px solid #00AEEF;
+}
+
+/* PDF Content Grid */
+.pdf-service-content-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.pdf-placeholder-square {
+    width: 100%;
+    height: 180px;
+    background-color: #A0C4FF;
+    border-radius: 4px;
+}
+
+.pdf-service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00AEEF;
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.pdf-service-desc {
+    font-size: 0.95rem;
+    color: #4A5568;
+    line-height: 1.6;
+}
+
+/* Section Qui sommes-nous */
+.about-pdf-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-pdf-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.pdf-section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00AEEF;
+    margin-bottom: 15px;
+}
+
+.about-pdf-desc {
+    font-size: 0.95rem;
+    color: #4A5568;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Testimonial PDF */
+.testimonial-pdf-grid {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 40px;
+    align-items: center;
+}
+
+.pdf-quote-bold {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1A202C;
+    margin-bottom: 15px;
+}
+
+.pdf-testimonial-p {
+    font-size: 0.95rem;
+    color: #4A5568;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.pdf-video-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.pdf-video-img {
+    width: 100%;
+    display: block;
+}
+
+.pdf-video-quote-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(7, 43, 73, 0.85);
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+}
+
+.pdf-darija-text {
+    font-size: 0.9rem;
+    direction: rtl;
+    line-height: 1.4;
+}
+
+.partner-pdf-img {
+    max-height: 65px;
+    width: auto;
+    object-fit: contain;
 }
 
 .admin-checkbox-label input {
