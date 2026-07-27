@@ -119,7 +119,7 @@
     </section>
 
     <!-- SECTION SERVICE 1: Étudier au Canada -->
-    <section class="service-block-section">
+    <section class="service-block-section" id="block-etudes">
         <div class="container">
             <!-- Red Horizontal Line Divider -->
             <div class="pdf-red-divider">
@@ -137,29 +137,77 @@
                 </div>
             </div>
 
-            <!-- 4 Horizontal Step Badges / Pills -->
+            <!-- 4 Interactive Horizontal Step Badges / Pills -->
             <div class="pdf-steps-row">
-                <span class="pdf-step-pill active-red">Étape 1 : Orientation</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : préparation de dossier</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : dépôt</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : après l'arrivée</span>
+                <button class="pdf-step-pill active-red" data-step-target="etudes-step-1">Étape 1 : Orientation</button>
+                <button class="pdf-step-pill border-blue" data-step-target="etudes-step-2">Étape 2 : Préparation de dossier</button>
+                <button class="pdf-step-pill border-blue" data-step-target="etudes-step-3">Étape 3 : Dépôt & Autorisations</button>
+                <button class="pdf-step-pill border-blue" data-step-target="etudes-step-4">Étape 4 : Après l'arrivée</button>
             </div>
 
-            <!-- Content Grid: Placeholder Square + Title/Text -->
-            <div class="pdf-service-content-grid">
-                <div class="pdf-placeholder-square"></div>
-                <div class="pdf-service-info">
-                    <h3 class="pdf-service-title">Orientation Scolaire et<br>académique</h3>
-                    <p class="pdf-service-desc">
-                        Notre équipe vous accompagne avec des conseils personnalisés pour faire les bons choix d'études, découvrir les meilleures opportunités académiques et bâtir un parcours cohérent vers la réussite.
-                    </p>
+            <!-- Content Panels -->
+            <div class="pdf-service-panels-container">
+                <!-- Panel 1 -->
+                <div class="pdf-service-content-grid step-panel active" id="etudes-step-1">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/vlcsnap-2025-04-30-15h50m21s967-2-300x221.png" alt="Orientation Scolaire" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Orientation Scolaire et académique</h3>
+                        <p class="pdf-service-desc">
+                            Notre équipe vous accompagne avec des conseils personnalisés pour faire les bons choix d'études, découvrir les meilleures opportunités académiques et bâtir un parcours cohérent vers la réussite.
+                        </p>
+                        <a href="services.html#acc-item-etudes" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Études <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="pdf-service-content-grid step-panel" id="etudes-step-2" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/IMG_8079-scaled-r5f0cacrzdk06kbmyr7yfvqbtf20pluxaoa4f9pq5c.jpg" alt="Démarches d'admission" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Démarches d’admission universitaires</h3>
+                        <p class="pdf-service-desc">
+                            Nos conseillers prennent en charge l’ensemble de vos démarches d’admission, du montage du dossier à la soumission de la candidature, pour vous aider à intégrer l’établissement de votre choix.
+                        </p>
+                        <a href="services.html#acc-item-etudes" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Études <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="pdf-service-content-grid step-panel" id="etudes-step-3" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/9567b792-5ab5-441c-aefc-14668eaf5bc77-300x289.jpg" alt="CAQ et Permis d'études" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Démarches pour les autorisations (CAQ & Permis)</h3>
+                        <p class="pdf-service-desc">
+                            Nous vous accompagnons dans l’obtention des autorisations nécessaires (CAQ, permis d’études, etc.) en assurant un suivi rigoureux et une préparation soignée de votre dossier.
+                        </p>
+                        <a href="services.html#acc-item-etudes" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Études <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 4 -->
+                <div class="pdf-service-content-grid step-panel" id="etudes-step-4" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/vlcsnap-2025-05-03-16h15m58s867-scaled-r5d6gshn615mbv1xu5wc4tj19huxks6lkuvss7yen4.png" alt="Accompagnement post-arrivée" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Accompagnement et intégration après l’arrivée</h3>
+                        <p class="pdf-service-desc">
+                            À votre arrivée au Canada, nous vous aidons dans les démarches clés : accueil à l’aéroport, logement, compte bancaire, assurance, obtention du NAS et suivi continu.
+                        </p>
+                        <a href="services.html#acc-item-etudes" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Études <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION SERVICE 2: Entrée Express (Immigration) -->
-    <section class="service-block-section">
+    <section class="service-block-section" id="block-immigration">
         <div class="container">
             <!-- Red Horizontal Line Divider -->
             <div class="pdf-red-divider">
@@ -177,33 +225,81 @@
                 </div>
             </div>
 
-            <!-- 4 Horizontal Step Badges / Pills -->
+            <!-- 4 Interactive Horizontal Step Badges / Pills -->
             <div class="pdf-steps-row">
-                <span class="pdf-step-pill active-red">Étape 1 : Orientation</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : préparation de dossier</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : dépôt</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : après l'arrivée</span>
+                <button class="pdf-step-pill active-red" data-step-target="imm-step-1">Étape 1 : Consultation</button>
+                <button class="pdf-step-pill border-blue" data-step-target="imm-step-2">Étape 2 : Préparation de dossier</button>
+                <button class="pdf-step-pill border-blue" data-step-target="imm-step-3">Étape 3 : Dépôt & Suivi</button>
+                <button class="pdf-step-pill border-blue" data-step-target="imm-step-4">Étape 4 : Post-arrivée</button>
             </div>
 
-            <!-- Content Grid: Placeholder Square + Title/Text -->
-            <div class="pdf-service-content-grid">
-                <div class="pdf-placeholder-square"></div>
-                <div class="pdf-service-info">
-                    <h3 class="pdf-service-title">Intégration et soutien<br>post-arrivée</h3>
-                    <p class="pdf-service-desc">
-                        Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une intégration harmonieuse.
-                    </p>
+            <!-- Content Panels -->
+            <div class="pdf-service-panels-container">
+                <!-- Panel 1 -->
+                <div class="pdf-service-content-grid step-panel active" id="imm-step-1">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/vlcsnap-2025-04-30-15h52m06s3444-268x300.png" alt="Consultation d'admissibilité" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Consultation initiale d'admissibilité</h3>
+                        <p class="pdf-service-desc">
+                            Commencez votre projet d'immigration par une consultation approfondie pour évaluer votre admissibilité, optimiser votre score CRS et bâtir votre stratégie.
+                        </p>
+                        <a href="services.html#acc-item-immigration" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="pdf-service-content-grid step-panel" id="imm-step-2" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/IMG_80933-298x300.jpg" alt="Préparation de dossier" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Montage et préparation du dossier</h3>
+                        <p class="pdf-service-desc">
+                            Constitution rigoureuse de vos pièces justificatives, équivalences de diplômes (EDE) et préparation méthodique aux tests linguistiques.
+                        </p>
+                        <a href="services.html#acc-item-immigration" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="pdf-service-content-grid step-panel" id="imm-step-3" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/depot-300x300.jpg" alt="Dépôt et suivi" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Dépôt et suivi officiel de candidature</h3>
+                        <p class="pdf-service-desc">
+                            Soumission officielle dans le bassin d'Entrée Express / Arrima et suivi en direct auprès des autorités d'immigration canadiennes.
+                        </p>
+                        <a href="services.html#acc-item-immigration" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 4 -->
+                <div class="pdf-service-content-grid step-panel" id="imm-step-4" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/ayaa-300x258.png" alt="Soutien post-arrivée" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Intégration et soutien post-arrivée</h3>
+                        <p class="pdf-service-desc">
+                            Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une installation réussie.
+                        </p>
+                        <a href="services.html#acc-item-immigration" class="btn btn-cyan" style="margin-top: 15px;">Découvrir le Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION SERVICE 3: Formation Préparatoire -->
-    <section class="service-block-section">
+    <section class="service-block-section" id="block-formations">
         <div class="container">
             <!-- Red Horizontal Line Divider -->
             <div class="pdf-red-divider">
-                <span>Services dédiés pour l'immigration au canada</span>
+                <span>Services dédiés pour les formations certifiantes</span>
             </div>
 
             <!-- Banner 3: Purple -->
@@ -217,22 +313,55 @@
                 </div>
             </div>
 
-            <!-- 4 Horizontal Step Badges / Pills -->
+            <!-- 3 Interactive Horizontal Step Badges / Pills -->
             <div class="pdf-steps-row">
-                <span class="pdf-step-pill active-red">Étape 1 : Orientation</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : préparation de dossier</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : dépôt</span>
-                <span class="pdf-step-pill border-blue">Étape 1 : après l'arrivée</span>
+                <button class="pdf-step-pill active-red" data-step-target="form-step-1">Formation 1 : Concours CEC (100H)</button>
+                <button class="pdf-step-pill border-blue" data-step-target="form-step-2">Formation 2 : DSCG (UE1 & UE4)</button>
+                <button class="pdf-step-pill border-blue" data-step-target="form-step-3">Formations Entreprises & Séminaires</button>
             </div>
 
-            <!-- Content Grid: Placeholder Square + Title/Text -->
-            <div class="pdf-service-content-grid">
-                <div class="pdf-placeholder-square"></div>
-                <div class="pdf-service-info">
-                    <h3 class="pdf-service-title">Intégration et soutien<br>post-arrivée</h3>
-                    <p class="pdf-service-desc">
-                        Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une intégration harmonieuse.
-                    </p>
+            <!-- Content Panels -->
+            <div class="pdf-service-panels-container">
+                <!-- Panel 1 -->
+                <div class="pdf-service-content-grid step-panel active" id="form-step-1">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/flyer-cec-1.jpg" alt="Formation Concours CEC" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Formation Préparatoire au Concours CEC</h3>
+                        <p class="pdf-service-desc">
+                            <strong>Cycle d'Expertise Comptable (100 Heures) :</strong> Préparation intensive couvrant la Comptabilité, le Droit, la Gestion et la TEC en cours du soir et week-ends.
+                        </p>
+                        <a href="services.html#acc-item-formation" class="btn btn-cyan" style="margin-top: 15px;">S'inscrire à la Formation CEC <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="pdf-service-content-grid step-panel" id="form-step-2" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/flyer-dscg.jpg" alt="Formation DSCG" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Formation DSCG (UE1 & UE4)</h3>
+                        <p class="pdf-service-desc">
+                            <strong>Diplôme Supérieur de Comptabilité et de Gestion (100 Heures) :</strong> Préparation ciblée et méthodique sur les unités d'enseignement UE1 et UE4.
+                        </p>
+                        <a href="services.html#acc-item-formation" class="btn btn-cyan" style="margin-top: 15px;">S'inscrire à la Formation DSCG <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="pdf-service-content-grid step-panel" id="form-step-3" style="display: none;">
+                    <div class="pdf-step-img-box">
+                        <img src="assets/images/CCCH-Kanadai-M-Ker-Kamara-reggeli-featured-1920x1083-1.webp" alt="Séminaires Entreprises" class="pdf-step-large-img">
+                    </div>
+                    <div class="pdf-service-info">
+                        <h3 class="pdf-service-title">Séminaires & Formations Sur Mesure</h3>
+                        <p class="pdf-service-desc">
+                            ICA propose des programmes de formation continue et séminaires spécialisés pour entreprises et professionnels, avec des certifications reconnues.
+                        </p>
+                        <a href="services.html#acc-item-formation" class="btn btn-cyan" style="margin-top: 15px;">Découvrir nos Séminaires <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

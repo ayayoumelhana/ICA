@@ -72,8 +72,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       Tabs Component (Both Sections)
+       Interactive Step Pills Switcher (.pdf-step-pill)
        ========================================================================== */
+    const serviceBlocks = document.querySelectorAll('.service-block-section');
+
+    serviceBlocks.forEach(block => {
+        const stepButtons = block.querySelectorAll('.pdf-step-pill');
+        const stepPanels = block.querySelectorAll('.step-panel');
+
+        stepButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-step-target');
+                if (!targetId) return;
+
+                // Deactivate all buttons in this section
+                stepButtons.forEach(btn => {
+                    btn.classList.remove('active-red', 'active');
+                    btn.classList.add('border-blue');
+                });
+
+                // Activate clicked button
+                button.classList.remove('border-blue');
+                button.classList.add('active-red', 'active');
+
+                // Hide all panels and show target panel
+                stepPanels.forEach(panel => {
+                    panel.style.display = 'none';
+                    panel.classList.remove('active');
+                });
+
+                const targetPanel = block.querySelector(`#${targetId}`);
+                if (targetPanel) {
+                    targetPanel.style.display = 'grid';
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+    });
     const setupTabs = (containerId) => {
         const container = document.querySelector(containerId);
         if (!container) return;
