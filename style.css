@@ -152,21 +152,23 @@ p {
    Header & Navigation
    ========================================================================== */
 .site-header {
-    position: sticky;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
-    padding: 15px 0 10px 0;
-    background-color: var(--secondary-color); /* Deep Navy background for perfect visibility */
+    padding: 20px 0;
+    background: transparent !important;
     border-top: none;
 }
 
 .site-header.scrolled {
-    background-color: var(--secondary-color);
+    position: fixed;
+    background: rgba(7, 43, 73, 0.92) !important;
+    backdrop-filter: blur(8px);
     box-shadow: var(--shadow-md);
-    padding: 12px 0 10px 0;
+    padding: 12px 0;
 }
 
 .header-container {
