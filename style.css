@@ -2223,7 +2223,7 @@ label {
     padding-right: 20px;
 }
 
-/* PDF Banners Full Width Image - Elegant Frame */
+/* PDF Banners Full Width Image - Elegant Frame with Interactive Shimmer */
 .pdf-banner {
     border-radius: 16px;
     display: flex;
@@ -2239,6 +2239,12 @@ label {
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.pdf-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
 }
 
 .pdf-banner::before {
@@ -2246,6 +2252,29 @@ label {
     position: absolute;
     inset: 0;
     z-index: 1;
+}
+
+.pdf-banner::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.22) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    transition: left 0.8s ease;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.pdf-banner:hover::after {
+    left: 130%;
 }
 
 .banner-blue-bg {
@@ -2332,6 +2361,7 @@ label {
     color: #FFFFFF !important;
     border-color: #F20D0D !important;
     box-shadow: 0 4px 12px rgba(242, 13, 13, 0.35);
+    transform: translateY(-2px);
 }
 
 .pdf-step-pill.border-blue {
@@ -2343,20 +2373,43 @@ label {
 .pdf-step-pill.border-blue:hover {
     background-color: #00AEEF;
     color: #FFFFFF;
+    transform: translateY(-2px);
 }
 
-/* PDF Content Grid */
+/* PDF Content Grid with Animated Step Panel */
 .pdf-service-content-grid {
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 35px;
     align-items: center;
     margin-bottom: 40px;
-    background: #F8FAFC;
-    padding: 25px;
-    border-radius: 16px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+    padding: 28px 30px;
+    border-radius: 18px;
     border: 1px solid #E2E8F0;
+    border-left: 5px solid #00AEEF;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+}
+
+.pdf-service-content-grid:hover {
+    box-shadow: 0 14px 32px rgba(0, 174, 239, 0.14);
+    border-left-color: #F20D0D;
+}
+
+.pdf-service-content-grid.step-panel.active {
+    animation: stepFadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes stepFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .pdf-step-img-box {
