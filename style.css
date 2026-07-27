@@ -2250,26 +2250,29 @@ label {
 
 .banner-blue-bg {
     background-image: url('assets/images/pdf-student-banner.png');
+    background-position: right 15% center !important;
 }
 
 .banner-blue-bg::before {
-    background: linear-gradient(90deg, rgba(26, 86, 176, 0.92) 0%, rgba(0, 174, 239, 0.7) 50%, rgba(0, 0, 0, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(26, 86, 176, 0.92) 0%, rgba(0, 174, 239, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .banner-red-bg {
     background-image: url('assets/images/pdf-express-banner.png');
+    background-position: right center !important;
 }
 
 .banner-red-bg::before {
-    background: linear-gradient(90deg, rgba(200, 16, 46, 0.92) 0%, rgba(244, 67, 54, 0.7) 50%, rgba(0, 0, 0, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(200, 16, 46, 0.92) 0%, rgba(244, 67, 54, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .banner-purple-bg {
     background-image: url('assets/images/pdf-rocket-banner.png');
+    background-position: right 25% center !important;
 }
 
 .banner-purple-bg::before {
-    background: linear-gradient(90deg, rgba(74, 20, 140, 0.92) 0%, rgba(123, 31, 162, 0.7) 50%, rgba(0, 0, 0, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(74, 20, 140, 0.92) 0%, rgba(123, 31, 162, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 .pdf-banner-content {
