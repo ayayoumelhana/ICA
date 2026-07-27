@@ -44,8 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll(); // Initial check on load
 
     /* ==========================================================================
-       Hero Slider
+       Hero Slider (Dynamic Data Structure {photo, titre, sous-titre})
        ========================================================================== */
+    const heroSlidesData = [
+        {
+            photo: 'assets/images/slider-immigration-scaled.png',
+            titre: 'Entrée Express',
+            sous-titre: 'Immigrez et réalisez vos rêves avec notre soutien'
+        },
+        {
+            photo: 'assets/images/Image2-1-scaled.jpg',
+            titre: 'Étudier au Canada',
+            sous-titre: 'Votre avenir commence maintenant'
+        },
+        {
+            photo: 'assets/images/formation-cec-concours.png',
+            titre: 'Formations & Expertise',
+            sous-titre: 'Préparation certifiante aux concours & cycles spécialisés'
+        }
+    ];
+
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
     let currentSlide = 0;
@@ -55,6 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
         
+        // Update first slide dynamically from heroSlidesData structure if on slide 0
+        if (index === 0 && slides[0]) {
+            const bgElement = slides[0].querySelector('.slide-bg');
+            const titleElement = slides[0].querySelector('.slide-title');
+            const subtitleElement = slides[0].querySelector('.slide-subtitle');
+            
+            if (bgElement) bgElement.style.backgroundImage = `url('${heroSlidesData[0].photo}')`;
+            if (titleElement) titleElement.textContent = heroSlidesData[0].titre;
+            if (subtitleElement) subtitleElement.textContent = heroSlidesData[0].sous-titre;
+        }
+
         slides[index].classList.add('active');
         dots[index].classList.add('active');
         currentSlide = index;
