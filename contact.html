@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous - Intelliquest Canada Academy</title>
+    <meta name="description" content="Contactez IntelliQuest Canada Academy à Casablanca. Remplissez notre formulaire pour planifier une consultation pour vos études ou immigration au Canada.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Dynamic Top Announcement Banner (Editable by Admin) -->
+    <div id="announcement-banner" class="announcement-banner">
+        <div class="container announcement-container">
+            <div class="announcement-content">
+                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
+                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes pour les sessions d'Août & Septembre !</span>
+                <a id="banner-btn-display" href="services.html#services-formations" class="announcement-btn">S'inscrire <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html" class="active">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('assets/images/arcgis-survey123-spring-2024-webinar-social-share-Copie.jpg');">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+        </div>
+    </section>
+
+    <!-- Contact Info Section (Text + Cards) -->
+    <section class="contact-info-section section bg-white" style="padding-bottom: 40px;">
+        <div class="container">
+            <div class="contact-info-grid">
+                <!-- Left: Text & Socials -->
+                <div class="contact-left-text animate-on-scroll">
+                    <h2>Contactez-nous</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-color); line-height: 1.8; margin-bottom: 30px;">Pour toute question ou pour en savoir plus sur nos services, n’hésitez pas à nous contacter.<br>Notre équipe est prête à vous fournir l’assistance dont vous avez besoin pour transformer votre carrière ou votre entreprise.</p>
+                    <div class="contact-social-icons">
+                        <a href="https://www.facebook.com" target="_blank" class="contact-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" class="contact-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com" target="_blank" class="contact-social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" class="contact-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Right: 3 Cards Row -->
+                <div class="contact-cards-row animate-on-scroll delay-1">
+                    <!-- Card 1: Appelez-nous -->
+                    <div class="contact-info-card">
+                        <div class="contact-card-icon-wrapper">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Appelez-nous</h4>
+                        <ul>
+                            <li>+212 522 36 31 31</li>
+                            <li>+212 522 36 40 40</li>
+                            <li>+212 6 28 41 42 42</li>
+                            <li>+1 (514) 619-7534</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Card 2: Envoyez-nous un courriel -->
+                    <div class="contact-info-card">
+                        <div class="contact-card-icon-wrapper">
+                            <i class="fas fa-mail-bulk"></i>
+                        </div>
+                        <h4>Envoyez-nous un courriel</h4>
+                        <p style="margin-top: auto; margin-bottom: auto; font-weight: 500;">contact@intelliquestcanada.ca</p>
+                    </div>
+                    
+                    <!-- Card 3: Où nous trouver -->
+                    <div class="contact-info-card">
+                        <div class="contact-card-icon-wrapper">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Où nous trouver</h4>
+                        <p style="margin-top: auto; margin-bottom: auto; font-weight: 500;">156, Bd Anfa, étage 3,<br>Casablanca, Maroc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section (Centered, No Map) -->
+    <section class="contact-form-section section" style="padding: 60px 0; background-color: #f7f9fa; border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="contact-form-centered-container animate-on-scroll">
+                <form class="oscar-form">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Adresse email pour vous joindre <sup style="color: #dc3545;">(*)</sup></label>
+                        <input type="email" id="email" required class="form-control">
+                    </div>
+
+                    <!-- Prénom -->
+                    <div class="form-group">
+                        <label for="prenom">Votre prénom officiel <sup style="color: #dc3545;">(*)</sup></label>
+                        <input type="text" id="prenom" required class="form-control">
+                    </div>
+
+                    <!-- Nom -->
+                    <div class="form-group">
+                        <label for="nom">Votre nom officiel <sup style="color: #dc3545;">(*)</sup></label>
+                        <input type="text" id="nom" required class="form-control">
+                        <small class="form-text text-muted">Nom de famille</small>
+                    </div>
+
+                    <!-- Pays -->
+                    <div class="form-group">
+                        <label for="pays">Votre pays de résidence actuel <sup style="color: #dc3545;">(*)</sup></label>
+                        <select id="pays" required class="form-control">
+                            <option value="">...</option>
+                            <option value="60257">MAROC</option>
+                            <option value="60167">ALGÉRIE</option>
+                            <option value="60312">TUNISIE</option>
+                            <option value="60216">FRANCE</option>
+                            <option value="60191">CANADA</option>
+                            <option value="60322">ETATS-UNIS</option>
+                            <option value="104696">AUTRE</option>
+                        </select>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="form-group">
+                        <label for="telephone">Téléphone cellulaire <sup style="color: #dc3545;">(*)</sup></label>
+                        <input type="tel" id="telephone" required class="form-control">
+                    </div>
+
+                    <!-- Études -->
+                    <div class="form-group">
+                        <label for="etudes">Niveau d'études réussies le plus élevé <sup style="color: #dc3545;">(*)</sup></label>
+                        <select id="etudes" required class="form-control">
+                            <option value="">...</option>
+                            <option value="12">(Equivalent de la) Seconde</option>
+                            <option value="13">Première</option>
+                            <option value="14">(Equivalent de la) Terminale</option>
+                            <option value="47">Bachelier</option>
+                            <option value="20">Collège</option>
+                            <option value="21">AUTRES</option>
+                        </select>
+                    </div>
+
+                    <!-- Projet -->
+                    <div class="form-group">
+                        <label for="projet">Sur quoi porte votre projet ? <sup style="color: #dc3545;">(*)</sup></label>
+                        <select id="projet" required class="form-control">
+                            <option value="">...</option>
+                            <option value="98">Études</option>
+                            <option value="99">Immigration</option>
+                            <option value="100">Autre</option>
+                        </select>
+                        <small class="form-text text-muted">Champ ICA</small>
+                    </div>
+
+                    <!-- Champs obligatoires -->
+                    <div class="oscar_input_required" style="margin-top: 15px; margin-bottom: 20px;">
+                        <span style="color: #dc3545; font-weight: bold;">(*)</span> Champs obligatoires
+                    </div>
+
+                    <!-- Bouton -->
+                    <div class="form-btn">
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-contact-col">
+                    <h3>Nos coordonnées</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone-alt"></i> +212 6 28 41 42 42</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 31 31</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 40 40</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (514) 619-7534</li>
+                        <li><i class="fas fa-envelope"></i> contact@intelliquestcanada.ca</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 156, Bd Anfa, etage 3, Casblanca, Maroc</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs,developpez votre reseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <svg viewBox="0 0 1219.547 1225.016" width="30" height="30">
+            <path fill="#FFFFFF" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"/>
+            <path fill="#25d366" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"/>
+            <path fill="#FFFFFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"/>
+        </svg>
+        <span>WhatsApp us</span>
+    </a>
+
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script>
+        window.__ow = window.__ow || {};
+        window.__ow.organizationId = "21d68b87-72ee-4594-90a8-c40ace454e47";
+        window.__ow.template_id = "3a6afe19-f012-4133-a055-c18181d18c7b";
+        window.__ow.integration_name = "manual_settings";
+        window.__ow.product_name = "chatbot";
+        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
+    <!-- End of ChatBot code -->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+document.addEventListener('DOMContentLoaded', () => {
+    /* ==========================================================================
+       Mobile Menu Toggle
+       ========================================================================== */
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('.main-nav');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('open');
+        mainNav.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-list a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('open');
+            mainNav.classList.remove('open');
+        });
+    });
+
+    /* ==========================================================================
+       Sticky Header on Scroll
+       ========================================================================== */
+    const header = document.querySelector('.site-header');
+    const scrollProgress = document.getElementById('scroll-progress');
+    
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Scroll Progress Bar Percentage
+        if (scrollProgress) {
+            const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (window.scrollY / totalHeight) * 100;
+            scrollProgress.style.width = `${progress}%`;
+        }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check on load
+
+    /* ==========================================================================
+       Hero Slider
+       ========================================================================== */
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    const showSlide = (index) => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    };
+
+    const nextSlide = () => {
+        let next = currentSlide + 1;
+        if (next >= slides.length) next = 0;
+        showSlide(next);
+    };
+
+    const startSlideShow = () => {
+        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    };
+
+    const stopSlideShow = () => {
+        clearInterval(slideInterval);
+    };
+
+    // Dot navigation click
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            stopSlideShow();
+            showSlide(index);
+            startSlideShow();
+        });
+    });
+
+    // Initialize Slider
+    if (slides.length > 0) {
+        startSlideShow();
+    }
+
+    /* ==========================================================================
+       Tabs Component (Both Sections)
+       ========================================================================== */
+    const setupTabs = (containerId) => {
+        const container = document.querySelector(containerId);
+        if (!container) return;
+
+        const tabButtons = container.querySelectorAll('.tab-btn');
+        const tabPanels = container.querySelectorAll('.tab-panel');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTabId = button.getAttribute('data-tab');
+
+                // Deactivate all buttons & panels in this section
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanels.forEach(panel => panel.classList.remove('active'));
+
+                // Activate clicked button & its corresponding panel
+                button.classList.add('active');
+                const targetPanel = container.querySelector(`#${targetTabId}`);
+                if (targetPanel) {
+                    targetPanel.classList.add('active');
+                }
+            });
+        });
+    };
+
+    // Setup for Studies, Immigration, and Formations tabs
+    setupTabs('#services-etudes');
+    setupTabs('#services-immigration');
+    setupTabs('#services-formations');
+
+    /* ==========================================================================
+       Scroll Animations (Intersection Observer)
+       ========================================================================== */
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target); // Trigger once
+            }
+        });
+    }, observerOptions);
+
+    const animatableElements = document.querySelectorAll('.animate-on-scroll');
+    animatableElements.forEach(el => observer.observe(el));
+
+    /* ==========================================================================
+       Swiper.js Carousel for Partners
+       ========================================================================== */
+    const partnersSwipers = document.querySelectorAll('.partners-swiper');
+    partnersSwipers.forEach((el) => {
+        new Swiper(el, {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: false,
+            grabCursor: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: el.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            }
+        });
+    });
+
+    /* ==========================================================================
+       Swiper.js Slideshow for Testimonials (Smart Slider 3 replica)
+       ========================================================================== */
+    const testimonialsSwipers = document.querySelectorAll('.testimonials-swiper');
+    testimonialsSwipers.forEach((el) => {
+        new Swiper(el, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            grabCursor: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: el.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
+            }
+        });
+    });
+
+    /* ==========================================================================
+       Google Reviews Auto-Fetch API Integration
+       ========================================================================== */
+    const googleReviewsContainer = document.getElementById('google-reviews-wrapper');
+    const mainGoogleMapsLink = 'https://www.google.com/maps/search/?api=1&query=IntelliQuest+Canada+Academy+Casablanca';
+    
+    if (googleReviewsContainer) {
+        let swiperInstance = null;
+
+        const renderReviews = (data) => {
+            if (!data || !data.reviews || data.reviews.length === 0) return;
+
+            const mapsLink = data.google_maps_link || mainGoogleMapsLink;
+
+            // Render Google Rating Header Badge if element exists
+            const badgeElement = document.getElementById('google-rating-badge');
+            if (badgeElement) {
+                badgeElement.innerHTML = `
+                    <div class="google-badge-box">
+                        <div class="google-badge-logo"><i class="fab fa-google"></i></div>
+                        <div class="google-badge-info">
+                            <span class="google-score">4.8 / 5</span>
+                            <div class="google-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                            <span class="google-count">Basé sur ${data.total_reviews} avis certifiés Google</span>
+                        </div>
+                        <a href="${mapsLink}" target="_blank" class="google-badge-btn"><i class="fas fa-external-link-alt"></i> Ouvrir Google Maps</a>
+                    </div>
+                `;
+            }
+
+            // Render Cards into Swiper Wrapper
+            let html = '';
+            const googleColors = ['#2e7d32', '#1565c0', '#6A1B9A', '#e65100', '#00695c', '#c62828'];
+
+            data.reviews.forEach((review, index) => {
+                const reviewUrl = review.review_url || mapsLink;
+                const initial = review.author_name ? review.author_name.charAt(0).toLowerCase() : 'g';
+                const avatarBg = googleColors[index % googleColors.length];
+
+                let avatarHtml = '';
+                if (review.profile_photo_url && review.profile_photo_url.startsWith('http')) {
+                    avatarHtml = `<img src="${review.profile_photo_url}" alt="${review.author_name}" class="google-author-img">`;
+                } else {
+                    avatarHtml = `<div class="google-avatar-circle" style="background-color: ${avatarBg};">${initial}</div>`;
+                }
+
+                html += `
+                    <div class="swiper-slide">
+                        <div class="google-review-card">
+                            <div>
+                                <div class="google-review-header">
+                                    ${avatarHtml}
+                                    <div class="google-author-info">
+                                        <h4 class="google-author-name">${review.author_name}</h4>
+                                        <span class="google-review-date">${review.relative_time_description}</span>
+                                    </div>
+                                    <div class="google-card-badge"><i class="fab fa-google"></i></div>
+                                </div>
+                                <div class="google-card-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="google-review-text">"${review.text}"</p>
+                            </div>
+                            <div class="google-card-footer">
+                                <a href="${reviewUrl}" target="_blank" class="google-verify-link"><i class="fab fa-google"></i> Consulter l'entreprise sur Google Maps <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            googleReviewsContainer.innerHTML = html;
+
+            if (swiperInstance) {
+                swiperInstance.destroy(true, true);
+            }
+
+            // Initialize Swiper for Google Reviews
+            swiperInstance = new Swiper('.google-reviews-swiper', {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                loop: data.reviews.length > 2,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.google-reviews-swiper .swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: { slidesPerView: 1, spaceBetween: 15 },
+                    768: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 3, spaceBetween: 24 }
+                }
+            });
+        };
+
+        // Fetch from PHP API with fallback array if static html file protocol is used
+        fetch('api/google_reviews.php')
+            .then(res => res.json())
+            .then(data => renderReviews(data))
+            .catch(err => {
+                renderReviews({
+                    rating: 4.8,
+                    total_reviews: 106,
+                    google_maps_link: mainGoogleMapsLink,
+                    reviews: [
+                        {
+                            author_name: 'Wissal Malk',
+                            profile_photo_url: '',
+                            rating: 5,
+                            relative_time_description: 'il y a une semaine',
+                            text: 'Je bénéficie d\'une excellente formation à l\'ICA pour le DSCG UE4. L\'organisation est irréprochable et les intervenants sont très compétents, pédagogues et de grande qualité. Je recommande vivement cette académie !',
+                            review_url: mainGoogleMapsLink
+                        }
+                    ]
+                });
+            });
+    }
+
+    /* ==========================================================================
+       Dynamic Top Announcement Banner & Admin Modal Controller
+       ========================================================================== */
+    const bannerContainer = document.getElementById('announcement-banner');
+    const bannerTagDisplay = document.getElementById('banner-tag-display');
+    const bannerTextDisplay = document.getElementById('banner-text-display');
+    const bannerBtnDisplay = document.getElementById('banner-btn-display');
+    const closeBannerBtn = document.getElementById('close-banner-btn');
+
+    const adminTriggerBtn = document.getElementById('admin-trigger-btn');
+    const adminModalOverlay = document.getElementById('admin-modal-overlay');
+    const adminCloseModal = document.getElementById('admin-close-modal');
+    const adminBannerForm = document.getElementById('admin-banner-form');
+    const adminBannerShow = document.getElementById('admin-banner-show');
+    const adminBannerTag = document.getElementById('admin-banner-tag');
+    const adminBannerText = document.getElementById('admin-banner-text');
+    const adminBannerBtnText = document.getElementById('admin-banner-btn-text');
+    const adminBannerBtnLink = document.getElementById('admin-banner-btn-link');
+    const adminResetBtn = document.getElementById('admin-reset-btn');
+
+    const defaultBannerConfig = {
+        show: true,
+        tag: "NOUVEAU",
+        text: "📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes pour les sessions d'Août & Septembre !",
+        btnText: "S'inscrire / Contacter",
+        btnLink: "contact.html"
+    };
+
+    const getSavedBannerConfig = () => {
+        try {
+            const saved = localStorage.getItem('ica_announcement_config');
+            return saved ? JSON.parse(saved) : defaultBannerConfig;
+        } catch (e) {
+            return defaultBannerConfig;
+        }
+    };
+
+    const applyBannerConfig = (config) => {
+        if (!bannerContainer) return;
+        
+        if (!config.show) {
+            bannerContainer.classList.add('hidden');
+        } else {
+            bannerContainer.classList.remove('hidden');
+        }
+
+        if (bannerTagDisplay) bannerTagDisplay.textContent = config.tag || 'NOUVEAU';
+        if (bannerTextDisplay) bannerTextDisplay.innerHTML = config.text || '';
+        if (bannerBtnDisplay) {
+            bannerBtnDisplay.innerHTML = `${config.btnText || "S'inscrire"} <i class="fas fa-arrow-right"></i>`;
+            bannerBtnDisplay.href = config.btnLink || 'services.html#services-formations';
+        }
+    };
+
+    // Initialize Banner Display
+    const currentConfig = getSavedBannerConfig();
+    applyBannerConfig(currentConfig);
+
+    // Close Banner Event
+    if (closeBannerBtn && bannerContainer) {
+        closeBannerBtn.addEventListener('click', () => {
+            bannerContainer.classList.add('hidden');
+        });
+    }
+
+    // Admin Modal Controls
+    if (adminTriggerBtn && adminModalOverlay) {
+        adminTriggerBtn.addEventListener('click', () => {
+            const cfg = getSavedBannerConfig();
+            if (adminBannerShow) adminBannerShow.checked = cfg.show;
+            if (adminBannerTag) adminBannerTag.value = cfg.tag;
+            if (adminBannerText) adminBannerText.value = cfg.text.replace(/<\/?strong>/g, '');
+            if (adminBannerBtnText) adminBannerBtnText.value = cfg.btnText;
+            if (adminBannerBtnLink) adminBannerBtnLink.value = cfg.btnLink;
+
+            adminModalOverlay.classList.add('active');
+        });
+    }
+
+    if (adminCloseModal && adminModalOverlay) {
+        adminCloseModal.addEventListener('click', () => {
+            adminModalOverlay.classList.remove('active');
+        });
+    }
+
+    if (adminModalOverlay) {
+        adminModalOverlay.addEventListener('click', (e) => {
+            if (e.target === adminModalOverlay) {
+                adminModalOverlay.classList.remove('active');
+            }
+        });
+    }
+
+    // Form Submit Handler
+    if (adminBannerForm) {
+        adminBannerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newConfig = {
+                show: adminBannerShow ? adminBannerShow.checked : true,
+                tag: adminBannerTag ? adminBannerTag.value.trim() : 'NOUVEAU',
+                text: adminBannerText ? adminBannerText.value.trim() : '',
+                btnText: adminBannerBtnText ? adminBannerBtnText.value.trim() : "S'inscrire",
+                btnLink: adminBannerBtnLink ? adminBannerBtnLink.value.trim() : 'services.html#services-formations'
+            };
+
+            localStorage.setItem('ica_announcement_config', JSON.stringify(newConfig));
+            applyBannerConfig(newConfig);
+            if (adminModalOverlay) adminModalOverlay.classList.remove('active');
+
+            alert('✨ Le bandeau d\'annonce a été mis à jour avec succès sur le site !');
+        });
+    }
+
+    // Reset Config Handler
+    if (adminResetBtn) {
+        adminResetBtn.addEventListener('click', () => {
+            localStorage.setItem('ica_announcement_config', JSON.stringify(defaultBannerConfig));
+            applyBannerConfig(defaultBannerConfig);
+            if (adminModalOverlay) adminModalOverlay.classList.remove('active');
+            alert('🔄 Le bandeau d\'annonce a été réinitialisé avec le contenu par défaut !');
+        });
+    }
+});

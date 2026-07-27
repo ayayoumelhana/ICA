@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages - Intelliquest Canada Academy</title>
+    <meta name="description" content="Découvrez les témoignages de nos étudiants et clients qui ont réalisé leur projet d'études et d'immigration au Canada grâce à l'accompagnement de l'ICA.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for Timeline Testimonials */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto 0;
+            padding: 20px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+        .timeline-entry {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-entry::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 40px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .left-aligned {
+            left: 0;
+        }
+        .right-aligned {
+            left: 50%;
+        }
+        .right-aligned::after {
+            left: -10px;
+        }
+        .timeline-card {
+            background-color: var(--bg-white);
+            position: relative;
+            border-radius: 19px; /* Exact 19px border radius from original elementor styles */
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column; /* Vertical post layout like original */
+            align-items: stretch;
+            overflow: hidden;
+        }
+        .timeline-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .timeline-card:hover img {
+            transform: scale(1.03);
+        }
+        .timeline-card-content {
+            padding: 20px 25px;
+        }
+        .timeline-card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            font-family: var(--font-secondary);
+            font-weight: 700;
+        }
+        .timeline-card-content p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+        .youtube-btn:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-entry {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 20px;
+            }
+            .timeline-entry::after {
+                left: 21px;
+                top: 40px;
+            }
+            .right-aligned {
+                left: 0%;
+            }
+            .timeline-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .timeline-card img {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Dynamic Top Announcement Banner (Editable by Admin) -->
+    <div id="announcement-banner" class="announcement-banner">
+        <div class="container announcement-container">
+            <div class="announcement-content">
+                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
+                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes pour les sessions d'Août & Septembre !</span>
+                <a id="banner-btn-display" href="services.html#services-formations" class="announcement-btn">S'inscrire <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="temoignages.html" class="active">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('assets/images/Temoignages-scaled.png');">
+        <div class="container">
+            <h1>Témoignages</h1>
+        </div>
+    </section>
+
+    <!-- Feature Video Testimonial -->
+    <section class="testimonial-section section bg-white">
+        <div class="container">
+            <div class="testimonial-grid">
+                <div class="testimonial-text animate-on-scroll animated">
+                    <h3 class="testimonial-sub">Témoignage de Rachid El Ouali</h3>
+                    <h2 class="testimonial-quote">"Avec ICA, vos enfants atteindront leurs rêves !"</h2>
+                    <p class="testimonial-desc">
+                        Le célèbre acteur marocain Rachid El Ouali soutient notre mission : accompagner les jeunes vers une réussite assurée au Canada. Découvrez pourquoi il fait confiance à IntelliQuest Canada Academy pour guider la nouvelle génération vers un avenir prometteur.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=WVqLnlJ0acw" target="_blank" class="btn btn-primary">En savoir plus</a>
+                </div>
+                <div class="testimonial-img-col animate-on-scroll delay-1 animated">
+                    <img src="assets/images/0cd820c4-819d-4e2e-956d-1a5d13c58f6c.png.jpg" alt="Rachid El Ouali" class="about-img">
+                </div>
+            </div>
+        </div>
+    <!-- Google Places Live Auto-Fetched Reviews Section (Native Custom Design) -->
+    <section class="google-reviews-section section bg-white" style="border-top: 1px solid var(--border-color);">
+        <div class="container text-center">
+            <h2 class="section-title" style="color: var(--secondary-color); margin-bottom: 15px;">NOS AVIS GOOGLE REVIEWS EN DIRECT</h2>
+            <div id="google-rating-badge" class="animate-on-scroll"></div>
+            
+            <!-- Native Custom Swiper Carousel Component -->
+            <div class="swiper google-reviews-swiper animate-on-scroll delay-1" style="margin-top: 25px;">
+                <div id="google-reviews-wrapper" class="swiper-wrapper">
+                    <!-- Dynamic Native Google Places Reviews -->
+                </div>
+                <div class="swiper-pagination" style="position: relative; margin-top: 24px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Testimonials Section -->
+    <section class="timeline-section section bg-light" style="border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="divider-line center"></div>
+            <h2 class="section-title text-center">CE QUE DISENT NOS ÉTUDIANTS ET NOS CLIENTS</h2>
+            <h3 class="partner-subtitle text-center" style="margin-bottom: 20px;">En vidéo : vos expériences avec ICA</h3>
+            
+            <div class="timeline">
+                <!-- Mohamed Rossi -->
+                <div class="timeline-entry left-aligned">
+                    <div class="timeline-card">
+                        <img src="assets/images/MOHAMED_ROSSI_2-272x300.png" alt="Mohamed Rossi">
+                        <div class="timeline-card-content">
+                            <h3>Mohamed Rossi</h3>
+                            <p>Témoignage étudiant : Mohamed Rossi nous partage son intégration réussie à Montréal entre études et passion.</p>
+                            <a href="https://www.youtube.com/shorts/MnaSbPb97jo" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Voir la vidéo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Aya -->
+                <div class="timeline-entry right-aligned">
+                    <div class="timeline-card">
+                        <img src="assets/images/ayaa-300x258.png" alt="Aya">
+                        <div class="timeline-card-content">
+                            <h3>Aya</h3>
+                            <p>Comment Aya a réalisé son rêve d'étudier au Canada grâce à ICA.</p>
+                            <a href="https://www.youtube.com/watch?v=foQOybld-yo" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Voir la vidéo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salaheddine -->
+                <div class="timeline-entry left-aligned">
+                    <div class="timeline-card">
+                        <img src="assets/images/Capture-decran-2025-05-23-104612-268x300.png" alt="Salaheddine">
+                        <div class="timeline-card-content">
+                            <h3>Salaheddine</h3>
+                            <p>Visa refusé, puis accepté grâce à ICA. Salaheddine part enfin au Canada ! Découvrez son témoignage!</p>
+                            <a href="https://www.youtube.com/shorts/cUQGPOoUJNs" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Voir la vidéo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Une maman comblée -->
+                <div class="timeline-entry right-aligned">
+                    <div class="timeline-card">
+                        <img src="assets/images/maman1-237x300.png" alt="Maman comblée">
+                        <div class="timeline-card-content">
+                            <h3>Une Maman Comblée</h3>
+                            <p>Une maman comblée voit son rêve se réaliser : son fils part étudier au Canada grâce à ICA.</p>
+                            <a href="https://www.youtube.com/shorts/V7afA1TwgIc" target="_blank" class="youtube-btn"><i class="fab fa-youtube"></i> Voir la vidéo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 55px;">
+                 <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 20px;">Découvrez nos vidéos et témoignages en cliquant sur le bouton ci-dessous pour accéder directement à notre chaine Youtube</p>
+                 <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp" target="_blank" class="btn btn-primary btn-large"><i class="fab fa-youtube" style="margin-right: 10px;"></i>Cliquez ici</a>
+            </div>
+            
+            <div class="divider-line center" style="margin: 60px auto 30px auto;"></div>
+            <h2 class="section-title text-center" style="margin-bottom: 40px; color: var(--secondary-color);">CE QUE DISENT NOS ÉTUDIANTS ET NOS CLIENTS</h2>
+            
+            <!-- Testimonials Slideshow Slider (Smart Slider 3 replica) -->
+            <div class="swiper testimonials-swiper animate-on-scroll delay-1">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('assets/images/cap2.png');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <div class="slide-tags">
+                                <span class="slide-tag">Directeur financier</span>
+                                <span class="slide-tag">Parent d'un étudiant</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Demande d'informations</a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('assets/images/CAP3.png');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <div class="slide-tags">
+                                <span class="slide-tag">Étudiante</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Demande d'informations</a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('assets/images/CAP3-1.png');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <div class="slide-tags">
+                                <span class="slide-tag">Maman de Mohamed Elhouat</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Demande d'informations</a>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('assets/images/CAP111111.png');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <div class="slide-tags">
+                                <span class="slide-tag">Étudiante à LCI</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Demande d'informations</a>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('assets/images/CAP0.png');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <div class="slide-tags">
+                                <span class="slide-tag">Ingénieur en informatique</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Demande d'informations</a>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('assets/images/CAP2222.png');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <div class="slide-tags">
+                                <span class="slide-tag">Expert en orientation académique</span>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Demande d'informations</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-contact-col">
+                    <h3>Nos coordonnées</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone-alt"></i> +212 6 28 41 42 42</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 31 31</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 40 40</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (514) 619-7534</li>
+                        <li><i class="fas fa-envelope"></i> contact@intelliquestcanada.ca</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 156, Bd Anfa, etage 3, Casblanca, Maroc</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs,developpez votre reseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <svg viewBox="0 0 1219.547 1225.016" width="30" height="30">
+            <path fill="#FFFFFF" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"/>
+            <path fill="#25d366" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"/>
+            <path fill="#FFFFFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"/>
+        </svg>
+        <span>WhatsApp us</span>
+    </a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script>
+        window.__ow = window.__ow || {};
+        window.__ow.organizationId = "21d68b87-72ee-4594-90a8-c40ace454e47";
+        window.__ow.template_id = "3a6afe19-f012-4133-a055-c18181d18c7b";
+        window.__ow.integration_name = "manual_settings";
+        window.__ow.product_name = "chatbot";
+        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
+    <!-- End of ChatBot code -->
+
+    <script src="script.js"></script>
+</body>
+</html>

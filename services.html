@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Intelliquest Canada Academy</title>
+    <meta name="description" content="Découvrez nos services d'immigration et d'études au Canada. Entrée express, CAQ, Permis d'études, Orientation, et bien plus.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Services Page Accordion Styles */
+        .services-accordion {
+            max-width: 1100px;
+            margin: 55px auto 0;
+        }
+        
+        .services-acc-item {
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            background: white;
+            transition: var(--transition);
+        }
+        
+        .services-acc-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .services-acc-header {
+            padding: 22px 30px;
+            background-color: #f8fafc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-secondary);
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+        
+        .services-acc-item.active .services-acc-header {
+            background-color: var(--secondary-color);
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .services-acc-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .services-acc-item.active .services-acc-icon {
+            transform: rotate(180deg);
+        }
+        
+        .services-acc-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: white;
+        }
+        
+        .services-acc-inner {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .services-acc-text h5 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .services-acc-item.active .services-acc-text h5 {
+            color: var(--primary-color);
+        }
+        
+        .services-acc-text ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .services-acc-text ul li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--text-dark);
+        }
+        
+        .services-acc-text ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--primary-color);
+        }
+        
+        .services-acc-text h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin: 20px 0 10px;
+            text-decoration: underline;
+        }
+        
+        .services-acc-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 19px;
+            box-shadow: var(--shadow-md);
+            border: 4px solid #f1f5f9;
+        }
+        
+        @media (max-width: 992px) {
+            .services-acc-inner {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+            .services-acc-img {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Dynamic Top Announcement Banner (Editable by Admin) -->
+    <div id="announcement-banner" class="announcement-banner">
+        <div class="container announcement-container">
+            <div class="announcement-content">
+                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
+                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes pour les sessions d'Août & Septembre !</span>
+                <a id="banner-btn-display" href="services.html#services-formations" class="announcement-btn">S'inscrire <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner" style="background-image: url('assets/images/Application-Procedure-for-Canada-study-permit-1.jpg');">
+        <div class="container">
+            <h1>Services</h1>
+        </div>
+    </section>
+
+    <!-- Nested Accordion Services Section -->
+    <section class="services-list-section section bg-white">
+        <div class="container">
+            
+            <div class="services-accordion">
+                <!-- Accordion Item 1: Étude (Open by default) -->
+                <div class="services-acc-item active" id="acc-item-etudes">
+                    <div class="services-acc-header">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <img src="assets/images/logo-ICA-etudes-livre.jpg" alt="Logo Pôle Études" style="height: 48px; width: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(7, 43, 73, 0.2); border: 2px solid #FFFFFF;">
+                            <span>Pôle Étude</span>
+                        </div>
+                        <i class="fas fa-chevron-down services-acc-icon"></i>
+                    </div>
+                    <div class="services-acc-content" style="max-height: 2000px;">
+                        <div class="services-acc-inner">
+                            <div class="services-acc-text">
+                                <h5>SERVICES EDUCATIFS SUR MESURE AVEC ICA</h5>
+                                <ul>
+                                    <li>Élaboration du projet d’étude</li>
+                                    <li>Conseils en orientation scolaire</li>
+                                    <li>Assistance pour l’admission et l’inscription</li>
+                                    <li>Coaching et soutien individuel personnalisé</li>
+                                    <li>Accompagnement dans la demande de CAQ (Certificat d’Acceptation du Québec) – demande initiale et renouvellement</li>
+                                    <li>Accompagnement pour le permis d’étude – première demande et prolongation</li>
+                                    <li>Organisation anticipée du séjour au Canada</li>
+                                </ul>
+                                <p style="font-weight: 600; color: var(--secondary-color);">Grâce à cet accompagnement sur mesure, nous vous aidons à vivre une expérience académique fluide, sereine et réussie.</p>
+                            </div>
+                            <div class="services-acc-img">
+                                <img src="assets/images/ic5-768x432-1.jpg" alt="Études au Canada">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2: Immigration -->
+                <div class="services-acc-item" id="acc-item-immigration">
+                    <div class="services-acc-header">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <img src="assets/images/logo-ICA-immigration.jpg" alt="Logo Pôle Immigration" style="height: 48px; width: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(7, 43, 73, 0.2); border: 2px solid #FFFFFF;">
+                            <span>Pôle Immigration</span>
+                        </div>
+                        <i class="fas fa-chevron-down services-acc-icon"></i>
+                    </div>
+                    <div class="services-acc-content">
+                        <div class="services-acc-inner">
+                            <div class="services-acc-text">
+                                <h5>NOS SERVICES COMPRENNENT</h5>
+                                <ul>
+                                    <li>Prestations de conseils personnalisées</li>
+                                    <li>Gestion intégrale de votre dossier</li>
+                                </ul>
+                                
+                                <h3>1 – Immigration permanente :</h3>
+                                <ul>
+                                    <li>Entrée express : Immigration à titre de travailleur qualifié</li>
+                                    <li>Travailleurs qualifiés sélectionnés par le Québec</li>
+                                    <li>Candidats des provinces : Immigration par désignation provinciale</li>
+                                    <li>Programme de l’expérience québécoise</li>
+                                    <li>Programme des investisseurs du Québec</li>
+                                    <li>Programme des travailleurs autonomes du Québec</li>
+                                    <li>Demande de parrainage ou regroupement familial</li>
+                                </ul>
+                                
+                                <h3>2 – Immigration temporaire :</h3>
+                                <ul>
+                                    <li>Travailleurs étrangers temporaires</li>
+                                    <li>Permis de travail ouvert</li>
+                                </ul>
+                                
+                                <p style="margin-top: 20px; font-weight: 600; color: var(--secondary-color);">En choisissant ICA, vous bénéficiez d'un ensemble complet de services pour rendre votre démarche d'immigration aussi fluide que possible.</p>
+                            </div>
+                            <div class="services-acc-img">
+                                <img src="assets/images/HHH5.jpg" alt="Immigration au Canada">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3: Formations -->
+                <div class="services-acc-item" id="acc-item-formation">
+                    <div class="services-acc-header">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <img src="assets/images/logo-ICA-formation.png" alt="Logo Pôle Formations" style="height: 48px; width: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(7, 43, 73, 0.2); border: 2px solid #FFFFFF;">
+                            <span>Pôle Formations Certifiantes</span>
+                        </div>
+                        <i class="fas fa-chevron-down services-acc-icon"></i>
+                    </div>
+                    <div class="services-acc-content">
+                        <div class="services-acc-inner">
+                            <div class="services-acc-text">
+                                <h5>FORMATIONS PRÉPARATOIRES CERTIFIANTES (100 HEURES)</h5>
+                                <ul>
+                                    <li><strong>Formation Concours CEC :</strong> Cycle d'Expertise Comptable (Comptabilité, Droit, Gestion, TEC - 2 mois en Août & Septembre)</li>
+                                    <li><strong>Formation DSCG :</strong> Préparation intensive UE1 & UE4 (3 mois de Juillet à Septembre les week-ends)</li>
+                                    <li><strong>Formations sur mesure pour entreprises :</strong> Séminaires thématiques et renforcement de compétences</li>
+                                    <li><strong>Certifications reconnues :</strong> Accompagnement pédagogique axé sur la réussite</li>
+                                </ul>
+                                <p style="font-weight: 600; color: var(--secondary-color); margin-top: 15px;">ICA, votre choix pour une formation préparatoire sur mesure et un succès certifié.</p>
+                            </div>
+                            <div class="services-acc-img">
+                                <img src="assets/images/flyer-cec-1.jpg" alt="Formations Certifiantes ICA" style="width: 100%; max-width: 280px; height: auto; border-radius: 12px; box-shadow: var(--shadow-sm);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section bg-light" style="border-top: 1px solid var(--border-color);">
+        <div class="container" style="max-width: 900px;">
+            <div class="divider-line center"></div>
+            <h2 class="section-title text-center">Questions fréquemment posées</h2>
+            
+            <div class="faq-accordion" style="margin-top: 40px;">
+                <!-- Item 1 -->
+                <div class="faq-item" style="background: white; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <div class="faq-question" style="padding: 20px 24px; font-weight: 700; color: var(--secondary-color); display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: var(--transition);">
+                        <span>Est-il nécessaire de passer un test de français pour s’inscrire dans une université ou une école au Canada ?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s;">
+                        <p style="margin-bottom: 20px; padding-top: 10px;">Non, l’inscription dans une université ou une école au Canada ne nécessite pas obligatoirement la réussite d’un test de français, mais avoir un bon résultat à un tel test peut certainement renforcer votre dossier d’admission.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="faq-item" style="background: white; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <div class="faq-question" style="padding: 20px 24px; font-weight: 700; color: var(--secondary-color); display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: var(--transition);">
+                        <span>Quels sont les critères d’admission pour les étudiants internationaux au Canada ?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s;">
+                        <p style="margin-bottom: 20px; padding-top: 10px;">Les critères d’admission varient d’une institution à l’autre. Cependant, en règle générale, les étudiants internationaux doivent d’implémenter leur capacité académique et leur maîtrise de la langue d’enseignement. Nous vous aiderons à choisir des écoles qui correspondent le mieux à votre profil académique.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="faq-item" style="background: white; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <div class="faq-question" style="padding: 20px 24px; font-weight: 700; color: var(--secondary-color); display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: var(--transition);">
+                        <span>Offrez-vous la garantie d’obtenir les autorisations nécessaires pour étudier au Canada ?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s;">
+                        <p style="margin-bottom: 20px; padding-top: 10px;">Non, nous ne pouvons jamais garantir l’obtention d’un visa ou d’un permis d’études, mais nous vous fournirons des conseils et un accompagnement de très grande qualité pour maximiser vos chances d’acceptation.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="faq-item" style="background: white; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <div class="faq-question" style="padding: 20px 24px; font-weight: 700; color: var(--secondary-color); display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: var(--transition);">
+                        <span>Peut-on s'inscrire avant d'obtenir son baccalauréat ?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s;">
+                        <p style="margin-bottom: 20px; padding-top: 10px;">Pour s’inscrire dans les universités et collèges au Canada, il est nécessaire d’atteindre un certain niveau scolaire. Les étudiants peuvent entamer le processus d’inscription dès leur dernière année de lycée, et cela s'applique à tous les niveaux d’études supérieures.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="faq-item" style="background: white; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <div class="faq-question" style="padding: 20px 24px; font-weight: 700; color: var(--secondary-color); display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: var(--transition);">
+                        <span>Est-ce que les études universitaires au Canada sont gratuites ?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s;">
+                        <p style="margin-bottom: 20px; padding-top: 10px;">Non, la plupart des établissements d’enseignement au Canada facturent des frais de scolarité aux étudiants internationaux. Cependant, nous offrons une assistance pour aider nos étudiants à trouver des écoles qui correspondent à leur capacité financière.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-contact-col">
+                    <h3>Nos coordonnées</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone-alt"></i> +212 6 28 41 42 42</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 31 31</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 40 40</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (514) 619-7534</li>
+                        <li><i class="fas fa-envelope"></i> contact@intelliquestcanada.ca</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 156, Bd Anfa, etage 3, Casblanca, Maroc</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs,developpez votre reseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <svg viewBox="0 0 1219.547 1225.016" width="30" height="30">
+            <path fill="#FFFFFF" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"/>
+            <path fill="#25d366" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"/>
+            <path fill="#FFFFFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"/>
+        </svg>
+        <span>WhatsApp us</span>
+    </a>
+
+    <!-- Add script for accordion toggles -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // General FAQ accordion toggle
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.parentElement;
+                    const answer = item.querySelector('.faq-answer');
+                    const icon = q.querySelector('i');
+                    
+                    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                        answer.style.maxHeight = '0px';
+                        answer.style.padding = '0 24px';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        document.querySelectorAll('.faq-answer').forEach(ans => {
+                            ans.style.maxHeight = '0px';
+                            ans.style.padding = '0 24px';
+                        });
+                        document.querySelectorAll('.faq-question i').forEach(ic => {
+                            ic.style.transform = 'rotate(0deg)';
+                        });
+                        
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.padding = '10px 24px 20px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Services accordion toggle (Nested Accordion replica)
+            const serviceHeaders = document.querySelectorAll('.services-acc-header');
+            serviceHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const currentItem = header.parentElement;
+                    const currentContent = currentItem.querySelector('.services-acc-content');
+                    
+                    if (currentItem.classList.contains('active')) {
+                        // Collapse
+                        currentContent.style.maxHeight = '0px';
+                        currentItem.classList.remove('active');
+                    } else {
+                        // Close other open service items
+                        document.querySelectorAll('.services-acc-item').forEach(item => {
+                            item.classList.remove('active');
+                            item.querySelector('.services-acc-content').style.maxHeight = '0px';
+                        });
+                        
+                        // Open current
+                        currentItem.classList.add('active');
+                        currentContent.style.maxHeight = '2000px'; // Set a large height to fit grid content
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script>
+        window.__ow = window.__ow || {};
+        window.__ow.organizationId = "21d68b87-72ee-4594-90a8-c40ace454e47";
+        window.__ow.template_id = "3a6afe19-f012-4133-a055-c18181d18c7b";
+        window.__ow.integration_name = "manual_settings";
+        window.__ow.product_name = "chatbot";
+        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
+    <!-- End of ChatBot code -->
+
+    <script src="script.js"></script>
+</body>
+</html>

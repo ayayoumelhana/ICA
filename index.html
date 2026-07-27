@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelliquest Canada Academy Bureau d'immigration Canada – Intelliquest Canada Academy (ICA)</title>
+    <meta name="description" content="Intelliquest Canada Academy Besoin d'un bureau d'immigration pour le Canada ? ICA vous accompagne depuis Casablanca dans vos démarches d'immigration, d'études ou de travail au Canada">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Dynamic Top Announcement Banner (Editable by Admin) -->
+    <div id="announcement-banner" class="announcement-banner">
+        <div class="container announcement-container">
+            <div class="announcement-content">
+                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
+                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes pour les sessions d'Août & Septembre !</span>
+                <a id="banner-btn-display" href="contact.html" class="announcement-btn">S'inscrire / Contacter <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section id="accueil" class="hero-slider-container">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide-bg" style="background-image: url('assets/images/Image2-1-scaled.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content text-center">
+                    <img src="assets/images/Artboard-7.png" alt="Artboard Logo" class="slide-artboard animate-in">
+                    <div class="slide-actions animate-in delay-2">
+                        <a href="#contact" class="btn btn-primary btn-large">Demande d'informations</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('assets/images/Image2-1-scaled.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content text-center">
+                    <h1 class="slide-title animate-in">Étudier au Canada, réussir demain.</h1>
+                    <div class="slide-actions animate-in delay-2">
+                        <a href="#contact" class="btn btn-primary btn-large">Demande d'informations</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('assets/images/slider-immigration-scaled.png');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content text-center">
+                    <h1 class="slide-title animate-in">Immigrez et réalisez vos rêves avec notre soutien</h1>
+                    <div class="slide-actions animate-in delay-2">
+                        <a href="#contact" class="btn btn-primary btn-large">Demande d'informations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="a-propos" class="about section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <div class="divider-line"></div>
+                    <h2 class="section-title">QUI SOMMES-NOUS?</h2>
+                    <p class="lead-text">
+                        IntelliQuest Canada Academy accompagne les étudiants souhaitant poursuivre des études au Canada en leur offrant un encadrement complet, de l’admission jusqu’à l’intégration.
+                    </p>
+                    <p>
+                        Nous guidons également les personnes désireuses d’immigrer au Canada, avec un accompagnement expert à chaque étape de leur projet.
+                    </p>
+                </div>
+                <div class="about-img-container animate-on-scroll delay-1" style="display: flex; justify-content: center;">
+                    <img src="assets/images/00-191x300.png" alt="ICA Canada" class="about-img" style="max-width: 191px; width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Dedicated to Studies -->
+    <section id="services-etudes" class="services-tabs-section section bg-light">
+        <div class="container">
+            <div class="divider-line center"></div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
+                <img src="assets/images/logo-ICA-etudes-livre.jpg" alt="Logo Pôle Études" style="height: 54px; width: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(7, 43, 73, 0.22); border: 2px solid #FFFFFF;">
+                <h2 class="section-title text-center" style="margin-bottom: 0;">SERVICES DÉDIÉS POUR LES ÉTUDES AU CANADA</h2>
+            </div>
+            
+            <!-- Tabs Component -->
+            <div class="tabs-container animate-on-scroll">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="etudes-1">Étape 1 : Orientation</button>
+                    <button class="tab-btn" data-tab="etudes-2">Étape 2 : Admission</button>
+                    <button class="tab-btn" data-tab="etudes-3">Étape 3 : Autorisations</button>
+                    <button class="tab-btn" data-tab="etudes-4">Étape 4 : Après l'arrivée</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Tab 1 -->
+                    <div class="tab-panel active" id="etudes-1">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/vlcsnap-2025-04-30-15h50m21s967-2-300x221.png" alt="Orientation" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Orientation Scolaire et académique</h3>
+                                <p>Notre équipe vous accompagne avec des conseils personnalisés pour faire les bons choix d'études, découvrir les meilleures opportunités académiques et bâtir un parcours cohérent vers la réussite.</p>
+                                <a href="services.html#acc-item-etudes" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Étude <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2 -->
+                    <div class="tab-panel" id="etudes-2">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/IMG_8079-scaled-r5f0cacrzdk06kbmyr7yfvqbtf20pluxaoa4f9pq5c.jpg" alt="Admission" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Démarches d’admission</h3>
+                                <p>Nos conseillers prennent en charge l’ensemble de vos démarches d’admission, du montage du dossier à la soumission de la candidature, pour vous aider à intégrer l’établissement scolaire, professionnel, collégial ou universitaire de votre choix.</p>
+                                <a href="services.html#acc-item-etudes" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Étude <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 3 -->
+                    <div class="tab-panel" id="etudes-3">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/9567b792-5ab5-441c-aefc-14668eaf5bc77-300x289.jpg" alt="Autorisations" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Démarches pour les autorisations</h3>
+                                <p>Nous vous accompagnons dans l’obtention des autorisations nécessaires (CAQ / LAP , permis d’études, etc.) en assurant un suivi rigoureux et une préparation soignée de votre dossier, pour maximiser vos chances de succès.</p>
+                                <a href="services.html#acc-item-etudes" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Étude <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 4 -->
+                    <div class="tab-panel" id="etudes-4">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/vlcsnap-2025-05-03-16h15m58s867-scaled-r5d6gshn615mbv1xu5wc4tj19huxks6lkuvss7yen4.png" alt="Après arrivée" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Accompagnement après l’arrivée</h3>
+                                <p>À votre arrivée au Canada, nous vous aidons dans les démarches clés : accueil à l’aéroport, logement, compte bancaire, assurance, obtention du NAS, etc. Nous vous accompagnons également après intégration pour le suivi et le renouvellement de vos documents.</p>
+                                <a href="services.html#acc-item-etudes" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Étude <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Dedicated to Immigration -->
+    <section id="services-immigration" class="services-tabs-section section bg-white">
+        <div class="container">
+            <div class="divider-line center"></div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
+                <img src="assets/images/logo-ICA-immigration.jpg" alt="Logo Pôle Immigration" style="height: 54px; width: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(7, 43, 73, 0.22); border: 2px solid #FFFFFF;">
+                <h2 class="section-title text-center" style="margin-bottom: 0;">SERVICES DÉDIÉS POUR L'IMMIGRATION AU CANADA</h2>
+            </div>
+            
+            <!-- Tabs Component -->
+            <div class="tabs-container animate-on-scroll">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="imm-1">Étape 1 : Consultation</button>
+                    <button class="tab-btn" data-tab="imm-2">Étape 2 : Préparation de dossier</button>
+                    <button class="tab-btn" data-tab="imm-3">Étape 3 : Dépôt</button>
+                    <button class="tab-btn" data-tab="imm-4">Étape 4 : Post-arrivée</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Tab 1 -->
+                    <div class="tab-panel active" id="imm-1">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/vlcsnap-2025-04-30-15h52m06s3444-268x300.png" alt="Consultation" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Consultation initiale</h3>
+                                <p>Commencez votre projet d'immigration par une consultation approfondie pour évaluer votre admissibilité, optimiser votre stratégie et obtenir des conseils personnalisés, ainsi que toutes les informations sur les frais.</p>
+                                <a href="services.html#acc-item-immigration" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2 -->
+                    <div class="tab-panel" id="imm-2">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/IMG_80933-298x300.jpg" alt="Préparation de dossier" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Dépôt, suivi et accompagnement</h3>
+                                <p>Après préparation de votre dossier, nous assurons son dépôt auprès des autorités canadiennes et suivons son évolution, vous tenant informé à chaque étape et intervenant si besoin. Nous vous accompagnons également dans l’équivalence de vos diplômes et la préparation aux tests linguistiques.</p>
+                                <a href="services.html#acc-item-immigration" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 3 -->
+                    <div class="tab-panel" id="imm-3">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/depot-300x300.jpg" alt="Dépôt" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Démarches pour l'obtention des autorisations</h3>
+                                <p>Notre équipe meuble un suivi personnalisé, garantissant la conformité de votre dossier et maximisant vos chances de réussite pour vos études au Canada.</p>
+                                <a href="services.html#acc-item-immigration" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 4 -->
+                    <div class="tab-panel" id="imm-4">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/ayaa-300x258.png" alt="Post-arrivée" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Intégration et soutien post-arrivée</h3>
+                                <p>Nous vous accompagnons après votre arrivée au Canada pour faciliter vos premières démarches et assurer une intégration harmonieuse.</p>
+                                <a href="services.html#acc-item-immigration" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails du Pôle Immigration <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Dedicated to Formations -->
+    <section id="services-formations" class="services-tabs-section section bg-light">
+        <div class="container">
+            <div class="divider-line center"></div>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
+                <img src="assets/images/logo-ICA-formation.png" alt="Logo Pôle Formations" style="height: 54px; width: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(7, 43, 73, 0.22); border: 2px solid #FFFFFF;">
+                <h2 class="section-title text-center" style="margin-bottom: 0;">FORMATIONS PRÉPARATOIRES CERTIFIANTES</h2>
+            </div>
+            
+            <!-- Tabs Component identical to Studies and Immigration -->
+            <div class="tabs-container animate-on-scroll">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="form-1">Formation 1 : Concours CEC</button>
+                    <button class="tab-btn" data-tab="form-2">Formation 2 : DSCG (UE1 & UE4)</button>
+                    <button class="tab-btn" data-tab="form-3">Accompagnement & Séminaires</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Tab 1: CEC -->
+                    <div class="tab-panel active" id="form-1">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/flyer-cec-1.jpg" alt="Formation CEC" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Formation Préparatoire au Concours du CEC</h3>
+                                <p><strong>Cycle d'Expertise Comptable (100 Heures) :</strong> Préparation intensive couvrant la Comptabilité, le Droit, la Gestion et la TEC. Programme concentré sur 2 mois en soirs et week-ends.</p>
+                                <a href="services.html#acc-item-formation" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails de la Formation <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2: DSCG -->
+                    <div class="tab-panel" id="form-2">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/flyer-dscg.jpg" alt="Formation DSCG" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Formation DSCG (UE1 & UE4)</h3>
+                                <p><strong>Diplôme Supérieur de Comptabilité et de Gestion (100 Heures) :</strong> Préparation ciblée et méthodique sur les unités d'enseignement UE1 et UE4 (Juillet à Septembre les week-ends).</p>
+                                <a href="services.html#acc-item-formation" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails de la Formation <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 3: Entreprises -->
+                    <div class="tab-panel" id="form-3">
+                        <div class="tab-grid">
+                            <div class="tab-img-col">
+                                <img src="assets/images/CCCH-Kanadai-M-Ker-Kamara-reggeli-featured-1920x1083-1.webp" alt="Séminaires Entreprises" class="tab-img">
+                            </div>
+                            <div class="tab-text-col">
+                                <h3>Séminaires & Formations Sur Mesure</h3>
+                                <p>ICA propose des programmes de formation continue et séminaires spécialisés pour entreprises et professionnels, avec des certifications reconnues.</p>
+                                <a href="services.html#acc-item-formation" class="btn btn-primary" style="margin-top: 10px; font-size: 0.82rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;">Voir les détails de la Formation <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial (Rachid El Ouali) -->
+    <section id="temoignages" class="testimonial-section section">
+        <div class="container">
+            <div class="testimonial-grid">
+                <div class="testimonial-text animate-on-scroll">
+                    <h3 class="testimonial-sub">Témoignage de Rachid El Ouali</h3>
+                    <h2 class="testimonial-quote">"Avec ICA, vos enfants atteindront leurs rêves !"</h2>
+                    <p class="testimonial-desc">
+                        Le célèbre acteur marocain Rachid El Ouali soutient notre mission d’accompagner les jeunes vers la réussite au Canada. Découvrez pourquoi il fait confiance à ICA pour guider la nouvelle génération vers un avenir prometteur.
+                    </p>
+                    <a href="https://www.youtube.com/watch?v=WVqLnlJ0acw" target="_blank" class="btn btn-primary">En savoir plus</a>
+                </div>
+                <div class="testimonial-img-col animate-on-scroll delay-1">
+                    <div class="video-thumbnail-container">
+                        <img src="assets/images/0cd820c4-819d-4e2e-956d-1a5d13c58f6c.png.jpg" alt="Rachid El Ouali" class="testimonial-img">
+                        <a href="https://www.youtube.com/watch?v=WVqLnlJ0acw" target="_blank" class="play-btn-overlay"><i class="fas fa-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Places Live Auto-Fetched Reviews Section (Native Custom Design) -->
+    <section class="google-reviews-section section" id="google-reviews-section">
+        <div class="container text-center">
+            <h2 class="section-title" style="color: var(--secondary-color); margin-bottom: 15px;">AVIS GOOGLE REVIEWS EN DIRECT</h2>
+            <div id="google-rating-badge" class="animate-on-scroll"></div>
+            
+            <!-- Native Custom Swiper Carousel Component (No 3rd-party widgets) -->
+            <div class="swiper google-reviews-swiper animate-on-scroll delay-1" style="margin-top: 25px;">
+                <div id="google-reviews-wrapper" class="swiper-wrapper">
+                    <!-- Dynamic Native Google Places Reviews loaded via api/google_reviews.php -->
+                </div>
+                <div class="swiper-pagination" style="position: relative; margin-top: 24px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Carousel Section -->
+    <section class="partners-section section bg-white">
+        <div class="container text-center">
+            <h2 class="partner-title">Accès aux grandes écoles et universités canadiennes</h2>
+            <div class="swiper partners-swiper animate-on-scroll">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/Artboard-12-3-300x241.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-14-3-300x159.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-15-3-300x216.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-17-2-300x246.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-19-2-300x246.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-20-2-300x203.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-21-3-300x198.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-22-3-300x186.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-23-3-300x201.png" alt="Partner"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            
+            <div class="divider-line center" style="margin: 40px auto 30px auto;"></div>
+            
+            <h2 class="partner-title">NOS AUTRES PARTENAIRES</h2>
+            <div class="swiper partners-swiper animate-on-scroll">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/Artboard-24-3-300x190.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-25-3-259x300.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-13-3-300x189.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-16-3-300x224.png" alt="Partner"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-18-2-300x300.png" alt="Partner"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section section">
+        <div class="container">
+            <div class="divider-line center"></div>
+            <h2 class="section-title text-center">CONTACTEZ-NOUS</h2>
+            <p class="text-center text-muted text-required">(*) Champs obligatoires</p>
+            
+            <div class="contact-grid">
+                <div class="contact-form-container animate-on-scroll">
+                    <form class="oscar-form">
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Adresse email pour vous joindre <sup style="color: #dc3545;">(*)</sup></label>
+                            <input type="email" id="email" required class="form-control">
+                        </div>
+
+                        <!-- Prénom -->
+                        <div class="form-group">
+                            <label for="prenom">Votre prénom officiel <sup style="color: #dc3545;">(*)</sup></label>
+                            <input type="text" id="prenom" required class="form-control">
+                        </div>
+
+                        <!-- Nom -->
+                        <div class="form-group">
+                            <label for="nom">Votre nom officiel <sup style="color: #dc3545;">(*)</sup></label>
+                            <input type="text" id="nom" required class="form-control">
+                            <small class="form-text text-muted">Nom de famille</small>
+                        </div>
+
+                        <!-- Pays -->
+                        <div class="form-group">
+                            <label for="pays">Votre pays de résidence actuel <sup style="color: #dc3545;">(*)</sup></label>
+                            <select id="pays" required class="form-control">
+                                <option value="">...</option>
+                                <option value="60257">MAROC</option>
+                                <option value="60167">ALGÉRIE</option>
+                                <option value="60312">TUNISIE</option>
+                                <option value="60216">FRANCE</option>
+                                <option value="60191">CANADA</option>
+                                <option value="60322">ETATS-UNIS</option>
+                                <option value="104696">AUTRE</option>
+                            </select>
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div class="form-group">
+                            <label for="telephone">Téléphone cellulaire <sup style="color: #dc3545;">(*)</sup></label>
+                            <input type="tel" id="telephone" required class="form-control">
+                        </div>
+
+                        <!-- Études -->
+                        <div class="form-group">
+                            <label for="etudes">Niveau d'études réussies le plus élevé <sup style="color: #dc3545;">(*)</sup></label>
+                            <select id="etudes" required class="form-control">
+                                <option value="">...</option>
+                                <option value="12">(Equivalent de la) Seconde</option>
+                                <option value="13">Première</option>
+                                <option value="14">(Equivalent de la) Terminale</option>
+                                <option value="47">Bachelier</option>
+                                <option value="20">Collège</option>
+                                <option value="21">AUTRES</option>
+                            </select>
+                        </div>
+
+                        <!-- Projet -->
+                        <div class="form-group">
+                            <label for="projet">Sur quoi porte votre projet ? <sup style="color: #dc3545;">(*)</sup></label>
+                            <select id="projet" required class="form-control">
+                                <option value="">...</option>
+                                <option value="98">Études</option>
+                                <option value="99">Immigration</option>
+                                <option value="100">Autre</option>
+                            </select>
+                            <small class="form-text text-muted">Champ ICA</small>
+                        </div>
+
+                        <!-- Champs obligatoires -->
+                        <div class="oscar_input_required" style="margin-top: 15px; margin-bottom: 20px;">
+                            <span style="color: #dc3545; font-weight: bold;">(*)</span> Champs obligatoires
+                        </div>
+
+                        <!-- Bouton -->
+                        <div class="form-btn">
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="map-container animate-on-scroll delay-1">
+                    <iframe loading="lazy"
+                            src="https://maps.google.com/maps?q=156%2C%20Bd%20Anfa%2C%20%C3%A9tage%203%2C%20Casablanca%2C%20Maroc&#038;t=m&#038;z=16&#038;output=embed&#038;iwloc=near"
+                            title="156, Bd Anfa, étage 3, Casablanca, Maroc"
+                            aria-label="156, Bd Anfa, étage 3, Casablanca, Maroc"
+                            class="google-map-iframe"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo-col">
+                    <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-contact-col">
+                    <h3>Nos coordonnées</h3>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone-alt"></i> +212 6 28 41 42 42</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 31 31</li>
+                        <li><i class="fas fa-phone-alt"></i> +212 522 36 40 40</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 (514) 619-7534</li>
+                        <li><i class="fas fa-envelope"></i> contact@intelliquestcanada.ca</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 156, Bd Anfa, etage 3, Casblanca, Maroc</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social-col">
+                    <h3>Restons connectés !</h3>
+                    <p>Connectez-vous avec des entrepreneurs,developpez votre reseau, faites de belles affaires.</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/intelliquestca/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@IntelliQuestCanadaAcadem-iw8tp/featured" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/intelliquest-canada-academy/" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/intelliquestca/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text-main">Copyright &copy; 2025 Intelliquest Canada Academy</p>
+                <p class="developed-text">Développé par Intelliquest Canada Academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212628414242?text=Bonjour%20IntelliQuest%20Canada%20Academy" target="_blank" class="whatsapp-float-btn" aria-label="WhatsApp us">
+        <svg viewBox="0 0 1219.547 1225.016" width="30" height="30">
+            <path fill="#FFFFFF" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"/>
+            <path fill="#25d366" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"/>
+            <path fill="#FFFFFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"/>
+        </svg>
+        <span>WhatsApp us</span>
+    </a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Start of ChatBot (www.chatbot.com) code -->
+    <script>
+        window.__ow = window.__ow || {};
+        window.__ow.organizationId = "21d68b87-72ee-4594-90a8-c40ace454e47";
+        window.__ow.template_id = "3a6afe19-f012-4133-a055-c18181d18c7b";
+        window.__ow.integration_name = "manual_settings";
+        window.__ow.product_name = "chatbot";
+        ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+    </script>
+    <noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
+    <!-- End of ChatBot code -->
+
+    <!-- Floating Admin Gear Button (For Website Administrator) -->
+    <button id="admin-trigger-btn" class="admin-trigger-btn" title="Modifier le Bandeau d'Annonce (Admin)">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Admin Modal Editor Window -->
+    <div id="admin-modal-overlay" class="admin-modal-overlay">
+        <div class="admin-modal-card">
+            <div class="admin-modal-header">
+                <h3><i class="fas fa-bullhorn" style="color: #E11D48;"></i> Gestion du Bandeau d'Annonce</h3>
+                <button id="admin-close-modal" class="announcement-close-btn" style="color: #64748B;">&times;</button>
+            </div>
+            <form id="admin-banner-form">
+                <div class="admin-form-group">
+                    <label class="admin-checkbox-label">
+                        <input type="checkbox" id="admin-banner-show" checked>
+                        Afficher le bandeau d'annonce en haut du site
+                    </label>
+                </div>
+                <div class="admin-form-group">
+                    <label for="admin-banner-tag">Badge / Label (ex: NOUVEAU, PROCHAINE SESSION)</label>
+                    <input type="text" id="admin-banner-tag" class="admin-input" value="NOUVEAU">
+                </div>
+                <div class="admin-form-group">
+                    <label for="admin-banner-text">Texte de l'Annonce</label>
+                    <textarea id="admin-banner-text" class="admin-textarea" rows="3">📜 Nouvelles Formations Certifiantes 100H (CEC & DSCG) — Inscriptions ouvertes pour les sessions d'Août & Septembre !</textarea>
+                </div>
+                <div class="admin-form-group">
+                    <label for="admin-banner-btn-text">Texte du Bouton d'Action</label>
+                    <input type="text" id="admin-banner-btn-text" class="admin-input" value="S'inscrire">
+                </div>
+                <div class="admin-form-group">
+                    <label for="admin-banner-btn-link">Lien du Bouton (Page / Section)</label>
+                    <input type="text" id="admin-banner-btn-link" class="admin-input" value="services.html#services-formations">
+                </div>
+                <div class="admin-modal-actions">
+                    <button type="submit" class="btn btn-primary" style="flex: 1; justify-content: center; padding: 12px;"><i class="fas fa-check-circle"></i> Publier l'Annonce</button>
+                    <button type="button" id="admin-reset-btn" class="btn btn-outline" style="padding: 12px;"><i class="fas fa-undo"></i> Défaut</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
