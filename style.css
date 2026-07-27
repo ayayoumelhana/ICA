@@ -2421,7 +2421,74 @@ label {
     margin-bottom: 12px;
 }
 
-/* Testimonial PDF */
+/* Testimonial PDF - Modern Card Container */
+.testimonial-modern-card {
+    background: linear-gradient(135deg, #072B49 0%, #164371 100%);
+    border-radius: 24px;
+    padding: 50px 45px;
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.testimonial-badge-pill {
+    display: inline-block;
+    background: rgba(0, 174, 239, 0.2);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.testimonial-card-title {
+    color: #FFFFFF !important;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.testimonial-modern-card .pdf-quote-bold {
+    color: #00AEEF;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-modern-card .pdf-testimonial-p {
+    color: #E2E8F0;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.testimonial-actions-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1.5px solid #FFFFFF;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+.btn-outline-white:hover {
+    background: #FFFFFF;
+    color: #072B49;
+}
+
 .testimonial-pdf-grid {
     display: grid;
     grid-template-columns: 1fr 450px;
@@ -2429,25 +2496,52 @@ label {
     align-items: center;
 }
 
-.pdf-quote-bold {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #1A202C;
-    margin-bottom: 15px;
-}
-
-.pdf-testimonial-p {
-    font-size: 0.95rem;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.pdf-video-card {
+/* Modern Video Card & Pulse Animation */
+.pdf-video-card-modern {
     position: relative;
-    border-radius: 12px;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.3);
+    cursor: pointer;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.pdf-video-card-modern:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 174, 239, 0.35);
+}
+
+.video-play-pulse {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: #F20D0D;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 0 0 0 rgba(242, 13, 13, 0.7);
+    animation: playPulse 2s infinite;
+    z-index: 5;
+    padding-left: 4px;
+}
+
+@keyframes playPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(242, 13, 13, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 22px rgba(242, 13, 13, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(242, 13, 13, 0);
+    }
 }
 
 .pdf-video-img {
@@ -2460,7 +2554,7 @@ label {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(7, 43, 73, 0.85);
+    background: rgba(7, 43, 73, 0.88);
     color: #FFFFFF;
     padding: 15px;
     text-align: center;
@@ -2470,6 +2564,83 @@ label {
     font-size: 0.9rem;
     direction: rtl;
     line-height: 1.4;
+}
+
+/* Video Modal In-Page Popup */
+.video-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.video-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.video-modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background: #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-modal-overlay.active .video-modal-card {
+    transform: scale(1);
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-modal-close:hover {
+    background: #F20D0D;
+}
+
+.video-modal-iframe-box {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-modal-iframe-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .partners-pdf-section {

@@ -523,13 +523,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Reset Config Handler
-    if (adminResetBtn) {
-        adminResetBtn.addEventListener('click', () => {
-            localStorage.setItem('ica_announcement_config', JSON.stringify(defaultBannerConfig));
-            applyBannerConfig(defaultBannerConfig);
-            if (adminModalOverlay) adminModalOverlay.classList.remove('active');
-            alert('🔄 Le bandeau d\'annonce a été réinitialisé avec le contenu par défaut !');
+    /* ==========================================================================
+       Rachid El Ouali Native In-Page Video Modal
+       ========================================================================== */
+    const openVideoBtns = document.querySelectorAll('.open-rachid-video-btn');
+    const videoModal = document.getElementById('rachid-video-modal');
+    const videoIframe = document.getElementById('rachid-iframe');
+    const videoCloseBtn = document.querySelector('.video-modal-close');
+    const youtubeVideoUrl = "https://www.youtube-nocookie.com/embed/WVqLnlJ0acw?autoplay=1&rel=0";
+
+    const openRachidVideo = () => {
+        if (videoModal && videoIframe) {
+            videoIframe.src = youtubeVideoUrl;
+            videoModal.classList.add('active');
+        }
+    };
+
+    const closeRachidVideo = () => {
+        if (videoModal && videoIframe) {
+            videoModal.classList.remove('active');
+            videoIframe.src = "";
+        }
+    };
+
+    openVideoBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openRachidVideo();
+        });
+    });
+
+    if (videoCloseBtn) {
+        videoCloseBtn.addEventListener('click', closeRachidVideo);
+    }
+
+    if (videoModal) {
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeRachidVideo();
+            }
         });
     }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal && videoModal.classList.contains('active')) {
+            closeRachidVideo();
+        }
+    });
 });
