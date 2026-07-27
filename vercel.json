@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/google_reviews(.php)?",
+      "dest": "/api/google_reviews.js"
+    }
+  ]
+}

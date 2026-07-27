@@ -311,9 +311,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Fetch from PHP API with fallback array if static html file protocol is used
+        // Fetch from Vercel / PHP API with fallback
         fetch('api/google_reviews.php')
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) return fetch('api/google_reviews').then(r => r.json());
+                return res.json();
+            })
             .then(data => renderReviews(data))
             .catch(err => {
                 renderReviews({
