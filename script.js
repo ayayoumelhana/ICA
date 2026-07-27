@@ -312,9 +312,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Fetch from Vercel / PHP API with fallback
-        fetch('api/google_reviews.php')
+        fetch('api/google_reviews')
             .then(res => {
-                if (!res.ok) return fetch('api/google_reviews').then(r => r.json());
+                if (!res.ok) return fetch('php_api/google_reviews.php').then(r => r.json());
                 return res.json();
             })
             .then(data => renderReviews(data))

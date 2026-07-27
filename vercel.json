@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/google_reviews.php",
-      "destination": "/api/google_reviews.js"
-    }
-  ]
-}
