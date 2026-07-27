@@ -2214,16 +2214,17 @@ label {
 
 /* PDF Banners */
 .pdf-banner {
-    border-radius: 0px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 35px 45px;
+    padding: 60px 60px;
     position: relative;
-    min-height: 220px;
+    min-height: 420px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .banner-blue-bg {
@@ -2239,24 +2240,26 @@ label {
 }
 
 .pdf-banner-content {
-    max-width: 55%;
+    max-width: 52%;
     z-index: 2;
 }
 
 .pdf-banner-main-title {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 10px;
+    line-height: 1.05;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .pdf-banner-sub-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 600;
     opacity: 0.95;
-    line-height: 1.3;
+    line-height: 1.35;
+    margin-top: 10px;
 }
 
 .pdf-banner-img-box {
@@ -2264,7 +2267,7 @@ label {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 45%;
+    width: 48%;
 }
 
 .pdf-banner-img {
