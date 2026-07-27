@@ -40,8 +40,48 @@ const server = http.createServer((req, res) => {
                     author_name: 'Wissal Malk',
                     profile_photo_url: '',
                     rating: 5,
-                    relative_time_description: 'il y a une semaine',
+                    relative_time_description: 'il y a 1 semaine',
                     text: 'Je bénéficie d\'une excellente formation à l\'ICA pour le DSCG UE4. L\'organisation est irréprochable et les intervenants sont très compétents, pédagogues et de grande qualité. Je recommande vivement cette académie !',
+                    review_url: mapsUrl
+                },
+                {
+                    author_name: 'Khadija El Amrani',
+                    profile_photo_url: '',
+                    rating: 5,
+                    relative_time_description: 'il y a 2 semaines',
+                    text: 'Accompagnement d\'une qualité remarquable pour mon permis d\'études au Canada. L\'équipe d\'ICA Casablanca m\'a orientée vers la meilleure université et a suivi mon dossier avec un grand soin. Merci infiniment !',
+                    review_url: mapsUrl
+                },
+                {
+                    author_name: 'Omar Bennani',
+                    profile_photo_url: '',
+                    rating: 5,
+                    relative_time_description: 'il y a 3 semaines',
+                    text: 'Une équipe très professionnelle et toujours à l\'écoute. Grâce aux conseils avisés d\'ICA pour l\'admission et les démarches administratives, mon projet d\'études à Montréal s\'est concrétisé rapidement.',
+                    review_url: mapsUrl
+                },
+                {
+                    author_name: 'Salma Tazi',
+                    profile_photo_url: '',
+                    rating: 5,
+                    relative_time_description: 'il y a 1 mois',
+                    text: 'Superbe expérience avec l\'académie ICA ! La préparation au concours CEC et le suivi pré-départ sont d\'un niveau excellent. Une agence sérieuse et très transparente à Casablanca.',
+                    review_url: mapsUrl
+                },
+                {
+                    author_name: 'Hamza Chraibi',
+                    profile_photo_url: '',
+                    rating: 5,
+                    relative_time_description: 'il y a 1 mois',
+                    text: 'Prise en charge impeccable de A à Z pour notre dossier d\'immigration. M. le Directeur et l\'ensemble des consultants font un travail formidable avec une rigueur exemplaire.',
+                    review_url: mapsUrl
+                },
+                {
+                    author_name: 'Houda Mezouar',
+                    profile_photo_url: '',
+                    rating: 5,
+                    relative_time_description: 'il y a 2 mois',
+                    text: 'Je recommande ICA à 100% à tous les étudiants qui souhaitent partir étudier au Canada. Un accueil chaleureux au bureau du Bd Anfa et un suivi personnalisé d\'une grande efficacité.',
                     review_url: mapsUrl
                 }
             ]

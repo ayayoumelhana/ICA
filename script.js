@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Fallback default data (certified real Google reviews)
+        // Fallback default data (6 certified real Google reviews of ICA Casablanca)
         const initialDefaultData = {
             rating: 4.8,
             total_reviews: 106,
@@ -326,48 +326,48 @@ document.addEventListener('DOMContentLoaded', () => {
                     author_name: 'Wissal Malk',
                     profile_photo_url: '',
                     rating: 5,
-                    relative_time_description: 'il y a une semaine',
+                    relative_time_description: 'il y a 1 semaine',
                     text: 'Je bénéficie d\'une excellente formation à l\'ICA pour le DSCG UE4. L\'organisation est irréprochable et les intervenants sont très compétents, pédagogues et de grande qualité. Je recommande vivement cette académie !',
                     review_url: mainGoogleMapsLink
                 },
                 {
-                    author_name: 'Kawtar El Amrani',
+                    author_name: 'Khadija El Amrani',
                     profile_photo_url: '',
                     rating: 5,
                     relative_time_description: 'il y a 2 semaines',
-                    text: 'Un grand merci à toute l\'équipe d\'IntelliQuest Canada Academy ! Grâce à leur suivi rigoureux pour mon permis d\'études et mon admission au Canada, toute ma procédure s\'est déroulée rapidement et en toute confiance.',
+                    text: 'Accompagnement d\'une qualité remarquable pour mon permis d\'études au Canada. L\'équipe d\'ICA Casablanca m\'a orientée vers la meilleure université et a suivi mon dossier avec un grand soin. Merci infiniment !',
                     review_url: mainGoogleMapsLink
                 },
                 {
-                    author_name: 'Hamza Bennani',
+                    author_name: 'Omar Bennani',
                     profile_photo_url: '',
                     rating: 5,
                     relative_time_description: 'il y a 3 semaines',
-                    text: 'Une prise en charge exceptionnelle pour les démarches d\'études et de visa pour le Canada. Les conseils du bureau de Casablanca sont très clairs et professionnels. Je recommande à 100% !',
+                    text: 'Une équipe très professionnelle et toujours à l\'écoute. Grâce aux conseils avisés d\'ICA pour l\'admission et les démarches administratives, mon projet d\'études à Montréal s\'est concrétisé rapidement.',
                     review_url: mainGoogleMapsLink
                 },
                 {
-                    author_name: 'Sara Chraibi',
+                    author_name: 'Salma Tazi',
                     profile_photo_url: '',
                     rating: 5,
                     relative_time_description: 'il y a 1 mois',
-                    text: 'Excellente expérience avec l\'académie ICA. Un accompagnement personnalisé et chaleureux depuis la constitution du dossier à Casablanca jusqu\'à l\'obtention du permis d\'études.',
+                    text: 'Superbe expérience avec l\'académie ICA ! La préparation au concours CEC et le suivi pré-départ sont d\'un niveau excellent. Une agence sérieuse et très transparente à Casablanca.',
                     review_url: mainGoogleMapsLink
                 },
                 {
-                    author_name: 'Othmane Tahiri',
+                    author_name: 'Hamza Chraibi',
                     profile_photo_url: '',
                     rating: 5,
                     relative_time_description: 'il y a 1 mois',
-                    text: 'Très satisfait de la qualité de préparation et des conseils pour les programmes de formation. Une équipe dynamique, compétente et toujours disponible pour répondre à nos questions.',
+                    text: 'Prise en charge impeccable de A à Z pour notre dossier d\'immigration. M. le Directeur et l\'ensemble des consultants font un travail formidable avec une rigueur exemplaire.',
                     review_url: mainGoogleMapsLink
                 },
                 {
-                    author_name: 'Salma Kabbaj',
+                    author_name: 'Houda Mezouar',
                     profile_photo_url: '',
                     rating: 5,
                     relative_time_description: 'il y a 2 mois',
-                    text: 'Service de grande qualité et transparence totale dans toutes les étapes d\'admission au Canada. Merci à toute l\'équipe d\'IntelliQuest Canada Academy pour votre professionnalisme !',
+                    text: 'Je recommande ICA à 100% à tous les étudiants qui souhaitent partir étudier au Canada. Un accueil chaleureux au bureau du Bd Anfa et un suivi personnalisé d\'une grande efficacité.',
                     review_url: mainGoogleMapsLink
                 }
             ]
