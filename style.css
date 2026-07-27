@@ -2413,10 +2413,37 @@ label {
     line-height: 1.4;
 }
 
-.partner-pdf-img {
-    max-height: 65px;
+.partners-pdf-section {
+    padding: 40px 0 60px 0;
+    background: #FFFFFF;
+}
+
+.partners-swiper {
+    padding: 20px 0 45px 0;
+}
+
+.partners-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    padding: 10px;
+}
+
+.partner-pdf-img,
+.partners-swiper .swiper-slide img {
+    max-height: 115px;
+    max-width: 250px;
     width: auto;
+    height: auto;
     object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.partners-swiper .swiper-slide img:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.12));
 }
 
 .admin-checkbox-label input {
