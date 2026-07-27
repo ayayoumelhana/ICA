@@ -290,50 +290,65 @@ document.addEventListener('DOMContentLoaded', () => {
                 swiperInstance.destroy(true, true);
             }
 
+            // Dynamic SlidesPerView based on review count
+            const slideCount = data.reviews.length;
+            const targetPerView = Math.min(3, Math.max(1, slideCount));
+
             // Initialize Swiper for Google Reviews
             swiperInstance = new Swiper('.google-reviews-swiper', {
-                slidesPerView: 3,
+                slidesPerView: targetPerView,
                 spaceBetween: 24,
-                loop: data.reviews.length > 2,
-                autoplay: {
+                centeredSlides: slideCount < 3,
+                loop: slideCount > 2,
+                autoplay: slideCount > 1 ? {
                     delay: 4500,
                     disableOnInteraction: false,
-                },
+                } : false,
                 pagination: {
                     el: '.google-reviews-swiper .swiper-pagination',
                     clickable: true,
                 },
                 breakpoints: {
                     320: { slidesPerView: 1, spaceBetween: 15 },
-                    768: { slidesPerView: 2, spaceBetween: 20 },
-                    1024: { slidesPerView: 3, spaceBetween: 24 }
+                    768: { slidesPerView: Math.min(2, slideCount), spaceBetween: 20 },
+                    1024: { slidesPerView: targetPerView, spaceBetween: 24 }
                 }
             });
         };
 
-        // Fetch from Vercel / PHP API with fallback
+        // Fallback default data (certified real Google review)
+        const initialDefaultData = {
+            rating: 4.8,
+            total_reviews: 106,
+            google_maps_link: mainGoogleMapsLink,
+            reviews: [
+                {
+                    author_name: 'Wissal Malk',
+                    profile_photo_url: '',
+                    rating: 5,
+                    relative_time_description: 'il y a une semaine',
+                    text: 'Je bénéficie d\'une excellente formation à l\'ICA pour le DSCG UE4. L\'organisation est irréprochable et les intervenants sont très compétents, pédagogues et de grande qualité. Je recommande vivement cette académie !',
+                    review_url: mainGoogleMapsLink
+                }
+            ]
+        };
+
+        // Render immediately to ensure reviews are ALWAYS visible 100% of the time
+        renderReviews(initialDefaultData);
+
+        // Asynchronously fetch live API updates from Vercel / PHP
         fetch('api/google_reviews')
             .then(res => {
                 if (!res.ok) return fetch('php_api/google_reviews.php').then(r => r.json());
                 return res.json();
             })
-            .then(data => renderReviews(data))
+            .then(data => {
+                if (data && data.reviews && data.reviews.length > 0) {
+                    renderReviews(data);
+                }
+            })
             .catch(err => {
-                renderReviews({
-                    rating: 4.8,
-                    total_reviews: 106,
-                    google_maps_link: mainGoogleMapsLink,
-                    reviews: [
-                        {
-                            author_name: 'Wissal Malk',
-                            profile_photo_url: '',
-                            rating: 5,
-                            relative_time_description: 'il y a une semaine',
-                            text: 'Je bénéficie d\'une excellente formation à l\'ICA pour le DSCG UE4. L\'organisation est irréprochable et les intervenants sont très compétents, pédagogues et de grande qualité. Je recommande vivement cette académie !',
-                            review_url: mainGoogleMapsLink
-                        }
-                    ]
-                });
+                // Keep initialDefaultData rendered cleanly
             });
     }
 
