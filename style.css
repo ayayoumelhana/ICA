@@ -2214,21 +2214,30 @@ label {
     font-family: var(--font-minion);
 }
 
-/* PDF Banners Full Width Image */
+/* Service Block Sections - Framed Container */
+.service-block-section .container {
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* PDF Banners Full Width Image - Elegant Frame */
 .pdf-banner {
-    border-radius: 12px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 60px 60px;
+    padding: 45px 50px;
     position: relative;
-    min-height: 420px;
+    min-height: 310px;
     overflow: hidden;
     margin-bottom: 30px;
     color: #FFFFFF;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
     background-size: cover !important;
-    background-position: center center !important;
+    background-position: center right !important;
     background-repeat: no-repeat !important;
 }
 
@@ -2244,7 +2253,7 @@ label {
 }
 
 .banner-blue-bg::before {
-    background: linear-gradient(90deg, rgba(26, 86, 176, 0.9) 0%, rgba(0, 174, 239, 0.65) 55%, rgba(0, 0, 0, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(26, 86, 176, 0.92) 0%, rgba(0, 174, 239, 0.7) 50%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .banner-red-bg {
@@ -2252,7 +2261,7 @@ label {
 }
 
 .banner-red-bg::before {
-    background: linear-gradient(90deg, rgba(200, 16, 46, 0.9) 0%, rgba(244, 67, 54, 0.65) 55%, rgba(0, 0, 0, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(200, 16, 46, 0.92) 0%, rgba(244, 67, 54, 0.7) 50%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .banner-purple-bg {
@@ -2260,31 +2269,31 @@ label {
 }
 
 .banner-purple-bg::before {
-    background: linear-gradient(90deg, rgba(74, 20, 140, 0.9) 0%, rgba(123, 31, 162, 0.65) 55%, rgba(0, 0, 0, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(74, 20, 140, 0.92) 0%, rgba(123, 31, 162, 0.7) 50%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .pdf-banner-content {
-    max-width: 650px;
+    max-width: 580px;
     position: relative;
     z-index: 2;
 }
 
 .pdf-banner-main-title {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 900;
-    line-height: 1.05;
-    margin-bottom: 15px;
+    line-height: 1.08;
+    margin-bottom: 12px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     font-family: var(--font-minion);
 }
 
 .pdf-banner-sub-title {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: 600;
     opacity: 0.95;
     line-height: 1.35;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .pdf-banner-img-box {
