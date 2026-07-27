@@ -2214,35 +2214,58 @@ label {
     font-family: var(--font-minion);
 }
 
-/* PDF Banners */
+/* PDF Banners Full Width Image */
 .pdf-banner {
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 60px 60px;
     position: relative;
     min-height: 420px;
     overflow: hidden;
     margin-bottom: 30px;
     color: #FFFFFF;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+.pdf-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
 
 .banner-blue-bg {
-    background: linear-gradient(135deg, #1A56B0 0%, #00AEEF 100%);
+    background-image: url('assets/images/pdf-student-banner.png');
+}
+
+.banner-blue-bg::before {
+    background: linear-gradient(90deg, rgba(26, 86, 176, 0.9) 0%, rgba(0, 174, 239, 0.65) 55%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .banner-red-bg {
-    background: linear-gradient(135deg, #C8102E 0%, #F44336 100%);
+    background-image: url('assets/images/pdf-express-banner.png');
+}
+
+.banner-red-bg::before {
+    background: linear-gradient(90deg, rgba(200, 16, 46, 0.9) 0%, rgba(244, 67, 54, 0.65) 55%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .banner-purple-bg {
-    background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 100%);
+    background-image: url('assets/images/pdf-rocket-banner.png');
+}
+
+.banner-purple-bg::before {
+    background: linear-gradient(90deg, rgba(74, 20, 140, 0.9) 0%, rgba(123, 31, 162, 0.65) 55%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .pdf-banner-content {
-    max-width: 52%;
+    max-width: 650px;
+    position: relative;
     z-index: 2;
 }
 
@@ -2265,18 +2288,7 @@ label {
 }
 
 .pdf-banner-img-box {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 48%;
-}
-
-.pdf-banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    display: none;
 }
 
 /* PDF Step Badges Row */
