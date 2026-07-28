@@ -44,32 +44,54 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll(); // Initial check on load
 
     /* ==========================================================================
-       Hero Slider PDF (.hero-pdf-slide & .hero-dot)
+       Awwwards Interactive Hero Background Crossfader & Service Cards
        ========================================================================== */
-    const pdfSlides = document.querySelectorAll('.hero-pdf-slide');
-    const pdfDots = document.querySelectorAll('.hero-dot');
-    let currentPdfSlide = 0;
+    const heroCards = document.querySelectorAll('.interactive-service-card');
+    const heroCardsGrid = document.querySelector('.hero-services-cards-grid');
+    const backdropLayers = document.querySelectorAll('.hero-backdrop-layer');
+    const defaultLayer = document.querySelector('.hero-backdrop-layer.bg-default');
 
-    const showPdfSlide = (index) => {
-        pdfSlides.forEach(slide => slide.classList.remove('active'));
-        pdfDots.forEach(dot => dot.classList.remove('active'));
+    const switchHeroBackdrop = (bgType) => {
+        backdropLayers.forEach(layer => layer.classList.remove('active'));
 
-        if (pdfSlides[index]) pdfSlides[index].classList.add('active');
-        if (pdfDots[index]) pdfDots[index].classList.add('active');
-        currentPdfSlide = index;
+        if (!bgType) {
+            if (defaultLayer) defaultLayer.classList.add('active');
+            return;
+        }
+
+        const targetLayer = document.querySelector(`.hero-backdrop-layer.bg-${bgType}`);
+        if (targetLayer) {
+            targetLayer.classList.add('active');
+        } else if (defaultLayer) {
+            defaultLayer.classList.add('active');
+        }
     };
 
-    if (pdfSlides.length > 0) {
-        setInterval(() => {
-            let next = currentPdfSlide + 1;
-            if (next >= pdfSlides.length) next = 0;
-            showPdfSlide(next);
-        }, 5000);
+    heroCards.forEach(card => {
+        const bgType = card.getAttribute('data-service-bg');
+        const linkUrl = card.getAttribute('data-link');
 
-        pdfDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => showPdfSlide(index));
+        // Mouse Enter -> Crossfade Background & Dim Siblings
+        card.addEventListener('mouseenter', () => {
+            switchHeroBackdrop(bgType);
+            if (heroCardsGrid) heroCardsGrid.classList.add('has-active-hover');
         });
-    }
+
+        // Mouse Leave -> Restore Default Background & Reset Cards
+        card.addEventListener('mouseleave', () => {
+            switchHeroBackdrop(null);
+            if (heroCardsGrid) heroCardsGrid.classList.remove('has-active-hover');
+        });
+
+        // Click Handler -> Smooth Scroll Navigation to Service Section
+        card.addEventListener('click', (e) => {
+            if (!e.target.closest('.hero-service-btn')) {
+                if (linkUrl) {
+                    window.location.href = linkUrl;
+                }
+            }
+        });
+    });
 
     /* ==========================================================================
        Interactive Step Pills Switcher (.pdf-step-pill)
