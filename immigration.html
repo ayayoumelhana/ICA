@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigration au Canada & Entrée Express - IntelliQuest Canada Academy</title>
+    <meta name="description" content="Accompagnement expert pour votre immigration au Canada : Entrée Express, résidence permanente, parrainage familial et permis de travail.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-landing-hero {
+            position: relative;
+            min-height: 480px;
+            background: linear-gradient(135deg, rgba(7, 43, 73, 0.88) 0%, rgba(242, 13, 13, 0.7) 100%), url('assets/images/pdf-express-banner.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            padding: 120px 0 60px;
+        }
+        .hero-title-serif {
+            font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+        .section-badge-pill {
+            display: inline-block;
+            background: rgba(242, 13, 13, 0.2);
+            color: #FF4D4D;
+            border: 1px solid rgba(242, 13, 13, 0.4);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .feature-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+        .feature-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            padding: 30px 25px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #F20D0D;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(242, 13, 13, 0.15);
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: rgba(242, 13, 13, 0.12);
+            color: #F20D0D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+        .faq-accordion-item {
+            background: #F8FAFC;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 700;
+            color: #072B49;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 24px 18px 24px;
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 992px) {
+            .feature-card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Dynamic Top Announcement Banner -->
+    <div id="announcement-banner" class="announcement-banner">
+        <div class="container announcement-container">
+            <div class="announcement-content">
+                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
+                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes !</span>
+                <a id="banner-btn-display" href="formations.html" class="announcement-btn">S'inscrire <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="active">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="etudes.html"><i class="fas fa-graduation-cap" style="color: #00AEEF; margin-right: 8px;"></i> Études au Canada</a></li>
+                            <li><a href="immigration.html" class="active"><i class="fas fa-passport" style="color: #F20D0D; margin-right: 8px;"></i> Immigration & Entrée Express</a></li>
+                            <li><a href="formations.html"><i class="fas fa-rocket" style="color: #7B1FA2; margin-right: 8px;"></i> Formations Certifiantes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="service-landing-hero">
+        <div class="container">
+            <span class="section-badge-pill">🇨🇦 PÔLE IMMIGRATION CANADIENNE</span>
+            <h1 class="hero-title-serif">Immigration & Entrée Express</h1>
+            <p style="font-size: 1.2rem; max-width: 650px; line-height: 1.6; opacity: 0.95; margin-bottom: 25px;">
+                Concrétisez votre projet de résidence permanente au Canada avec l'accompagnement personnalisé de nos conseillers experts.
+            </p>
+            <a href="contact.html" class="btn btn-cyan" style="background-color: #F20D0D; border-color: #F20D0D;">Évaluer Mon Admissibilité à l'Immigration</a>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div>
+                    <span class="section-badge-pill">VOTRE RÉSIDENCE PERMANENTE</span>
+                    <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.3rem; color: #072B49; margin-bottom: 18px;">Stratégie d'Immigration Optimisée</h2>
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 15px;">
+                        L'immigration au Canada repose sur des critères précis d'âge, de diplômes, d'expérience professionnelle et de maîtrise linguistique (TCF / TEF Canada).
+                    </p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        IntelliQuest Canada Academy vous aide à maximiser votre score CRS dans le bassin d'Entrée Express ou Arrima pour maximiser vos chances d'obtenir une Invitation à Présenter une Demande (IPD).
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/images/vlcsnap-2025-04-30-15h52m06s3444-268x300.png" alt="Consultation d'immigration" style="width: 100%; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 1px solid #E2E8F0;">
+                </div>
+            </div>
+
+            <!-- Programs Grid -->
+            <div class="feature-card-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-passport"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Entrée Express</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Système de gestion rapide des candidatures pour les travailleurs qualifiés au niveau fédéral.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Programme Québec (Arrima)</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Accompagnement rigoureux pour le Certificat de Sélection du Québec (CSQ) via la plateforme Arrima.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Parrainage Familial</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Regroupement familial pour parrainer votre conjoint(e), vos enfants ou vos parents en toute légalité.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-white">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center" style="margin-bottom: 35px;">
+                <span class="section-badge-pill">QUESTIONS FRÉQUENTES</span>
+                <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.2rem; color: #072B49;">Tout Savoir sur l'Immigration au Canada</h2>
+            </div>
+
+            <div class="faq-accordion-item">
+                <div class="faq-question">Quels sont les tests linguistiques acceptés pour Entrée Express ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Pour le français, le TCF Canada et le TEF Canada sont acceptés. Pour l'anglais, le IELTS General Training ou le CELPIP-General sont reconnus.
+                </div>
+            </div>
+            <div class="faq-accordion-item">
+                <div class="faq-question">Qu'est-ce que l'Évaluation des Diplômes Étrangers (EDE) ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    L'EDE (par exemple via WES ou ICAS) permet d'attester l'équivalence canadienne de vos diplômes obtenus au Maroc ou à l'étranger.
+                </div>
+            </div>
+            <div class="faq-accordion-item">
+                <div class="faq-question">Combien de temps prend une procédure d'Entrée Express ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Le traitement d'un dossier Entrée Express prend en moyenne 6 mois après la soumission complète du dossier suite à la réception de votre invitation.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section text-center" style="background: linear-gradient(135deg, #072B49 0%, #164371 100%); color: #FFFFFF; padding: 60px 0;">
+        <div class="container">
+            <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.4rem; margin-bottom: 15px;">Prêt à Lancer Votre Projet d'Immigration ?</h2>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 25px; opacity: 0.9;">
+                Contactez-nous pour réaliser un bilan d'admissibilité complet et optimiser votre score.
+            </p>
+            <a href="contact.html" class="btn btn-cyan" style="background-color: #F20D0D; border-color: #F20D0D; padding: 14px 32px; font-size: 1rem;">Évaluer Mon Dossier <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 IntelliQuest Canada Academy (ICA). Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

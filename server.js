@@ -91,6 +91,11 @@ const server = http.createServer((req, res) => {
         return;
     }
 
+    // Clean Route Aliases for Service Landing Pages
+    if (reqUrl === '/study' || reqUrl === '/etudes') reqUrl = '/etudes.html';
+    if (reqUrl === '/immigration') reqUrl = '/immigration.html';
+    if (reqUrl === '/training' || reqUrl === '/formations') reqUrl = '/formations.html';
+
     // Serve Static Files
     let filePath = path.join(PUBLIC_DIR, reqUrl === '/' ? 'index.html' : reqUrl);
     let extname = path.extname(filePath).toLowerCase();

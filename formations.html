@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations Certifiantes & Concours DU - IntelliQuest Canada Academy</title>
+    <meta name="description" content="Formations préparatoires d'excellence aux concours d'expertise comptable CEC (100h), diplômes DSCG et séminaires professionnels certifiants.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-landing-hero {
+            position: relative;
+            min-height: 480px;
+            background: linear-gradient(135deg, rgba(7, 43, 73, 0.88) 0%, rgba(123, 31, 162, 0.7) 100%), url('assets/images/pdf-rocket-banner.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            padding: 120px 0 60px;
+        }
+        .hero-title-serif {
+            font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+        .section-badge-pill {
+            display: inline-block;
+            background: rgba(171, 71, 188, 0.2);
+            color: #E1BEE7;
+            border: 1px solid rgba(171, 71, 188, 0.4);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .feature-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+        .feature-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            padding: 30px 25px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #7B1FA2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(123, 31, 162, 0.15);
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: rgba(123, 31, 162, 0.12);
+            color: #7B1FA2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+        .faq-accordion-item {
+            background: #F8FAFC;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 700;
+            color: #072B49;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 24px 18px 24px;
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 992px) {
+            .feature-card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Dynamic Top Announcement Banner -->
+    <div id="announcement-banner" class="announcement-banner">
+        <div class="container announcement-container">
+            <div class="announcement-content">
+                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
+                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes !</span>
+                <a id="banner-btn-display" href="formations.html" class="announcement-btn">S'inscrire <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="active">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="etudes.html"><i class="fas fa-graduation-cap" style="color: #00AEEF; margin-right: 8px;"></i> Études au Canada</a></li>
+                            <li><a href="immigration.html"><i class="fas fa-passport" style="color: #F20D0D; margin-right: 8px;"></i> Immigration & Entrée Express</a></li>
+                            <li><a href="formations.html" class="active"><i class="fas fa-rocket" style="color: #7B1FA2; margin-right: 8px;"></i> Formations Certifiantes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="service-landing-hero">
+        <div class="container">
+            <span class="section-badge-pill">🚀 PÔLE FORMATION PROFESSIONNELLE</span>
+            <h1 class="hero-title-serif">Formations Certifiantes & Concours DU</h1>
+            <p style="font-size: 1.2rem; max-width: 650px; line-height: 1.6; opacity: 0.95; margin-bottom: 25px;">
+                Boostez vos compétences comptables, juridiques et de gestion avec nos cycles intensifs de 100 Heures encadrés par des experts.
+            </p>
+            <a href="contact.html" class="btn btn-cyan" style="background-color: #7B1FA2; border-color: #7B1FA2;">S'inscrire à une Session de Formation</a>
+        </div>
+    </section>
+
+    <!-- Programs Grid Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 35px;">
+                <span class="section-badge-pill">PROGRAMMES INTENSIFS</span>
+                <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.3rem; color: #072B49;">Nos Formations Spécialisées</h2>
+            </div>
+
+            <div class="feature-card-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Concours CEC (100 Heures)</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Cycle préparatoire intensif couvrant la Comptabilité, le Droit, la Gestion et la TEC. Horaires aménagés les soirs et week-ends.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Formation DSCG (UE1 & UE4)</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Diplôme Supérieur de Comptabilité et de Gestion : préparation méthodique sur les unités d'enseignement UE1 et UE4.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Séminaires Entreprises</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Programmes sur-mesure de formation continue pour professionnels, directeurs financiers et cadres d'entreprise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-white" style="border-top: 1px solid #E2E8F0;">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center" style="margin-bottom: 35px;">
+                <span class="section-badge-pill">QUESTIONS FRÉQUENTES</span>
+                <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.2rem; color: #072B49;">Informations Pratiques sur nos Formations</h2>
+            </div>
+
+            <div class="faq-accordion-item">
+                <div class="faq-question">Quels sont les horaires des cours préparatoires ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Les cours ont lieu en présentiel et en distanciel les soirs de semaine à partir de 18h30 et le week-end (samedi/dimanche) pour être compatibles avec une activité professionnelle.
+                </div>
+            </div>
+            <div class="faq-accordion-item">
+                <div class="faq-question">Délivrez-vous une attestation de suivi de formation ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Oui, chaque participant reçoit un certificat de réussite ou une attestation officielle de formation continue délivrée par IntelliQuest Canada Academy.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section text-center" style="background: linear-gradient(135deg, #072B49 0%, #164371 100%); color: #FFFFFF; padding: 60px 0;">
+        <div class="container">
+            <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.4rem; margin-bottom: 15px;">Prêt à Développer vos Compétences ?</h2>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 25px; opacity: 0.9;">
+                Réservez votre place pour la prochaine session de formation 100H CEC & DSCG.
+            </p>
+            <a href="contact.html" class="btn btn-cyan" style="background-color: #7B1FA2; border-color: #7B1FA2; padding: 14px 32px; font-size: 1rem;">S'inscrire Maintenant <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 IntelliQuest Canada Academy (ICA). Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

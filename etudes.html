@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étudier au Canada - IntelliQuest Canada Academy</title>
+    <meta name="description" content="Accompagnement d'excellence pour vos études au Canada : orientation, admissions universitaires, CAQ, permis d'études et installation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-landing-hero {
+            position: relative;
+            min-height: 480px;
+            background: linear-gradient(135deg, rgba(7, 43, 73, 0.88) 0%, rgba(0, 174, 239, 0.7) 100%), url('assets/images/pdf-student-banner.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            padding: 120px 0 60px;
+        }
+        .hero-title-serif {
+            font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+        .section-badge-pill {
+            display: inline-block;
+            background: rgba(0, 174, 239, 0.2);
+            color: #00AEEF;
+            border: 1px solid rgba(0, 174, 239, 0.4);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .feature-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+        .feature-card {
+            background: #FFFFFF;
+            border-radius: 18px;
+            padding: 30px 25px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #00AEEF;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 174, 239, 0.15);
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: rgba(0, 174, 239, 0.12);
+            color: #00AEEF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+        .faq-accordion-item {
+            background: #F8FAFC;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 700;
+            color: #072B49;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 24px 18px 24px;
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 992px) {
+            .feature-card-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Dynamic Top Announcement Banner -->
+    <div id="announcement-banner" class="announcement-banner">
+        <div class="container announcement-container">
+            <div class="announcement-content">
+                <span id="banner-tag-display" class="announcement-tag">NOUVEAU</span>
+                <span id="banner-text-display" class="announcement-text">📜 <strong>Nouvelles Formations Certifiantes 100H (CEC & DSCG)</strong> — Inscriptions ouvertes !</span>
+                <a id="banner-btn-display" href="formations.html" class="announcement-btn">S'inscrire <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <button id="close-banner-btn" class="announcement-close-btn" aria-label="Fermer le bandeau">&times;</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+                <span class="btn-line"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="active">Services <i class="fas fa-chevron-down nav-chevron"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="etudes.html" class="active"><i class="fas fa-graduation-cap" style="color: #00AEEF; margin-right: 8px;"></i> Études au Canada</a></li>
+                            <li><a href="immigration.html"><i class="fas fa-passport" style="color: #F20D0D; margin-right: 8px;"></i> Immigration & Entrée Express</a></li>
+                            <li><a href="formations.html"><i class="fas fa-rocket" style="color: #7B1FA2; margin-right: 8px;"></i> Formations Certifiantes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="temoignages.html">Témoignages</a></li>
+                    <li><a href="contact.html">Contactez-Nous</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="service-landing-hero">
+        <div class="container">
+            <span class="section-badge-pill">🇨🇦 PÔLE ÉTUDES INTERNATIONALES</span>
+            <h1 class="hero-title-serif">Étudier au Canada</h1>
+            <p style="font-size: 1.2rem; max-width: 650px; line-height: 1.6; opacity: 0.95; margin-bottom: 25px;">
+                Votre projet d'études universitaires ou collégiales au Canada encadré de A à Z par nos conseillers d'élite à Casablanca.
+            </p>
+            <a href="contact.html" class="btn btn-cyan">Demander une Consultation d'Admission</a>
+        </div>
+    </section>
+
+    <!-- Introduction & Pourquoi Étudier au Canada -->
+    <section class="section bg-white">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div>
+                    <span class="section-badge-pill">EXCELLENCE ACADÉMIQUE</span>
+                    <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.3rem; color: #072B49; margin-bottom: 18px;">Pourquoi Choisir le Canada pour vos Études ?</h2>
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 15px;">
+                        Le système éducatif canadien figure parmi les plus performants au monde. Obtenir un diplôme reconnu à l'international vous ouvre les portes d'une carrière florissante et vous permet de bénéficier du permis de travail post-diplôme (PTPD).
+                    </p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        IntelliQuest Canada Academy vous accompagne à chaque étape : bilan d'orientation, choix de l'université, dossier d'admission, obtention du CAQ, permis d'études et accueil chaleureux dès votre arrivée.
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/images/vlcsnap-2025-05-03-16h15m58s867-scaled-r5d6gshn615mbv1xu5wc4tj19huxks6lkuvss7yen4.png" alt="Étudiants au Canada" style="width: 100%; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 1px solid #E2E8F0;">
+                </div>
+            </div>
+
+            <!-- Avantages / Benefits Cards Grid -->
+            <div class="feature-card-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-university"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Diplômes Reconnus</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Accès aux meilleures universités canadiennes partenaires offrant des programmes accrédités mondialement.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Permis de Travail Post-Diplôme</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Possibilité de travailler légalement au Canada après l'obtention de votre diplôme universitaire ou collégial.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-plane-arrival"></i></div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #072B49; margin-bottom: 10px;">Accueil Post-Arrivée</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; line-height: 1.6;">
+                        Prise en charge à l'aéroport, aide au logement, ouverture de compte bancaire et obtention du NAS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Établissements Partenaires -->
+    <section class="section bg-light" style="border-top: 1px solid #E2E8F0;">
+        <div class="container text-center">
+            <span class="section-badge-pill">RÉSEAU UNIVERSITAIRE</span>
+            <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.2rem; color: #072B49; margin-bottom: 25px;">Accès aux Grandes Écoles et Universités Canadiennes</h2>
+            
+            <div class="swiper partners-swiper" style="margin-top: 30px;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/images/Artboard-12-3-300x241.png" alt="Concordia University" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-14-3-300x159.png" alt="uOttawa" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-15-3-300x216.png" alt="LCI Education" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-17-2-300x246.png" alt="Université Partenaire 4" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-19-2-300x246.png" alt="Université Partenaire 5" class="partner-pdf-img"></div>
+                    <div class="swiper-slide"><img src="assets/images/Artboard-20-2-300x203.png" alt="Université Partenaire 6" class="partner-pdf-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-white">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center" style="margin-bottom: 35px;">
+                <span class="section-badge-pill">QUESTIONS FRÉQUENTES</span>
+                <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.2rem; color: #072B49;">Tout Savoir sur les Études au Canada</h2>
+            </div>
+
+            <div class="faq-accordion-item">
+                <div class="faq-question">Quelles sont les conditions pour obtenir une admission universitaire au Canada ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Les conditions varient selon le niveau (Bac, Licence, Master). En général, vous devez présenter un bon relevé de notes, un passeport valide et faire preuve d'un niveau linguistique adapté. Nos conseillers évaluent gratuitement votre profil.
+                </div>
+            </div>
+            <div class="faq-accordion-item">
+                <div class="faq-question">Qu'est-ce que le CAQ et le Permis d'études ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Le CAQ (Certificat d'Acceptation du Québec) est requis pour étudier au Québec. Le permis d'études est délivré par le gouvernement fédéral canadien pour vous autoriser à résider et étudier au Canada.
+                </div>
+            </div>
+            <div class="faq-accordion-item">
+                <div class="faq-question">Combien coûtent les frais de scolarité au Canada ? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">
+                    Les frais de scolarité varient entre 15 000 CAD et 30 000 CAD par an selon l'établissement et le programme choisi. Des bourses d'exemption peuvent également être sollicitées.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section text-center" style="background: linear-gradient(135deg, #072B49 0%, #164371 100%); color: #FFFFFF; padding: 60px 0;">
+        <div class="container">
+            <h2 style="font-family: 'Minion Pro', Georgia, serif; font-size: 2.4rem; margin-bottom: 15px;">Prêt à Réaliser vos Études au Canada ?</h2>
+            <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 25px; opacity: 0.9;">
+                Prenez rendez-vous dès aujourd'hui avec nos experts à Casablanca pour évaluer votre dossier d'admission.
+            </p>
+            <a href="contact.html" class="btn btn-cyan" style="padding: 14px 32px; font-size: 1rem;">Commencer mes démarches <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 IntelliQuest Canada Academy (ICA). Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
