@@ -2100,18 +2100,12 @@ label {
     background-size: cover;
     background-position: center center;
     opacity: 0;
-    filter: blur(12px) scale(1.06);
-    transform: scale(1.06);
-    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
-                filter 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1;
 }
 
 .hero-backdrop-layer.active {
     opacity: 1;
-    filter: blur(0px) scale(1);
-    transform: scale(1);
     z-index: 2;
 }
 
