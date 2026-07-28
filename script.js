@@ -44,46 +44,63 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll(); // Initial check on load
 
     /* ==========================================================================
-       Awwwards Interactive Hero Background Crossfader & Service Cards
+       Awwwards Hero Hybrid: Auto-Slideshow + Hover Service Override
        ========================================================================== */
     const heroCards = document.querySelectorAll('.interactive-service-card');
     const heroCardsGrid = document.querySelector('.hero-services-cards-grid');
     const backdropLayers = document.querySelectorAll('.hero-backdrop-layer');
-    const defaultLayer = document.querySelector('.hero-backdrop-layer.bg-default');
+    const serviceBgKeys = ['study', 'immigration', 'training'];
+    let autoSlideIndex = 0;
+    let heroAutoSlideTimer = null;
+    let isUserHovering = false;
 
     const switchHeroBackdrop = (bgType) => {
         backdropLayers.forEach(layer => layer.classList.remove('active'));
 
         if (!bgType) {
-            if (defaultLayer) defaultLayer.classList.add('active');
+            const currentKey = serviceBgKeys[autoSlideIndex];
+            const activeLayer = document.querySelector(`.hero-backdrop-layer.bg-${currentKey}`) || document.querySelector('.hero-backdrop-layer.bg-default');
+            if (activeLayer) activeLayer.classList.add('active');
             return;
         }
 
         const targetLayer = document.querySelector(`.hero-backdrop-layer.bg-${bgType}`);
         if (targetLayer) {
             targetLayer.classList.add('active');
-        } else if (defaultLayer) {
-            defaultLayer.classList.add('active');
         }
     };
+
+    const startAutoSlide = () => {
+        if (heroAutoSlideTimer) clearInterval(heroAutoSlideTimer);
+        heroAutoSlideTimer = setInterval(() => {
+            if (isUserHovering) return;
+            autoSlideIndex = (autoSlideIndex + 1) % serviceBgKeys.length;
+            switchHeroBackdrop(serviceBgKeys[autoSlideIndex]);
+        }, 4500);
+    };
+
+    // Initialize auto slide
+    startAutoSlide();
 
     heroCards.forEach(card => {
         const bgType = card.getAttribute('data-service-bg');
         const linkUrl = card.getAttribute('data-link');
 
-        // Mouse Enter -> Crossfade Background & Dim Siblings
+        // Mouse Enter -> Pause Auto-Slide, Show Hovered Photo & Dim Siblings
         card.addEventListener('mouseenter', () => {
+            isUserHovering = true;
             switchHeroBackdrop(bgType);
             if (heroCardsGrid) heroCardsGrid.classList.add('has-active-hover');
         });
 
-        // Mouse Leave -> Restore Default Background & Reset Cards
+        // Mouse Leave -> Resume Auto-Slide
         card.addEventListener('mouseleave', () => {
+            isUserHovering = false;
             switchHeroBackdrop(null);
             if (heroCardsGrid) heroCardsGrid.classList.remove('has-active-hover');
         });
 
-        // Click Handler -> Smooth Scroll Navigation to Service Section
+        // Click Handler -> Navigation to Service Section
         card.addEventListener('click', (e) => {
             if (!e.target.closest('.hero-service-btn')) {
                 if (linkUrl) {
