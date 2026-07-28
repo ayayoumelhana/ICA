@@ -2661,28 +2661,29 @@ label {
     padding-right: 20px;
 }
 
-/* PDF Banners Full Width Image - Elegant Frame with Interactive Shimmer */
+/* PDF Banners Full Width Image - Modern Glassmorphic Awwwards Card */
 .pdf-banner {
-    border-radius: 16px;
+    border-radius: 26px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 45px 50px;
+    padding: 50px 55px;
     position: relative;
-    min-height: 310px;
+    min-height: 320px;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     color: #FFFFFF;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.18);
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 }
 
 .pdf-banner:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(7, 43, 73, 0.28);
 }
 
 .pdf-banner::before {
@@ -2721,7 +2722,7 @@ label {
 }
 
 .banner-blue-bg::before {
-    background: linear-gradient(90deg, rgba(26, 86, 176, 0.92) 0%, rgba(0, 174, 239, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(7, 43, 73, 0.94) 0%, rgba(0, 174, 239, 0.72) 60%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .banner-red-bg {
@@ -2730,7 +2731,7 @@ label {
 }
 
 .banner-red-bg::before {
-    background: linear-gradient(90deg, rgba(200, 16, 46, 0.92) 0%, rgba(244, 67, 54, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(7, 43, 73, 0.94) 0%, rgba(242, 13, 13, 0.72) 60%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .banner-purple-bg {
@@ -2739,7 +2740,7 @@ label {
 }
 
 .banner-purple-bg::before {
-    background: linear-gradient(90deg, rgba(74, 20, 140, 0.92) 0%, rgba(123, 31, 162, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(7, 43, 73, 0.94) 0%, rgba(123, 31, 162, 0.72) 60%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .pdf-banner-content {
@@ -2749,21 +2750,23 @@ label {
 }
 
 .pdf-banner-main-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 900;
     line-height: 1.08;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     font-family: var(--font-minion);
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
 .pdf-banner-sub-title {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 600;
     opacity: 0.95;
-    line-height: 1.35;
-    margin-top: 8px;
+    line-height: 1.4;
+    margin-top: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .pdf-banner-img-box {
@@ -2773,21 +2776,21 @@ label {
 /* PDF Step Badges Row */
 .pdf-steps-row {
     display: flex;
-    gap: 12px;
-    margin-bottom: 25px;
+    gap: 14px;
+    margin-bottom: 28px;
     flex-wrap: wrap;
 }
 
 .pdf-step-pill {
     flex: 1;
-    min-width: 160px;
+    min-width: 170px;
     text-align: center;
-    padding: 10px 18px;
-    border-radius: 25px;
-    font-size: 0.88rem;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1.5px solid transparent;
     outline: none;
     font-family: inherit;
@@ -2795,68 +2798,73 @@ label {
 
 .pdf-step-pill.active-red,
 .pdf-step-pill.active {
-    background-color: #F20D0D !important;
+    background: #F20D0D !important;
     color: #FFFFFF !important;
     border-color: #F20D0D !important;
-    box-shadow: 0 4px 12px rgba(242, 13, 13, 0.35);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 13, 13, 0.4);
+    transform: translateY(-3px);
 }
 
 .pdf-step-pill.border-blue {
     background-color: #FFFFFF;
-    color: #00AEEF;
-    border: 1.5px solid #00AEEF;
+    color: #072B49;
+    border: 1.5px solid #E2E8F0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .pdf-step-pill.border-blue:hover {
-    background-color: #00AEEF;
-    color: #FFFFFF;
+    border-color: #F20D0D;
+    color: #F20D0D;
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(242, 13, 13, 0.15);
 }
 
 /* PDF Content Grid with Animated Step Panel */
 .pdf-service-content-grid {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 35px;
+    grid-template-columns: 360px 1fr;
+    gap: 40px;
     align-items: center;
-    margin-bottom: 40px;
-    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-    padding: 28px 30px;
-    border-radius: 18px;
+    margin-bottom: 45px;
+    background: #FFFFFF;
+    padding: 32px 35px;
+    border-radius: 24px;
     border: 1px solid #E2E8F0;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Pôle Études: Bordure Bleue / Cyan */
 #block-etudes .pdf-service-content-grid {
-    border-left: 5px solid #00AEEF;
+    border-left: 6px solid #00AEEF;
 }
 
 #block-etudes .pdf-service-content-grid:hover {
-    border-left-color: #0088CC;
-    box-shadow: 0 14px 32px rgba(0, 174, 239, 0.22);
+    border-left-color: #F20D0D;
+    box-shadow: 0 18px 40px rgba(0, 174, 239, 0.2);
+    transform: translateY(-4px);
 }
 
 /* Pôle Immigration: Bordure Rouge */
 #block-immigration .pdf-service-content-grid {
-    border-left: 5px solid #F20D0D;
+    border-left: 6px solid #F20D0D;
 }
 
 #block-immigration .pdf-service-content-grid:hover {
-    border-left-color: #C8102E;
-    box-shadow: 0 14px 32px rgba(242, 13, 13, 0.22);
+    border-left-color: #00AEEF;
+    box-shadow: 0 18px 40px rgba(242, 13, 13, 0.2);
+    transform: translateY(-4px);
 }
 
 /* Pôle Formations: Bordure Violette */
 #block-formations .pdf-service-content-grid {
-    border-left: 5px solid #7B1FA2;
+    border-left: 6px solid #7B1FA2;
 }
 
 #block-formations .pdf-service-content-grid:hover {
-    border-left-color: #4A148C;
-    box-shadow: 0 14px 32px rgba(123, 31, 162, 0.22);
+    border-left-color: #F20D0D;
+    box-shadow: 0 18px 40px rgba(123, 31, 162, 0.2);
+    transform: translateY(-4px);
 }
 
 .pdf-service-content-grid.step-panel.active {
@@ -2876,10 +2884,11 @@ label {
 
 .pdf-step-img-box {
     width: 100%;
-    height: 230px;
-    border-radius: 12px;
+    height: 250px;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E2E8F0;
 }
 
 .pdf-step-large-img {
@@ -2887,25 +2896,26 @@ label {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pdf-step-img-box:hover .pdf-step-large-img {
-    transform: scale(1.04);
+    transform: scale(1.06);
 }
 
 .pdf-service-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #00AEEF;
-    margin-bottom: 12px;
+    font-family: var(--font-minion);
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #072B49;
+    margin-bottom: 14px;
     line-height: 1.25;
 }
 
 .pdf-service-desc {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #4A5568;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 /* Section Qui sommes-nous - Awwwards Modern Redesign */
