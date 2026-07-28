@@ -245,7 +245,7 @@ p {
     transform: scaleX(1);
 }
 
-/* Hero-Styled Services Dropdown Menu */
+/* Clean Simple Text Dropdown Menu */
 .has-dropdown {
     position: relative;
 }
@@ -260,135 +260,55 @@ p {
     transform: rotate(180deg);
 }
 
-.dropdown-menu.hero-style-dropdown {
+.dropdown-menu.simple-dropdown {
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(16px);
-    width: 370px;
-    background: #072B49;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
-    padding: 12px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    left: 0;
+    width: 250px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 8px 0;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid #E2E8F0;
+    list-style: none;
+    margin: 0;
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     z-index: 9999;
 }
 
-.has-dropdown:hover .dropdown-menu.hero-style-dropdown {
+.has-dropdown:hover .dropdown-menu.simple-dropdown {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
-    transform: translateX(-50%) translateY(8px);
+    transform: translateY(4px);
 }
 
-.dropdown-hero-card {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-decoration: none !important;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+.dropdown-menu.simple-dropdown li {
+    margin: 0;
+    padding: 0;
 }
 
-.dropdown-hero-card::after {
+.dropdown-menu.simple-dropdown a {
+    display: block;
+    padding: 10px 18px;
+    color: #072B49 !important;
+    font-family: var(--font-primary);
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu.simple-dropdown a::after {
     display: none !important;
 }
 
-.dropdown-hero-card:hover {
-    background: rgba(255, 255, 255, 0.12);
-    transform: translateX(4px);
-}
-
-.dropdown-study:hover {
-    border-color: #00AEEF;
-    box-shadow: 0 8px 20px rgba(0, 174, 239, 0.25);
-}
-
-.dropdown-immigration:hover {
-    border-color: #F20D0D;
-    box-shadow: 0 8px 20px rgba(242, 13, 13, 0.25);
-}
-
-.dropdown-training:hover {
-    border-color: #AB47BC;
-    box-shadow: 0 8px 20px rgba(171, 71, 188, 0.25);
-}
-
-.dropdown-hero-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.15rem;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.cyan-icon {
-    background: rgba(0, 174, 239, 0.18);
-    color: #00AEEF;
-    border: 1px solid rgba(0, 174, 239, 0.35);
-}
-
-.red-icon {
-    background: rgba(242, 13, 13, 0.18);
-    color: #FF4D4D;
-    border: 1px solid rgba(242, 13, 13, 0.35);
-}
-
-.purple-icon {
-    background: rgba(171, 71, 188, 0.18);
-    color: #E1BEE7;
-    border: 1px solid rgba(171, 71, 188, 0.35);
-}
-
-.dropdown-hero-card:hover .dropdown-hero-icon {
-    transform: scale(1.1) rotate(-4deg);
-}
-
-.dropdown-hero-text {
-    flex: 1;
-}
-
-.dropdown-hero-title {
-    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 1.08rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin: 0 0 3px 0;
-    line-height: 1.25;
-}
-
-.dropdown-hero-sub {
-    font-size: 0.78rem;
-    color: #CBD5E1;
-    margin: 0;
-    line-height: 1.35;
-}
-
-.dropdown-hero-arrow {
-    font-size: 0.8rem;
-    color: #94A3B8;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.dropdown-hero-card:hover .dropdown-hero-arrow {
-    transform: translateX(4px);
-    color: #FFFFFF;
+.dropdown-menu.simple-dropdown a:hover,
+.dropdown-menu.simple-dropdown a.active {
+    background: #F1F5F9;
+    color: #F20D0D !important;
 }
 
 .services-mega-menu {
