@@ -124,20 +124,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       Google Reviews Slider Buttons Navigation Controller
+       Google Reviews Change Buttons (Prev ❮ / Next ❯) Controller
        ========================================================================== */
-    const googleTrack = document.getElementById('google-reviews-slider-track');
-    const googlePrev = document.getElementById('google-prev');
-    const googleNext = document.getElementById('google-next');
+    const googleTrack = document.querySelector('.google-reviews-marquee-track');
+    const googlePrevBtn = document.getElementById('google-prev-btn');
+    const googleNextBtn = document.getElementById('google-next-btn');
 
-    if (googleTrack && googlePrev && googleNext) {
-        googlePrev.addEventListener('click', () => {
-            googleTrack.parentElement.scrollBy({ left: -390, behavior: 'smooth' });
+    if (googleTrack && googlePrevBtn && googleNextBtn) {
+        let currentOffset = 0;
+        const stepAmount = 405; // 380px card + 25px gap
+
+        googlePrevBtn.addEventListener('click', () => {
+            googleTrack.style.animation = 'none';
+            currentOffset += stepAmount;
+            if (currentOffset > 0) {
+                currentOffset = -stepAmount * 4;
+            }
+            googleTrack.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            googleTrack.style.transform = `translateX(${currentOffset}px)`;
         });
-        googleNext.addEventListener('click', () => {
-            googleTrack.parentElement.scrollBy({ left: 390, behavior: 'smooth' });
+
+        googleNextBtn.addEventListener('click', () => {
+            googleTrack.style.animation = 'none';
+            currentOffset -= stepAmount;
+            if (currentOffset < -stepAmount * 4) {
+                currentOffset = 0;
+            }
+            googleTrack.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            googleTrack.style.transform = `translateX(${currentOffset}px)`;
         });
     }
+
+    /* ==========================================================================
        Interactive Step Pills Switcher (.pdf-step-pill)
        ========================================================================== */
     const serviceBlocks = document.querySelectorAll('.service-block-section');
