@@ -2636,6 +2636,191 @@ label {
 }
 
 /* ==========================================================================
+   Section Qui sommes-nous ? (Concept C: Bandeau Immersif Bleu Nuit)
+   ========================================================================== */
+.about-corporate-section {
+    padding: 80px 0;
+    background-color: #FFFFFF;
+}
+
+.about-corporate-banner {
+    background: linear-gradient(135deg, #072B49 0%, #0c3d67 100%);
+    border-radius: 32px;
+    padding: 60px;
+    box-shadow: 0 25px 60px rgba(7, 43, 73, 0.25);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-corporate-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-badge-pill {
+    display: inline-block;
+    background: rgba(0, 174, 239, 0.18);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.35);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.about-corporate-title {
+    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif !important;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #FFFFFF !important;
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.about-corporate-lead {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.about-corporate-desc {
+    font-size: 0.98rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.65;
+    margin-bottom: 30px;
+}
+
+/* 3 Stat Cards Row */
+.about-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.about-stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 16px 14px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.about-stat-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(0, 174, 239, 0.5);
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #00AEEF;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+/* CTA Button */
+.about-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #00AEEF;
+    color: #FFFFFF;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    box-shadow: 0 8px 25px rgba(0, 174, 239, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-cta-btn:hover {
+    background: #009BD5;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 174, 239, 0.55);
+}
+
+.about-cta-btn .icon-arrow {
+    transition: transform 0.3s ease;
+}
+
+.about-cta-btn:hover .icon-arrow {
+    transform: translateX(6px);
+}
+
+/* Photo Stage */
+.about-img-stage-box {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    height: 380px;
+}
+
+.about-corporate-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.about-img-stage-box:hover .about-corporate-img {
+    transform: scale(1.06);
+}
+
+.about-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.4) 100%);
+}
+
+.about-glass-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(7, 43, 73, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    font-size: 0.88rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .about-corporate-banner { padding: 35px 24px; }
+    .about-corporate-grid { grid-template-columns: 1fr; gap: 35px; }
+    .about-stats-row { grid-template-columns: 1fr; }
+    .about-img-stage-box { height: 280px; }
+}
+
+/* ==========================================================================
    Concept 2: Expanding Glass Accordion Cards (Framer/Linear Style)
    ========================================================================== */
 .services-expanding-section {
@@ -2867,179 +3052,6 @@ label {
 
 .expanding-discover-btn:hover .icon-arrow {
     transform: translateX(5px);
-}
-
-/* ==========================================================================
-   Concept 5: Vitrine Médias Immersive & Témoignage Intégré (About Showcase)
-   ========================================================================== */
-.about-showcase-section {
-    padding: 90px 0;
-    background-color: #F8FAFC;
-}
-
-.about-showcase-header {
-    margin-bottom: 50px;
-}
-
-.about-showcase-subtitle {
-    font-size: 1.1rem;
-    color: #64748B;
-    max-width: 720px;
-    margin: 0 auto;
-}
-
-.about-showcase-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
-    align-items: stretch;
-}
-
-.showcase-card {
-    background: #FFFFFF;
-    border-radius: 28px;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.07);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-}
-
-.showcase-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px rgba(7, 43, 73, 0.15);
-}
-
-.showcase-img-box, .showcase-video-box {
-    position: relative;
-    height: 270px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.showcase-img, .showcase-video-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.showcase-card:hover .showcase-img,
-.showcase-video-box:hover .showcase-video-img {
-    transform: scale(1.06);
-}
-
-.showcase-glass-tag {
-    position: absolute;
-    top: 18px;
-    left: 18px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    background: rgba(7, 43, 73, 0.65);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 5;
-}
-
-.showcase-card-body {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.showcase-card-title {
-    font-family: var(--font-minion) !important;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #072B49;
-    margin-bottom: 12px;
-}
-
-.showcase-card-text {
-    font-size: 0.96rem;
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 18px;
-}
-
-.showcase-features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-.showcase-features-list li {
-    font-size: 0.93rem;
-    color: #334155;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.check-icon {
-    color: #00AEEF;
-    font-size: 1.1rem;
-}
-
-.showcase-quote-bold {
-    font-family: var(--font-minion) !important;
-    font-size: 1.15rem;
-    font-weight: 800;
-    color: #F20D0D;
-    margin-bottom: 8px;
-}
-
-.showcase-video-darija-overlay {
-    position: absolute;
-    bottom: 0;
-    inset-x: 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(7, 43, 73, 0.9) 100%);
-    padding: 20px 20px 14px;
-}
-
-.darija-quote {
-    color: #FFFFFF;
-    font-size: 0.92rem;
-    font-weight: 600;
-    text-align: center;
-    margin: 0;
-    line-height: 1.5;
-}
-
-.showcase-actions-row {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.btn-outline-dark {
-    background: transparent;
-    color: #072B49;
-    border: 2px solid #072B49;
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-outline-dark:hover {
-    background: #072B49;
-    color: #FFFFFF;
-}
-
-@media (max-width: 992px) {
-    .about-showcase-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 992px) {
