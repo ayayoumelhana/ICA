@@ -2624,15 +2624,18 @@ label {
 }
 
 /* ==========================================================================
-   Concept 4: Interactive Neon Timeline (Webflow Showcase Style)
+   Concept 3: Luxury Split Layout Preview (Awwwards/Stripe Style)
    ========================================================================== */
-.services-timeline-section {
+.services-split-section {
     padding: 90px 0;
     background-color: #FFFFFF;
-    position: relative;
 }
 
-.timeline-section-title {
+.split-section-header {
+    margin-bottom: 50px;
+}
+
+.split-section-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
     font-size: 2.6rem;
     font-weight: 800;
@@ -2640,182 +2643,185 @@ label {
     margin: 12px 0;
 }
 
-.timeline-section-subtitle {
+.split-section-subtitle {
     font-size: 1.1rem;
     color: #64748B;
     max-width: 680px;
-    margin: 0 auto 50px;
-}
-
-.timeline-track-wrapper {
-    position: relative;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-.timeline-progress-line {
-    position: absolute;
-    top: 26px;
-    left: 10%;
-    right: 10%;
-    height: 4px;
-    background: #E2E8F0;
-    border-radius: 4px;
-    z-index: 1;
-}
-
-.timeline-progress-glow {
-    height: 100%;
-    width: 33%;
-    background: linear-gradient(90deg, #00AEEF 0%, #F20D0D 50%, #7B1FA2 100%);
-    border-radius: 4px;
-    box-shadow: 0 0 15px rgba(0, 174, 239, 0.8);
-    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.timeline-cards-grid {
+.services-split-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.split-image-stage {
+    position: sticky;
+    top: 100px;
+    height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.15);
+    border: 1px solid #E2E8F0;
+}
+
+.split-stage-wrapper {
     position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.split-img-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(1.04);
+}
+
+.split-img-layer.active {
+    opacity: 1;
+    transform: scale(1);
     z-index: 2;
 }
 
-.timeline-service-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.split-img-layer.bg-study {
+    background-position: right 35% center !important;
+    background-size: cover !important;
 }
 
-.timeline-card-badge-step {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    background: #072B49;
-    color: #FFFFFF;
+.split-img-layer.bg-immigration {
+    background-position: right 35% center !important;
+    background-size: cover !important;
+}
+
+.split-img-layer.bg-training {
+    background-position: right 25% center !important;
+    background-size: cover !important;
+}
+
+.split-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 10;
+}
+
+.badge-blue {
+    background: rgba(0, 174, 239, 0.2);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.4);
+}
+
+.badge-red {
+    background: rgba(242, 13, 13, 0.2);
+    color: #FF4D4D;
+    border: 1px solid rgba(242, 13, 13, 0.4);
+}
+
+.badge-purple {
+    background: rgba(123, 31, 162, 0.2);
+    color: #E1BEE7;
+    border: 1px solid rgba(123, 31, 162, 0.4);
+}
+
+.split-cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.split-service-card {
+    display: flex;
+    gap: 20px;
+    padding: 28px 24px;
+    border-radius: 20px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    text-decoration: none !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.split-service-card:hover,
+.split-service-card.active {
+    background: #FFFFFF;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-study:hover, .card-study.active {
+    border-color: #00AEEF;
+    box-shadow: 0 15px 35px rgba(0, 174, 239, 0.18);
+}
+
+.card-immigration:hover, .card-immigration.active {
+    border-color: #F20D0D;
+    box-shadow: 0 15px 35px rgba(242, 13, 13, 0.18);
+}
+
+.card-training:hover, .card-training.active {
+    border-color: #7B1FA2;
+    box-shadow: 0 15px 35px rgba(123, 31, 162, 0.18);
+}
+
+.split-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-primary);
-    font-size: 1.1rem;
-    font-weight: 800;
-    box-shadow: 0 0 0 8px #FFFFFF, 0 10px 25px rgba(7, 43, 73, 0.25);
-    margin-bottom: 25px;
-    transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
-    z-index: 3;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
 }
 
-.card-study:hover .timeline-card-badge-step {
-    background: #00AEEF;
-    box-shadow: 0 0 0 8px #FFFFFF, 0 0 25px rgba(0, 174, 239, 0.6);
-    transform: scale(1.15);
+.blue-icon {
+    background: rgba(0, 174, 239, 0.14);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.3);
 }
 
-.card-immigration:hover .timeline-card-badge-step {
-    background: #F20D0D;
-    box-shadow: 0 0 0 8px #FFFFFF, 0 0 25px rgba(242, 13, 13, 0.6);
-    transform: scale(1.15);
+.red-icon {
+    background: rgba(242, 13, 13, 0.14);
+    color: #F20D0D;
+    border: 1px solid rgba(242, 13, 13, 0.3);
 }
 
-.card-training:hover .timeline-card-badge-step {
-    background: #7B1FA2;
-    box-shadow: 0 0 0 8px #FFFFFF, 0 0 25px rgba(123, 31, 162, 0.6);
-    transform: scale(1.15);
+.purple-icon {
+    background: rgba(123, 31, 162, 0.14);
+    color: #7B1FA2;
+    border: 1px solid rgba(123, 31, 162, 0.3);
 }
 
-.timeline-card-inner {
-    width: 100%;
-    border-radius: 24px;
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.08);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+.split-service-card:hover .split-card-icon {
+    transform: scale(1.12) rotate(-4deg);
 }
 
-.timeline-service-card:hover .timeline-card-inner {
-    transform: translateY(-8px);
-}
-
-.card-study:hover .timeline-card-inner {
-    border-color: #00AEEF;
-    box-shadow: 0 20px 45px rgba(0, 174, 239, 0.2);
-}
-
-.card-immigration:hover .timeline-card-inner {
-    border-color: #F20D0D;
-    box-shadow: 0 20px 45px rgba(242, 13, 13, 0.2);
-}
-
-.card-training:hover .timeline-card-inner {
-    border-color: #7B1FA2;
-    box-shadow: 0 20px 45px rgba(123, 31, 162, 0.2);
-}
-
-.timeline-card-img-box {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-}
-
-.timeline-card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.timeline-service-card:hover .timeline-card-img {
-    transform: scale(1.08);
-}
-
-.timeline-card-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.65) 100%);
-}
-
-.timeline-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-.timeline-card-content {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
+.split-card-body {
     flex: 1;
 }
 
-.timeline-card-header-row {
+.split-card-top-row {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
-.timeline-card-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.timeline-card-title {
+.split-card-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
     font-size: 1.35rem;
     font-weight: 700;
@@ -2823,44 +2829,56 @@ label {
     margin: 0;
 }
 
-.timeline-card-desc {
-    font-size: 0.92rem;
+.split-card-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F1F5F9;
+    color: #072B49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.split-service-card:hover .split-card-arrow {
+    transform: translateX(6px);
+    background: #072B49;
+    color: #FFFFFF;
+}
+
+.split-card-desc {
+    font-size: 0.95rem;
     color: #475569;
     line-height: 1.55;
-    margin-bottom: 20px;
-    flex: 1;
+    margin-bottom: 14px;
 }
 
-.timeline-discover-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    border-radius: 30px;
+.split-discover-btn {
     font-size: 0.88rem;
     font-weight: 700;
-    text-decoration: none !important;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s ease;
 }
 
-.timeline-discover-btn:hover {
-    transform: translateY(-2px);
+.split-service-card:hover .split-discover-btn {
+    gap: 10px;
 }
 
-.timeline-discover-btn .icon-arrow {
-    transition: transform 0.3s ease;
-}
-
-.timeline-discover-btn:hover .icon-arrow {
-    transform: translateX(5px);
-}
+.btn-blue-text { color: #00AEEF; }
+.btn-red-text { color: #F20D0D; }
+.btn-purple-text { color: #7B1FA2; }
 
 @media (max-width: 992px) {
-    .timeline-cards-grid {
+    .services-split-grid {
         grid-template-columns: 1fr;
     }
-    .timeline-progress-line {
-        display: none;
+    .split-image-stage {
+        height: 300px;
+        position: static;
     }
 }
 

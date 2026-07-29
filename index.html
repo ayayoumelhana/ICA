@@ -170,108 +170,83 @@
         </div>
     </section>
 
-    <!-- Concept 4: Interactive Neon Timeline (Webflow Showcase Style) -->
-    <section class="services-timeline-section section bg-white" id="nos-services">
+    <!-- Concept 3: Luxury Split Layout Preview (Editorial Style Awwwards) -->
+    <section class="services-split-section section bg-white" id="nos-services">
         <div class="container">
-            <div class="timeline-section-header text-center">
+            <div class="split-section-header text-center">
                 <span class="section-badge-pill">🇨🇦 NOS SERVICES</span>
-                <h2 class="timeline-section-title">Des Solutions Sur-Mesure pour Votre Réussite</h2>
-                <p class="timeline-section-subtitle">Découvrez votre parcours de réussite à travers nos 3 pôles d'excellence.</p>
+                <h2 class="split-section-title">Des Solutions Sur-Mesure pour Votre Réussite</h2>
+                <p class="split-section-subtitle">Découvrez nos services d'exception et explorez l'accompagnement d'élite de nos spécialistes.</p>
             </div>
 
-            <!-- Neon Timeline Track Container -->
-            <div class="timeline-track-wrapper">
-                <div class="timeline-progress-line">
-                    <div class="timeline-progress-glow" id="timeline-glow"></div>
+            <div class="services-split-grid">
+                <!-- Left Column: High-Definition Image Stage -->
+                <div class="split-image-stage">
+                    <div class="split-stage-wrapper">
+                        <div class="split-img-layer bg-study active" style="background-image: url('assets/images/pdf-student-banner.png');">
+                            <span class="split-badge badge-blue">PÔLE ÉTUDES</span>
+                        </div>
+                        <div class="split-img-layer bg-immigration" style="background-image: url('assets/images/pdf-express-banner.png');">
+                            <span class="split-badge badge-red">PÔLE IMMIGRATION</span>
+                        </div>
+                        <div class="split-img-layer bg-training" style="background-image: url('assets/images/pdf-rocket-banner.png');">
+                            <span class="split-badge badge-purple">PÔLE FORMATION</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline-cards-grid">
-                    <!-- Card 1: Study in Canada -->
-                    <div class="timeline-service-card card-study" data-step="1">
-                        <div class="timeline-card-badge-step">
-                            <span class="step-num">01</span>
+                <!-- Right Column: 3 Interactive Service Cards -->
+                <div class="split-cards-column">
+                    <!-- Service Card 1: Study in Canada -->
+                    <a href="etudes.html" class="split-service-card card-study active" data-service-bg="study">
+                        <div class="split-card-icon blue-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="timeline-card-inner">
-                            <div class="timeline-card-img-box">
-                                <img src="assets/images/pdf-student-banner.png" alt="Étudier au Canada" class="timeline-card-img img-study">
-                                <div class="timeline-card-overlay"></div>
-                                <span class="timeline-badge badge-blue">PÔLE ÉTUDES</span>
+                        <div class="split-card-body">
+                            <div class="split-card-top-row">
+                                <h3 class="split-card-title">Étudier au Canada</h3>
+                                <span class="split-card-arrow"><i class="fas fa-arrow-right"></i></span>
                             </div>
-                            <div class="timeline-card-content">
-                                <div class="timeline-card-header-row">
-                                    <div class="timeline-card-icon blue-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <h3 class="timeline-card-title">Étudier au Canada</h3>
-                                </div>
-                                <p class="timeline-card-desc">
-                                    Accompagnement d'élite aux admissions universitaires, CAQ, permis d'études et accueil chaleureux dès votre arrivée.
-                                </p>
-                                <a href="etudes.html" class="timeline-discover-btn btn-blue">
-                                    <span>Découvrir le Pôle Études</span>
-                                    <i class="fas fa-arrow-right icon-arrow"></i>
-                                </a>
-                            </div>
+                            <p class="split-card-desc">
+                                Accompagnement d'élite aux admissions universitaires, CAQ, permis d'études et accueil chaleureux post-arrivée.
+                            </p>
+                            <span class="split-discover-btn btn-blue-text">Découvrir le Pôle Études <i class="fas fa-chevron-right"></i></span>
                         </div>
-                    </div>
+                    </a>
 
-                    <!-- Card 2: Immigration -->
-                    <div class="timeline-service-card card-immigration" data-step="2">
-                        <div class="timeline-card-badge-step">
-                            <span class="step-num">02</span>
+                    <!-- Service Card 2: Immigration -->
+                    <a href="immigration.html" class="split-service-card card-immigration" data-service-bg="immigration">
+                        <div class="split-card-icon red-icon">
+                            <i class="fas fa-passport"></i>
                         </div>
-                        <div class="timeline-card-inner">
-                            <div class="timeline-card-img-box">
-                                <img src="assets/images/pdf-express-banner.png" alt="Immigration & Entrée Express" class="timeline-card-img img-immigration">
-                                <div class="timeline-card-overlay"></div>
-                                <span class="timeline-badge badge-red">PÔLE IMMIGRATION</span>
+                        <div class="split-card-body">
+                            <div class="split-card-top-row">
+                                <h3 class="split-card-title">Immigration & Entrée Express</h3>
+                                <span class="split-card-arrow"><i class="fas fa-arrow-right"></i></span>
                             </div>
-                            <div class="timeline-card-content">
-                                <div class="timeline-card-header-row">
-                                    <div class="timeline-card-icon red-icon">
-                                        <i class="fas fa-passport"></i>
-                                    </div>
-                                    <h3 class="timeline-card-title">Immigration & Entrée Express</h3>
-                                </div>
-                                <p class="timeline-card-desc">
-                                    Stratégie sur-mesure pour Entrée Express, résidence permanente, Arrima et parrainage au Canada.
-                                </p>
-                                <a href="immigration.html" class="timeline-discover-btn btn-red">
-                                    <span>Découvrir le Pôle Immigration</span>
-                                    <i class="fas fa-arrow-right icon-arrow"></i>
-                                </a>
-                            </div>
+                            <p class="split-card-desc">
+                                Stratégie sur-mesure pour Entrée Express, résidence permanente, Arrima et parrainage au Canada.
+                            </p>
+                            <span class="split-discover-btn btn-red-text">Découvrir le Pôle Immigration <i class="fas fa-chevron-right"></i></span>
                         </div>
-                    </div>
+                    </a>
 
-                    <!-- Card 3: Training -->
-                    <div class="timeline-service-card card-training" data-step="3">
-                        <div class="timeline-card-badge-step">
-                            <span class="step-num">03</span>
+                    <!-- Service Card 3: Training -->
+                    <a href="formations.html" class="split-service-card card-training" data-service-bg="training">
+                        <div class="split-card-icon purple-icon">
+                            <i class="fas fa-rocket"></i>
                         </div>
-                        <div class="timeline-card-inner">
-                            <div class="timeline-card-img-box">
-                                <img src="assets/images/pdf-rocket-banner.png" alt="Formations Certifiantes" class="timeline-card-img img-training">
-                                <div class="timeline-card-overlay"></div>
-                                <span class="timeline-badge badge-purple">PÔLE FORMATION</span>
+                        <div class="split-card-body">
+                            <div class="split-card-top-row">
+                                <h3 class="split-card-title">Formations Certifiantes</h3>
+                                <span class="split-card-arrow"><i class="fas fa-arrow-right"></i></span>
                             </div>
-                            <div class="timeline-card-content">
-                                <div class="timeline-card-header-row">
-                                    <div class="timeline-card-icon purple-icon">
-                                        <i class="fas fa-rocket"></i>
-                                    </div>
-                                    <h3 class="timeline-card-title">Formations Certifiantes</h3>
-                                </div>
-                                <p class="timeline-card-desc">
-                                    Cycles intensifs (100H) de préparation aux concours d'expertise comptable CEC, diplômes DSCG et séminaires.
-                                </p>
-                                <a href="formations.html" class="timeline-discover-btn btn-purple">
-                                    <span>Découvrir nos Formations</span>
-                                    <i class="fas fa-arrow-right icon-arrow"></i>
-                                </a>
-                            </div>
+                            <p class="split-card-desc">
+                                Cycles intensifs (100H) de préparation aux concours d'expertise comptable CEC, diplômes DSCG et séminaires.
+                            </p>
+                            <span class="split-discover-btn btn-purple-text">Découvrir nos Formations <i class="fas fa-chevron-right"></i></span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

@@ -111,25 +111,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       Concept 4: Interactive Neon Timeline Progress Controller
+       Concept 3: Split Layout Image Stage Crossfade Handler
        ========================================================================== */
-    const timelineCards = document.querySelectorAll('.timeline-service-card');
-    const timelineGlow = document.getElementById('timeline-glow');
+    const splitCards = document.querySelectorAll('.split-service-card');
+    const splitImgLayers = document.querySelectorAll('.split-img-layer');
 
-    if (timelineCards.length > 0 && timelineGlow) {
-        timelineCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                const step = card.getAttribute('data-step');
-                if (step === '1') {
-                    timelineGlow.style.width = '33%';
-                } else if (step === '2') {
-                    timelineGlow.style.width = '66%';
-                } else if (step === '3') {
-                    timelineGlow.style.width = '100%';
-                }
-            });
+    splitCards.forEach(card => {
+        const bgType = card.getAttribute('data-service-bg');
+
+        card.addEventListener('mouseenter', () => {
+            splitCards.forEach(c => c.classList.remove('active'));
+            splitImgLayers.forEach(l => l.classList.remove('active'));
+
+            card.classList.add('active');
+            const targetLayer = document.querySelector(`.split-img-layer.bg-${bgType}`);
+            if (targetLayer) targetLayer.classList.add('active');
         });
-    }
+    });
 
     /* ==========================================================================
        Interactive Step Pills Switcher (.pdf-step-pill)
