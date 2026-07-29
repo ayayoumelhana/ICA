@@ -2689,6 +2689,21 @@ label {
     z-index: 2;
 }
 
+.split-img-layer.bg-study {
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+.split-img-layer.bg-immigration {
+    background-position: center center !important;
+    background-size: cover !important;
+}
+
+.split-img-layer.bg-training {
+    background-position: right 25% center !important;
+    background-size: cover !important;
+}
+
 .split-badge {
     position: absolute;
     top: 20px;
