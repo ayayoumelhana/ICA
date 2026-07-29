@@ -2636,248 +2636,6 @@ label {
 }
 
 /* ==========================================================================
-   Qui sommes-nous ? - Concept 4: Storytelling & Parcours de Mission ICA
-   ========================================================================== */
-.about-story-section {
-    padding: 100px 0;
-    background-color: #F8FAFC;
-    position: relative;
-}
-
-.about-story-title {
-    font-family: var(--font-minion) !important;
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: #072B49;
-    margin: 12px 0 16px;
-}
-
-.about-story-subtitle {
-    font-size: 1.15rem;
-    color: #64748B;
-    max-width: 740px;
-    margin: 0 auto 60px;
-    line-height: 1.6;
-}
-
-.about-story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.about-story-img-card {
-    position: relative;
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.12);
-    border: 1px solid #E2E8F0;
-}
-
-.story-img {
-    width: 100%;
-    height: 520px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.about-story-img-card:hover .story-img {
-    transform: scale(1.05);
-}
-
-.story-img-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.65) 100%);
-}
-
-.story-badge-top {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #072B49;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.story-badge-bottom {
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    right: 24px;
-    padding: 20px 24px;
-    border-radius: 20px;
-    background: rgba(7, 43, 73, 0.88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.story-stat-number {
-    font-family: var(--font-minion);
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #00AEEF;
-    line-height: 1;
-}
-
-.story-stat-label {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.about-story-timeline-col {
-    position: relative;
-    padding-left: 20px;
-}
-
-.story-timeline-track {
-    position: absolute;
-    top: 30px;
-    bottom: 80px;
-    left: 38px;
-    width: 3px;
-    background: linear-gradient(180deg, #00AEEF 0%, #F20D0D 50%, #7B1FA2 100%);
-    border-radius: 3px;
-}
-
-.story-step-item {
-    position: relative;
-    display: flex;
-    gap: 24px;
-    margin-bottom: 32px;
-}
-
-.story-step-marker {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #072B49;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 0.9rem;
-    box-shadow: 0 0 0 6px #F8FAFC, 0 8px 20px rgba(7, 43, 73, 0.2);
-    z-index: 5;
-    flex-shrink: 0;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.step-cyan:hover .story-step-marker { background: #00AEEF; transform: scale(1.15); }
-.step-red:hover .story-step-marker { background: #F20D0D; transform: scale(1.15); }
-.step-purple:hover .story-step-marker { background: #7B1FA2; transform: scale(1.15); }
-
-.story-step-content {
-    background: #FFFFFF;
-    padding: 22px 26px;
-    border-radius: 20px;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 10px 25px rgba(7, 43, 73, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    flex: 1;
-}
-
-.story-step-item:hover .story-step-content {
-    transform: translateX(6px);
-    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.1);
-}
-
-.step-cyan:hover .story-step-content { border-color: #00AEEF; }
-.step-red:hover .story-step-content { border-color: #F20D0D; }
-.step-purple:hover .story-step-content { border-color: #7B1FA2; }
-
-.story-step-icon-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
-}
-
-.story-step-icon-row i {
-    font-size: 1.2rem;
-}
-
-.story-step-title {
-    font-family: var(--font-minion) !important;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #072B49;
-    margin: 0;
-}
-
-.story-step-desc {
-    font-size: 0.92rem;
-    color: #475569;
-    line-height: 1.55;
-    margin: 0;
-}
-
-.story-actions {
-    margin-top: 20px;
-    padding-left: 64px;
-}
-
-.btn-story-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 14px 28px;
-    border-radius: 30px;
-    background: #072B49;
-    color: #FFFFFF;
-    font-size: 0.92rem;
-    font-weight: 700;
-    text-decoration: none !important;
-    box-shadow: 0 8px 25px rgba(7, 43, 73, 0.25);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.btn-story-primary:hover {
-    background: #00AEEF;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 174, 239, 0.4);
-}
-
-.btn-story-primary .icon-arrow {
-    transition: transform 0.3s ease;
-}
-
-.btn-story-primary:hover .icon-arrow {
-    transform: translateX(5px);
-}
-
-@media (max-width: 992px) {
-    .about-story-grid {
-        grid-template-columns: 1fr;
-    }
-    .about-story-timeline-col {
-        padding-left: 0;
-    }
-    .story-timeline-track {
-        display: none;
-    }
-    .story-actions {
-        padding-left: 0;
-    }
-}
-
-/* ==========================================================================
    Concept 2: Expanding Glass Accordion Cards (Framer/Linear Style)
    ========================================================================== */
 .services-expanding-section {
@@ -3109,6 +2867,179 @@ label {
 
 .expanding-discover-btn:hover .icon-arrow {
     transform: translateX(5px);
+}
+
+/* ==========================================================================
+   Concept 5: Vitrine Médias Immersive & Témoignage Intégré (About Showcase)
+   ========================================================================== */
+.about-showcase-section {
+    padding: 90px 0;
+    background-color: #F8FAFC;
+}
+
+.about-showcase-header {
+    margin-bottom: 50px;
+}
+
+.about-showcase-subtitle {
+    font-size: 1.1rem;
+    color: #64748B;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: stretch;
+}
+
+.showcase-card {
+    background: #FFFFFF;
+    border-radius: 28px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(7, 43, 73, 0.15);
+}
+
+.showcase-img-box, .showcase-video-box {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.showcase-img, .showcase-video-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.showcase-card:hover .showcase-img,
+.showcase-video-box:hover .showcase-video-img {
+    transform: scale(1.06);
+}
+
+.showcase-glass-tag {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    background: rgba(7, 43, 73, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+.showcase-card-body {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.showcase-card-title {
+    font-family: var(--font-minion) !important;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #072B49;
+    margin-bottom: 12px;
+}
+
+.showcase-card-text {
+    font-size: 0.96rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.showcase-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.showcase-features-list li {
+    font-size: 0.93rem;
+    color: #334155;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-icon {
+    color: #00AEEF;
+    font-size: 1.1rem;
+}
+
+.showcase-quote-bold {
+    font-family: var(--font-minion) !important;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #F20D0D;
+    margin-bottom: 8px;
+}
+
+.showcase-video-darija-overlay {
+    position: absolute;
+    bottom: 0;
+    inset-x: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(7, 43, 73, 0.9) 100%);
+    padding: 20px 20px 14px;
+}
+
+.darija-quote {
+    color: #FFFFFF;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.showcase-actions-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.btn-outline-dark {
+    background: transparent;
+    color: #072B49;
+    border: 2px solid #072B49;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background: #072B49;
+    color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+    .about-showcase-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 992px) {
