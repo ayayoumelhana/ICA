@@ -3837,25 +3837,54 @@ label {
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Side Navigation Arrows Floating Beside Comments Container */
+.google-reviews-slider-stage {
+    position: relative;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.google-side-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #072B49;
+    border: 2px solid #00AEEF;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(7, 43, 73, 0.35);
+    z-index: 50;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .google-prev-btn {
-    left: -20px;
+    left: 10px;
 }
 
 .google-next-btn {
-    right: -20px;
+    right: 10px;
 }
 
 .google-side-btn:hover {
     background: #00AEEF;
     color: #FFFFFF;
     border-color: #00AEEF;
-    transform: translateY(-50%) scale(1.12);
-    box-shadow: 0 12px 30px rgba(0, 174, 239, 0.45);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 14px 35px rgba(0, 174, 239, 0.55);
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 992px) {
     .google-prev-btn { left: 5px; }
     .google-next-btn { right: 5px; }
+    .google-side-btn { width: 46px; height: 46px; font-size: 1.05rem; }
 }
 
 .google-logo-badge {
