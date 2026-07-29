@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (googleTrack && (googlePrevBtns.length > 0 || googleNextBtns.length > 0)) {
         let currentOffset = 0;
-        const stepAmount = 405; // 380px card + 25px gap
+        const stepAmount = 355; // 330px card + 25px gap
 
         googlePrevBtns.forEach(btn => {
             btn.addEventListener('click', () => {
