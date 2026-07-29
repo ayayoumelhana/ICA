@@ -3782,4 +3782,194 @@ label {
     margin-top: 25px;
 }
 
+/* ==========================================================================
+   Section Avis Google Authentiques (Google Reviews Showcase)
+   ========================================================================== */
+.google-reviews-section {
+    padding: 90px 0;
+    background-color: #F8FAFC;
+}
+
+.google-reviews-title {
+    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif !important;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #072B49 !important;
+    margin: 12px 0 25px;
+}
+
+.google-rating-summary-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    padding: 16px 28px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(7, 43, 73, 0.06);
+    margin-bottom: 50px;
+}
+
+.google-logo-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-score-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-score {
+    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #072B49;
+}
+
+.rating-stars {
+    color: #FFC107;
+    font-size: 1.1rem;
+    display: flex;
+    gap: 3px;
+}
+
+.rating-meta-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-left: 1px solid #E2E8F0;
+    padding-left: 16px;
+}
+
+.reviews-count {
+    font-weight: 700;
+    color: #072B49;
+    font-size: 0.95rem;
+}
+
+.google-certified-tag {
+    font-size: 0.78rem;
+    color: #2E7D32;
+    font-weight: 600;
+}
+
+/* 5 Cards Grid Layout */
+.google-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 992px) {
+    .google-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    .google-rating-summary-box {
+        flex-direction: column;
+        border-radius: 24px;
+        text-align: center;
+        padding: 20px;
+    }
+    .rating-meta-text {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid #E2E8F0;
+        padding-top: 10px;
+        align-items: center;
+    }
+}
+
+.google-review-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 12px 30px rgba(7, 43, 73, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.google-review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.12);
+    border-color: #00AEEF;
+}
+
+.google-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.reviewer-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.avatar-green { background-color: #00897B; }
+.avatar-lime { background-color: #558B2F; }
+.avatar-darkgreen { background-color: #2E7D32; }
+.avatar-pink { background-color: #D81B60; }
+.avatar-purple { background-color: #8E24AA; }
+
+.reviewer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviewer-info {
+    flex: 1;
+}
+
+.reviewer-name {
+    font-family: var(--font-primary) !important;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #072B49 !important;
+    margin: 0 0 2px !important;
+}
+
+.reviewer-meta {
+    font-size: 0.8rem;
+    color: #94A3B8;
+}
+
+.google-card-icon {
+    font-size: 1.4rem;
+    color: #4285F4;
+}
+
+.google-card-stars {
+    color: #FFC107;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 3px;
+    margin-bottom: 14px;
+}
+
+.google-card-text {
+    font-size: 0.93rem;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+    font-style: italic;
+}
+
 
