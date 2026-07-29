@@ -2624,14 +2624,18 @@ label {
 }
 
 /* ==========================================================================
-   Concept 4: Interactive Neon Timeline (Webflow/Stripe Style)
+   Concept 3: Luxury Split Layout Preview (Awwwards/Stripe Style)
    ========================================================================== */
-.services-timeline-section {
+.services-split-section {
     padding: 90px 0;
     background-color: #FFFFFF;
 }
 
-.timeline-section-title {
+.split-section-header {
+    margin-bottom: 50px;
+}
+
+.split-section-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
     font-size: 2.6rem;
     font-weight: 800;
@@ -2639,192 +2643,149 @@ label {
     margin: 12px 0;
 }
 
-.timeline-section-subtitle {
+.split-section-subtitle {
     font-size: 1.1rem;
     color: #64748B;
     max-width: 680px;
-    margin: 0 auto 50px;
-}
-
-.neon-timeline-container {
-    position: relative;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Connecting Line */
-.neon-timeline-line {
-    position: absolute;
-    top: 24px;
-    left: 80px;
-    right: 80px;
-    height: 4px;
-    background: #E2E8F0;
-    border-radius: 4px;
-    z-index: 1;
-}
-
-.neon-timeline-progress {
-    height: 100%;
-    width: 33%;
-    background: linear-gradient(90deg, #00AEEF 0%, #F20D0D 50%, #7B1FA2 100%);
-    border-radius: 4px;
-    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 0 12px rgba(0, 174, 239, 0.6);
-}
-
-.neon-timeline-grid {
+.services-split-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.split-image-stage {
+    position: sticky;
+    top: 100px;
+    height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.15);
+    border: 1px solid #E2E8F0;
+}
+
+.split-stage-wrapper {
     position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.split-img-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(1.04);
+}
+
+.split-img-layer.active {
+    opacity: 1;
+    transform: scale(1);
     z-index: 2;
 }
 
-.neon-timeline-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
+.split-img-layer.bg-study {
+    background-position: right 35% center !important;
+    background-size: cover !important;
 }
 
-.neon-node-wrapper {
-    margin-bottom: 25px;
+.split-img-layer.bg-immigration {
+    background-position: right 35% center !important;
+    background-size: cover !important;
 }
 
-.neon-node {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 3px solid #CBD5E1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: #64748B;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.35s ease, border-color 0.35s ease, color 0.3s ease, box-shadow 0.35s ease;
+.split-img-layer.bg-training {
+    background-position: right 25% center !important;
+    background-size: cover !important;
 }
 
-.node-cyan { color: #00AEEF; }
-.node-red { color: #F20D0D; }
-.node-purple { color: #7B1FA2; }
-
-.neon-timeline-card:hover .neon-node,
-.neon-timeline-card.active .neon-node {
-    transform: scale(1.2);
-}
-
-.card-study:hover .neon-node, .card-study.active .neon-node {
-    border-color: #00AEEF;
-    box-shadow: 0 0 20px rgba(0, 174, 239, 0.6);
-}
-
-.card-immigration:hover .neon-node, .card-immigration.active .neon-node {
-    border-color: #F20D0D;
-    box-shadow: 0 0 20px rgba(242, 13, 13, 0.6);
-}
-
-.card-training:hover .neon-node, .card-training.active .neon-node {
-    border-color: #7B1FA2;
-    box-shadow: 0 0 20px rgba(123, 31, 162, 0.6);
-}
-
-.neon-card-inner {
-    width: 100%;
-    border-radius: 24px;
-    background: #F8FAFC;
-    border: 1px solid #E2E8F0;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
-}
-
-.neon-timeline-card:hover .neon-card-inner,
-.neon-timeline-card.active .neon-card-inner {
-    background: #FFFFFF;
-    transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.12);
-}
-
-.card-study:hover .neon-card-inner, .card-study.active .neon-card-inner {
-    border-color: #00AEEF;
-    box-shadow: 0 0 25px rgba(0, 174, 239, 0.25), 0 20px 45px rgba(7, 43, 73, 0.12);
-}
-
-.card-immigration:hover .neon-card-inner, .card-immigration.active .neon-card-inner {
-    border-color: #F20D0D;
-    box-shadow: 0 0 25px rgba(242, 13, 13, 0.25), 0 20px 45px rgba(7, 43, 73, 0.12);
-}
-
-.card-training:hover .neon-card-inner, .card-training.active .neon-card-inner {
-    border-color: #7B1FA2;
-    box-shadow: 0 0 25px rgba(123, 31, 162, 0.25), 0 20px 45px rgba(7, 43, 73, 0.12);
-}
-
-.neon-card-img-box {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-}
-
-.neon-card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.img-study { object-position: right 35% center; }
-.img-immigration { object-position: right 35% center; }
-.img-training { object-position: right 25% center; }
-
-.neon-timeline-card:hover .neon-card-img {
-    transform: scale(1.08);
-}
-
-.neon-card-overlay {
+.split-badge {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.05) 0%, rgba(7, 43, 73, 0.55) 100%);
-}
-
-.neon-badge {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    padding: 6px 14px;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 1px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 10;
 }
 
-.neon-card-body {
-    padding: 24px;
+.badge-blue {
+    background: rgba(0, 174, 239, 0.2);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.4);
+}
+
+.badge-red {
+    background: rgba(242, 13, 13, 0.2);
+    color: #FF4D4D;
+    border: 1px solid rgba(242, 13, 13, 0.4);
+}
+
+.badge-purple {
+    background: rgba(123, 31, 162, 0.2);
+    color: #E1BEE7;
+    border: 1px solid rgba(123, 31, 162, 0.4);
+}
+
+.split-cards-column {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-.neon-card-header-row {
+.split-service-card {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
+    gap: 20px;
+    padding: 28px 24px;
+    border-radius: 20px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    text-decoration: none !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
 }
 
-.neon-card-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
+.split-service-card:hover,
+.split-service-card.active {
+    background: #FFFFFF;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-study:hover, .card-study.active {
+    border-color: #00AEEF;
+    box-shadow: 0 15px 35px rgba(0, 174, 239, 0.18);
+}
+
+.card-immigration:hover, .card-immigration.active {
+    border-color: #F20D0D;
+    box-shadow: 0 15px 35px rgba(242, 13, 13, 0.18);
+}
+
+.card-training:hover, .card-training.active {
+    border-color: #7B1FA2;
+    box-shadow: 0 15px 35px rgba(123, 31, 162, 0.18);
+}
+
+.split-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.15rem;
+    font-size: 1.35rem;
     flex-shrink: 0;
+    transition: transform 0.35s ease;
 }
 
 .blue-icon {
@@ -2845,69 +2806,79 @@ label {
     border: 1px solid rgba(123, 31, 162, 0.3);
 }
 
-.neon-card-title {
+.split-service-card:hover .split-card-icon {
+    transform: scale(1.12) rotate(-4deg);
+}
+
+.split-card-body {
+    flex: 1;
+}
+
+.split-card-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.split-card-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: #072B49;
     margin: 0;
 }
 
-.neon-card-desc {
-    font-size: 0.92rem;
-    color: #475569;
-    line-height: 1.5;
-    margin-bottom: 20px;
+.split-card-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F1F5F9;
+    color: #072B49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
-.neon-discover-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    border-radius: 30px;
+.split-service-card:hover .split-card-arrow {
+    transform: translateX(6px);
+    background: #072B49;
+    color: #FFFFFF;
+}
+
+.split-card-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 14px;
+}
+
+.split-discover-btn {
     font-size: 0.88rem;
     font-weight: 700;
-    text-decoration: none !important;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s ease;
 }
 
-.btn-blue {
-    background: #00AEEF;
-    color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(0, 174, 239, 0.35);
+.split-service-card:hover .split-discover-btn {
+    gap: 10px;
 }
 
-.btn-red {
-    background: #F20D0D;
-    color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(242, 13, 13, 0.35);
-}
-
-.btn-purple {
-    background: #7B1FA2;
-    color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(123, 31, 162, 0.35);
-}
-
-.neon-discover-btn:hover {
-    transform: translateY(-2px);
-}
-
-.neon-discover-btn .icon-arrow {
-    transition: transform 0.3s ease;
-}
-
-.neon-discover-btn:hover .icon-arrow {
-    transform: translateX(5px);
-}
+.btn-blue-text { color: #00AEEF; }
+.btn-red-text { color: #F20D0D; }
+.btn-purple-text { color: #7B1FA2; }
 
 @media (max-width: 992px) {
-    .neon-timeline-grid {
+    .services-split-grid {
         grid-template-columns: 1fr;
     }
-    .neon-timeline-line {
-        display: none;
+    .split-image-stage {
+        height: 300px;
+        position: static;
     }
 }
 

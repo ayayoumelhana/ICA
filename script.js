@@ -111,22 +111,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       Concept 4: Interactive Neon Timeline Controller
+       Concept 3: Split Layout Image Stage Crossfade Handler
        ========================================================================== */
-    const neonCards = document.querySelectorAll('.neon-timeline-card');
-    const progressBar = document.getElementById('neon-progress-bar');
+    const splitCards = document.querySelectorAll('.split-service-card');
+    const splitImgLayers = document.querySelectorAll('.split-img-layer');
 
-    neonCards.forEach(card => {
+    splitCards.forEach(card => {
+        const bgType = card.getAttribute('data-service-bg');
+
         card.addEventListener('mouseenter', () => {
-            neonCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
+            splitCards.forEach(c => c.classList.remove('active'));
+            splitImgLayers.forEach(l => l.classList.remove('active'));
 
-            const step = card.getAttribute('data-step');
-            if (progressBar) {
-                if (step === '1') progressBar.style.width = '33%';
-                else if (step === '2') progressBar.style.width = '66%';
-                else if (step === '3') progressBar.style.width = '100%';
-            }
+            card.classList.add('active');
+            const targetLayer = document.querySelector(`.split-img-layer.bg-${bgType}`);
+            if (targetLayer) targetLayer.classList.add('active');
         });
     });
 
