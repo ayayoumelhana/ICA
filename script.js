@@ -157,50 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 googleTrack.style.transform = `translateX(${currentOffset}px)`;
             });
         });
-    /* ==========================================================================
-       Awwwards Bento Grid Video Lightbox Modal Controller
-       ========================================================================== */
-    const bentoVideoBtns = document.querySelectorAll('.open-bento-video-btn, .open-rachid-video-btn');
-    const bentoModal = document.getElementById('bento-video-modal');
-    const bentoIframe = document.getElementById('bento-modal-iframe');
-    const bentoTitle = document.getElementById('bento-modal-title');
-    const bentoCloseBtn = document.getElementById('bento-modal-close');
-
-    if (bentoModal && bentoIframe) {
-        bentoVideoBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const videoEmbedUrl = btn.getAttribute('data-video-embed') || 'https://www.youtube-nocookie.com/embed/WVqLnlJ0acw?autoplay=1&rel=0';
-                const videoTitleText = btn.getAttribute('data-video-title') || 'Témoignage Vidéo Rachid El Ouali';
-
-                bentoIframe.src = videoEmbedUrl;
-                if (bentoTitle) bentoTitle.textContent = videoTitleText;
-                bentoModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        const closeBentoModal = () => {
-            bentoModal.classList.remove('active');
-            bentoIframe.src = ''; // Stop video playback
-            document.body.style.overflow = '';
-        };
-
-        if (bentoCloseBtn) {
-            bentoCloseBtn.addEventListener('click', closeBentoModal);
-        }
-
-        bentoModal.addEventListener('click', (e) => {
-            if (e.target === bentoModal) {
-                closeBentoModal();
-            }
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && bentoModal.classList.contains('active')) {
-                closeBentoModal();
-            }
-        });
     }
 
     /* ==========================================================================
