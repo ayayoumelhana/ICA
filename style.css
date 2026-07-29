@@ -2549,243 +2549,8 @@ label {
 }
 
 .btn-purple:hover {
-    background: #6A1B9A;
+    background: #4A148C;
     box-shadow: 0 10px 25px rgba(123, 31, 162, 0.5);
-}
-
-/* ==========================================================================
-   Home Bento Grid Services Section (Awwwards & Apple Style)
-   ========================================================================== */
-.home-bento-section {
-    padding: 90px 0;
-    background-color: #F8FAFC;
-}
-
-.bento-section-header {
-    max-width: 750px;
-    margin: 0 auto 50px auto;
-}
-
-.bento-main-title {
-    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #072B49;
-    margin: 15px 0 12px 0;
-    line-height: 1.25;
-}
-
-.bento-main-subtitle {
-    font-size: 1.05rem;
-    color: #475569;
-    line-height: 1.6;
-}
-
-.home-bento-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
-
-.bento-card {
-    position: relative;
-    border-radius: 24px;
-    overflow: hidden;
-    min-height: 440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.08);
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.4s ease;
-    cursor: pointer;
-}
-
-.bento-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(7, 43, 73, 0.18);
-}
-
-.bento-card-study:hover {
-    border-color: #00AEEF;
-}
-
-.bento-card-immigration:hover {
-    border-color: #F20D0D;
-}
-
-.bento-card-training:hover {
-    border-color: #AB47BC;
-}
-
-.bento-card-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center center;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1;
-}
-
-.bento-card:hover .bento-card-bg {
-    transform: scale(1.08);
-}
-
-.bento-card-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        180deg, 
-        rgba(7, 43, 73, 0.25) 0%, 
-        rgba(7, 43, 73, 0.7) 50%, 
-        rgba(7, 43, 73, 0.96) 100%
-    );
-    z-index: 2;
-    transition: opacity 0.35s ease;
-}
-
-.bento-card:hover .bento-card-overlay {
-    background: linear-gradient(
-        180deg, 
-        rgba(7, 43, 73, 0.15) 0%, 
-        rgba(7, 43, 73, 0.65) 45%, 
-        rgba(7, 43, 73, 0.98) 100%
-    );
-}
-
-.bento-card-content {
-    position: relative;
-    z-index: 3;
-    padding: 32px 28px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: flex-end;
-}
-
-.bento-badge-row {
-    margin-bottom: 14px;
-}
-
-.bento-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-.badge-cyan {
-    background: rgba(0, 174, 239, 0.22);
-    color: #38BDF8;
-    border: 1px solid rgba(0, 174, 239, 0.4);
-}
-
-.badge-red {
-    background: rgba(242, 13, 13, 0.22);
-    color: #FF6B6B;
-    border: 1px solid rgba(242, 13, 13, 0.4);
-}
-
-.badge-purple {
-    background: rgba(171, 71, 188, 0.22);
-    color: #E1BEE7;
-    border: 1px solid rgba(171, 71, 188, 0.4);
-}
-
-.bento-card-title {
-    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    margin: 0 0 10px 0;
-    line-height: 1.25;
-}
-
-.bento-card-desc {
-    font-size: 0.92rem;
-    color: #E2E8F0;
-    line-height: 1.5;
-    margin-bottom: 22px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    opacity: 0.92;
-}
-
-.bento-card-footer {
-    display: flex;
-    align-items: center;
-}
-
-.bento-action-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 11px 22px;
-    border-radius: 14px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-decoration: none !important;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-cyan-glow {
-    background: #00AEEF;
-    color: #FFFFFF;
-    box-shadow: 0 4px 15px rgba(0, 174, 239, 0.35);
-}
-
-.btn-red-glow {
-    background: #F20D0D;
-    color: #FFFFFF;
-    box-shadow: 0 4px 15px rgba(242, 13, 13, 0.35);
-}
-
-.btn-purple-glow {
-    background: #7B1FA2;
-    color: #FFFFFF;
-    box-shadow: 0 4px 15px rgba(123, 31, 162, 0.35);
-}
-
-.bento-card:hover .btn-cyan-glow {
-    background: #0099D6;
-    box-shadow: 0 8px 25px rgba(0, 174, 239, 0.5);
-}
-
-.bento-card:hover .btn-red-glow {
-    background: #D00B0B;
-    box-shadow: 0 8px 25px rgba(242, 13, 13, 0.5);
-}
-
-.bento-card:hover .btn-purple-glow {
-    background: #6A1B9A;
-    box-shadow: 0 8px 25px rgba(123, 31, 162, 0.5);
-}
-
-.bento-arrow {
-    transition: transform 0.3s ease;
-}
-
-.bento-card:hover .bento-arrow {
-    transform: translateX(6px);
-}
-
-@media (max-width: 992px) {
-    .home-bento-grid {
-        grid-template-columns: 1fr;
-    }
-    .bento-card {
-        min-height: 360px;
-    }
 }
 
 .icon-arrow {
@@ -2856,6 +2621,250 @@ label {
 .btn-cyan:hover {
     background-color: #009BD5;
     transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Concept 3: Luxury Split Layout Preview (Awwwards/Stripe Style)
+   ========================================================================== */
+.services-split-section {
+    padding: 90px 0;
+    background-color: #FFFFFF;
+}
+
+.split-section-header {
+    margin-bottom: 50px;
+}
+
+.split-section-title {
+    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #072B49;
+    margin: 12px 0;
+}
+
+.split-section-subtitle {
+    font-size: 1.1rem;
+    color: #64748B;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.services-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.split-image-stage {
+    position: sticky;
+    top: 100px;
+    height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.15);
+    border: 1px solid #E2E8F0;
+}
+
+.split-stage-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.split-img-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(1.04);
+}
+
+.split-img-layer.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.split-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 10;
+}
+
+.badge-blue {
+    background: rgba(0, 174, 239, 0.2);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.4);
+}
+
+.badge-red {
+    background: rgba(242, 13, 13, 0.2);
+    color: #FF4D4D;
+    border: 1px solid rgba(242, 13, 13, 0.4);
+}
+
+.badge-purple {
+    background: rgba(123, 31, 162, 0.2);
+    color: #E1BEE7;
+    border: 1px solid rgba(123, 31, 162, 0.4);
+}
+
+.split-cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.split-service-card {
+    display: flex;
+    gap: 20px;
+    padding: 28px 24px;
+    border-radius: 20px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    text-decoration: none !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+.split-service-card:hover,
+.split-service-card.active {
+    background: #FFFFFF;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-study:hover, .card-study.active {
+    border-color: #00AEEF;
+    box-shadow: 0 15px 35px rgba(0, 174, 239, 0.18);
+}
+
+.card-immigration:hover, .card-immigration.active {
+    border-color: #F20D0D;
+    box-shadow: 0 15px 35px rgba(242, 13, 13, 0.18);
+}
+
+.card-training:hover, .card-training.active {
+    border-color: #7B1FA2;
+    box-shadow: 0 15px 35px rgba(123, 31, 162, 0.18);
+}
+
+.split-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
+}
+
+.blue-icon {
+    background: rgba(0, 174, 239, 0.14);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.3);
+}
+
+.red-icon {
+    background: rgba(242, 13, 13, 0.14);
+    color: #F20D0D;
+    border: 1px solid rgba(242, 13, 13, 0.3);
+}
+
+.purple-icon {
+    background: rgba(123, 31, 162, 0.14);
+    color: #7B1FA2;
+    border: 1px solid rgba(123, 31, 162, 0.3);
+}
+
+.split-service-card:hover .split-card-icon {
+    transform: scale(1.12) rotate(-4deg);
+}
+
+.split-card-body {
+    flex: 1;
+}
+
+.split-card-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.split-card-title {
+    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #072B49;
+    margin: 0;
+}
+
+.split-card-arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F1F5F9;
+    color: #072B49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.split-service-card:hover .split-card-arrow {
+    transform: translateX(6px);
+    background: #072B49;
+    color: #FFFFFF;
+}
+
+.split-card-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 14px;
+}
+
+.split-discover-btn {
+    font-size: 0.88rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.3s ease;
+}
+
+.split-service-card:hover .split-discover-btn {
+    gap: 10px;
+}
+
+.btn-blue-text { color: #00AEEF; }
+.btn-red-text { color: #F20D0D; }
+.btn-purple-text { color: #7B1FA2; }
+
+@media (max-width: 992px) {
+    .services-split-grid {
+        grid-template-columns: 1fr;
+    }
+    .split-image-stage {
+        height: 300px;
+        position: static;
+    }
 }
 
 /* PDF Red Divider Line */

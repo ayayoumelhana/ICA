@@ -111,6 +111,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
+       Concept 3: Split Layout Image Stage Crossfade Handler
+       ========================================================================== */
+    const splitCards = document.querySelectorAll('.split-service-card');
+    const splitImgLayers = document.querySelectorAll('.split-img-layer');
+
+    splitCards.forEach(card => {
+        const bgType = card.getAttribute('data-service-bg');
+
+        card.addEventListener('mouseenter', () => {
+            splitCards.forEach(c => c.classList.remove('active'));
+            splitImgLayers.forEach(l => l.classList.remove('active'));
+
+            card.classList.add('active');
+            const targetLayer = document.querySelector(`.split-img-layer.bg-${bgType}`);
+            if (targetLayer) targetLayer.classList.add('active');
+        });
+    });
+
+    /* ==========================================================================
        Interactive Step Pills Switcher (.pdf-step-pill)
        ========================================================================== */
     const serviceBlocks = document.querySelectorAll('.service-block-section');
