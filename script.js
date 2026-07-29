@@ -111,15 +111,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       Concept 2: Expanding Glass Cards Interactive Hover Handler
+       Qui sommes-nous ? - Concept 3 3D Parallax Mouse Controller
        ========================================================================== */
-    const expandingCards = document.querySelectorAll('.expanding-card');
-    if (expandingCards.length > 0) {
-        expandingCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                expandingCards.forEach(c => c.classList.remove('active'));
-                card.classList.add('active');
-            });
+    const parallaxCard = document.getElementById('about-parallax-card');
+    if (parallaxCard) {
+        const container = parallaxCard.parentElement;
+
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            const rotateX = (-y / rect.height) * 14;
+            const rotateY = (x / rect.width) * 14;
+
+            parallaxCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            parallaxCard.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1.0)';
         });
     }
 

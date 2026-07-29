@@ -2636,192 +2636,282 @@ label {
 }
 
 /* ==========================================================================
-   Concept 2: About Us Split Editorial Layout (Linear/Framer Style)
+   Qui sommes-nous ? - Concept 3: Dark Glassmorphic & Parallax Experience
    ========================================================================== */
-.about-split-section {
+.about-glass-section {
+    position: relative;
     padding: 100px 0;
-    background-color: #F8FAFC;
+    background: #072B49;
+    overflow: hidden;
 }
 
-.about-split-grid {
+.relative-z {
+    position: relative;
+    z-index: 10;
+}
+
+/* Background Glowing Orbs */
+.glass-bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.orb-1 {
+    top: -100px;
+    left: -100px;
+    width: 450px;
+    height: 450px;
+    background: #00AEEF;
+}
+
+.orb-2 {
+    bottom: -120px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    background: #F20D0D;
+}
+
+.orb-3 {
+    top: 40%;
+    left: 45%;
+    width: 350px;
+    height: 350px;
+    background: #7B1FA2;
+    opacity: 0.25;
+}
+
+.badge-glass-pill {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.about-glass-title {
+    font-family: var(--font-minion) !important;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #FFFFFF !important;
+    margin: 12px 0 16px;
+}
+
+.about-glass-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 720px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+.about-glass-grid {
     display: grid;
     grid-template-columns: 1fr 1.15fr;
     gap: 50px;
     align-items: center;
 }
 
-.about-visual-column {
-    position: relative;
+/* Parallax Image Frame */
+.about-glass-img-col {
+    perspective: 1000px;
 }
 
-.about-img-frame {
+.about-parallax-card {
     position: relative;
     border-radius: 28px;
     overflow: hidden;
-    box-shadow: 0 25px 55px rgba(7, 43, 73, 0.15);
-    border: 1px solid #E2E8F0;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
 }
 
-.about-featured-img {
+.about-glass-img {
     width: 100%;
     height: 480px;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-img-frame:hover .about-featured-img {
-    transform: scale(1.05);
-}
-
-.about-img-overlay {
+.about-glass-img-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.65) 100%);
 }
 
-.about-glass-badge {
+.about-floating-badge {
     position: absolute;
-    bottom: 24px;
+    top: 24px;
     left: 24px;
-    background: rgba(7, 43, 73, 0.85);
-    color: #FFFFFF;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 0.85rem;
     font-weight: 700;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    color: #FFFFFF;
+    background: rgba(7, 43, 73, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    z-index: 10;
 }
 
-.about-split-title {
-    font-family: var(--font-minion) !important;
-    font-size: 2.5rem;
+.about-floating-stat-badge {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    padding: 16px 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #FFFFFF;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.stat-badge-num {
+    font-family: var(--font-minion);
+    font-size: 2.2rem;
     font-weight: 800;
-    color: #072B49;
-    margin: 12px 0 16px;
-    line-height: 1.25;
+    color: #00AEEF;
+    line-height: 1;
 }
 
-.about-split-lead {
-    font-size: 1.05rem;
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 30px;
+.stat-badge-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.about-values-list {
+/* Glassmorphic Value Cards */
+.about-glass-content-col {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 35px;
+    gap: 20px;
 }
 
-.about-value-card {
+.about-glass-card {
     display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 20px 22px;
-    border-radius: 20px;
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    gap: 20px;
+    padding: 24px 26px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-value-card:hover {
-    transform: translateX(8px);
-    background: #FFFFFF;
+.about-glass-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-5px);
 }
 
-.card-blue:hover {
-    border-color: #00AEEF;
-    box-shadow: 0 12px 30px rgba(0, 174, 239, 0.15);
+.card-cyan-hover:hover {
+    border-color: rgba(0, 174, 239, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 174, 239, 0.2);
 }
 
-.card-red:hover {
-    border-color: #F20D0D;
-    box-shadow: 0 12px 30px rgba(242, 13, 13, 0.15);
+.card-red-hover:hover {
+    border-color: rgba(242, 13, 13, 0.5);
+    box-shadow: 0 15px 35px rgba(242, 13, 13, 0.2);
 }
 
-.card-purple:hover {
-    border-color: #7B1FA2;
-    box-shadow: 0 12px 30px rgba(123, 31, 162, 0.15);
+.card-purple-hover:hover {
+    border-color: rgba(123, 31, 162, 0.5);
+    box-shadow: 0 15px 35px rgba(123, 31, 162, 0.2);
 }
 
-.value-icon-box {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
+.glass-card-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
-    transition: transform 0.35s ease;
 }
 
-.about-value-card:hover .value-icon-box {
-    transform: scale(1.12) rotate(-4deg);
+.icon-cyan {
+    background: rgba(0, 174, 239, 0.2);
+    color: #00AEEF;
+    border: 1px solid rgba(0, 174, 239, 0.4);
 }
 
-.icon-blue { background: rgba(0, 174, 239, 0.12); color: #00AEEF; border: 1px solid rgba(0, 174, 239, 0.3); }
-.icon-red { background: rgba(242, 13, 13, 0.12); color: #F20D0D; border: 1px solid rgba(242, 13, 13, 0.3); }
-.icon-purple { background: rgba(123, 31, 162, 0.12); color: #7B1FA2; border: 1px solid rgba(123, 31, 162, 0.3); }
+.icon-red {
+    background: rgba(242, 13, 13, 0.2);
+    color: #FF4D4D;
+    border: 1px solid rgba(242, 13, 13, 0.4);
+}
 
-.value-card-title {
+.icon-purple {
+    background: rgba(123, 31, 162, 0.2);
+    color: #E1BEE7;
+    border: 1px solid rgba(123, 31, 162, 0.4);
+}
+
+.glass-card-title {
     font-family: var(--font-minion) !important;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    color: #072B49;
-    margin: 0 0 4px 0;
+    color: #FFFFFF !important;
+    margin: 0 0 6px 0 !important;
 }
 
-.value-card-desc {
-    font-size: 0.92rem;
-    color: #64748B;
-    line-height: 1.5;
+.glass-card-desc {
+    font-size: 0.94rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.55;
     margin: 0;
 }
 
-.about-cta-btn {
+.about-glass-actions {
+    margin-top: 10px;
+}
+
+.btn-glass-glow {
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
     gap: 12px;
     padding: 14px 30px;
     border-radius: 30px;
-    background: #072B49;
+    background: linear-gradient(135deg, #00AEEF 0%, #0077B6 100%);
     color: #FFFFFF;
     font-size: 0.95rem;
     font-weight: 700;
     text-decoration: none !important;
-    box-shadow: 0 6px 20px rgba(7, 43, 73, 0.3);
-    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 174, 239, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-cta-btn:hover {
-    background: #F20D0D;
-    color: #FFFFFF;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(242, 13, 13, 0.4);
+.btn-glass-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 174, 239, 0.6);
 }
 
-.about-cta-btn .icon-arrow {
+.btn-glass-glow .icon-arrow {
     transition: transform 0.3s ease;
 }
 
-.about-cta-btn:hover .icon-arrow {
+.btn-glass-glow:hover .icon-arrow {
     transform: translateX(6px);
 }
 
 @media (max-width: 992px) {
-    .about-split-grid {
+    .about-glass-grid {
         grid-template-columns: 1fr;
     }
-    .about-featured-img {
-        height: 320px;
+    .about-glass-img {
+        height: 340px;
     }
 }
 
