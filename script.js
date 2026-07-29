@@ -111,21 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       Concept 3: Split Layout Image Stage Crossfade Handler
+       Concept 2: Interactive Expanding Glass Cards Controller
        ========================================================================== */
-    const splitCards = document.querySelectorAll('.split-service-card');
-    const splitImgLayers = document.querySelectorAll('.split-img-layer');
+    const expandingCards = document.querySelectorAll('.expanding-card');
 
-    splitCards.forEach(card => {
-        const bgType = card.getAttribute('data-service-bg');
-
+    expandingCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            splitCards.forEach(c => c.classList.remove('active'));
-            splitImgLayers.forEach(l => l.classList.remove('active'));
-
+            expandingCards.forEach(c => c.classList.remove('active'));
             card.classList.add('active');
-            const targetLayer = document.querySelector(`.split-img-layer.bg-${bgType}`);
-            if (targetLayer) targetLayer.classList.add('active');
         });
     });
 
