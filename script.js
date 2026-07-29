@@ -111,62 +111,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       Concept 5: Premium 3D Carousel Interactive Controller
+       Concept 4: Interactive Neon Timeline Controller
        ========================================================================== */
-    const carouselCards = document.querySelectorAll('.carousel-3d-card');
-    const carouselDots = document.querySelectorAll('.carousel-dot');
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
-    let currentCarouselIndex = 0;
-    const totalCarouselCards = carouselCards.length;
+    const neonCards = document.querySelectorAll('.neon-timeline-card');
+    const progressBar = document.getElementById('neon-progress-bar');
 
-    function updateCarousel3D(index) {
-        if (totalCarouselCards === 0) return;
-        currentCarouselIndex = (index + totalCarouselCards) % totalCarouselCards;
+    neonCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            neonCards.forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
 
-        carouselCards.forEach((card, i) => {
-            card.classList.remove('pos-center', 'pos-left', 'pos-right');
-
-            const diff = (i - currentCarouselIndex + totalCarouselCards) % totalCarouselCards;
-
-            if (diff === 0) {
-                card.classList.add('pos-center');
-            } else if (diff === 1 || (totalCarouselCards === 3 && diff === 1)) {
-                card.classList.add('pos-right');
-            } else {
-                card.classList.add('pos-left');
+            const step = card.getAttribute('data-step');
+            if (progressBar) {
+                if (step === '1') progressBar.style.width = '33%';
+                else if (step === '2') progressBar.style.width = '66%';
+                else if (step === '3') progressBar.style.width = '100%';
             }
         });
-
-        carouselDots.forEach((dot, idx) => {
-            dot.classList.toggle('active', idx === currentCarouselIndex);
-        });
-    }
-
-    if (prevBtn && nextBtn && carouselCards.length > 0) {
-        prevBtn.addEventListener('click', () => updateCarousel3D(currentCarouselIndex - 1));
-        nextBtn.addEventListener('click', () => updateCarousel3D(currentCarouselIndex + 1));
-
-        carouselDots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const targetIdx = parseInt(dot.getAttribute('data-dot-index'), 10);
-                updateCarousel3D(targetIdx);
-            });
-        });
-
-        carouselCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                const cardIdx = parseInt(card.getAttribute('data-index'), 10);
-                if (cardIdx !== currentCarouselIndex) {
-                    e.preventDefault();
-                    updateCarousel3D(cardIdx);
-                }
-            });
-        });
-
-        // Initialize 3D carousel
-        updateCarousel3D(0);
-    }
+    });
 
     /* ==========================================================================
        Interactive Step Pills Switcher (.pdf-step-pill)
