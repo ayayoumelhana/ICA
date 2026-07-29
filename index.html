@@ -325,10 +325,8 @@
         <div class="container">
             <!-- Google Reviews Header Banner -->
             <div class="google-reviews-header text-center">
-                <span class="section-badge-pill"><i class="fab fa-google" style="margin-right: 6px; color: #4285F4;"></i> AVIS GOOGLE VÉRIFIÉS</span>
-                <h2 class="google-reviews-title">Ce que nos clients disent de nous</h2>
-                
-                <!-- Google Rating Badge -->
+                <span class="section-badge-pill"><i class="fab f            <!-- Google Rating Badge & Navigation Arrow Buttons -->
+            <div class="google-rating-nav-row">
                 <div class="google-rating-summary-box">
                     <div class="google-logo-badge">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -341,11 +339,7 @@
                     <div class="rating-score-block">
                         <span class="rating-score">4,8</span>
                         <div class="rating-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                     <div class="rating-meta-text">
@@ -353,12 +347,22 @@
                         <span class="google-certified-tag"><i class="fas fa-check-circle"></i> Fiche Google Vérifiée</span>
                     </div>
                 </div>
+
+                <!-- Navigation Arrow Buttons -->
+                <div class="google-nav-buttons">
+                    <button class="google-nav-btn prev-google-btn" id="google-prev" aria-label="Avis Précédent">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="google-nav-btn next-google-btn" id="google-next" aria-label="Avis Suivant">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <!-- 1 Single Line Continuous Marquee Slider -->
-        <div class="google-reviews-marquee-wrapper">
-            <div class="google-reviews-marquee-track">
-                <!-- SET 1 of 5 Google Review Cards -->
+        <!-- Single Line Interactive Carousel Slider -->
+        <div class="google-reviews-slider-wrapper">
+            <div class="google-reviews-slider-track" id="google-reviews-slider-track">
                 <!-- Review 1: Lebbar Amine -->
                 <div class="google-review-card">
                     <div class="google-card-header">
@@ -373,7 +377,7 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="google-card-text">
-                        "À tous ceux qui veulent immigrer au Canada sans aucune contrainte, optez directement sur ce cabinet. Ils sont très professionnels, agréables et réactives. Ce sont des gens de confiances..."
+                        "À tous ceux qui veulent immigrer au Canada sans aucune contrainte, optez directement sur ce cabinet. Ils sont très professionnels, agréables et réactives. Ce sont des gens de confiances qui s'occuperont de vous de A à Z. Mon dossier a été traité en un temps record et j'ai réussi à obtenir ce que je voulais grâce à eux."
                     </p>
                 </div>
 
@@ -391,7 +395,7 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="google-card-text">
-                        "Je tiens à remercier sincèrement Intellequest Canada Academy pour leur professionnalisme, leur accompagnement et leur efficacité tout au long du processus d'immigration de mes deux fils..."
+                        "Je tiens à remercier sincèrement Intellequest Canada Academy pour leur professionnalisme, leur accompagnement et leur efficacité tout au long du processus d'immigration de mes deux fils, qui ont pu partir au Canada en tant qu'étudiants. Grâce à leur soutien constant, tout s'est déroulé de manière fluide et rassurante."
                     </p>
                 </div>
 
@@ -409,7 +413,7 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="google-card-text">
-                        "Très bonne formation DSCG avec des professeurs compétents et un excellent accompagnement. Les cours sont clairs, organisés et très utiles pour préparer les examens."
+                        "Très bonne formation DSCG avec des professeurs compétents et un excellent accompagnement. Les cours sont clairs, organisés et très utiles pour préparer les examens. Je recommande vivement."
                     </p>
                 </div>
 
@@ -427,7 +431,7 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="google-card-text">
-                        "Je suis extrêmement satisfaite des services d’ICA Cabinet d’Immigration ! Leur équipe est professionnelle, réactive et très à l’écoute. Grâce à eux, j’ai pu avancer sereinement..."
+                        "Je suis extrêmement satisfaite des services d’ICA Cabinet d’Immigration ! Leur équipe est professionnelle, réactive et très à l’écoute. Ils m’ont accompagné à chaque étape de mon projet avec sérieux et bienveillance."
                     </p>
                 </div>
 
@@ -445,98 +449,11 @@
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
                     <p class="google-card-text">
-                        "Vraiement et sincerement ce sont des professionnels,acceueillants,disponibles.à l,ecoute.assurant un accompagnement tt au long du preces d obtention du visa étudiant de mon fils."
+                        "Vraiement et sincerement ce sont des professionnels,acceueillants,disponibles.à l,ecoute.assurant un accompagnement tt au long du preces d obtention du visa étudiant de mon fils.tres satisfait."
                     </p>
                 </div>
-
-                <!-- SET 2 (DUPLICATED FOR INFINITE 1-LINE LOOP) -->
-                <!-- Review 1: Lebbar Amine -->
-                <div class="google-review-card">
-                    <div class="google-card-header">
-                        <div class="reviewer-avatar avatar-green">L</div>
-                        <div class="reviewer-info">
-                            <h4 class="reviewer-name">Lebbar Amine</h4>
-                            <span class="reviewer-meta">2 avis · il y a 7 mois</span>
-                        </div>
-                        <i class="fab fa-google google-card-icon"></i>
-                    </div>
-                    <div class="google-card-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="google-card-text">
-                        "À tous ceux qui veulent immigrer au Canada sans aucune contrainte, optez directement sur ce cabinet. Ils sont très professionnels, agréables et réactives. Ce sont des gens de confiances..."
-                    </p>
-                </div>
-
-                <!-- Review 2: Siham Abidine -->
-                <div class="google-review-card">
-                    <div class="google-card-header">
-                        <div class="reviewer-avatar avatar-lime">S</div>
-                        <div class="reviewer-info">
-                            <h4 class="reviewer-name">Siham Abidine</h4>
-                            <span class="reviewer-meta">2 avis · il y a 10 mois</span>
-                        </div>
-                        <i class="fab fa-google google-card-icon"></i>
-                    </div>
-                    <div class="google-card-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="google-card-text">
-                        "Je tiens à remercier sincèrement Intellequest Canada Academy pour leur professionnalisme, leur accompagnement et leur efficacité tout au long du processus d'immigration de mes deux fils..."
-                    </p>
-                </div>
-
-                <!-- Review 3: Yasmine Souidi -->
-                <div class="google-review-card">
-                    <div class="google-card-header">
-                        <div class="reviewer-avatar avatar-darkgreen">Y</div>
-                        <div class="reviewer-info">
-                            <h4 class="reviewer-name">Yasmine Souidi</h4>
-                            <span class="reviewer-meta">1 avis · il y a 2 mois</span>
-                        </div>
-                        <i class="fab fa-google google-card-icon"></i>
-                    </div>
-                    <div class="google-card-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="google-card-text">
-                        "Très bonne formation DSCG avec des professeurs compétents et un excellent accompagnement. Les cours sont clairs, organisés et très utiles pour préparer les examens."
-                    </p>
-                </div>
-
-                <!-- Review 4: Yasmine Boujendar -->
-                <div class="google-review-card">
-                    <div class="google-card-header">
-                        <div class="reviewer-avatar avatar-pink">Y</div>
-                        <div class="reviewer-info">
-                            <h4 class="reviewer-name">Yasmine Boujendar</h4>
-                            <span class="reviewer-meta">2 avis · 3 photos · il y a un an</span>
-                        </div>
-                        <i class="fab fa-google google-card-icon"></i>
-                    </div>
-                    <div class="google-card-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="google-card-text">
-                        "Je suis extrêmement satisfaite des services d’ICA Cabinet d’Immigration ! Leur équipe est professionnelle, réactive et très à l’écoute. Grâce à eux, j’ai pu avancer sereinement..."
-                    </p>
-                </div>
-
-                <!-- Review 5: Taoufik Ridaoui -->
-                <div class="google-review-card">
-                    <div class="google-card-header">
-                        <div class="reviewer-avatar avatar-purple">T</div>
-                        <div class="reviewer-info">
-                            <h4 class="reviewer-name">Taoufik Ridaoui</h4>
-                            <span class="reviewer-meta">3 avis · il y a un an</span>
-                        </div>
-                        <i class="fab fa-google google-card-icon"></i>
-                    </div>
-                    <div class="google-card-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="google-card-text">
-                        "Vraiement et sincerement ce sont des professionnels,acceueillants,disponibles.à l,ecoute.assurant un accompagnement tt au long du preces d obtention du visa étudiant de mon fils."
+            </div>
+        </div>   "Vraiement et sincerement ce sont des professionnels,acceueillants,disponibles.à l,ecoute.assurant un accompagnement tt au long du preces d obtention du visa étudiant de mon fils."
                     </p>
                 </div>
             </div>

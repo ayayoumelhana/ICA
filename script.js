@@ -124,6 +124,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
+       Google Reviews Slider Buttons Navigation Controller
+       ========================================================================== */
+    const googleTrack = document.getElementById('google-reviews-slider-track');
+    const googlePrev = document.getElementById('google-prev');
+    const googleNext = document.getElementById('google-next');
+
+    if (googleTrack && googlePrev && googleNext) {
+        googlePrev.addEventListener('click', () => {
+            googleTrack.parentElement.scrollBy({ left: -390, behavior: 'smooth' });
+        });
+        googleNext.addEventListener('click', () => {
+            googleTrack.parentElement.scrollBy({ left: 390, behavior: 'smooth' });
+        });
+    }
        Interactive Step Pills Switcher (.pdf-step-pill)
        ========================================================================== */
     const serviceBlocks = document.querySelectorAll('.service-block-section');
