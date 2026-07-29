@@ -2690,12 +2690,12 @@ label {
 }
 
 .split-img-layer.bg-study {
-    background-position: center center !important;
+    background-position: right 35% center !important;
     background-size: cover !important;
 }
 
 .split-img-layer.bg-immigration {
-    background-position: center center !important;
+    background-position: right 35% center !important;
     background-size: cover !important;
 }
 
