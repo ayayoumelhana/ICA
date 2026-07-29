@@ -124,34 +124,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       Google Reviews Change Buttons (Prev ❮ / Next ❯) Controller
+       Google Reviews Side Change Buttons (Prev ❮ / Next ❯) Controller
        ========================================================================== */
     const googleTrack = document.querySelector('.google-reviews-marquee-track');
-    const googlePrevBtn = document.getElementById('google-prev-btn');
-    const googleNextBtn = document.getElementById('google-next-btn');
+    const googlePrevBtns = document.querySelectorAll('.google-prev-btn');
+    const googleNextBtns = document.querySelectorAll('.google-next-btn');
 
-    if (googleTrack && googlePrevBtn && googleNextBtn) {
+    if (googleTrack && (googlePrevBtns.length > 0 || googleNextBtns.length > 0)) {
         let currentOffset = 0;
         const stepAmount = 405; // 380px card + 25px gap
 
-        googlePrevBtn.addEventListener('click', () => {
-            googleTrack.style.animation = 'none';
-            currentOffset += stepAmount;
-            if (currentOffset > 0) {
-                currentOffset = -stepAmount * 4;
-            }
-            googleTrack.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
-            googleTrack.style.transform = `translateX(${currentOffset}px)`;
+        googlePrevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                googleTrack.style.animation = 'none';
+                currentOffset += stepAmount;
+                if (currentOffset > 0) {
+                    currentOffset = -stepAmount * 4;
+                }
+                googleTrack.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                googleTrack.style.transform = `translateX(${currentOffset}px)`;
+            });
         });
 
-        googleNextBtn.addEventListener('click', () => {
-            googleTrack.style.animation = 'none';
-            currentOffset -= stepAmount;
-            if (currentOffset < -stepAmount * 4) {
-                currentOffset = 0;
-            }
-            googleTrack.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
-            googleTrack.style.transform = `translateX(${currentOffset}px)`;
+        googleNextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                googleTrack.style.animation = 'none';
+                currentOffset -= stepAmount;
+                if (currentOffset < -stepAmount * 4) {
+                    currentOffset = 0;
+                }
+                googleTrack.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                googleTrack.style.transform = `translateX(${currentOffset}px)`;
+            });
         });
     }
 

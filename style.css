@@ -3798,45 +3798,6 @@ label {
     margin: 12px 0 25px;
 }
 
-.google-controls-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.google-nav-buttons-group {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.google-nav-btn {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    color: #072B49;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(7, 43, 73, 0.08);
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.google-nav-btn:hover {
-    background: #00AEEF;
-    color: #FFFFFF;
-    border-color: #00AEEF;
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0, 174, 239, 0.4);
-}
-
 .google-rating-summary-box {
     display: inline-flex;
     align-items: center;
@@ -3846,7 +3807,55 @@ label {
     padding: 16px 28px;
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(7, 43, 73, 0.06);
-    margin-bottom: 0;
+    margin-bottom: 45px;
+}
+
+/* Side Navigation Arrows Floating Beside Comments Container */
+.google-reviews-slider-stage {
+    position: relative;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.google-side-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    color: #072B49;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(7, 43, 73, 0.12);
+    z-index: 30;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-prev-btn {
+    left: -20px;
+}
+
+.google-next-btn {
+    right: -20px;
+}
+
+.google-side-btn:hover {
+    background: #00AEEF;
+    color: #FFFFFF;
+    border-color: #00AEEF;
+    transform: translateY(-50%) scale(1.12);
+    box-shadow: 0 12px 30px rgba(0, 174, 239, 0.45);
+}
+
+@media (max-width: 1350px) {
+    .google-prev-btn { left: 5px; }
+    .google-next-btn { right: 5px; }
 }
 
 .google-logo-badge {
