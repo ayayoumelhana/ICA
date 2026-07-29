@@ -111,23 +111,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ==========================================================================
-       Concept 3: Split Layout Image Stage Crossfade Handler
+       Concept 5: Premium 3D Carousel Interactive Controller
        ========================================================================== */
-    const splitCards = document.querySelectorAll('.split-service-card');
-    const splitImgLayers = document.querySelectorAll('.split-img-layer');
+    const carouselCards = document.querySelectorAll('.carousel-3d-card');
+    const carouselDots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    let currentCarouselIndex = 0;
+    const totalCarouselCards = carouselCards.length;
 
-    splitCards.forEach(card => {
-        const bgType = card.getAttribute('data-service-bg');
+    function updateCarousel3D(index) {
+        if (totalCarouselCards === 0) return;
+        currentCarouselIndex = (index + totalCarouselCards) % totalCarouselCards;
 
-        card.addEventListener('mouseenter', () => {
-            splitCards.forEach(c => c.classList.remove('active'));
-            splitImgLayers.forEach(l => l.classList.remove('active'));
+        carouselCards.forEach((card, i) => {
+            card.classList.remove('pos-center', 'pos-left', 'pos-right');
 
-            card.classList.add('active');
-            const targetLayer = document.querySelector(`.split-img-layer.bg-${bgType}`);
-            if (targetLayer) targetLayer.classList.add('active');
+            const diff = (i - currentCarouselIndex + totalCarouselCards) % totalCarouselCards;
+
+            if (diff === 0) {
+                card.classList.add('pos-center');
+            } else if (diff === 1 || (totalCarouselCards === 3 && diff === 1)) {
+                card.classList.add('pos-right');
+            } else {
+                card.classList.add('pos-left');
+            }
         });
-    });
+
+        carouselDots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentCarouselIndex);
+        });
+    }
+
+    if (prevBtn && nextBtn && carouselCards.length > 0) {
+        prevBtn.addEventListener('click', () => updateCarousel3D(currentCarouselIndex - 1));
+        nextBtn.addEventListener('click', () => updateCarousel3D(currentCarouselIndex + 1));
+
+        carouselDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const targetIdx = parseInt(dot.getAttribute('data-dot-index'), 10);
+                updateCarousel3D(targetIdx);
+            });
+        });
+
+        carouselCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                const cardIdx = parseInt(card.getAttribute('data-index'), 10);
+                if (cardIdx !== currentCarouselIndex) {
+                    e.preventDefault();
+                    updateCarousel3D(cardIdx);
+                }
+            });
+        });
+
+        // Initialize 3D carousel
+        updateCarousel3D(0);
+    }
 
     /* ==========================================================================
        Interactive Step Pills Switcher (.pdf-step-pill)

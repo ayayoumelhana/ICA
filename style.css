@@ -2624,18 +2624,15 @@ label {
 }
 
 /* ==========================================================================
-   Concept 3: Luxury Split Layout Preview (Awwwards/Stripe Style)
+   Concept 5: Premium 3D Carousel (Apple Product Showcase Style)
    ========================================================================== */
-.services-split-section {
+.services-carousel-section {
     padding: 90px 0;
     background-color: #FFFFFF;
+    overflow: hidden;
 }
 
-.split-section-header {
-    margin-bottom: 50px;
-}
-
-.split-section-title {
+.carousel-section-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
     font-size: 2.6rem;
     font-weight: 800;
@@ -2643,149 +2640,157 @@ label {
     margin: 12px 0;
 }
 
-.split-section-subtitle {
+.carousel-section-subtitle {
     font-size: 1.1rem;
     color: #64748B;
     max-width: 680px;
+    margin: 0 auto 40px;
+}
+
+.carousel-3d-stage {
+    position: relative;
+    max-width: 1100px;
     margin: 0 auto;
-}
-
-.services-split-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 40px;
+    height: 520px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    perspective: 1200px;
 }
 
-.split-image-stage {
-    position: sticky;
-    top: 100px;
-    height: 480px;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.15);
-    border: 1px solid #E2E8F0;
-}
-
-.split-stage-wrapper {
+.carousel-3d-track {
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
 }
 
-.split-img-layer {
+.carousel-3d-card {
+    position: absolute;
+    width: 380px;
+    height: 480px;
+    border-radius: 24px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.08);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* 3D Positions */
+.carousel-3d-card.pos-center {
+    transform: translateX(0) translateZ(60px) scale(1.04);
+    opacity: 1;
+    z-index: 10;
+    filter: blur(0px);
+    box-shadow: 0 25px 60px rgba(7, 43, 73, 0.2);
+}
+
+.carousel-3d-card.pos-left {
+    transform: translateX(-340px) translateZ(-80px) rotateY(16deg) scale(0.88);
+    opacity: 0.7;
+    z-index: 5;
+    filter: blur(2px);
+}
+
+.carousel-3d-card.pos-right {
+    transform: translateX(340px) translateZ(-80px) rotateY(-16deg) scale(0.88);
+    opacity: 0.7;
+    z-index: 5;
+    filter: blur(2px);
+}
+
+.carousel-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.carousel-card-img-box {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.carousel-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.img-study { object-position: right 35% center; }
+.img-immigration { object-position: right 35% center; }
+.img-training { object-position: right 25% center; }
+
+.carousel-3d-card:hover .carousel-card-img {
+    transform: scale(1.08);
+}
+
+.carousel-card-overlay {
     position: absolute;
     inset: 0;
-    background-size: cover;
-    background-position: center center;
-    opacity: 0;
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    transform: scale(1.04);
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.6) 100%);
 }
 
-.split-img-layer.active {
-    opacity: 1;
-    transform: scale(1);
-    z-index: 2;
-}
-
-.split-img-layer.bg-study {
-    background-position: right 35% center !important;
-    background-size: cover !important;
-}
-
-.split-img-layer.bg-immigration {
-    background-position: right 35% center !important;
-    background-size: cover !important;
-}
-
-.split-img-layer.bg-training {
-    background-position: right 25% center !important;
-    background-size: cover !important;
-}
-
-.split-badge {
+.carousel-badge {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 8px 16px;
+    top: 16px;
+    left: 16px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 1px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 10;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .badge-blue {
-    background: rgba(0, 174, 239, 0.2);
+    background: rgba(0, 174, 239, 0.25);
     color: #00AEEF;
     border: 1px solid rgba(0, 174, 239, 0.4);
 }
 
 .badge-red {
-    background: rgba(242, 13, 13, 0.2);
+    background: rgba(242, 13, 13, 0.25);
     color: #FF4D4D;
     border: 1px solid rgba(242, 13, 13, 0.4);
 }
 
 .badge-purple {
-    background: rgba(123, 31, 162, 0.2);
+    background: rgba(123, 31, 162, 0.25);
     color: #E1BEE7;
     border: 1px solid rgba(123, 31, 162, 0.4);
 }
 
-.split-cards-column {
+.carousel-card-content {
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    flex: 1;
 }
 
-.split-service-card {
+.carousel-card-header-row {
     display: flex;
-    gap: 20px;
-    padding: 28px 24px;
-    border-radius: 20px;
-    background: #F8FAFC;
-    border: 1px solid #E2E8F0;
-    text-decoration: none !important;
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
 }
 
-.split-service-card:hover,
-.split-service-card.active {
-    background: #FFFFFF;
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-.card-study:hover, .card-study.active {
-    border-color: #00AEEF;
-    box-shadow: 0 15px 35px rgba(0, 174, 239, 0.18);
-}
-
-.card-immigration:hover, .card-immigration.active {
-    border-color: #F20D0D;
-    box-shadow: 0 15px 35px rgba(242, 13, 13, 0.18);
-}
-
-.card-training:hover, .card-training.active {
-    border-color: #7B1FA2;
-    box-shadow: 0 15px 35px rgba(123, 31, 162, 0.18);
-}
-
-.split-card-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 16px;
+.carousel-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
-    transition: transform 0.35s ease;
 }
 
 .blue-icon {
@@ -2806,79 +2811,140 @@ label {
     border: 1px solid rgba(123, 31, 162, 0.3);
 }
 
-.split-service-card:hover .split-card-icon {
-    transform: scale(1.12) rotate(-4deg);
-}
-
-.split-card-body {
-    flex: 1;
-}
-
-.split-card-top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-
-.split-card-title {
+.carousel-card-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #072B49;
     margin: 0;
 }
 
-.split-card-arrow {
-    width: 32px;
-    height: 32px;
+.carousel-card-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.carousel-discover-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-blue {
+    background: #00AEEF;
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(0, 174, 239, 0.35);
+}
+
+.btn-red {
+    background: #F20D0D;
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(242, 13, 13, 0.35);
+}
+
+.btn-purple {
+    background: #7B1FA2;
+    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(123, 31, 162, 0.35);
+}
+
+.carousel-discover-btn:hover {
+    transform: translateY(-2px);
+}
+
+.carousel-discover-btn .icon-arrow {
+    transition: transform 0.3s ease;
+}
+
+.carousel-discover-btn:hover .icon-arrow {
+    transform: translateX(5px);
+}
+
+/* Nav Controls */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background: #F1F5F9;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
     color: #072B49;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
-    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-.split-service-card:hover .split-card-arrow {
-    transform: translateX(6px);
+.carousel-nav-btn:hover {
     background: #072B49;
     color: #FFFFFF;
+    transform: translateY(-50%) scale(1.1);
 }
 
-.split-card-desc {
-    font-size: 0.95rem;
-    color: #475569;
-    line-height: 1.55;
-    margin-bottom: 14px;
-}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
 
-.split-discover-btn {
-    font-size: 0.88rem;
-    font-weight: 700;
-    display: inline-flex;
+/* Pagination Dots */
+.carousel-dots-row {
+    display: flex;
     align-items: center;
-    gap: 6px;
-    transition: gap 0.3s ease;
-}
-
-.split-service-card:hover .split-discover-btn {
+    justify-content: center;
     gap: 10px;
+    margin-top: 30px;
 }
 
-.btn-blue-text { color: #00AEEF; }
-.btn-red-text { color: #F20D0D; }
-.btn-purple-text { color: #7B1FA2; }
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #CBD5E1;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: #00AEEF;
+    transform: scale(1.1);
+    width: 28px;
+    border-radius: 12px;
+}
 
 @media (max-width: 992px) {
-    .services-split-grid {
-        grid-template-columns: 1fr;
+    .carousel-3d-stage {
+        height: 500px;
     }
-    .split-image-stage {
-        height: 300px;
-        position: static;
+    .carousel-3d-card {
+        width: 310px;
+        height: 460px;
+    }
+    .carousel-3d-card.pos-left { transform: translateX(-180px) translateZ(-60px) scale(0.85); }
+    .carousel-3d-card.pos-right { transform: translateX(180px) translateZ(-60px) scale(0.85); }
+}
+
+@media (max-width: 640px) {
+    .carousel-3d-card.pos-left,
+    .carousel-3d-card.pos-right {
+        display: none;
+    }
+    .carousel-3d-card.pos-center {
+        width: 100%;
+        max-width: 330px;
     }
 }
 
