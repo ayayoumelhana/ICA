@@ -4075,110 +4075,158 @@ label {
 }
 
 /* ==========================================================================
-   Subpages Luxury Navy Hero Banner (.page-banner)
-   Matching Homepage #hero-awwwards Aesthetic
+   Comprehensive Site-Wide Responsive System (Mobile, Tablet, Desktop)
    ========================================================================== */
-.page-banner {
-    position: relative;
-    padding: 100px 0 80px;
-    background: linear-gradient(135deg, #072B49 0%, #0A192F 50%, #031424 100%);
-    color: #FFFFFF;
-    text-align: center;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(7, 43, 73, 0.2);
+
+/* Preventing Horizontal Scrollbar on Mobile */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.page-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 20%, rgba(0, 174, 239, 0.18) 0%, transparent 65%);
-    pointer-events: none;
-}
-
-.page-banner .container {
-    position: relative;
-    z-index: 5;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-.page-banner-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(0, 174, 239, 0.35);
-    backdrop-filter: blur(12px);
-    border-radius: 50px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #00AEEF;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.page-banner-title {
-    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif !important;
-    font-size: 3rem;
-    font-weight: 800;
-    color: #FFFFFF !important;
-    line-height: 1.25;
-    margin-bottom: 16px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.page-banner-subtitle {
-    font-size: 1.12rem;
-    color: #CBD5E1;
-    line-height: 1.65;
-    max-width: 780px;
-    margin: 0 auto 28px;
-    font-weight: 400;
-}
-
-.page-banner-breadcrumb {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(7, 43, 73, 0.6);
-    padding: 8px 22px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    font-size: 0.88rem;
-    color: #94A3B8;
-}
-
-.page-banner-breadcrumb a {
-    color: #00AEEF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.page-banner-breadcrumb a:hover {
-    color: #FFFFFF;
-}
-
-.page-banner-breadcrumb i {
-    font-size: 0.72rem;
-    color: #64748B;
-}
-
-@media (max-width: 992px) {
-    .page-banner {
-        padding: 75px 0 55px;
+/* Laptops & Tablets (< 1024px) */
+@media (max-width: 1024px) {
+    .hero-awwwards-title {
+        font-size: 2.3rem !important;
     }
-    .page-banner-title {
-        font-size: 2.1rem;
+    
+    .expanding-cards-container {
+        height: auto !important;
+        flex-direction: column !important;
+        gap: 15px !important;
     }
-    .page-banner-subtitle {
-        font-size: 0.98rem;
+    
+    .expanding-card {
+        width: 100% !important;
+        height: 220px !important;
+        flex: none !important;
+    }
+    
+    .expanding-card.active {
+        height: 380px !important;
+    }
+
+    .about-corporate-banner {
+        padding: 40px 25px !important;
+        border-radius: 20px !important;
+    }
+
+    .about-corporate-grid {
+        grid-template-columns: 1fr !important;
+        gap: 35px !important;
+    }
+
+    .about-stats-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+    }
+}
+
+/* Mobile Devices (< 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Hero Section Responsive */
+    .hero-awwwards-title {
+        font-size: 1.85rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .hero-awwwards-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .hero-cta-group {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .hero-cta-group .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Concept C Navy Banner */
+    .about-stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .about-stat-card {
+        padding: 20px 15px !important;
+    }
+
+    .stat-number {
+        font-size: 2.2rem !important;
+    }
+
+    /* Google Reviews Showcase */
+    .google-reviews-title {
+        font-size: 1.8rem !important;
+    }
+
+    .google-reviews-marquee-wrapper {
+        padding: 10px 0 20px !important;
+    }
+
+    .google-review-card {
+        width: 285px !important;
+        padding: 20px !important;
+    }
+
+    .google-side-btn {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .google-prev-btn { left: 2px !important; }
+    .google-next-btn { right: 2px !important; }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        text-align: center !important;
+    }
+
+    .footer-contact-list li {
+        justify-content: center !important;
+    }
+
+    .social-links {
+        justify-content: center !important;
+    }
+}
+
+/* Extra Small Mobile Devices (< 480px) */
+@media (max-width: 480px) {
+    .hero-awwwards-title {
+        font-size: 1.65rem !important;
+    }
+
+    .section-badge-pill {
+        font-size: 0.75rem !important;
+        padding: 6px 14px !important;
+    }
+
+    .google-rating-summary-box {
+        padding: 12px 18px !important;
+        width: 100% !important;
+    }
+
+    .google-review-card {
+        width: 260px !important;
+        padding: 16px !important;
+    }
+
+    .google-card-text {
+        font-size: 0.85rem !important;
     }
 }
 
