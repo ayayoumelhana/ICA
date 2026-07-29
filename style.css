@@ -2624,15 +2624,15 @@ label {
 }
 
 /* ==========================================================================
-   Concept 5: Premium 3D Carousel (Apple Product Showcase Style)
+   Concept 4: Interactive Neon Timeline (Webflow Showcase Style)
    ========================================================================== */
-.services-carousel-section {
+.services-timeline-section {
     padding: 90px 0;
     background-color: #FFFFFF;
-    overflow: hidden;
+    position: relative;
 }
 
-.carousel-section-title {
+.timeline-section-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
     font-size: 2.6rem;
     font-weight: 800;
@@ -2640,104 +2640,144 @@ label {
     margin: 12px 0;
 }
 
-.carousel-section-subtitle {
+.timeline-section-subtitle {
     font-size: 1.1rem;
     color: #64748B;
     max-width: 680px;
-    margin: 0 auto 40px;
+    margin: 0 auto 50px;
 }
 
-.carousel-3d-stage {
+.timeline-track-wrapper {
     position: relative;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    perspective: 1400px;
 }
 
-.carousel-3d-track {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-style: preserve-3d;
-}
-
-.carousel-3d-card {
+.timeline-progress-line {
     position: absolute;
-    width: 440px;
-    height: 550px;
-    border-radius: 28px;
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.1);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
-    cursor: pointer;
-    overflow: hidden;
+    top: 26px;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background: #E2E8F0;
+    border-radius: 4px;
+    z-index: 1;
 }
 
-/* 3D Positions */
-.carousel-3d-card.pos-center {
-    transform: translateX(0) translateZ(80px) scale(1.08);
-    opacity: 1;
-    z-index: 10;
-    filter: blur(0px);
-    box-shadow: 0 30px 70px rgba(7, 43, 73, 0.22);
+.timeline-progress-glow {
+    height: 100%;
+    width: 33%;
+    background: linear-gradient(90deg, #00AEEF 0%, #F20D0D 50%, #7B1FA2 100%);
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 174, 239, 0.8);
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.carousel-3d-card.pos-left {
-    transform: translateX(-400px) translateZ(-80px) rotateY(16deg) scale(0.88);
-    opacity: 0.7;
-    z-index: 5;
-    filter: blur(2px);
+.timeline-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 2;
 }
 
-.carousel-3d-card.pos-right {
-    transform: translateX(400px) translateZ(-80px) rotateY(-16deg) scale(0.88);
-    opacity: 0.7;
-    z-index: 5;
-    filter: blur(2px);
-}
-
-.carousel-card-inner {
+.timeline-service-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    align-items: center;
 }
 
-.carousel-card-img-box {
+.timeline-card-badge-step {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #072B49;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 800;
+    box-shadow: 0 0 0 8px #FFFFFF, 0 10px 25px rgba(7, 43, 73, 0.25);
+    margin-bottom: 25px;
+    transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+    z-index: 3;
+}
+
+.card-study:hover .timeline-card-badge-step {
+    background: #00AEEF;
+    box-shadow: 0 0 0 8px #FFFFFF, 0 0 25px rgba(0, 174, 239, 0.6);
+    transform: scale(1.15);
+}
+
+.card-immigration:hover .timeline-card-badge-step {
+    background: #F20D0D;
+    box-shadow: 0 0 0 8px #FFFFFF, 0 0 25px rgba(242, 13, 13, 0.6);
+    transform: scale(1.15);
+}
+
+.card-training:hover .timeline-card-badge-step {
+    background: #7B1FA2;
+    box-shadow: 0 0 0 8px #FFFFFF, 0 0 25px rgba(123, 31, 162, 0.6);
+    transform: scale(1.15);
+}
+
+.timeline-card-inner {
+    width: 100%;
+    border-radius: 24px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.08);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-service-card:hover .timeline-card-inner {
+    transform: translateY(-8px);
+}
+
+.card-study:hover .timeline-card-inner {
+    border-color: #00AEEF;
+    box-shadow: 0 20px 45px rgba(0, 174, 239, 0.2);
+}
+
+.card-immigration:hover .timeline-card-inner {
+    border-color: #F20D0D;
+    box-shadow: 0 20px 45px rgba(242, 13, 13, 0.2);
+}
+
+.card-training:hover .timeline-card-inner {
+    border-color: #7B1FA2;
+    box-shadow: 0 20px 45px rgba(123, 31, 162, 0.2);
+}
+
+.timeline-card-img-box {
     position: relative;
-    height: 270px;
+    height: 220px;
     overflow: hidden;
 }
 
-.carousel-card-img {
+.timeline-card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.img-study { object-position: right 35% center; }
-.img-immigration { object-position: right 35% center; }
-.img-training { object-position: right 25% center; }
-
-.carousel-3d-card:hover .carousel-card-img {
+.timeline-service-card:hover .timeline-card-img {
     transform: scale(1.08);
 }
 
-.carousel-card-overlay {
+.timeline-card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.6) 100%);
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.65) 100%);
 }
 
-.carousel-badge {
+.timeline-badge {
     position: absolute;
     top: 16px;
     left: 16px;
@@ -2750,39 +2790,21 @@ label {
     -webkit-backdrop-filter: blur(10px);
 }
 
-.badge-blue {
-    background: rgba(0, 174, 239, 0.25);
-    color: #00AEEF;
-    border: 1px solid rgba(0, 174, 239, 0.4);
-}
-
-.badge-red {
-    background: rgba(242, 13, 13, 0.25);
-    color: #FF4D4D;
-    border: 1px solid rgba(242, 13, 13, 0.4);
-}
-
-.badge-purple {
-    background: rgba(123, 31, 162, 0.25);
-    color: #E1BEE7;
-    border: 1px solid rgba(123, 31, 162, 0.4);
-}
-
-.carousel-card-content {
+.timeline-card-content {
     padding: 24px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.carousel-card-header-row {
+.timeline-card-header-row {
     display: flex;
     align-items: center;
     gap: 14px;
     margin-bottom: 10px;
 }
 
-.carousel-card-icon {
+.timeline-card-icon {
     width: 44px;
     height: 44px;
     border-radius: 14px;
@@ -2793,41 +2815,23 @@ label {
     flex-shrink: 0;
 }
 
-.blue-icon {
-    background: rgba(0, 174, 239, 0.14);
-    color: #00AEEF;
-    border: 1px solid rgba(0, 174, 239, 0.3);
-}
-
-.red-icon {
-    background: rgba(242, 13, 13, 0.14);
-    color: #F20D0D;
-    border: 1px solid rgba(242, 13, 13, 0.3);
-}
-
-.purple-icon {
-    background: rgba(123, 31, 162, 0.14);
-    color: #7B1FA2;
-    border: 1px solid rgba(123, 31, 162, 0.3);
-}
-
-.carousel-card-title {
+.timeline-card-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: #072B49;
     margin: 0;
 }
 
-.carousel-card-desc {
+.timeline-card-desc {
     font-size: 0.92rem;
     color: #475569;
-    line-height: 1.5;
+    line-height: 1.55;
     margin-bottom: 20px;
     flex: 1;
 }
 
-.carousel-discover-btn {
+.timeline-discover-btn {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -2839,112 +2843,24 @@ label {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.btn-blue {
-    background: #00AEEF;
-    color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(0, 174, 239, 0.35);
-}
-
-.btn-red {
-    background: #F20D0D;
-    color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(242, 13, 13, 0.35);
-}
-
-.btn-purple {
-    background: #7B1FA2;
-    color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(123, 31, 162, 0.35);
-}
-
-.carousel-discover-btn:hover {
+.timeline-discover-btn:hover {
     transform: translateY(-2px);
 }
 
-.carousel-discover-btn .icon-arrow {
+.timeline-discover-btn .icon-arrow {
     transition: transform 0.3s ease;
 }
 
-.carousel-discover-btn:hover .icon-arrow {
+.timeline-discover-btn:hover .icon-arrow {
     transform: translateX(5px);
 }
 
-/* Nav Controls */
-.carousel-nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    color: #072B49;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    z-index: 20;
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.carousel-nav-btn:hover {
-    background: #072B49;
-    color: #FFFFFF;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
-
-/* Pagination Dots */
-.carousel-dots-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-}
-
-.carousel-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #CBD5E1;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
-}
-
-.carousel-dot.active {
-    background: #00AEEF;
-    transform: scale(1.1);
-    width: 28px;
-    border-radius: 12px;
-}
-
 @media (max-width: 992px) {
-    .carousel-3d-stage {
-        height: 500px;
+    .timeline-cards-grid {
+        grid-template-columns: 1fr;
     }
-    .carousel-3d-card {
-        width: 310px;
-        height: 460px;
-    }
-    .carousel-3d-card.pos-left { transform: translateX(-180px) translateZ(-60px) scale(0.85); }
-    .carousel-3d-card.pos-right { transform: translateX(180px) translateZ(-60px) scale(0.85); }
-}
-
-@media (max-width: 640px) {
-    .carousel-3d-card.pos-left,
-    .carousel-3d-card.pos-right {
+    .timeline-progress-line {
         display: none;
-    }
-    .carousel-3d-card.pos-center {
-        width: 100%;
-        max-width: 330px;
     }
 }
 

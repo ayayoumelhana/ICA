@@ -170,39 +170,44 @@
         </div>
     </section>
 
-    <!-- Concept 5: Premium 3D Carousel (Apple Showcase Style) -->
-    <section class="services-carousel-section section bg-white" id="nos-services">
+    <!-- Concept 4: Interactive Neon Timeline (Webflow Showcase Style) -->
+    <section class="services-timeline-section section bg-white" id="nos-services">
         <div class="container">
-            <div class="carousel-section-header text-center">
+            <div class="timeline-section-header text-center">
                 <span class="section-badge-pill">🇨🇦 NOS SERVICES</span>
-                <h2 class="carousel-section-title">Des Solutions Sur-Mesure pour Votre Réussite</h2>
-                <p class="carousel-section-subtitle">Découvrez nos 3 pôles d'exception à travers notre vitrine interactive 3D.</p>
+                <h2 class="timeline-section-title">Des Solutions Sur-Mesure pour Votre Réussite</h2>
+                <p class="timeline-section-subtitle">Découvrez votre parcours de réussite à travers nos 3 pôles d'excellence.</p>
             </div>
 
-            <!-- 3D Carousel Stage Container -->
-            <div class="carousel-3d-stage">
-                <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Service Précédent"><i class="fas fa-chevron-left"></i></button>
+            <!-- Neon Timeline Track Container -->
+            <div class="timeline-track-wrapper">
+                <div class="timeline-progress-line">
+                    <div class="timeline-progress-glow" id="timeline-glow"></div>
+                </div>
 
-                <div class="carousel-3d-track">
+                <div class="timeline-cards-grid">
                     <!-- Card 1: Study in Canada -->
-                    <div class="carousel-3d-card card-study pos-center" data-index="0">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-img-box">
-                                <img src="assets/images/pdf-student-banner.png" alt="Étudier au Canada" class="carousel-card-img img-study">
-                                <div class="carousel-card-overlay"></div>
-                                <span class="carousel-badge badge-blue">PÔLE ÉTUDES</span>
+                    <div class="timeline-service-card card-study" data-step="1">
+                        <div class="timeline-card-badge-step">
+                            <span class="step-num">01</span>
+                        </div>
+                        <div class="timeline-card-inner">
+                            <div class="timeline-card-img-box">
+                                <img src="assets/images/pdf-student-banner.png" alt="Étudier au Canada" class="timeline-card-img img-study">
+                                <div class="timeline-card-overlay"></div>
+                                <span class="timeline-badge badge-blue">PÔLE ÉTUDES</span>
                             </div>
-                            <div class="carousel-card-content">
-                                <div class="carousel-card-header-row">
-                                    <div class="carousel-card-icon blue-icon">
+                            <div class="timeline-card-content">
+                                <div class="timeline-card-header-row">
+                                    <div class="timeline-card-icon blue-icon">
                                         <i class="fas fa-graduation-cap"></i>
                                     </div>
-                                    <h3 class="carousel-card-title">Étudier au Canada</h3>
+                                    <h3 class="timeline-card-title">Étudier au Canada</h3>
                                 </div>
-                                <p class="carousel-card-desc">
+                                <p class="timeline-card-desc">
                                     Accompagnement d'élite aux admissions universitaires, CAQ, permis d'études et accueil chaleureux dès votre arrivée.
                                 </p>
-                                <a href="etudes.html" class="carousel-discover-btn btn-blue">
+                                <a href="etudes.html" class="timeline-discover-btn btn-blue">
                                     <span>Découvrir le Pôle Études</span>
                                     <i class="fas fa-arrow-right icon-arrow"></i>
                                 </a>
@@ -211,24 +216,27 @@
                     </div>
 
                     <!-- Card 2: Immigration -->
-                    <div class="carousel-3d-card card-immigration pos-right" data-index="1">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-img-box">
-                                <img src="assets/images/pdf-express-banner.png" alt="Immigration & Entrée Express" class="carousel-card-img img-immigration">
-                                <div class="carousel-card-overlay"></div>
-                                <span class="carousel-badge badge-red">PÔLE IMMIGRATION</span>
+                    <div class="timeline-service-card card-immigration" data-step="2">
+                        <div class="timeline-card-badge-step">
+                            <span class="step-num">02</span>
+                        </div>
+                        <div class="timeline-card-inner">
+                            <div class="timeline-card-img-box">
+                                <img src="assets/images/pdf-express-banner.png" alt="Immigration & Entrée Express" class="timeline-card-img img-immigration">
+                                <div class="timeline-card-overlay"></div>
+                                <span class="timeline-badge badge-red">PÔLE IMMIGRATION</span>
                             </div>
-                            <div class="carousel-card-content">
-                                <div class="carousel-card-header-row">
-                                    <div class="carousel-card-icon red-icon">
+                            <div class="timeline-card-content">
+                                <div class="timeline-card-header-row">
+                                    <div class="timeline-card-icon red-icon">
                                         <i class="fas fa-passport"></i>
                                     </div>
-                                    <h3 class="carousel-card-title">Immigration & Entrée Express</h3>
+                                    <h3 class="timeline-card-title">Immigration & Entrée Express</h3>
                                 </div>
-                                <p class="carousel-card-desc">
+                                <p class="timeline-card-desc">
                                     Stratégie sur-mesure pour Entrée Express, résidence permanente, Arrima et parrainage au Canada.
                                 </p>
-                                <a href="immigration.html" class="carousel-discover-btn btn-red">
+                                <a href="immigration.html" class="timeline-discover-btn btn-red">
                                     <span>Découvrir le Pôle Immigration</span>
                                     <i class="fas fa-arrow-right icon-arrow"></i>
                                 </a>
@@ -237,24 +245,27 @@
                     </div>
 
                     <!-- Card 3: Training -->
-                    <div class="carousel-3d-card card-training pos-left" data-index="2">
-                        <div class="carousel-card-inner">
-                            <div class="carousel-card-img-box">
-                                <img src="assets/images/pdf-rocket-banner.png" alt="Formations Certifiantes" class="carousel-card-img img-training">
-                                <div class="carousel-card-overlay"></div>
-                                <span class="carousel-badge badge-purple">PÔLE FORMATION</span>
+                    <div class="timeline-service-card card-training" data-step="3">
+                        <div class="timeline-card-badge-step">
+                            <span class="step-num">03</span>
+                        </div>
+                        <div class="timeline-card-inner">
+                            <div class="timeline-card-img-box">
+                                <img src="assets/images/pdf-rocket-banner.png" alt="Formations Certifiantes" class="timeline-card-img img-training">
+                                <div class="timeline-card-overlay"></div>
+                                <span class="timeline-badge badge-purple">PÔLE FORMATION</span>
                             </div>
-                            <div class="carousel-card-content">
-                                <div class="carousel-card-header-row">
-                                    <div class="carousel-card-icon purple-icon">
+                            <div class="timeline-card-content">
+                                <div class="timeline-card-header-row">
+                                    <div class="timeline-card-icon purple-icon">
                                         <i class="fas fa-rocket"></i>
                                     </div>
-                                    <h3 class="carousel-card-title">Formations Certifiantes</h3>
+                                    <h3 class="timeline-card-title">Formations Certifiantes</h3>
                                 </div>
-                                <p class="carousel-card-desc">
+                                <p class="timeline-card-desc">
                                     Cycles intensifs (100H) de préparation aux concours d'expertise comptable CEC, diplômes DSCG et séminaires.
                                 </p>
-                                <a href="formations.html" class="carousel-discover-btn btn-purple">
+                                <a href="formations.html" class="timeline-discover-btn btn-purple">
                                     <span>Découvrir nos Formations</span>
                                     <i class="fas fa-arrow-right icon-arrow"></i>
                                 </a>
@@ -262,15 +273,6 @@
                         </div>
                     </div>
                 </div>
-
-                <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Service Suivant"><i class="fas fa-chevron-right"></i></button>
-            </div>
-
-            <!-- Pagination Dots -->
-            <div class="carousel-dots-row">
-                <button class="carousel-dot active" data-dot-index="0" aria-label="Aller à Études"></button>
-                <button class="carousel-dot" data-dot-index="1" aria-label="Aller à Immigration"></button>
-                <button class="carousel-dot" data-dot-index="2" aria-label="Aller à Formations"></button>
             </div>
         </div>
     </section>
