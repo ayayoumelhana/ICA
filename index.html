@@ -170,94 +170,107 @@
         </div>
     </section>
 
-    <!-- Concept 2: Interactive Expanding Glass Cards (Linear / Framer Style) -->
-    <section class="services-expanding-section section bg-white" id="nos-services">
+    <!-- Concept 5: Premium 3D Carousel (Apple Showcase Style) -->
+    <section class="services-carousel-section section bg-white" id="nos-services">
         <div class="container">
-            <div class="expanding-section-header text-center">
+            <div class="carousel-section-header text-center">
                 <span class="section-badge-pill">🇨🇦 NOS SERVICES</span>
-                <h2 class="expanding-section-title">Des Solutions Sur-Mesure pour Votre Réussite</h2>
-                <p class="expanding-section-subtitle">Survolez chaque carte pour explorer nos 3 pôles d'accompagnement d'exception.</p>
+                <h2 class="carousel-section-title">Des Solutions Sur-Mesure pour Votre Réussite</h2>
+                <p class="carousel-section-subtitle">Découvrez nos 3 pôles d'exception à travers notre vitrine interactive 3D.</p>
             </div>
 
-            <!-- Expanding Cards Flex Grid Container -->
-            <div class="expanding-cards-grid">
-                <!-- Card 1: Study in Canada -->
-                <a href="etudes.html" class="expanding-card card-study active" data-service="study">
-                    <div class="expanding-card-bg img-study" style="background-image: url('assets/images/pdf-student-banner.png');"></div>
-                    <div class="expanding-card-overlay"></div>
-                    
-                    <div class="expanding-card-content">
-                        <div class="expanding-top-row">
-                            <span class="expanding-badge badge-blue">PÔLE ÉTUDES</span>
-                            <div class="expanding-icon-box blue-icon">
-                                <i class="fas fa-graduation-cap"></i>
+            <!-- 3D Carousel Stage Container -->
+            <div class="carousel-3d-stage">
+                <button class="carousel-nav-btn prev-btn" id="carousel-prev" aria-label="Service Précédent"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="carousel-3d-track">
+                    <!-- Card 1: Study in Canada -->
+                    <div class="carousel-3d-card card-study pos-center" data-index="0">
+                        <div class="carousel-card-inner">
+                            <div class="carousel-card-img-box">
+                                <img src="assets/images/pdf-student-banner.png" alt="Étudier au Canada" class="carousel-card-img img-study">
+                                <div class="carousel-card-overlay"></div>
+                                <span class="carousel-badge badge-blue">PÔLE ÉTUDES</span>
+                            </div>
+                            <div class="carousel-card-content">
+                                <div class="carousel-card-header-row">
+                                    <div class="carousel-card-icon blue-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <h3 class="carousel-card-title">Étudier au Canada</h3>
+                                </div>
+                                <p class="carousel-card-desc">
+                                    Accompagnement d'élite aux admissions universitaires, CAQ, permis d'études et accueil chaleureux dès votre arrivée.
+                                </p>
+                                <a href="etudes.html" class="carousel-discover-btn btn-blue">
+                                    <span>Découvrir le Pôle Études</span>
+                                    <i class="fas fa-arrow-right icon-arrow"></i>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="expanding-bottom-block">
-                            <h3 class="expanding-card-title">Étudier au Canada</h3>
-                            <p class="expanding-card-desc">
-                                Accompagnement d'élite aux admissions universitaires, CAQ, permis d'études et accueil chaleureux dès votre arrivée.
-                            </p>
-                            <span class="expanding-btn btn-blue">
-                                <span>Découvrir le Pôle Études</span>
-                                <i class="fas fa-arrow-right icon-arrow"></i>
-                            </span>
-                        </div>
                     </div>
-                </a>
 
-                <!-- Card 2: Immigration -->
-                <a href="immigration.html" class="expanding-card card-immigration" data-service="immigration">
-                    <div class="expanding-card-bg img-immigration" style="background-image: url('assets/images/pdf-express-banner.png');"></div>
-                    <div class="expanding-card-overlay"></div>
-                    
-                    <div class="expanding-card-content">
-                        <div class="expanding-top-row">
-                            <span class="expanding-badge badge-red">PÔLE IMMIGRATION</span>
-                            <div class="expanding-icon-box red-icon">
-                                <i class="fas fa-passport"></i>
+                    <!-- Card 2: Immigration -->
+                    <div class="carousel-3d-card card-immigration pos-right" data-index="1">
+                        <div class="carousel-card-inner">
+                            <div class="carousel-card-img-box">
+                                <img src="assets/images/pdf-express-banner.png" alt="Immigration & Entrée Express" class="carousel-card-img img-immigration">
+                                <div class="carousel-card-overlay"></div>
+                                <span class="carousel-badge badge-red">PÔLE IMMIGRATION</span>
+                            </div>
+                            <div class="carousel-card-content">
+                                <div class="carousel-card-header-row">
+                                    <div class="carousel-card-icon red-icon">
+                                        <i class="fas fa-passport"></i>
+                                    </div>
+                                    <h3 class="carousel-card-title">Immigration & Entrée Express</h3>
+                                </div>
+                                <p class="carousel-card-desc">
+                                    Stratégie sur-mesure pour Entrée Express, résidence permanente, Arrima et parrainage au Canada.
+                                </p>
+                                <a href="immigration.html" class="carousel-discover-btn btn-red">
+                                    <span>Découvrir le Pôle Immigration</span>
+                                    <i class="fas fa-arrow-right icon-arrow"></i>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="expanding-bottom-block">
-                            <h3 class="expanding-card-title">Immigration & Entrée Express</h3>
-                            <p class="expanding-card-desc">
-                                Stratégie sur-mesure pour Entrée Express, résidence permanente, Arrima et parrainage au Canada.
-                            </p>
-                            <span class="expanding-btn btn-red">
-                                <span>Découvrir le Pôle Immigration</span>
-                                <i class="fas fa-arrow-right icon-arrow"></i>
-                            </span>
-                        </div>
                     </div>
-                </a>
 
-                <!-- Card 3: Training -->
-                <a href="formations.html" class="expanding-card card-training" data-service="training">
-                    <div class="expanding-card-bg img-training" style="background-image: url('assets/images/pdf-rocket-banner.png');"></div>
-                    <div class="expanding-card-overlay"></div>
-                    
-                    <div class="expanding-card-content">
-                        <div class="expanding-top-row">
-                            <span class="expanding-badge badge-purple">PÔLE FORMATION</span>
-                            <div class="expanding-icon-box purple-icon">
-                                <i class="fas fa-rocket"></i>
+                    <!-- Card 3: Training -->
+                    <div class="carousel-3d-card card-training pos-left" data-index="2">
+                        <div class="carousel-card-inner">
+                            <div class="carousel-card-img-box">
+                                <img src="assets/images/pdf-rocket-banner.png" alt="Formations Certifiantes" class="carousel-card-img img-training">
+                                <div class="carousel-card-overlay"></div>
+                                <span class="carousel-badge badge-purple">PÔLE FORMATION</span>
+                            </div>
+                            <div class="carousel-card-content">
+                                <div class="carousel-card-header-row">
+                                    <div class="carousel-card-icon purple-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h3 class="carousel-card-title">Formations Certifiantes</h3>
+                                </div>
+                                <p class="carousel-card-desc">
+                                    Cycles intensifs (100H) de préparation aux concours d'expertise comptable CEC, diplômes DSCG et séminaires.
+                                </p>
+                                <a href="formations.html" class="carousel-discover-btn btn-purple">
+                                    <span>Découvrir nos Formations</span>
+                                    <i class="fas fa-arrow-right icon-arrow"></i>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="expanding-bottom-block">
-                            <h3 class="expanding-card-title">Formations Certifiantes</h3>
-                            <p class="expanding-card-desc">
-                                Cycles intensifs (100H) de préparation aux concours d'expertise comptable CEC, diplômes DSCG et séminaires.
-                            </p>
-                            <span class="expanding-btn btn-purple">
-                                <span>Découvrir nos Formations</span>
-                                <i class="fas fa-arrow-right icon-arrow"></i>
-                            </span>
-                        </div>
                     </div>
-                </a>
+                </div>
+
+                <button class="carousel-nav-btn next-btn" id="carousel-next" aria-label="Service Suivant"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="carousel-dots-row">
+                <button class="carousel-dot active" data-dot-index="0" aria-label="Aller à Études"></button>
+                <button class="carousel-dot" data-dot-index="1" aria-label="Aller à Immigration"></button>
+                <button class="carousel-dot" data-dot-index="2" aria-label="Aller à Formations"></button>
             </div>
         </div>
     </section>

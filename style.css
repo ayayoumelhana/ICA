@@ -2624,14 +2624,15 @@ label {
 }
 
 /* ==========================================================================
-   Concept 2: Interactive Expanding Glass Cards (Linear / Framer Style)
+   Concept 5: Premium 3D Carousel (Apple Product Showcase Style)
    ========================================================================== */
-.services-expanding-section {
+.services-carousel-section {
     padding: 90px 0;
     background-color: #FFFFFF;
+    overflow: hidden;
 }
 
-.expanding-section-title {
+.carousel-section-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
     font-size: 2.6rem;
     font-weight: 800;
@@ -2639,90 +2640,110 @@ label {
     margin: 12px 0;
 }
 
-.expanding-section-subtitle {
+.carousel-section-subtitle {
     font-size: 1.1rem;
     color: #64748B;
     max-width: 680px;
-    margin: 0 auto 45px;
+    margin: 0 auto 40px;
 }
 
-.expanding-cards-grid {
-    display: flex;
-    gap: 24px;
-    height: 520px;
-    width: 100%;
-}
-
-.expanding-card {
+.carousel-3d-stage {
     position: relative;
-    flex: 1;
-    border-radius: 24px;
-    overflow: hidden;
-    text-decoration: none !important;
-    border: 1px solid #E2E8F0;
-    transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-    cursor: pointer;
-    box-shadow: 0 15px 35px rgba(7, 43, 73, 0.08);
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1400px;
 }
 
-.expanding-card.active,
-.expanding-card:hover {
-    flex: 2.4;
-    box-shadow: 0 25px 50px rgba(7, 43, 73, 0.2);
+.carousel-3d-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
 }
 
-.card-study:hover, .card-study.active { border-color: #00AEEF; }
-.card-immigration:hover, .card-immigration.active { border-color: #F20D0D; }
-.card-training:hover, .card-training.active { border-color: #7B1FA2; }
-
-.expanding-card-bg {
+.carousel-3d-card {
     position: absolute;
-    inset: 0;
-    background-size: cover;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 440px;
+    height: 550px;
+    border-radius: 28px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.img-study { background-position: right 35% center; }
-.img-immigration { background-position: right 35% center; }
-.img-training { background-position: right 25% center; }
+/* 3D Positions */
+.carousel-3d-card.pos-center {
+    transform: translateX(0) translateZ(80px) scale(1.08);
+    opacity: 1;
+    z-index: 10;
+    filter: blur(0px);
+    box-shadow: 0 30px 70px rgba(7, 43, 73, 0.22);
+}
 
-.expanding-card:hover .expanding-card-bg,
-.expanding-card.active .expanding-card-bg {
+.carousel-3d-card.pos-left {
+    transform: translateX(-400px) translateZ(-80px) rotateY(16deg) scale(0.88);
+    opacity: 0.7;
+    z-index: 5;
+    filter: blur(2px);
+}
+
+.carousel-3d-card.pos-right {
+    transform: translateX(400px) translateZ(-80px) rotateY(-16deg) scale(0.88);
+    opacity: 0.7;
+    z-index: 5;
+    filter: blur(2px);
+}
+
+.carousel-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.carousel-card-img-box {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+}
+
+.carousel-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.img-study { object-position: right 35% center; }
+.img-immigration { object-position: right 35% center; }
+.img-training { object-position: right 25% center; }
+
+.carousel-3d-card:hover .carousel-card-img {
     transform: scale(1.08);
 }
 
-.expanding-card-overlay {
+.carousel-card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg, 
-        rgba(7, 43, 73, 0.2) 0%, 
-        rgba(7, 43, 73, 0.6) 45%, 
-        rgba(7, 43, 73, 0.94) 100%
-    );
-    transition: opacity 0.4s ease;
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.6) 100%);
 }
 
-.expanding-card-content {
-    position: relative;
-    z-index: 10;
-    height: 100%;
-    padding: 30px 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.expanding-top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.expanding-badge {
+.carousel-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
     padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 1px;
     backdrop-filter: blur(10px);
@@ -2747,17 +2768,29 @@ label {
     border: 1px solid rgba(123, 31, 162, 0.4);
 }
 
-.expanding-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
+.carousel-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.carousel-card-header-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.carousel-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: transform 0.4s ease;
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .blue-icon {
@@ -2778,50 +2811,32 @@ label {
     border: 1px solid rgba(123, 31, 162, 0.3);
 }
 
-.expanding-card:hover .expanding-icon-box {
-    transform: scale(1.1) rotate(-4deg);
-}
-
-.expanding-bottom-block {
-    margin-top: auto;
-}
-
-.expanding-card-title {
+.carousel-card-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    margin: 0 0 10px 0;
-    white-space: nowrap;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #072B49;
+    margin: 0;
 }
 
-.expanding-card-desc {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.55;
+.carousel-card-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.5;
     margin-bottom: 20px;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease, margin-bottom 0.5s ease;
+    flex: 1;
 }
 
-.expanding-card.active .expanding-card-desc,
-.expanding-card:hover .expanding-card-desc {
-    max-height: 100px;
-    opacity: 1;
-}
-
-.expanding-btn {
+.carousel-discover-btn {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 22px;
+    padding: 12px 20px;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 700;
-    width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-blue {
@@ -2842,26 +2857,94 @@ label {
     box-shadow: 0 6px 20px rgba(123, 31, 162, 0.35);
 }
 
-.expanding-btn .icon-arrow {
+.carousel-discover-btn:hover {
+    transform: translateY(-2px);
+}
+
+.carousel-discover-btn .icon-arrow {
     transition: transform 0.3s ease;
 }
 
-.expanding-btn:hover .icon-arrow {
-    transform: translateX(6px);
+.carousel-discover-btn:hover .icon-arrow {
+    transform: translateX(5px);
+}
+
+/* Nav Controls */
+.carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    color: #072B49;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-nav-btn:hover {
+    background: #072B49;
+    color: #FFFFFF;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+/* Pagination Dots */
+.carousel-dots-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #CBD5E1;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: #00AEEF;
+    transform: scale(1.1);
+    width: 28px;
+    border-radius: 12px;
 }
 
 @media (max-width: 992px) {
-    .expanding-cards-grid {
-        flex-direction: column;
-        height: auto;
+    .carousel-3d-stage {
+        height: 500px;
     }
-    .expanding-card {
-        height: 280px;
-        flex: none !important;
+    .carousel-3d-card {
+        width: 310px;
+        height: 460px;
     }
-    .expanding-card-desc {
-        max-height: 100px;
-        opacity: 1;
+    .carousel-3d-card.pos-left { transform: translateX(-180px) translateZ(-60px) scale(0.85); }
+    .carousel-3d-card.pos-right { transform: translateX(180px) translateZ(-60px) scale(0.85); }
+}
+
+@media (max-width: 640px) {
+    .carousel-3d-card.pos-left,
+    .carousel-3d-card.pos-right {
+        display: none;
+    }
+    .carousel-3d-card.pos-center {
+        width: 100%;
+        max-width: 330px;
     }
 }
 
