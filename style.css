@@ -37,25 +37,32 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 14px;
 }
 
 body {
     font-family: var(--font-primary);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.55;
     background-color: var(--bg-white);
     overflow-x: hidden;
 }
 
+@media (min-width: 1200px) {
+    html {
+        zoom: 0.88;
+    }
+}
+
 .container {
     width: 100%;
-    max-width: 1160px;
+    max-width: 1060px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .section {
-    padding: 48px 0;
+    padding: 40px 0;
 }
 
 .bg-light {
