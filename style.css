@@ -74,8 +74,20 @@ body {
 /* ==========================================================================
    Typography & UI Elements
    ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-secondary);
+h1, h2, h3, h4, h5, h6,
+.pdf-section-title,
+.hero-awwwards-title,
+.card-service-title,
+.split-card-title,
+.carousel-card-title,
+.timeline-card-title,
+.expanding-card-title,
+.section-badge-pill,
+.hero-badge-pill,
+.card-badge,
+.expanding-badge,
+.nav-links a {
+    font-family: var(--font-minion) !important;
     font-weight: 700;
     color: var(--secondary-color);
     margin-bottom: 1.2rem;
