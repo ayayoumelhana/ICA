@@ -3856,17 +3856,56 @@ label {
     font-weight: 600;
 }
 
-/* 5 Cards Grid Layout */
-.google-reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* 1 Single Line Continuous Marquee Slider */
+.google-reviews-marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 15px 0 25px;
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+.google-reviews-marquee-track {
+    display: flex;
     gap: 25px;
+    width: max-content;
+    animation: googleMarqueeScroll 35s linear infinite;
+}
+
+.google-reviews-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes googleMarqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.google-review-card {
+    width: 380px;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 26px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 12px 30px rgba(7, 43, 73, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.google-review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.14);
+    border-color: #00AEEF;
 }
 
 @media (max-width: 992px) {
-    .google-reviews-grid {
-        grid-template-columns: 1fr;
-    }
     .google-rating-summary-box {
         flex-direction: column;
         border-radius: 24px;
@@ -3880,23 +3919,9 @@ label {
         padding-top: 10px;
         align-items: center;
     }
-}
-
-.google-review-card {
-    background: #FFFFFF;
-    border-radius: 20px;
-    padding: 28px;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 12px 30px rgba(7, 43, 73, 0.05);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-}
-
-.google-review-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.12);
-    border-color: #00AEEF;
+    .google-review-card {
+        width: 310px;
+    }
 }
 
 .google-card-header {
