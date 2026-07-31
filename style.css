@@ -193,11 +193,11 @@ p {
 }
 
 .logo-img {
-    height: 190px;
+    height: 140px;
     width: auto;
-    max-width: 360px;
-    margin-top: -32px;
-    margin-bottom: -32px;
+    max-width: 280px;
+    margin-top: -18px;
+    margin-bottom: -18px;
     display: block;
     object-fit: contain;
     transition: var(--transition);
@@ -205,10 +205,10 @@ p {
 }
 
 .site-header.scrolled .logo-img {
-    height: 130px;
-    max-width: 250px;
-    margin-top: -18px;
-    margin-bottom: -18px;
+    height: 95px;
+    max-width: 200px;
+    margin-top: -8px;
+    margin-bottom: -8px;
     filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
 }
 
@@ -4201,9 +4201,21 @@ img, video {
    5. Tablets / iPad Air / iPad Mini (820px – 1023px) & Drawer Trigger (< 992px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1023px) {
+    .logo-img {
+        height: 85px !important;
+        max-width: 210px !important;
+        margin-top: -8px !important;
+        margin-bottom: -8px !important;
+    }
+    .site-header.scrolled .logo-img {
+        height: 68px !important;
+        max-width: 170px !important;
+        margin-top: -4px !important;
+        margin-bottom: -4px !important;
+    }
     .hero-awwwards-section {
         min-height: 70vh !important;
-        padding: 110px 0 45px 0 !important;
+        padding: 100px 0 45px 0 !important;
     }
     .hero-services-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
