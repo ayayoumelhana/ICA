@@ -4358,10 +4358,10 @@ img, video {
         background-repeat: no-repeat !important;
     }
 
-    .hero-backdrop-layer.bg-default { background-position: 78% 0% !important; }
-    .hero-backdrop-layer.bg-study { background-position: 50% 0% !important; }
+    .hero-backdrop-layer.bg-default { background-position: 80% 0% !important; }
+    .hero-backdrop-layer.bg-study { background-position: 68% 0% !important; }
     .hero-backdrop-layer.bg-immigration { background-position: 50% 0% !important; }
-    .hero-backdrop-layer.bg-training { background-position: 50% 0% !important; }
+    .hero-backdrop-layer.bg-training { background-position: 78% 0% !important; }
 
     .hero-backdrop-overlay {
         position: absolute !important;
@@ -4583,9 +4583,10 @@ img, video {
         max-height: 45vh !important;
     }
 
-    .hero-backdrop-layer.bg-default {
-        background-position: 82% 0% !important;
-    }
+    .hero-backdrop-layer.bg-default { background-position: 82% 0% !important; }
+    .hero-backdrop-layer.bg-study { background-position: 70% 0% !important; }
+    .hero-backdrop-layer.bg-immigration { background-position: 50% 0% !important; }
+    .hero-backdrop-layer.bg-training { background-position: 80% 0% !important; }
 }
 
 @media (max-width: 390px) {
