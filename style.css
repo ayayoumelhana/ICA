@@ -199,7 +199,7 @@ p {
 }
 
 .logo-img {
-    height: 48px;
+    height: 52px;
     width: auto;
     margin: 0;
     display: block;
@@ -208,7 +208,7 @@ p {
 }
 
 .site-header.scrolled .logo-img {
-    height: 42px;
+    height: 44px;
     margin: 0;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
 }
@@ -244,7 +244,7 @@ p {
 
 .nav-list a:not(.btn):hover,
 .nav-list a.active:not(.btn) {
-    color: #F59E0B !important; /* Gold / Yellow highlight like ACCUEIL in reference image */
+    color: var(--primary-color) !important; /* Original brand red color #F20D0D */
 }
 
 .nav-list a:not(.btn)::after {
@@ -254,7 +254,7 @@ p {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #F59E0B;
+    background-color: var(--primary-color);
     transition: transform 0.25s ease;
     transform: scaleX(0);
     transform-origin: center;
