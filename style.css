@@ -172,17 +172,17 @@ p {
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
-    padding: 20px 0;
+    padding: 12px 0;
     background: transparent !important;
     border-top: none;
 }
 
 .site-header.scrolled {
     position: fixed;
-    background: rgba(7, 43, 73, 0.92) !important;
-    backdrop-filter: blur(8px);
+    background: rgba(7, 43, 73, 0.95) !important;
+    backdrop-filter: blur(10px);
     box-shadow: var(--shadow-md);
-    padding: 12px 0;
+    padding: 8px 0;
 }
 
 .header-container {
@@ -192,20 +192,18 @@ p {
 }
 
 .logo-img {
-    height: 250px;
+    height: 75px;
     width: auto;
-    margin-top: -76px;
-    margin-bottom: -76px;
+    margin: 0;
     display: block;
     transition: var(--transition);
-    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
 }
 
 .site-header.scrolled .logo-img {
-    height: 180px;
-    margin-top: -54px;
-    margin-bottom: -54px;
-    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
+    height: 60px;
+    margin: 0;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
 }
 
 .main-nav {
@@ -216,20 +214,20 @@ p {
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 30px;
-    list-style: none; /* Explicitly remove standard bullet points */
+    gap: 20px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav-list a:not(.btn) {
-    color: #FFFFFF; /* Exact default white text */
-    font-family: var(--font-nav); /* Poppins */
-    font-size: 22px; /* Exact original font size */
-    font-weight: 400; /* Regular Poppins */
+    color: #FFFFFF;
+    font-family: var(--font-nav);
+    font-size: 0.92rem;
+    font-weight: 500;
     position: relative;
-    padding: 5px 4px;
-    margin: 0 4px;
+    padding: 4px 2px;
+    margin: 0 2px;
     transition: var(--transition);
     text-decoration: none;
     display: inline-block;
@@ -2302,11 +2300,11 @@ label {
    ========================================================================== */
 .hero-awwwards-section {
     position: relative;
-    min-height: 75vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 85px 0 45px 0;
+    padding: 95px 0 40px 0;
     overflow: hidden;
     color: #FFFFFF;
     background-color: #072B49;
