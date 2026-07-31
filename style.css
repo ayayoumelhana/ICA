@@ -4262,10 +4262,7 @@ img, video {
         font-size: 1rem !important;
         padding: 6px 0 !important;
         color: rgba(255, 255, 255, 0.85) !important;
-    }
-}
-
-/* Mobile Devices (< 768px) */
+    }/* Mobile Devices (< 768px) */
 @media (max-width: 768px) {
     html, body {
         overflow-x: hidden !important;
@@ -4288,10 +4285,22 @@ img, video {
         margin: 0 !important;
     }
 
-    /* Hero Section Mobile */
+    /* Hero Section Slidebar & Backdrop Mobile */
     .hero-awwwards-section {
         min-height: auto !important;
         padding: 85px 0 35px 0 !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .hero-backdrop-stack,
+    .hero-backdrop-layer,
+    .hero-backdrop-overlay {
+        width: 100% !important;
+        height: 100% !important;
+        background-size: cover !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
     }
 
     .hero-awwwards-header {
@@ -4330,6 +4339,50 @@ img, video {
         width: 100% !important;
         justify-content: center !important;
         text-align: center !important;
+    }
+
+    /* Témoignage Rachid El Ouali Mobile */
+    .testimonial-pdf-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+
+    .testimonial-content-col {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .testimonial-actions-row {
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .testimonial-actions-row .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .pdf-video-card-modern {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        border-radius: 16px !important;
+    }
+
+    .pdf-video-img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 240px !important;
+        object-fit: cover !important;
+    }
+
+    .pdf-darija-text {
+        font-size: 0.8rem !important;
+        line-height: 1.35 !important;
     }
 
     /* Concept C Navy Banner Mobile */
