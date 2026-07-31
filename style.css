@@ -4081,24 +4081,26 @@ label {
 }
 
 /* ==========================================================================
-   Comprehensive Site-Wide Responsive System (iOS Safari & All Mobile Devices)
+   UNIFIED AGENCY-GRADE RESPONSIVE SYSTEM (1920px -> 390px)
    ========================================================================== */
 
+/* Base Global Reset for Images & Prevention of Overflow */
 html {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Preventing Horizontal Scrollbar on Mobile & iPhones */
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
 }
 
 img, video {
-    max-width: 100%;
-    height: auto;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
 }
 
 /* iOS Safe Area Insets Support */
@@ -4107,94 +4109,115 @@ img, video {
     padding-right: max(16px, env(safe-area-inset-right)) !important;
 }
 
-/* Laptops & Desktops (< 1440px) */
-@media (max-width: 1440px) {
+/* --------------------------------------------------------------------------
+   1. Ultra-Wide Desktops & 4K (≥ 1920px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1920px) {
     .container {
-        max-width: 1200px !important;
+        max-width: 1440px !important;
     }
-    
+    .hero-awwwards-section {
+        min-height: 85vh !important;
+        max-height: 95vh !important;
+        display: flex;
+        align-items: center;
+    }
+    .hero-services-cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 28px !important;
+    }
+    .hero-backdrop-layer.bg-default { background-position: center 15% !important; }
+    .hero-backdrop-layer.bg-study { background-position: center 15% !important; }
+    .hero-backdrop-layer.bg-immigration { background-position: center 15% !important; }
+    .hero-backdrop-layer.bg-training { background-position: center 15% !important; }
+}
+
+/* --------------------------------------------------------------------------
+   2. Standard Desktops & Laptops (1440px – 1919px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .container {
+        max-width: 1280px !important;
+    }
+    .hero-awwwards-section {
+        min-height: 85vh !important;
+    }
+    .hero-backdrop-layer.bg-default { background-position: center 15% !important; }
+    .hero-backdrop-layer.bg-study { background-position: center 15% !important; }
+    .hero-backdrop-layer.bg-immigration { background-position: center 15% !important; }
+    .hero-backdrop-layer.bg-training { background-position: center 15% !important; }
+}
+
+/* --------------------------------------------------------------------------
+   3. Small Laptops & Desktops (1280px – 1439px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .container {
+        max-width: 1180px !important;
+    }
+    .hero-awwwards-section {
+        min-height: 80vh !important;
+        padding-top: 130px !important;
+    }
     .logo-img {
         height: 140px !important;
         max-width: 270px !important;
     }
+    .hero-backdrop-layer.bg-default { background-position: 68% 12% !important; }
 }
 
-/* Tablets & Small Laptops (< 1024px) */
-@media (max-width: 1024px) {
+/* --------------------------------------------------------------------------
+   4. Large Tablets & iPad Pro (1024px – 1279px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) and (max-width: 1279px) {
     .container {
         max-width: 960px !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        padding: 0 24px !important;
     }
-
     .logo-img {
-        height: 105px !important;
-        max-width: 210px !important;
+        height: 110px !important;
+        max-width: 220px !important;
     }
-
-    .nav-list {
-        gap: 18px !important;
-    }
-
-    .nav-list a:not(.btn) {
-        font-size: 0.82rem !important;
-    }
-
     .hero-awwwards-section {
         min-height: 75vh !important;
         padding: 120px 0 50px 0 !important;
     }
-
-    .hero-awwwards-title {
-        font-size: 2.2rem !important;
-    }
-    
     .hero-services-cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
         gap: 16px !important;
     }
-
-    /* Lock Card Alignment & Disable Hover Motion Shifting on Touch/Mobile */
-    .interactive-service-card,
-    .interactive-service-card:hover,
-    .hero-services-cards-grid.has-active-hover .interactive-service-card:not(:hover) {
-        transform: none !important;
-        opacity: 1 !important;
-        filter: none !important;
+    .interactive-service-card {
+        padding: 16px 14px !important;
     }
-
-    .expanding-cards-flex {
-        height: auto !important;
-        flex-direction: column !important;
-        gap: 16px !important;
-    }
-    
-    .expanding-card {
-        width: 100% !important;
-        height: 240px !important;
-        flex: none !important;
-    }
-    
-    .expanding-card.active {
-        height: 380px !important;
-    }
-
-    .about-corporate-banner {
-        padding: 40px 25px !important;
-        border-radius: 20px !important;
-    }
-
-    .about-corporate-grid {
-        grid-template-columns: 1fr !important;
-        gap: 35px !important;
-    }
-
-    .about-stats-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 15px !important;
-    }
+    .hero-backdrop-layer.bg-default { background-position: 70% 10% !important; }
 }
 
-/* Mobile & Tablet Drawer Menu (< 992px) */
+/* --------------------------------------------------------------------------
+   5. Tablets / iPad Air / iPad Mini (820px – 1023px) & Drawer Trigger (< 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+    .hero-awwwards-section {
+        min-height: 70vh !important;
+        padding: 110px 0 45px 0 !important;
+    }
+    .hero-services-cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+    .interactive-service-card {
+        padding: 14px 12px !important;
+    }
+    .card-icon-box {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 1rem !important;
+    }
+    .card-service-title {
+        font-size: 1.2rem !important;
+    }
+    .hero-backdrop-layer.bg-default { background-position: 72% 8% !important; }
+}
+
 @media (max-width: 992px) {
     .mobile-menu-btn {
         display: flex !important;
@@ -4207,7 +4230,6 @@ img, video {
         cursor: pointer !important;
         z-index: 10001 !important;
     }
-
     .btn-line {
         width: 100% !important;
         height: 3px !important;
@@ -4215,30 +4237,15 @@ img, video {
         border-radius: 2px !important;
         transition: transform 0.3s ease, opacity 0.3s ease !important;
     }
+    .mobile-menu-btn.open .btn-line:nth-child(1) { transform: translateY(8.5px) rotate(45deg) !important; }
+    .mobile-menu-btn.open .btn-line:nth-child(2) { opacity: 0 !important; }
+    .mobile-menu-btn.open .btn-line:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg) !important; }
 
-    .mobile-menu-btn.open .btn-line:nth-child(1) {
-        transform: translateY(8.5px) rotate(45deg) !important;
-    }
-
-    .mobile-menu-btn.open .btn-line:nth-child(2) {
-        opacity: 0 !important;
-    }
-
-    .mobile-menu-btn.open .btn-line:nth-child(3) {
-        transform: translateY(-8.5px) rotate(-45deg) !important;
-    }
-
-    .main-nav {
-        display: none !important;
-    }
-
+    .main-nav { display: none !important; }
     .main-nav.open {
         display: flex !important;
         position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
+        inset: 0 !important;
         width: 100vw !important;
         height: 100vh !important;
         background: #072B49 !important;
@@ -4247,21 +4254,17 @@ img, video {
         align-items: center !important;
         z-index: 10000 !important;
         padding: 40px 20px !important;
-        overflow-y: auto !important;
     }
-
     .main-nav.open .nav-list {
         flex-direction: column !important;
         gap: 22px !important;
         text-align: center !important;
         width: 100% !important;
     }
-
     .main-nav.open .nav-list a:not(.btn) {
         font-size: 1.2rem !important;
         padding: 8px 0 !important;
     }
-
     .main-nav.open .dropdown-menu.simple-dropdown {
         position: static !important;
         opacity: 1 !important;
@@ -4274,7 +4277,6 @@ img, video {
         width: 100% !important;
         text-align: center !important;
     }
-
     .main-nav.open .dropdown-menu.simple-dropdown a {
         font-size: 1rem !important;
         padding: 6px 0 !important;
@@ -4282,13 +4284,24 @@ img, video {
     }
 }
 
-/* Mobile Devices (< 768px) */
-@media (max-width: 768px) {
-    html, body {
-        overflow-x: hidden !important;
-        width: 100% !important;
+/* --------------------------------------------------------------------------
+   6. Small Tablets & Phablets (768px – 819px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 819px) {
+    .hero-services-cards-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 12px !important;
     }
+    .interactive-service-card {
+        padding: 12px 10px !important;
+    }
+    .hero-backdrop-layer.bg-default { background-position: 75% 5% !important; }
+}
 
+/* --------------------------------------------------------------------------
+   7. Smartphones / Mobile Devices (≤ 767px) - Dedicated Mobile Layout
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
     .container {
         padding-left: 16px !important;
         padding-right: 16px !important;
@@ -4297,46 +4310,27 @@ img, video {
         box-sizing: border-box !important;
     }
 
-    /* Site Header & Logo Mobile */
-    .site-header {
-        padding: 12px 0 !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        z-index: 1000 !important;
-    }
-
-    .header-container {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        width: 100% !important;
-    }
-
     .logo-img {
-        height: 85px !important;
-        max-width: 220px !important;
+        height: 75px !important;
+        max-width: 195px !important;
         width: auto !important;
-        margin-top: -12px !important;
-        margin-bottom: -12px !important;
+        margin-top: -10px !important;
+        margin-bottom: -10px !important;
         display: block !important;
         object-fit: contain !important;
-        filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.45)) !important;
+        filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4)) !important;
     }
 
     .site-header.scrolled .logo-img {
-        height: 70px !important;
-        max-width: 180px !important;
-        margin-top: -8px !important;
-        margin-bottom: -8px !important;
+        height: 62px !important;
+        max-width: 160px !important;
     }
 
-    /* Hero Section & Slidebar Background Photos Mobile (< 768px) */
     .hero-awwwards-section {
-        min-height: auto !important;
+        min-height: 55vh !important;
+        max-height: 65vh !important;
         height: auto !important;
-        padding: 95px 0 40px 0 !important;
+        padding: 95px 0 35px 0 !important;
         width: 100% !important;
         position: relative !important;
         overflow: hidden !important;
@@ -4348,8 +4342,8 @@ img, video {
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
-        height: 480px !important;
-        max-height: 55vh !important;
+        height: 420px !important;
+        max-height: 48vh !important;
         width: 100% !important;
         overflow: hidden !important;
         z-index: 1 !important;
@@ -4364,21 +4358,10 @@ img, video {
         background-repeat: no-repeat !important;
     }
 
-    .hero-backdrop-layer.bg-default {
-        background-position: 78% 0% !important;
-    }
-
-    .hero-backdrop-layer.bg-study {
-        background-position: 50% 0% !important;
-    }
-
-    .hero-backdrop-layer.bg-immigration {
-        background-position: 50% 0% !important;
-    }
-
-    .hero-backdrop-layer.bg-training {
-        background-position: 50% 0% !important;
-    }
+    .hero-backdrop-layer.bg-default { background-position: 78% 0% !important; }
+    .hero-backdrop-layer.bg-study { background-position: 50% 0% !important; }
+    .hero-backdrop-layer.bg-immigration { background-position: 50% 0% !important; }
+    .hero-backdrop-layer.bg-training { background-position: 50% 0% !important; }
 
     .hero-backdrop-overlay {
         position: absolute !important;
@@ -4395,14 +4378,8 @@ img, video {
         z-index: 3 !important;
     }
 
-    .hero-awwwards-container {
-        position: relative !important;
-        z-index: 5 !important;
-        width: 100% !important;
-    }
-
     .hero-awwwards-header {
-        margin-bottom: 18px !important;
+        margin-bottom: 16px !important;
         text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
@@ -4410,107 +4387,91 @@ img, video {
     }
 
     .hero-awwwards-title {
-        font-size: clamp(1.4rem, 5.5vw, 1.7rem) !important;
+        font-size: clamp(1.35rem, 5.2vw, 1.65rem) !important;
         line-height: 1.22 !important;
-        margin-bottom: 8px !important;
+        margin-bottom: 6px !important;
         text-align: center !important;
         max-width: 95% !important;
     }
 
     .hero-awwwards-subtitle {
-        font-size: clamp(0.82rem, 2.8vw, 0.9rem) !important;
-        line-height: 1.45 !important;
+        font-size: clamp(0.8rem, 2.6vw, 0.88rem) !important;
+        line-height: 1.42 !important;
         text-align: center !important;
         max-width: 92% !important;
     }
 
-    /* Complete Proportional Layout Scaling Mobile (< 768px) */
     .hero-services-cards-grid {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: clamp(8px, 2vw, 12px) !important;
+        gap: 10px !important;
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        margin-top: clamp(10px, 2.5vw, 16px) !important;
+        margin-top: 12px !important;
     }
 
     .interactive-service-card {
-        width: clamp(88%, 92%, 95%) !important;
+        width: clamp(90%, 92%, 95%) !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        padding: clamp(10px, 2.8vw, 14px) !important;
-        border-radius: clamp(10px, 2vw, 12px) !important;
+        padding: 12px 13px !important;
+        border-radius: 12px !important;
         background: rgba(7, 43, 73, 0.94) !important;
         border: 1px solid rgba(255, 255, 255, 0.18) !important;
         margin: 0 auto !important;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22) !important;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
     }
 
-    .card-header-row {
-        margin-bottom: clamp(4px, 1.2vw, 8px) !important;
-    }
+    .card-header-row { margin-bottom: 6px !important; }
 
     .card-icon-box {
-        width: clamp(28px, 7.5vw, 34px) !important;
-        height: clamp(28px, 7.5vw, 34px) !important;
-        border-radius: clamp(7px, 1.8vw, 9px) !important;
-        font-size: clamp(0.8rem, 2vw, 0.95rem) !important;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 8px !important;
+        font-size: 0.9rem !important;
     }
 
     .card-badge {
-        font-size: clamp(0.55rem, 1.6vw, 0.62rem) !important;
-        padding: clamp(2px, 0.6vw, 3px) clamp(6px, 1.5vw, 8px) !important;
+        font-size: 0.58rem !important;
+        padding: 3px 8px !important;
         border-radius: 10px !important;
     }
 
     .card-service-title {
-        font-size: clamp(1rem, 3vw, 1.15rem) !important;
-        margin-bottom: clamp(1px, 0.4vw, 3px) !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 2px !important;
         line-height: 1.2 !important;
     }
 
     .card-service-tagline {
-        font-size: clamp(0.7rem, 2vw, 0.78rem) !important;
-        margin-bottom: clamp(3px, 1vw, 6px) !important;
+        font-size: 0.75rem !important;
+        margin-bottom: 4px !important;
     }
 
     .card-expandable-content {
         max-height: 180px !important;
         opacity: 1 !important;
-        margin-top: clamp(4px, 1.2vw, 8px) !important;
+        margin-top: 6px !important;
     }
 
     .card-service-desc {
-        font-size: clamp(0.7rem, 2vw, 0.78rem) !important;
+        font-size: 0.75rem !important;
         line-height: 1.32 !important;
-        margin-bottom: clamp(6px, 1.5vw, 10px) !important;
+        margin-bottom: 8px !important;
     }
 
     .hero-service-btn {
         width: 100% !important;
         box-sizing: border-box !important;
-        padding: clamp(5px, 1.5vw, 8px) clamp(8px, 2.5vw, 14px) !important;
-        font-size: clamp(0.7rem, 2vw, 0.78rem) !important;
+        padding: 6px 12px !important;
+        font-size: 0.75rem !important;
         border-radius: 18px !important;
         height: auto !important;
-    }
-
-    .hero-cta-group {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 8px !important;
-        margin-top: 12px !important;
-    }
-
-    .hero-cta-group .btn {
-        width: 100% !important;
-        padding: 8px 16px !important;
-        font-size: 0.78rem !important;
-        justify-content: center !important;
-        text-align: center !important;
-        border-radius: 25px !important;
     }
 
     /* Témoignage Rachid El Ouali Mobile */
@@ -4557,49 +4518,6 @@ img, video {
         line-height: 1.35 !important;
     }
 
-    /* Concept C Navy Banner Mobile */
-    .about-corporate-banner {
-        padding: 28px 18px !important;
-        border-radius: 16px !important;
-    }
-
-    .about-corporate-title {
-        font-size: 1.45rem !important;
-    }
-
-    .about-stats-grid {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-    }
-
-    .about-stat-card {
-        padding: 16px 12px !important;
-    }
-
-    .stat-number {
-        font-size: 1.8rem !important;
-    }
-
-    /* Google Reviews Showcase Mobile */
-    .google-reviews-title {
-        font-size: 1.55rem !important;
-    }
-
-    .google-reviews-marquee-wrapper {
-        padding: 10px 0 15px !important;
-        overflow: hidden !important;
-        width: 100% !important;
-    }
-
-    .google-review-card {
-        width: 270px !important;
-        padding: 16px !important;
-    }
-
-    .google-side-btn {
-        display: none !important; /* Hide floating side buttons on mobile to avoid overflow */
-    }
-
     /* Footer Grid Mobile */
     .footer-grid {
         grid-template-columns: 1fr !important;
@@ -4607,99 +4525,76 @@ img, video {
         text-align: center !important;
     }
 
-    .footer-contact-list li {
-        justify-content: center !important;
-    }
-
-    .social-links {
-        justify-content: center !important;
-    }
+    .footer-contact-list li { justify-content: center !important; }
+    .social-links { justify-content: center !important; }
 }
 
-/* Extra Small Mobile Devices (< 480px) */
+/* --------------------------------------------------------------------------
+   8. Extra Small Mobile Devices & iPhones (≤ 480px & 390px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 480px) {
-    .logo-img {
-        height: 72px !important;
-        max-width: 185px !important;
-        margin-top: -8px !important;
-        margin-bottom: -8px !important;
-    }
-
-    .site-header.scrolled .logo-img {
-        height: 60px !important;
-        max-width: 155px !important;
-        margin-top: -5px !important;
-        margin-bottom: -5px !important;
-    }
-
-    .hero-awwwards-title {
-        font-size: 1.4rem !important;
-    }
-
-    .hero-badge-pill {
-        font-size: 0.68rem !important;
-        padding: 4px 12px !important;
-    }
-
-    .google-rating-summary-box {
-        padding: 10px 14px !important;
-        width: 100% !important;
-    }
-
-    .google-review-card {
-        width: 245px !important;
-        padding: 14px !important;
-    }
-
-    .google-card-text {
-        font-size: 0.82rem !important;
-    }
-}
-
-/* Ultra Small Mobile Devices (< 375px) */
-@media (max-width: 375px) {
     .container {
         padding-left: 12px !important;
         padding-right: 12px !important;
     }
 
     .logo-img {
-        height: 64px !important;
-        max-width: 165px !important;
+        height: 68px !important;
+        max-width: 175px !important;
     }
 
     .site-header.scrolled .logo-img {
-        height: 52px !important;
-        max-width: 140px !important;
+        height: 56px !important;
+        max-width: 145px !important;
     }
 
     .hero-awwwards-title {
-        font-size: 1.3rem !important;
-        line-height: 1.22 !important;
+        font-size: 1.35rem !important;
+        line-height: 1.2 !important;
     }
 
     .hero-awwwards-subtitle {
-        font-size: 0.84rem !important;
+        font-size: 0.8rem !important;
     }
 
     .interactive-service-card {
-        padding: 14px 12px !important;
-        border-radius: 14px !important;
-    }
-
-    .card-service-title {
-        font-size: 1.18rem !important;
+        width: 95% !important;
+        padding: 10px 11px !important;
+        border-radius: 10px !important;
     }
 
     .card-icon-box {
-        width: 36px !important;
-        height: 36px !important;
-        font-size: 1rem !important;
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.85rem !important;
     }
 
     .card-badge {
-        font-size: 0.62rem !important;
-        padding: 3px 8px !important;
+        font-size: 0.55rem !important;
+        padding: 2px 6px !important;
+    }
+
+    .card-service-title {
+        font-size: 1.05rem !important;
+    }
+
+    .hero-backdrop-stack {
+        height: 380px !important;
+        max-height: 45vh !important;
+    }
+
+    .hero-backdrop-layer.bg-default {
+        background-position: 82% 0% !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-awwwards-title {
+        font-size: 1.25rem !important;
+    }
+    .interactive-service-card {
+        width: 98% !important;
+        padding: 9px 10px !important;
     }
 }
 
