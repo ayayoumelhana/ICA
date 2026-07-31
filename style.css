@@ -2660,56 +2660,58 @@ label {
 }
 
 .about-corporate-banner {
-    background: linear-gradient(135deg, #072B49 0%, #0c3d67 100%);
-    border-radius: 20px;
-    padding: 36px 32px;
-    box-shadow: 0 15px 40px rgba(7, 43, 73, 0.2);
+    background: linear-gradient(135deg, #072B49 0%, #164371 100%);
+    border-radius: 24px;
+    padding: 50px 45px;
+    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.22);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    max-width: 1060px;
+    margin: 0 auto;
 }
 
 .about-corporate-grid {
     display: grid;
     grid-template-columns: 1.15fr 1fr;
-    gap: 35px;
+    gap: 40px;
     align-items: center;
 }
 
 .about-badge-pill {
     display: inline-block;
-    background: rgba(0, 174, 239, 0.18);
+    background: rgba(0, 174, 239, 0.2);
     color: #00AEEF;
-    border: 1px solid rgba(0, 174, 239, 0.35);
-    padding: 4px 12px;
+    border: 1px solid rgba(0, 174, 239, 0.4);
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .about-corporate-title {
     font-family: 'Minion Pro', 'Playfair Display', Georgia, serif !important;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #FFFFFF !important;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     line-height: 1.2;
 }
 
 .about-corporate-lead {
-    font-size: 0.96rem;
+    font-size: 0.98rem;
     color: rgba(255, 255, 255, 0.95);
-    line-height: 1.5;
-    margin-bottom: 10px;
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
 
 .about-corporate-desc {
-    font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.78);
-    line-height: 1.55;
-    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.6;
+    margin-bottom: 24px;
 }
 
 /* 3 Stat Cards Row */
@@ -2717,14 +2719,14 @@ label {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .about-stat-card {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 18px;
-    padding: 16px 14px;
+    padding: 16px 12px;
     text-align: center;
     transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
@@ -2737,17 +2739,21 @@ label {
 
 .stat-number {
     display: block;
-    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif;
-    font-size: 1.65rem;
-    font-weight: 800;
-    color: #00AEEF;
+    font-family: 'Outfit', 'Montserrat', 'Inter', system-ui, -apple-system, sans-serif !important;
+    font-size: 1.85rem !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #00AEEF 0%, #38BDF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 8px rgba(0, 174, 239, 0.35));
     margin-bottom: 4px;
 }
 
 .stat-label {
     display: block;
     font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.88);
     line-height: 1.35;
     font-weight: 600;
 }
