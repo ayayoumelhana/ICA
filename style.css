@@ -4424,85 +4424,93 @@ img, video {
         max-width: 92% !important;
     }
 
-    /* Les 3 Pôles / Service Cards Grid Mobile (< 768px) - Fluid Responsive CSS */
+    /* Complete Proportional Layout Scaling Mobile (< 768px) */
     .hero-services-cards-grid {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: clamp(10px, 2vw, 14px) !important;
+        gap: clamp(8px, 2vw, 12px) !important;
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        margin-top: clamp(14px, 3vw, 20px) !important;
+        margin-top: clamp(10px, 2.5vw, 16px) !important;
     }
 
     .interactive-service-card {
-        width: clamp(88%, 92%, 96%) !important;
+        width: clamp(88%, 92%, 95%) !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        padding: clamp(12px, 3vw, 16px) !important;
-        border-radius: clamp(10px, 2.5vw, 14px) !important;
-        background: rgba(7, 43, 73, 0.92) !important;
+        padding: clamp(10px, 2.8vw, 14px) !important;
+        border-radius: clamp(10px, 2vw, 12px) !important;
+        background: rgba(7, 43, 73, 0.94) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
         margin: 0 auto !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22) !important;
     }
 
     .card-header-row {
-        margin-bottom: clamp(6px, 1.5vw, 10px) !important;
-    }
-
-    .card-icon-box {
-        width: clamp(30px, 8vw, 36px) !important;
-        height: clamp(30px, 8vw, 36px) !important;
-        border-radius: clamp(8px, 2vw, 10px) !important;
-        font-size: clamp(0.85rem, 2.2vw, 1rem) !important;
-    }
-
-    .card-badge {
-        font-size: clamp(0.58rem, 1.8vw, 0.65rem) !important;
-        padding: clamp(2px, 0.8vw, 4px) clamp(6px, 1.8vw, 10px) !important;
-        border-radius: 12px !important;
-    }
-
-    .card-service-title {
-        font-size: clamp(1.05rem, 3.2vw, 1.2rem) !important;
-        margin-bottom: clamp(2px, 0.5vw, 4px) !important;
-    }
-
-    .card-service-tagline {
-        font-size: clamp(0.72rem, 2.2vw, 0.8rem) !important;
         margin-bottom: clamp(4px, 1.2vw, 8px) !important;
     }
 
+    .card-icon-box {
+        width: clamp(28px, 7.5vw, 34px) !important;
+        height: clamp(28px, 7.5vw, 34px) !important;
+        border-radius: clamp(7px, 1.8vw, 9px) !important;
+        font-size: clamp(0.8rem, 2vw, 0.95rem) !important;
+    }
+
+    .card-badge {
+        font-size: clamp(0.55rem, 1.6vw, 0.62rem) !important;
+        padding: clamp(2px, 0.6vw, 3px) clamp(6px, 1.5vw, 8px) !important;
+        border-radius: 10px !important;
+    }
+
+    .card-service-title {
+        font-size: clamp(1rem, 3vw, 1.15rem) !important;
+        margin-bottom: clamp(1px, 0.4vw, 3px) !important;
+        line-height: 1.2 !important;
+    }
+
+    .card-service-tagline {
+        font-size: clamp(0.7rem, 2vw, 0.78rem) !important;
+        margin-bottom: clamp(3px, 1vw, 6px) !important;
+    }
+
     .card-expandable-content {
-        max-height: 200px !important;
+        max-height: 180px !important;
         opacity: 1 !important;
-        margin-top: clamp(6px, 1.5vw, 10px) !important;
+        margin-top: clamp(4px, 1.2vw, 8px) !important;
     }
 
     .card-service-desc {
-        font-size: clamp(0.72rem, 2.2vw, 0.8rem) !important;
-        line-height: 1.35 !important;
-        margin-bottom: clamp(8px, 2vw, 12px) !important;
+        font-size: clamp(0.7rem, 2vw, 0.78rem) !important;
+        line-height: 1.32 !important;
+        margin-bottom: clamp(6px, 1.5vw, 10px) !important;
     }
 
     .hero-service-btn {
         width: 100% !important;
         box-sizing: border-box !important;
-        padding: clamp(6px, 1.8vw, 9px) clamp(10px, 3vw, 16px) !important;
-        font-size: clamp(0.72rem, 2.2vw, 0.8rem) !important;
-        border-radius: 20px !important;
+        padding: clamp(5px, 1.5vw, 8px) clamp(8px, 2.5vw, 14px) !important;
+        font-size: clamp(0.7rem, 2vw, 0.78rem) !important;
+        border-radius: 18px !important;
+        height: auto !important;
     }
 
     .hero-cta-group {
         flex-direction: column !important;
         width: 100% !important;
-        gap: 10px !important;
+        gap: 8px !important;
+        margin-top: 12px !important;
     }
 
     .hero-cta-group .btn {
         width: 100% !important;
+        padding: 8px 16px !important;
+        font-size: 0.78rem !important;
         justify-content: center !important;
         text-align: center !important;
+        border-radius: 25px !important;
     }
 
     /* Témoignage Rachid El Ouali Mobile */
