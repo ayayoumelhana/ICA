@@ -178,17 +178,18 @@ p {
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
-    padding: 12px 0;
-    background: transparent !important;
+    padding: 16px 0;
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.8) 0%, rgba(7, 43, 73, 0.2) 100%) !important;
     border-top: none;
 }
 
 .site-header.scrolled {
     position: fixed;
-    background: rgba(7, 43, 73, 0.95) !important;
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-md);
-    padding: 8px 0;
+    background: rgba(7, 43, 73, 0.96) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
 }
 
 .header-container {
@@ -198,20 +199,18 @@ p {
 }
 
 .logo-img {
-    height: 130px;
+    height: 48px;
     width: auto;
-    margin-top: -28px;
-    margin-bottom: -28px;
+    margin: 0;
     display: block;
     transition: var(--transition);
-    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
 .site-header.scrolled .logo-img {
-    height: 95px;
-    margin-top: -18px;
-    margin-bottom: -18px;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+    height: 42px;
+    margin: 0;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
 }
 
 .main-nav {
@@ -222,7 +221,7 @@ p {
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 26px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -230,33 +229,35 @@ p {
 
 .nav-list a:not(.btn) {
     color: #FFFFFF;
-    font-family: var(--font-nav);
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-family: 'Poppins', 'Manrope', sans-serif !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px;
     position: relative;
-    padding: 4px 4px;
-    margin: 0 2px;
-    transition: var(--transition);
+    padding: 4px 0;
+    margin: 0;
+    transition: color 0.25s ease;
     text-decoration: none;
     display: inline-block;
 }
 
 .nav-list a:not(.btn):hover,
 .nav-list a.active:not(.btn) {
-    color: var(--primary-color) !important; /* Exact red #F20D0D */
+    color: #F59E0B !important; /* Gold / Yellow highlight like ACCUEIL in reference image */
 }
 
 .nav-list a:not(.btn)::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 4px;
-    right: 4px;
-    height: 1px; /* 1px thin underline like the original site */
-    background-color: var(--primary-color);
-    transition: var(--transition);
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #F59E0B;
+    transition: transform 0.25s ease;
     transform: scaleX(0);
-    transform-origin: bottom center;
+    transform-origin: center;
 }
 
 .nav-list a:not(.btn):hover::after,
