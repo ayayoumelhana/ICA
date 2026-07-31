@@ -4298,12 +4298,21 @@ img, video {
     }
 
     .logo-img {
-        height: 52px !important;
-        max-width: 140px !important;
+        height: 85px !important;
+        max-width: 220px !important;
         width: auto !important;
-        margin: 0 !important;
+        margin-top: -12px !important;
+        margin-bottom: -12px !important;
         display: block !important;
         object-fit: contain !important;
+        filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.45)) !important;
+    }
+
+    .site-header.scrolled .logo-img {
+        height: 70px !important;
+        max-width: 180px !important;
+        margin-top: -8px !important;
+        margin-bottom: -8px !important;
     }
 
     /* Hero Section & Slidebar Background Photos Mobile (< 768px) */
@@ -4542,8 +4551,17 @@ img, video {
 /* Extra Small Mobile Devices (< 480px) */
 @media (max-width: 480px) {
     .logo-img {
-        height: 44px !important;
-        max-width: 120px !important;
+        height: 72px !important;
+        max-width: 185px !important;
+        margin-top: -8px !important;
+        margin-bottom: -8px !important;
+    }
+
+    .site-header.scrolled .logo-img {
+        height: 60px !important;
+        max-width: 155px !important;
+        margin-top: -5px !important;
+        margin-bottom: -5px !important;
     }
 
     .hero-awwwards-title {
