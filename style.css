@@ -4345,9 +4345,12 @@ img, video {
 
     .hero-backdrop-stack {
         position: absolute !important;
-        inset: 0 !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 480px !important;
+        max-height: 55vh !important;
         width: 100% !important;
-        height: 100% !important;
         overflow: hidden !important;
         z-index: 1 !important;
     }
@@ -4361,28 +4364,20 @@ img, video {
         background-repeat: no-repeat !important;
     }
 
-    .hero-backdrop-layer.bg-default,
-    .expanding-card-bg.bg-default {
-        background-position: 72% 0% !important;
-        background-size: cover !important;
+    .hero-backdrop-layer.bg-default {
+        background-position: 78% 0% !important;
     }
 
-    .hero-backdrop-layer.bg-study,
-    .expanding-card-bg.bg-study {
+    .hero-backdrop-layer.bg-study {
         background-position: 50% 0% !important;
-        background-size: cover !important;
     }
 
-    .hero-backdrop-layer.bg-immigration,
-    .expanding-card-bg.bg-immigration {
+    .hero-backdrop-layer.bg-immigration {
         background-position: 50% 0% !important;
-        background-size: cover !important;
     }
 
-    .hero-backdrop-layer.bg-training,
-    .expanding-card-bg.bg-training {
+    .hero-backdrop-layer.bg-training {
         background-position: 50% 0% !important;
-        background-size: cover !important;
     }
 
     .hero-backdrop-overlay {
@@ -4392,9 +4387,10 @@ img, video {
         height: 100% !important;
         background: linear-gradient(
             180deg, 
-            rgba(7, 43, 73, 0.48) 0%, 
-            rgba(7, 43, 73, 0.78) 45%, 
-            rgba(7, 43, 73, 0.95) 100%
+            rgba(7, 43, 73, 0.35) 0%, 
+            rgba(7, 43, 73, 0.70) 50%, 
+            rgba(7, 43, 73, 0.98) 85%,
+            #072B49 100%
         ) !important;
         z-index: 3 !important;
     }
