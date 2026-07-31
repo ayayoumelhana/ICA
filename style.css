@@ -2829,7 +2829,7 @@ label {
 @media (max-width: 992px) {
     .about-corporate-banner { padding: 35px 24px; }
     .about-corporate-grid { grid-template-columns: 1fr; gap: 35px; }
-    .about-stats-row { grid-template-columns: 1fr; }
+    .about-stats-row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
     .about-img-stage-box { height: 280px; }
 }
 
@@ -4568,6 +4568,29 @@ img, video {
     .pdf-darija-text {
         font-size: 0.8rem !important;
         line-height: 1.35 !important;
+    }
+
+    /* Qui Sommes-Nous Stats 3 Columns Side-by-Side Mobile */
+    .about-stats-row {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .about-stat-card {
+        padding: 10px 4px !important;
+        border-radius: 12px !important;
+    }
+
+    .stat-number {
+        font-size: 1.25rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .stat-label {
+        font-size: 0.62rem !important;
+        line-height: 1.25 !important;
     }
 
     /* Footer Grid Mobile */
