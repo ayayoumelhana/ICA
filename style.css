@@ -4153,6 +4153,15 @@ img, video {
         gap: 16px !important;
     }
 
+    /* Lock Card Alignment & Disable Hover Motion Shifting on Touch/Mobile */
+    .interactive-service-card,
+    .interactive-service-card:hover,
+    .hero-services-cards-grid.has-active-hover .interactive-service-card:not(:hover) {
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+    }
+
     .expanding-cards-flex {
         height: auto !important;
         flex-direction: column !important;
