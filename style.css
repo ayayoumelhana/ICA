@@ -178,17 +178,17 @@ p {
     width: 100%;
     z-index: 1000;
     transition: var(--transition);
-    padding: 8px 0;
+    padding: 20px 0;
     background: transparent !important;
     border-top: none;
 }
 
 .site-header.scrolled {
     position: fixed;
-    background: rgba(7, 43, 73, 0.95) !important;
-    backdrop-filter: blur(10px);
+    background: rgba(7, 43, 73, 0.92) !important;
+    backdrop-filter: blur(8px);
     box-shadow: var(--shadow-md);
-    padding: 6px 0;
+    padding: 12px 0;
 }
 
 .header-container {
@@ -198,18 +198,20 @@ p {
 }
 
 .logo-img {
-    height: 52px;
+    height: 250px;
     width: auto;
-    margin: 0;
+    margin-top: -76px;
+    margin-bottom: -76px;
     display: block;
     transition: var(--transition);
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
 }
 
 .site-header.scrolled .logo-img {
-    height: 44px;
-    margin: 0;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    height: 180px;
+    margin-top: -54px;
+    margin-bottom: -54px;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
 }
 
 .main-nav {
@@ -220,7 +222,7 @@ p {
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -229,11 +231,11 @@ p {
 .nav-list a:not(.btn) {
     color: #FFFFFF;
     font-family: var(--font-nav);
-    font-size: 0.85rem;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 400;
     position: relative;
-    padding: 3px 2px;
-    margin: 0 2px;
+    padding: 5px 4px;
+    margin: 0 4px;
     transition: var(--transition);
     text-decoration: none;
     display: inline-block;
