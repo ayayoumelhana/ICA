@@ -4128,15 +4128,15 @@ html, body {
         gap: 16px !important;
     }
 
-    .expanding-cards-container {
+    .expanding-cards-flex {
         height: auto !important;
         flex-direction: column !important;
-        gap: 15px !important;
+        gap: 16px !important;
     }
     
     .expanding-card {
         width: 100% !important;
-        height: 220px !important;
+        height: 240px !important;
         flex: none !important;
     }
     
@@ -4160,6 +4160,66 @@ html, body {
     }
 }
 
+/* Mobile & Tablet Drawer Menu (< 992px) */
+@media (max-width: 992px) {
+    .mobile-menu-btn {
+        display: flex !important;
+        z-index: 10001;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .main-nav.active {
+        display: flex !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background: #072B49 !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: 10000 !important;
+        padding: 40px 20px !important;
+    }
+
+    .main-nav.active .nav-list {
+        flex-direction: column !important;
+        gap: 22px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .main-nav.active .nav-list a:not(.btn) {
+        font-size: 1.25rem !important;
+        padding: 8px 0 !important;
+    }
+
+    .main-nav.active .dropdown-menu.simple-dropdown {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: transparent !important;
+        padding: 10px 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .main-nav.active .dropdown-menu.simple-dropdown a {
+        font-size: 1.05rem !important;
+        padding: 8px 0 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
+}
+
 /* Mobile Devices (< 768px) */
 @media (max-width: 768px) {
     .container {
@@ -4170,6 +4230,7 @@ html, body {
     .logo-img {
         height: 75px !important;
         max-width: 150px !important;
+        margin: 0 !important;
     }
 
     /* Hero Section Responsive */
