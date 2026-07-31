@@ -4330,11 +4330,15 @@ img, video {
         min-height: 55vh !important;
         max-height: 65vh !important;
         height: auto !important;
-        padding: 95px 0 35px 0 !important;
+        padding: 130px 0 35px 0 !important;
         width: 100% !important;
         position: relative !important;
         overflow: hidden !important;
         background-color: #072B49 !important;
+    }
+
+    .hero-badge-pill {
+        display: none !important;
     }
 
     .hero-backdrop-stack {
@@ -4342,8 +4346,8 @@ img, video {
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
-        height: 420px !important;
-        max-height: 48vh !important;
+        height: 440px !important;
+        max-height: 50vh !important;
         width: 100% !important;
         overflow: hidden !important;
         z-index: 1 !important;
@@ -4358,10 +4362,10 @@ img, video {
         background-repeat: no-repeat !important;
     }
 
-    .hero-backdrop-layer.bg-default { background-position: 80% 0% !important; }
-    .hero-backdrop-layer.bg-study { background-position: 68% 0% !important; }
-    .hero-backdrop-layer.bg-immigration { background-position: 50% 0% !important; }
-    .hero-backdrop-layer.bg-training { background-position: 78% 0% !important; }
+    .hero-backdrop-layer.bg-default { background-position: 65% top !important; }
+    .hero-backdrop-layer.bg-study { background-position: 65% top !important; }
+    .hero-backdrop-layer.bg-immigration { background-position: 50% top !important; }
+    .hero-backdrop-layer.bg-training { background-position: 70% top !important; }
 
     .hero-backdrop-overlay {
         position: absolute !important;
