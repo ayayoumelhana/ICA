@@ -4361,20 +4361,28 @@ img, video {
         background-repeat: no-repeat !important;
     }
 
-    .hero-backdrop-layer.bg-default {
-        background-position: 65% top !important;
+    .hero-backdrop-layer.bg-default,
+    .expanding-card-bg.bg-default {
+        background-position: 72% 0% !important;
+        background-size: cover !important;
     }
 
-    .hero-backdrop-layer.bg-study {
-        background-position: center top !important;
+    .hero-backdrop-layer.bg-study,
+    .expanding-card-bg.bg-study {
+        background-position: 50% 0% !important;
+        background-size: cover !important;
     }
 
-    .hero-backdrop-layer.bg-immigration {
-        background-position: 50% top !important;
+    .hero-backdrop-layer.bg-immigration,
+    .expanding-card-bg.bg-immigration {
+        background-position: 50% 0% !important;
+        background-size: cover !important;
     }
 
-    .hero-backdrop-layer.bg-training {
-        background-position: center top !important;
+    .hero-backdrop-layer.bg-training,
+    .expanding-card-bg.bg-training {
+        background-position: 50% 0% !important;
+        background-size: cover !important;
     }
 
     .hero-backdrop-overlay {
