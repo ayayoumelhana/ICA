@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!bgType) {
             const currentKey = serviceBgKeys[autoSlideIndex];
-            const activeLayer = document.querySelector(`.hero-backdrop-layer.bg-${currentKey}`) || document.querySelector('.hero-backdrop-layer.bg-default');
+            const activeLayer = document.querySelector(`.hero-backdrop-layer.bg-${currentKey}`) || document.querySelector('.hero-backdrop-layer.bg-study');
             if (activeLayer) activeLayer.classList.add('active');
             return;
         }
