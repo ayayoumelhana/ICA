@@ -2407,8 +2407,11 @@ label {
 /* 3 Integrated Interactive Service Glass Cards Grid */
 .hero-services-cards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 1.8vw, 24px);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     align-items: stretch;
 }
 
@@ -2417,14 +2420,19 @@ label {
     position: relative;
     background: rgba(7, 43, 73, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 16px;
-    padding: 20px 18px;
+    border-radius: clamp(12px, 1.5vw, 18px);
+    padding: clamp(14px, 1.8vw, 22px);
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    height: auto;
+    box-sizing: border-box;
     transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
                 background 0.45s cubic-bezier(0.16, 1, 0.3, 1),
                 border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
