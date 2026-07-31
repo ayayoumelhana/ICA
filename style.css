@@ -4364,8 +4364,8 @@ img, video {
     }
 
     .hero-backdrop-layer.bg-default { background-position: 78% 0% !important; }
-    .hero-backdrop-layer.bg-study { background-position: 68% 0% !important; }
-    .hero-backdrop-layer.bg-immigration { background-position: 50% 0% !important; }
+    .hero-backdrop-layer.bg-study { background-position: 72% 0% !important; }
+    .hero-backdrop-layer.bg-immigration { background-position: 78% 0% !important; }
     .hero-backdrop-layer.bg-training { background-position: 78% 0% !important; }
 
     .hero-backdrop-overlay {
@@ -4583,7 +4583,10 @@ img, video {
         font-size: 1.05rem !important;
     }
 
-    /* Clean mobile background styling */
+    .hero-backdrop-layer.bg-default { background-position: 82% 0% !important; }
+    .hero-backdrop-layer.bg-study { background-position: 75% 0% !important; }
+    .hero-backdrop-layer.bg-immigration { background-position: 80% 0% !important; }
+    .hero-backdrop-layer.bg-training { background-position: 82% 0% !important; }
 }
 
 @media (max-width: 390px) {
