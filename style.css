@@ -198,18 +198,20 @@ p {
 }
 
 .logo-img {
-    height: 95px;
+    height: 130px;
     width: auto;
-    margin: 0;
+    margin-top: -28px;
+    margin-bottom: -28px;
     display: block;
     transition: var(--transition);
-    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.4));
 }
 
 .site-header.scrolled .logo-img {
-    height: 70px;
-    margin: 0;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+    height: 95px;
+    margin-top: -18px;
+    margin-bottom: -18px;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
 .main-nav {
