@@ -4413,41 +4413,73 @@ img, video {
         line-height: 1.5 !important;
     }
 
-    /* Les 3 Pôles / Service Cards Grid Mobile */
+    /* Les 3 Pôles / Service Cards Grid Mobile (< 768px) */
     .hero-services-cards-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 14px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        margin-top: 20px !important;
-    }
-
-    .interactive-service-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        padding: 18px 16px !important;
-        border-radius: 16px !important;
+        margin-top: 18px !important;
+    }
+
+    .interactive-service-card {
+        width: 92% !important;
+        max-width: 95% !important;
+        box-sizing: border-box !important;
+        padding: 14px 14px !important;
+        border-radius: 14px !important;
         background: rgba(7, 43, 73, 0.92) !important;
+        margin: 0 auto !important;
+    }
+
+    .card-header-row {
+        margin-bottom: 8px !important;
+    }
+
+    .card-icon-box {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 10px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .card-badge {
+        font-size: 0.62rem !important;
+        padding: 3px 8px !important;
+        border-radius: 12px !important;
+    }
+
+    .card-service-title {
+        font-size: 1.15rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .card-service-tagline {
+        font-size: 0.78rem !important;
+        margin-bottom: 6px !important;
     }
 
     .card-expandable-content {
-        max-height: 250px !important;
+        max-height: 200px !important;
         opacity: 1 !important;
-        margin-top: 10px !important;
+        margin-top: 8px !important;
     }
 
     .card-service-desc {
-        font-size: 0.82rem !important;
-        margin-bottom: 12px !important;
+        font-size: 0.78rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px !important;
     }
 
     .hero-service-btn {
         width: 100% !important;
         box-sizing: border-box !important;
-        padding: 9px 16px !important;
-        font-size: 0.82rem !important;
+        padding: 7px 12px !important;
+        font-size: 0.78rem !important;
+        border-radius: 20px !important;
     }
 
     .hero-cta-group {
