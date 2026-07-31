@@ -4073,13 +4073,30 @@ label {
 }
 
 /* ==========================================================================
-   Comprehensive Site-Wide Responsive System (Mobile, Tablet, Desktop)
+   Comprehensive Site-Wide Responsive System (iOS Safari & All Mobile Devices)
    ========================================================================== */
 
-/* Preventing Horizontal Scrollbar on Mobile */
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Preventing Horizontal Scrollbar on Mobile & iPhones */
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    width: 100%;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* iOS Safe Area Insets Support */
+.site-header {
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
 }
 
 /* Laptops & Desktops (< 1440px) */
