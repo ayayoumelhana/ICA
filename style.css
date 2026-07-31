@@ -193,23 +193,23 @@ p {
 }
 
 .logo-img {
-    height: 140px;
+    height: 190px;
     width: auto;
-    max-width: 270px;
-    margin-top: -18px;
-    margin-bottom: -18px;
+    max-width: 360px;
+    margin-top: -32px;
+    margin-bottom: -32px;
     display: block;
     object-fit: contain;
     transition: var(--transition);
-    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+    filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.5));
 }
 
 .site-header.scrolled .logo-img {
-    height: 95px;
-    max-width: 190px;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    height: 130px;
+    max-width: 250px;
+    margin-top: -18px;
+    margin-bottom: -18px;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
 }
 
 .main-nav {
@@ -4089,8 +4089,8 @@ html, body {
     }
     
     .logo-img {
-        height: 95px !important;
-        max-width: 190px !important;
+        height: 140px !important;
+        max-width: 270px !important;
     }
 }
 
@@ -4103,8 +4103,8 @@ html, body {
     }
 
     .logo-img {
-        height: 80px !important;
-        max-width: 160px !important;
+        height: 105px !important;
+        max-width: 210px !important;
     }
 
     .nav-list {
@@ -4168,8 +4168,8 @@ html, body {
     }
 
     .logo-img {
-        height: 65px !important;
-        max-width: 130px !important;
+        height: 75px !important;
+        max-width: 150px !important;
     }
 
     /* Hero Section Responsive */
