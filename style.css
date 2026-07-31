@@ -4402,19 +4402,26 @@ img, video {
     }
 
     .hero-awwwards-header {
-        margin-bottom: 24px !important;
-        text-align: left !important;
+        margin-bottom: 18px !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     .hero-awwwards-title {
-        font-size: 1.55rem !important;
-        line-height: 1.25 !important;
-        margin-bottom: 10px !important;
+        font-size: clamp(1.4rem, 5.5vw, 1.7rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 8px !important;
+        text-align: center !important;
+        max-width: 95% !important;
     }
 
     .hero-awwwards-subtitle {
-        font-size: 0.9rem !important;
-        line-height: 1.5 !important;
+        font-size: clamp(0.82rem, 2.8vw, 0.9rem) !important;
+        line-height: 1.45 !important;
+        text-align: center !important;
+        max-width: 92% !important;
     }
 
     /* Les 3 Pôles / Service Cards Grid Mobile (< 768px) - Fluid Responsive CSS */
