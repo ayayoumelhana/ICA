@@ -185,9 +185,7 @@ p {
 
 .site-header.scrolled {
     position: fixed;
-    background: rgba(7, 43, 73, 0.96) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: #072B49 !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     padding: 10px 0;
 }
@@ -2375,9 +2373,8 @@ label {
 
 .hero-badge-pill {
     display: inline-block;
-    background: rgba(0, 174, 239, 0.18);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 174, 239, 0.4);
+    background: rgba(0, 174, 239, 0.25);
+    border: 1px solid rgba(0, 174, 239, 0.5);
     color: #00AEEF;
     padding: 4px 14px;
     border-radius: 30px;
@@ -2419,13 +2416,11 @@ label {
 /* Individual Glass Card */
 .interactive-service-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(7, 43, 73, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     padding: 22px 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     overflow: hidden;
     display: flex;
@@ -2715,10 +2710,8 @@ label {
 }
 
 .about-stat-card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 18px;
     padding: 16px 14px;
     text-align: center;
@@ -2727,7 +2720,7 @@ label {
 
 .about-stat-card:hover {
     transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.18);
     border-color: rgba(0, 174, 239, 0.5);
 }
 
@@ -2802,7 +2795,7 @@ label {
 .about-img-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.4) 100%);
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.05) 0%, rgba(7, 43, 73, 0.3) 100%);
 }
 
 .about-glass-badge {
@@ -2810,10 +2803,8 @@ label {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    background: rgba(7, 43, 73, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(7, 43, 73, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 16px;
     padding: 12px 20px;
     color: #FFFFFF;
@@ -2908,12 +2899,12 @@ label {
 .expanding-card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.15) 0%, rgba(7, 43, 73, 0.6) 45%, rgba(7, 43, 73, 0.95) 100%);
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.05) 0%, rgba(7, 43, 73, 0.35) 50%, rgba(7, 43, 73, 0.88) 100%);
     transition: background 0.4s ease;
 }
 
 .expanding-card:hover .expanding-card-overlay {
-    background: linear-gradient(180deg, rgba(7, 43, 73, 0.1) 0%, rgba(7, 43, 73, 0.5) 45%, rgba(7, 43, 73, 0.92) 100%);
+    background: linear-gradient(180deg, rgba(7, 43, 73, 0.02) 0%, rgba(7, 43, 73, 0.25) 50%, rgba(7, 43, 73, 0.82) 100%);
 }
 
 .expanding-card-content {
@@ -2932,8 +2923,6 @@ label {
     font-weight: 800;
     letter-spacing: 1px;
     margin-bottom: 18px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .badge-blue {
