@@ -172,7 +172,7 @@ p {
     width: 100%;
     z-index: 1000;
     transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease;
-    padding: 6px 0;
+    padding: 15px 0 5px 0;
     background: transparent !important;
     border-top: none;
 }
@@ -2318,7 +2318,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 140px 0 60px 0;
+    padding: 85px 0 60px 0;
     overflow: hidden;
     color: #FFFFFF;
     background-color: #072B49;
@@ -4168,7 +4168,7 @@ img, video {
     }
     .hero-awwwards-section {
         min-height: 80vh !important;
-        padding-top: 130px !important;
+        padding-top: 85px !important;
     }
     .logo-img {
         height: 140px !important;
@@ -4191,7 +4191,7 @@ img, video {
     }
     .hero-awwwards-section {
         min-height: 75vh !important;
-        padding: 120px 0 50px 0 !important;
+        padding: 80px 0 50px 0 !important;
     }
     .hero-services-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -4221,7 +4221,7 @@ img, video {
     }
     .hero-awwwards-section {
         min-height: 70vh !important;
-        padding: 100px 0 45px 0 !important;
+        padding: 75px 0 45px 0 !important;
     }
     .hero-services-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
