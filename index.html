@@ -6,19 +6,29 @@
     <title>IntelliQuest Canada Academy (ICA) – Accueil</title>
     <meta name="description" content="IntelliQuest Canada Academy vous accompagne dans vos démarches d'études et d'immigration au Canada depuis Casablanca.">
     
-    <!-- Fonts -->
+    <!-- Preconnect & DNS-Prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="assets/images/pdf-student-banner.webp" fetchpriority="high">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
     
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Defer Script -->
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -26,7 +36,7 @@
     <header class="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo-ICA-en-blanc-500x500-px.png" alt="ICA Logo" class="logo-img">
+                <img src="assets/images/logo-ICA-en-blanc-500x500-px.webp" alt="ICA Logo" class="logo-img" width="280" height="140" fetchpriority="high">
             </a>
             
             <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -58,9 +68,9 @@
     <section id="hero-awwwards" class="hero-awwwards-section">
         <!-- Background Stack for Smooth Crossfading -->
         <div class="hero-backdrop-stack">
-            <div class="hero-backdrop-layer bg-study active" style="background-image: url('assets/images/pdf-student-banner.jpg');"></div>
-            <div class="hero-backdrop-layer bg-immigration" style="background-image: url('assets/images/pdf-express-banner.jpg');"></div>
-            <div class="hero-backdrop-layer bg-training" style="background-image: url('assets/images/pdf-rocket-banner.jpg');"></div>
+            <div class="hero-backdrop-layer bg-study active" style="background-image: url('assets/images/pdf-student-banner.webp');"></div>
+            <div class="hero-backdrop-layer bg-immigration" style="background-image: url('assets/images/pdf-express-banner.webp');"></div>
+            <div class="hero-backdrop-layer bg-training" style="background-image: url('assets/images/pdf-rocket-banner.webp');"></div>
             <div class="hero-backdrop-overlay"></div>
         </div>
 
@@ -216,7 +226,7 @@
             <div class="expanding-cards-flex">
                 <!-- Card 1: Study in Canada -->
                 <a href="etudes.html" class="expanding-card card-study active" data-service="study">
-                    <div class="expanding-card-bg bg-study" style="background-image: url('assets/images/pdf-student-banner.jpg');"></div>
+                    <div class="expanding-card-bg bg-study" style="background-image: url('assets/images/pdf-student-banner.webp');"></div>
                     <div class="expanding-card-overlay"></div>
                     
                     <div class="expanding-card-content">
@@ -239,7 +249,7 @@
 
                 <!-- Card 2: Immigration -->
                 <a href="immigration.html" class="expanding-card card-immigration" data-service="immigration">
-                    <div class="expanding-card-bg bg-immigration" style="background-image: url('assets/images/pdf-express-banner.jpg');"></div>
+                    <div class="expanding-card-bg bg-immigration" style="background-image: url('assets/images/pdf-express-banner.webp');"></div>
                     <div class="expanding-card-overlay"></div>
                     
                     <div class="expanding-card-content">
@@ -262,7 +272,7 @@
 
                 <!-- Card 3: Training -->
                 <a href="formations.html" class="expanding-card card-training" data-service="training">
-                    <div class="expanding-card-bg bg-training" style="background-image: url('assets/images/pdf-rocket-banner.jpg');"></div>
+                    <div class="expanding-card-bg bg-training" style="background-image: url('assets/images/pdf-rocket-banner.webp');"></div>
                     <div class="expanding-card-overlay"></div>
                     
                     <div class="expanding-card-content">

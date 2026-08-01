@@ -3183,7 +3183,7 @@ label {
 }
 
 .banner-blue-bg {
-    background-image: url('assets/images/pdf-student-banner.jpg');
+    background-image: url('assets/images/pdf-student-banner.webp');
     background-position: right 15% center !important;
 }
 
@@ -3192,7 +3192,7 @@ label {
 }
 
 .banner-red-bg {
-    background-image: url('assets/images/pdf-express-banner.jpg');
+    background-image: url('assets/images/pdf-express-banner.webp');
     background-position: right center !important;
 }
 
@@ -3201,7 +3201,7 @@ label {
 }
 
 .banner-purple-bg {
-    background-image: url('assets/images/pdf-rocket-banner.jpg');
+    background-image: url('assets/images/pdf-rocket-banner.webp');
     background-position: right 25% center !important;
 }
 
