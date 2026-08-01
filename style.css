@@ -3179,7 +3179,7 @@ label {
 }
 
 .banner-blue-bg {
-    background-image: url('assets/images/pdf-student-banner.png');
+    background-image: url('assets/images/pdf-student-banner.jpg');
     background-position: right 15% center !important;
 }
 
@@ -3188,7 +3188,7 @@ label {
 }
 
 .banner-red-bg {
-    background-image: url('assets/images/pdf-express-banner.png');
+    background-image: url('assets/images/pdf-express-banner.jpg');
     background-position: right center !important;
 }
 
@@ -3197,7 +3197,7 @@ label {
 }
 
 .banner-purple-bg {
-    background-image: url('assets/images/pdf-rocket-banner.png');
+    background-image: url('assets/images/pdf-rocket-banner.jpg');
     background-position: right 25% center !important;
 }
 
