@@ -2358,9 +2358,9 @@ label {
     inset: 0;
     background: linear-gradient(
         180deg, 
-        rgba(7, 43, 73, 0.12) 0%, 
-        rgba(7, 43, 73, 0.42) 50%, 
-        rgba(7, 43, 73, 0.92) 100%
+        rgba(7, 43, 73, 0.05) 0%, 
+        rgba(7, 43, 73, 0.15) 50%, 
+        rgba(7, 43, 73, 0.4) 100%
     );
     z-index: 3;
     pointer-events: none;
@@ -3186,7 +3186,7 @@ label {
 }
 
 .banner-blue-bg::before {
-    background: linear-gradient(90deg, rgba(26, 86, 176, 0.92) 0%, rgba(0, 174, 239, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(7, 43, 73, 0.4) 0%, rgba(7, 43, 73, 0.1) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 .banner-red-bg {
@@ -3195,7 +3195,7 @@ label {
 }
 
 .banner-red-bg::before {
-    background: linear-gradient(90deg, rgba(200, 16, 46, 0.92) 0%, rgba(244, 67, 54, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(7, 43, 73, 0.4) 0%, rgba(7, 43, 73, 0.1) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 .banner-purple-bg {
@@ -3204,7 +3204,7 @@ label {
 }
 
 .banner-purple-bg::before {
-    background: linear-gradient(90deg, rgba(74, 20, 140, 0.92) 0%, rgba(123, 31, 162, 0.65) 55%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(7, 43, 73, 0.4) 0%, rgba(7, 43, 73, 0.1) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 .pdf-banner-content {
