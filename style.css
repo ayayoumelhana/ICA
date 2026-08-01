@@ -163,53 +163,53 @@ p {
 }
 
 /* ==========================================================================
-   Header & Navigation
+   Header & Navigation Bar — Premium Agency Architecture (Stripe / Apple Style)
    ========================================================================== */
 .site-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: var(--transition);
-    padding: 20px 0;
-    background: transparent !important;
-    border-top: none;
+    padding: 10px 0;
+    background: rgba(7, 43, 73, 0.88) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .site-header.scrolled {
-    position: fixed;
-    background: rgba(7, 43, 73, 0.95) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-    padding: 12px 0;
+    padding: 6px 0;
+    background: rgba(7, 43, 73, 0.96) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 52px;
 }
 
 .logo-img {
-    height: 140px;
+    height: 85px;
     width: auto;
-    max-width: 280px;
-    margin-top: -18px;
-    margin-bottom: -18px;
+    max-width: 220px;
+    margin: 0;
     display: block;
     object-fit: contain;
-    transition: var(--transition);
-    filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.5));
+    transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.4));
 }
 
 .site-header.scrolled .logo-img {
-    height: 95px;
-    max-width: 200px;
-    margin-top: -8px;
-    margin-bottom: -8px;
-    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
+    height: 68px;
+    max-width: 175px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .main-nav {
@@ -220,16 +220,16 @@ p {
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 26px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav-list a:not(.btn) {
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.92);
     font-family: 'Poppins', 'Manrope', sans-serif !important;
-    font-size: 0.9rem !important;
+    font-size: 0.88rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.8px;
@@ -238,12 +238,13 @@ p {
     margin: 0;
     transition: color 0.25s ease;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-list a:not(.btn):hover,
 .nav-list a.active:not(.btn) {
-    color: var(--primary-color) !important;
+    color: #00AEEF !important;
 }
 
 .nav-list a:not(.btn)::after {
@@ -253,10 +254,11 @@ p {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: var(--primary-color);
-    transition: transform 0.25s ease;
+    background-color: #00AEEF;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     transform: scaleX(0);
     transform-origin: center;
+    border-radius: 2px;
 }
 
 .nav-list a:not(.btn):hover::after,
@@ -1583,7 +1585,7 @@ label {
    ========================================================================== */
 .page-banner {
     position: relative;
-    padding: 130px 0 60px; /* Taller top padding for scale, but shorter bottom padding to bring the fields closer to the photo */
+    padding: 110px 0 50px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4327,26 +4329,33 @@ img, video {
         box-sizing: border-box !important;
     }
 
+    .site-header {
+        padding: 6px 0 !important;
+    }
+
+    .site-header.scrolled {
+        padding: 4px 0 !important;
+    }
+
     .logo-img {
-        height: 75px !important;
-        max-width: 195px !important;
+        height: 68px !important;
+        max-width: 175px !important;
         width: auto !important;
-        margin-top: -10px !important;
-        margin-bottom: -10px !important;
+        margin: 0 !important;
         display: block !important;
         object-fit: contain !important;
-        filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4)) !important;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4)) !important;
     }
 
     .site-header.scrolled .logo-img {
-        height: 62px !important;
-        max-width: 160px !important;
+        height: 54px !important;
+        max-width: 140px !important;
     }
 
     .hero-awwwards-section {
         min-height: auto !important;
         height: auto !important;
-        padding: 95px 0 35px 0 !important;
+        padding: 82px 0 30px 0 !important;
         width: 100% !important;
         position: relative !important;
         overflow: hidden !important;
