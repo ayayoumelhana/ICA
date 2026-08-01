@@ -2316,11 +2316,11 @@ label {
    ========================================================================== */
 .hero-awwwards-section {
     position: relative;
-    min-height: 82vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 0 65px 0;
+    padding: 100px 0 90px 0;
     overflow: hidden;
     color: #FFFFFF;
     background-color: #072B49;
@@ -2470,7 +2470,7 @@ label {
 .hero-awwwards-header {
     text-align: center;
     max-width: 860px;
-    margin: 0 auto 36px auto;
+    margin: 0 auto 85px auto;
 }
 
 .hero-badge-pill {
