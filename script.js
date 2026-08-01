@@ -113,30 +113,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     heroCards.forEach(card => {
         const bgType = card.getAttribute('data-service-bg');
-        const linkUrl = card.getAttribute('data-link');
 
-        // Mouse Enter -> Pause Auto-Slide, Show Hovered Photo & Dim Siblings
+        // Mouse Enter -> Pause Auto-Slide & Show Hovered Background Photo
         card.addEventListener('mouseenter', () => {
             isUserHovering = true;
             switchHeroBackdrop(bgType);
             if (heroCardsGrid) heroCardsGrid.classList.add('has-active-hover');
-        });
+        }, { passive: true });
 
         // Mouse Leave -> Resume Auto-Slide
         card.addEventListener('mouseleave', () => {
             isUserHovering = false;
             switchHeroBackdrop(null);
             if (heroCardsGrid) heroCardsGrid.classList.remove('has-active-hover');
-        });
-
-        // Click Handler -> Navigation to Service Section
-        card.addEventListener('click', (e) => {
-            if (!e.target.closest('.hero-service-btn')) {
-                if (linkUrl) {
-                    window.location.href = linkUrl;
-                }
-            }
-        });
+        }, { passive: true });
     });
 
     /* ==========================================================================

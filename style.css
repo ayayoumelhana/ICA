@@ -2427,13 +2427,14 @@ label {
 }
 
 /* Individual Glass Card */
+/* Individual Fixed Navigation Card */
 .interactive-service-card {
     position: relative;
     background: rgba(7, 43, 73, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: clamp(12px, 1.5vw, 18px);
-    padding: clamp(14px, 1.8vw, 22px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+    padding: clamp(16px, 1.8vw, 22px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     overflow: hidden;
     display: flex;
@@ -2441,23 +2442,17 @@ label {
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
-    min-height: auto;
-    height: auto;
+    text-decoration: none;
     box-sizing: border-box;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                background 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.45s ease,
-                filter 0.45s ease;
+    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card-glass-glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.15), transparent 70%);
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12), transparent 70%);
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.25s ease;
     pointer-events: none;
 }
 
@@ -2465,7 +2460,33 @@ label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
+}
+
+.card-body-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.card-arrow-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.25s ease;
+}
+
+.hero-card-arrow {
+    font-size: 0.85rem;
+    color: #FFFFFF;
+    transition: transform 0.25s ease, color 0.25s ease;
+    will-change: transform;
 }
 
 .card-icon-box {
@@ -2479,7 +2500,7 @@ label {
     font-size: 1.15rem;
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease, box-shadow 0.4s ease;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .blue-glow { color: #00AEEF; border-color: rgba(0, 174, 239, 0.4); }
@@ -2511,10 +2532,10 @@ label {
 
 .card-service-title {
     font-family: var(--font-minion);
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 800;
     color: #FFFFFF;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     line-height: 1.2;
 }
 
@@ -2522,122 +2543,46 @@ label {
     font-size: 0.82rem;
     color: #94A3B8;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
-/* Expandable Content on Hover */
-.card-expandable-content {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                margin-top 0.45s ease;
-}
-
-.card-service-desc {
-    font-size: 0.82rem;
-    color: #E2E8F0;
-    line-height: 1.45;
-    margin-bottom: 14px;
-}
-
-.hero-service-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 9px 16px;
-    border-radius: 25px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-blue {
-    background: #00AEEF;
-    color: #FFFFFF;
-    box-shadow: 0 6px 18px rgba(0, 174, 239, 0.35);
-}
-
-.btn-blue:hover {
-    background: #0088CC;
-    box-shadow: 0 10px 25px rgba(0, 174, 239, 0.5);
-}
-
-.btn-red {
-    background: #F20D0D;
-    color: #FFFFFF;
-    box-shadow: 0 6px 18px rgba(242, 13, 13, 0.35);
-}
-
-.btn-red:hover {
-    background: #C8102E;
-    box-shadow: 0 10px 25px rgba(242, 13, 13, 0.5);
-}
-
-.btn-purple {
-    background: #7B1FA2;
-    color: #FFFFFF;
-    box-shadow: 0 6px 18px rgba(123, 31, 162, 0.35);
-}
-
-.btn-purple:hover {
-    background: #4A148C;
-    box-shadow: 0 10px 25px rgba(123, 31, 162, 0.5);
-}
-
-.icon-arrow {
-    transition: transform 0.3s ease;
-}
-
-.hero-service-btn:hover .icon-arrow {
-    transform: translateX(5px);
-}
-
-/* Hover States & Micro-Interactions */
+/* Hover States & Micro-Interactions (60 FPS Lightweight Nav Button) */
 .interactive-service-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    background: rgba(255, 255, 255, 0.16);
+    background: rgba(15, 55, 90, 0.92);
     border-color: rgba(255, 255, 255, 0.45);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card-etudes:hover {
     border-color: #00AEEF;
-    box-shadow: 0 0 35px rgba(0, 174, 239, 0.4), 0 25px 50px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px rgba(0, 174, 239, 0.35);
 }
 
 .card-immigration:hover {
     border-color: #F20D0D;
-    box-shadow: 0 0 35px rgba(242, 13, 13, 0.4), 0 25px 50px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px rgba(242, 13, 13, 0.35);
 }
 
 .card-training:hover {
     border-color: #AB47BC;
-    box-shadow: 0 0 35px rgba(171, 71, 188, 0.4), 0 25px 50px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px rgba(171, 71, 188, 0.35);
 }
 
 .interactive-service-card:hover .card-glass-glow {
     opacity: 1;
 }
 
-.interactive-service-card:hover .card-icon-box {
-    transform: scale(1.1) rotate(-4deg);
+.interactive-service-card:hover .hero-card-arrow {
+    transform: translateX(4px);
 }
 
-.interactive-service-card:hover .card-expandable-content {
-    max-height: 180px;
-    opacity: 1;
-    margin-top: 15px;
-}
+.card-etudes:hover .hero-card-arrow { color: #00AEEF; }
+.card-immigration:hover .hero-card-arrow { color: #FF4D4D; }
+.card-training:hover .hero-card-arrow { color: #E1BEE7; }
 
 /* Sibling Dimming Effect */
 .hero-services-cards-grid.has-active-hover .interactive-service-card:not(:hover) {
-    opacity: 0.55;
-    transform: scale(0.97);
-    filter: blur(1px);
+    opacity: 0.75;
 }
 
 /* Button Cyan */
