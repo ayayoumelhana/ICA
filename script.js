@@ -25,22 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.site-header');
     const scrollProgress = document.getElementById('scroll-progress');
     
+    let isTicking = false;
     const handleScroll = () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        if (!isTicking) {
+            window.requestAnimationFrame(() => {
+                const scrollY = window.scrollY;
+                if (scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
 
-        // Scroll Progress Bar Percentage
-        if (scrollProgress) {
-            const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const progress = (window.scrollY / totalHeight) * 100;
-            scrollProgress.style.width = `${progress}%`;
+                if (scrollProgress) {
+                    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const progress = (scrollY / totalHeight) * 100;
+                    scrollProgress.style.width = `${progress}%`;
+                }
+                isTicking = false;
+            });
+            isTicking = true;
         }
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial check on load
 
     /* ==========================================================================
