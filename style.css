@@ -2514,7 +2514,8 @@ label {
     gap: clamp(16px, 2vw, 24px);
     width: 100%;
     max-width: 1040px;
-    margin: 35px auto 0 auto;
+    margin: 0 auto;
+    transform: translateY(45px);
     box-sizing: border-box;
     align-items: stretch;
 }
