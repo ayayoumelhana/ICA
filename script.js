@@ -57,15 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const switchHeroBackdrop = (bgType) => {
         backdropLayers.forEach(layer => layer.classList.remove('active'));
 
-        if (!bgType) {
-            const currentKey = serviceBgKeys[autoSlideIndex];
-            const activeLayer = document.querySelector(`.hero-backdrop-layer.bg-${currentKey}`) || document.querySelector('.hero-backdrop-layer.bg-study');
-            if (activeLayer) activeLayer.classList.add('active');
-            return;
+        const targetKey = bgType || serviceBgKeys[autoSlideIndex];
+        let targetLayer = document.querySelector(`.hero-backdrop-layer.bg-${targetKey}`);
+        if (!targetLayer) {
+            targetLayer = document.querySelector('.hero-backdrop-layer.bg-study');
         }
 
-        const targetLayer = document.querySelector(`.hero-backdrop-layer.bg-${bgType}`);
         if (targetLayer) {
+            if (!targetLayer.style.backgroundImage && targetLayer.dataset.src) {
+                targetLayer.style.backgroundImage = `url('${targetLayer.dataset.src}')`;
+            }
             targetLayer.classList.add('active');
         }
     };
