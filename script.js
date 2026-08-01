@@ -71,8 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const stopAutoSlide = () => {
+        if (heroAutoSlideTimer) {
+            clearInterval(heroAutoSlideTimer);
+            heroAutoSlideTimer = null;
+        }
+    };
+
     const startAutoSlide = () => {
-        if (heroAutoSlideTimer) clearInterval(heroAutoSlideTimer);
+        stopAutoSlide();
         heroAutoSlideTimer = setInterval(() => {
             if (isUserHovering) return;
             autoSlideIndex = (autoSlideIndex + 1) % serviceBgKeys.length;
@@ -80,8 +87,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4500);
     };
 
-    // Initialize auto slide
-    startAutoSlide();
+    // IntersectionObserver to pause slideshow when Hero section is outside viewport
+    const heroSection = document.getElementById('hero-awwwards');
+    if (heroSection && 'IntersectionObserver' in window) {
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startAutoSlide();
+                } else {
+                    stopAutoSlide();
+                }
+            });
+        }, { threshold: 0.1 });
+        heroObserver.observe(heroSection);
+    } else {
+        startAutoSlide();
+    }
 
     heroCards.forEach(card => {
         const bgType = card.getAttribute('data-service-bg');
