@@ -163,73 +163,79 @@ p {
 }
 
 /* ==========================================================================
-   Header & Navigation Bar — Premium Agency Architecture (Stripe / Apple Style)
+   Header & Navigation
    ========================================================================== */
 .site-header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
-    background: rgba(7, 43, 73, 0.88) !important;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 18px 0;
+    background: transparent !important;
+    border-top: none;
 }
 
 .site-header.scrolled {
-    padding: 6px 0;
+    position: fixed;
     background: rgba(7, 43, 73, 0.96) !important;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border-bottom-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    padding: 6px 0 !important;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 52px;
 }
 
 .logo-img {
-    height: 85px;
+    height: 140px;
     width: auto;
-    max-width: 220px;
-    margin: 0;
+    max-width: 280px;
+    margin-top: -18px;
+    margin-bottom: -18px;
     display: block;
     object-fit: contain;
-    transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
-    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.4));
+    transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1), margin 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.5));
 }
 
 .site-header.scrolled .logo-img {
-    height: 68px;
-    max-width: 175px;
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    height: 70px !important;
+    max-width: 180px !important;
+    margin-top: -6px !important;
+    margin-bottom: -6px !important;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
 }
 
 .main-nav {
     display: flex;
     align-items: center;
+    transform: translateY(-12px);
+    transition: transform 0.3s ease;
+}
+
+.site-header.scrolled .main-nav {
+    transform: translateY(-4px);
 }
 
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 28px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav-list a:not(.btn) {
-    color: rgba(255, 255, 255, 0.92);
+    color: #FFFFFF;
     font-family: 'Poppins', 'Manrope', sans-serif !important;
-    font-size: 0.88rem !important;
+    font-size: 0.9rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.8px;
@@ -238,13 +244,12 @@ p {
     margin: 0;
     transition: color 0.25s ease;
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
+    display: inline-block;
 }
 
 .nav-list a:not(.btn):hover,
 .nav-list a.active:not(.btn) {
-    color: #00AEEF !important;
+    color: var(--primary-color) !important;
 }
 
 .nav-list a:not(.btn)::after {
@@ -254,11 +259,10 @@ p {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #00AEEF;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: var(--primary-color);
+    transition: transform 0.25s ease;
     transform: scaleX(0);
     transform-origin: center;
-    border-radius: 2px;
 }
 
 .nav-list a:not(.btn):hover::after,
@@ -1585,7 +1589,7 @@ label {
    ========================================================================== */
 .page-banner {
     position: relative;
-    padding: 110px 0 50px;
+    padding: 130px 0 60px; /* Taller top padding for scale, but shorter bottom padding to bring the fields closer to the photo */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4329,33 +4333,26 @@ img, video {
         box-sizing: border-box !important;
     }
 
-    .site-header {
-        padding: 6px 0 !important;
-    }
-
-    .site-header.scrolled {
-        padding: 4px 0 !important;
-    }
-
     .logo-img {
-        height: 68px !important;
-        max-width: 175px !important;
+        height: 75px !important;
+        max-width: 195px !important;
         width: auto !important;
-        margin: 0 !important;
+        margin-top: -10px !important;
+        margin-bottom: -10px !important;
         display: block !important;
         object-fit: contain !important;
-        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4)) !important;
+        filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.4)) !important;
     }
 
     .site-header.scrolled .logo-img {
-        height: 54px !important;
-        max-width: 140px !important;
+        height: 62px !important;
+        max-width: 160px !important;
     }
 
     .hero-awwwards-section {
         min-height: auto !important;
         height: auto !important;
-        padding: 82px 0 30px 0 !important;
+        padding: 95px 0 35px 0 !important;
         width: 100% !important;
         position: relative !important;
         overflow: hidden !important;
