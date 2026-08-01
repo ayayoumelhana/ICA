@@ -191,11 +191,11 @@ p {
 }
 
 .logo-img {
-    height: 205px;
+    height: 225px;
     width: auto;
-    max-width: 380px;
-    margin-top: -36px;
-    margin-bottom: -36px;
+    max-width: 410px;
+    margin-top: -40px;
+    margin-bottom: -40px;
     display: block;
     object-fit: contain;
     transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1), margin 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease, filter 0.3s ease;
@@ -2489,22 +2489,24 @@ label {
 
 .hero-awwwards-title {
     font-family: var(--font-minion);
-    font-size: 2.75rem;
+    font-size: 2.35rem;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.25;
     color: #FFFFFF;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     text-shadow: 0 4px 25px rgba(0,0,0,0.45);
+    text-align: center;
 }
 
 .hero-awwwards-subtitle {
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     color: #E2E8F0;
-    line-height: 1.6;
+    line-height: 1.65;
     font-weight: 400;
-    max-width: 720px;
+    max-width: 780px;
     margin: 0 auto;
     opacity: 0.95;
+    text-align: center;
 }
 
 /* 3 Integrated Interactive Service Glass Cards Grid (Wider & Spaced Out) */
