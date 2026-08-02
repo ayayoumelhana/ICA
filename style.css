@@ -2341,11 +2341,11 @@ label {
    ========================================================================== */
 .hero-awwwards-section {
     position: relative;
-    min-height: 95vh;
+    min-height: 86vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 130px 0 105px 0;
+    padding: 105px 0 85px 0;
     overflow: hidden;
     color: #FFFFFF;
     background-color: #072B49;
@@ -4186,8 +4186,8 @@ img, video {
         max-width: 1440px !important;
     }
     .hero-awwwards-section {
-        min-height: 92vh !important;
-        max-height: 98vh !important;
+        min-height: 84vh !important;
+        max-height: 92vh !important;
         display: flex;
         align-items: center;
     }
@@ -4209,7 +4209,7 @@ img, video {
         max-width: 1280px !important;
     }
     .hero-awwwards-section {
-        min-height: 92vh !important;
+        min-height: 84vh !important;
     }
     .hero-backdrop-layer.bg-default { background-position: center 15% !important; }
     .hero-backdrop-layer.bg-study { background-position: center 15% !important; }
@@ -4225,8 +4225,8 @@ img, video {
         max-width: 1180px !important;
     }
     .hero-awwwards-section {
-        min-height: 88vh !important;
-        padding-top: 105px !important;
+        min-height: 80vh !important;
+        padding-top: 85px !important;
     }
     .logo-img {
         height: 140px !important;
@@ -4248,8 +4248,8 @@ img, video {
         max-width: 220px !important;
     }
     .hero-awwwards-section {
-        min-height: 82vh !important;
-        padding: 95px 0 65px 0 !important;
+        min-height: 75vh !important;
+        padding: 80px 0 50px 0 !important;
     }
     .hero-services-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -4278,8 +4278,8 @@ img, video {
         margin-bottom: -3px !important;
     }
     .hero-awwwards-section {
-        min-height: 78vh !important;
-        padding: 90px 0 60px 0 !important;
+        min-height: 70vh !important;
+        padding: 75px 0 45px 0 !important;
     }
     .hero-services-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -4410,7 +4410,7 @@ img, video {
     .hero-awwwards-section {
         min-height: auto !important;
         height: auto !important;
-        padding: 120px 0 65px 0 !important;
+        padding: 95px 0 45px 0 !important;
         width: 100% !important;
         position: relative !important;
         overflow: hidden !important;
