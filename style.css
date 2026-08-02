@@ -2341,11 +2341,11 @@ label {
    ========================================================================== */
 .hero-awwwards-section {
     position: relative;
-    min-height: 88vh;
+    min-height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 110px 0 85px 0;
+    padding: 130px 0 105px 0;
     overflow: hidden;
     color: #FFFFFF;
     background-color: #072B49;
@@ -2365,8 +2365,8 @@ label {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center 10% !important;
-    transform: scale(1.25);
+    background-position: center 15% !important;
+    transform: scale(1.18);
     opacity: 0;
     will-change: opacity;
     transition: opacity 0.5s ease-in-out;
@@ -4186,8 +4186,8 @@ img, video {
         max-width: 1440px !important;
     }
     .hero-awwwards-section {
-        min-height: 85vh !important;
-        max-height: 95vh !important;
+        min-height: 92vh !important;
+        max-height: 98vh !important;
         display: flex;
         align-items: center;
     }
@@ -4209,7 +4209,7 @@ img, video {
         max-width: 1280px !important;
     }
     .hero-awwwards-section {
-        min-height: 85vh !important;
+        min-height: 92vh !important;
     }
     .hero-backdrop-layer.bg-default { background-position: center 15% !important; }
     .hero-backdrop-layer.bg-study { background-position: center 15% !important; }
@@ -4225,8 +4225,8 @@ img, video {
         max-width: 1180px !important;
     }
     .hero-awwwards-section {
-        min-height: 80vh !important;
-        padding-top: 85px !important;
+        min-height: 88vh !important;
+        padding-top: 105px !important;
     }
     .logo-img {
         height: 140px !important;
@@ -4248,8 +4248,8 @@ img, video {
         max-width: 220px !important;
     }
     .hero-awwwards-section {
-        min-height: 75vh !important;
-        padding: 80px 0 50px 0 !important;
+        min-height: 82vh !important;
+        padding: 95px 0 65px 0 !important;
     }
     .hero-services-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -4278,8 +4278,8 @@ img, video {
         margin-bottom: -3px !important;
     }
     .hero-awwwards-section {
-        min-height: 70vh !important;
-        padding: 75px 0 45px 0 !important;
+        min-height: 78vh !important;
+        padding: 90px 0 60px 0 !important;
     }
     .hero-services-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -4410,7 +4410,7 @@ img, video {
     .hero-awwwards-section {
         min-height: auto !important;
         height: auto !important;
-        padding: 95px 0 35px 0 !important;
+        padding: 120px 0 65px 0 !important;
         width: 100% !important;
         position: relative !important;
         overflow: hidden !important;
