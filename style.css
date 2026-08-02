@@ -2366,7 +2366,7 @@ label {
     height: 100%;
     background-size: cover;
     background-position: center 15% !important;
-    transform: scale(1.08);
+    transform: scale(1.18);
     opacity: 0;
     will-change: opacity;
     transition: opacity 0.5s ease-in-out;
