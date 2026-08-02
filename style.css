@@ -2478,16 +2478,16 @@ label {
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 100px;
+    max-width: 1050px;
     margin: 0 auto;
-    padding: 0 28px;
+    padding: 0 24px;
 }
 
 /* Header Text Block (Spacious & Premium Spacing) */
 .hero-awwwards-header {
     text-align: center;
-    max-width: 780px;
-    margin: 105px auto 95px auto;
+    max-width: 680px;
+    margin: 85px auto 75px auto;
 }
 
 .hero-badge-pill {
@@ -2520,21 +2520,21 @@ label {
     color: #E2E8F0;
     line-height: 1.65;
     font-weight: 400;
-    max-width: 720px;
+    max-width: 640px;
     margin: 0 auto;
     opacity: 0.95;
     text-align: center;
 }
 
-/* 3 Integrated Interactive Service Glass Cards Grid (Compact & Focused Width) */
+/* 3 Integrated Interactive Service Glass Cards Grid (Ultra-Compact & Focused Width) */
 .hero-services-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(14px, 1.8vw, 20px);
+    gap: clamp(12px, 1.5vw, 18px);
     width: 100%;
-    max-width: 940px;
+    max-width: 850px;
     margin: 0 auto;
-    transform: translateY(50px);
+    transform: translateY(40px);
     box-sizing: border-box;
     align-items: stretch;
 }
