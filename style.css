@@ -177,11 +177,10 @@ p {
 
 .site-header.scrolled {
     position: fixed;
-    background: rgba(7, 43, 73, 0.96) !important;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    background: #072B49 !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
     padding: 4px 0 !important;
+    transform: translateZ(0);
 }
 
 .header-container {
@@ -1453,13 +1452,14 @@ label {
 
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translate3d(0, 20px, 0);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
 .animate-on-scroll.animated {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
 }
 
 /* ==========================================================================
@@ -2366,7 +2366,9 @@ label {
     height: 100%;
     background-size: cover;
     background-position: center 15% !important;
-    transform: scale(1.18);
+    transform: scale(1.18) translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     opacity: 0;
     will-change: opacity;
     transition: opacity 0.5s ease-in-out;

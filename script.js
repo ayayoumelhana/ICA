@@ -26,19 +26,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollProgress = document.getElementById('scroll-progress');
     
     let isTicking = false;
+    let isScrolledState = false;
+    let cachedTotalHeight = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+
+    window.addEventListener('resize', () => {
+        cachedTotalHeight = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+    }, { passive: true });
+    
     const handleScroll = () => {
         if (!isTicking) {
             window.requestAnimationFrame(() => {
-                const scrollY = window.scrollY;
-                if (scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
+                const scrollY = window.scrollY || window.pageYOffset;
+                const shouldBeScrolled = scrollY > 50;
+                
+                if (shouldBeScrolled !== isScrolledState && header) {
+                    isScrolledState = shouldBeScrolled;
+                    if (isScrolledState) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
                 }
 
-                if (scrollProgress) {
-                    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                    const progress = (scrollY / totalHeight) * 100;
+                if (scrollProgress && cachedTotalHeight > 0) {
+                    const progress = Math.min(100, Math.max(0, (scrollY / cachedTotalHeight) * 100));
                     scrollProgress.style.width = `${progress}%`;
                 }
                 isTicking = false;
@@ -48,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Initial check on load
+    handleScroll();
 
     /* ==========================================================================
        Awwwards Hero Hybrid: Auto-Slideshow + Hover Service Override
