@@ -202,11 +202,11 @@ p {
 }
 
 .site-header.scrolled .logo-img {
-    height: 60px !important;
-    max-width: 160px !important;
-    margin-top: -4px !important;
-    margin-bottom: -4px !important;
-    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.35));
+    height: 250px !important;
+    max-width: 440px !important;
+    margin-top: -46px !important;
+    margin-bottom: -46px !important;
+    filter: drop-shadow(0 5px 18px rgba(0, 0, 0, 0.5));
 }
 
 .main-nav {
