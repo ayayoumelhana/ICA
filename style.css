@@ -202,23 +202,23 @@ p {
 }
 
 .logo-img {
-    height: 270px;
+    height: 140px;
     width: auto;
-    max-width: 480px;
-    margin-top: -105px;
-    margin-bottom: -105px;
+    max-width: 250px;
+    margin-top: -22px;
+    margin-bottom: -22px;
     display: block;
     object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.4));
 }
 
 .site-header.scrolled .logo-img {
-    height: 270px !important;
-    max-width: 480px !important;
-    margin-top: -105px !important;
-    margin-bottom: -105px !important;
-    filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
+    height: 140px !important;
+    max-width: 250px !important;
+    margin-top: -22px !important;
+    margin-bottom: -22px !important;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.4));
 }
 
 .main-nav {
