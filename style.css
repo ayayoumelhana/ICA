@@ -48,13 +48,13 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 28px;
 }
 
 .section {
-    padding: 60px 0;
+    padding: 45px 0;
 }
 
 .bg-light {
@@ -1591,7 +1591,7 @@ label {
    ========================================================================== */
 .page-banner {
     position: relative;
-    padding: 130px 0 60px; /* Taller top padding for scale, but shorter bottom padding to bring the fields closer to the photo */
+    padding: 100px 0 45px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1606,7 +1606,7 @@ label {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45); /* Dark semi-transparent overlay matching original site */
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1;
 }
 
@@ -1617,13 +1617,13 @@ label {
 
 .page-banner h1 {
     font-family: var(--font-secondary);
-    font-size: 2rem !important; /* Thinner title font size matching screenshot */
-    font-weight: 600; /* Medium-bold font weight */
+    font-size: 1.7rem !important;
+    font-weight: 600;
     color: white !important;
     text-shadow: 0 1px 8px rgba(0,0,0,0.4);
     letter-spacing: 0px;
     margin: 0;
-    text-transform: none; /* Make sure it matches natural casing */
+    text-transform: none;
 }
 
 /* ==========================================================================
@@ -3432,18 +3432,18 @@ label {
 /* Section Qui sommes-nous - Minimalist Clean Design */
 .about-pdf-grid {
     display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: 40px;
+    grid-template-columns: 330px 1fr;
+    gap: 32px;
     align-items: center;
 }
 
 .about-clean-img {
     width: 100%;
-    height: 310px;
+    height: 260px;
     object-fit: cover;
     object-position: center center;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     border: 1px solid #E2E8F0;
     display: block;
     transition: transform 0.3s ease;
@@ -3454,16 +3454,16 @@ label {
 }
 
 .about-pdf-text-col .pdf-section-title {
-    font-size: 2.1rem;
+    font-size: 1.65rem;
     color: #00AEEF;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .about-pdf-desc {
-    font-size: 1rem;
+    font-size: 0.90rem;
     color: #475569;
-    line-height: 1.65;
-    margin-bottom: 16px;
+    line-height: 1.6;
+    margin-bottom: 14px;
 }
 
 .about-glass-badge:hover {
@@ -3481,12 +3481,12 @@ label {
 }
 
 .badge-icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #00AEEF;
 }
 
 .badge-icon-gold {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #F59E0B;
 }
 
@@ -3497,13 +3497,13 @@ label {
 }
 
 .badge-text strong {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 800;
     color: #072B49;
 }
 
 .badge-text span {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: #64748B;
     font-weight: 600;
 }
@@ -3513,55 +3513,48 @@ label {
     background: rgba(0, 174, 239, 0.12);
     color: #00AEEF;
     border: 1px solid rgba(0, 174, 239, 0.3);
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 20px;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .about-title-main {
-    font-size: 2.3rem;
+    font-size: 1.7rem;
     color: #072B49 !important;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .about-highlight-p {
-    font-size: 1.08rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #00AEEF;
     line-height: 1.45;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-style: italic;
-}
-
-.about-pdf-desc {
-    font-size: 0.96rem;
-    color: #475569;
-    line-height: 1.65;
-    margin-bottom: 20px;
 }
 
 .about-pillars-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
 }
 
 .about-pillars-list li {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    font-size: 0.93rem;
+    gap: 10px;
+    font-size: 0.88rem;
     color: #334155;
-    margin-bottom: 10px;
-    line-height: 1.5;
+    margin-bottom: 8px;
+    line-height: 1.45;
 }
 
 .pillar-icon {
     color: #00AEEF;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     margin-top: 2px;
     flex-shrink: 0;
 }
@@ -3593,12 +3586,12 @@ label {
 /* Testimonial PDF - Modern Card Container */
 .testimonial-modern-card {
     background: linear-gradient(135deg, #072B49 0%, #164371 100%);
-    border-radius: 24px;
-    padding: 50px 45px;
-    box-shadow: 0 20px 45px rgba(7, 43, 73, 0.22);
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 16px 35px rgba(7, 43, 73, 0.18);
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: #FFFFFF;
-    max-width: 1060px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -3607,36 +3600,36 @@ label {
     background: rgba(0, 174, 239, 0.2);
     color: #00AEEF;
     border: 1px solid rgba(0, 174, 239, 0.4);
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 20px;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .testimonial-card-title {
     color: #FFFFFF !important;
-    font-size: 2.2rem;
-    margin-bottom: 12px;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
 }
 
 .testimonial-modern-card .pdf-quote-bold {
     color: #00AEEF;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
 }
 
 .testimonial-modern-card .pdf-testimonial-p {
     color: #E2E8F0;
-    font-size: 0.98rem;
+    font-size: 0.88rem;
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .testimonial-actions-row {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -3645,9 +3638,10 @@ label {
     background: transparent;
     color: #FFFFFF;
     border: 1.5px solid #FFFFFF;
-    padding: 12px 26px;
+    padding: 10px 22px;
     border-radius: 30px;
     font-weight: 700;
+    font-size: 0.82rem;
     text-decoration: none;
     transition: all 0.25s ease;
     display: inline-block;
@@ -3660,8 +3654,8 @@ label {
 
 .testimonial-pdf-grid {
     display: grid;
-    grid-template-columns: 1fr 450px;
-    gap: 40px;
+    grid-template-columns: 1fr 380px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -3861,16 +3855,16 @@ label {
    Section Avis Google Authentiques (Google Reviews Showcase)
    ========================================================================== */
 .google-reviews-section {
-    padding: 50px 0;
+    padding: 40px 0;
     background-color: #F8FAFC;
 }
 
 .google-reviews-title {
-    font-family: 'Minion Pro', 'Playfair Display', Georgia, serif !important;
-    font-size: 1.8rem;
+    font-family: var(--font-minion) !important;
+    font-size: 1.55rem;
     font-weight: 800;
     color: #072B49 !important;
-    margin: 8px 0 16px;
+    margin: 6px 0 14px;
 }
 
 .google-rating-summary-box {
