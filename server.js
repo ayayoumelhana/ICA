@@ -10,6 +10,7 @@ const MIME_TYPES = {
     '.css': 'text/css; charset=utf-8',
     '.js': 'application/javascript; charset=utf-8',
     '.json': 'application/json; charset=utf-8',
+    '.webp': 'image/webp',
     '.png': 'image/png',
     '.jpg': 'image/jpeg',
     '.jpeg': 'image/jpeg',
@@ -111,7 +112,11 @@ const server = http.createServer((req, res) => {
                 res.end(`Server Error: ${err.code}`);
             }
         } else {
-            res.writeHead(200, { 'Content-Type': contentType });
+            const headers = { 'Content-Type': contentType };
+            if (['.webp', '.png', '.jpg', '.jpeg', '.css', '.js', '.svg'].includes(extname)) {
+                headers['Cache-Control'] = 'public, max-age=31536000, immutable';
+            }
+            res.writeHead(200, headers);
             res.end(content, 'utf-8');
         }
     });
