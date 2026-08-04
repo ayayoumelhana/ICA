@@ -1316,12 +1316,12 @@ label {
 }
 
 .footer-logo {
-    width: 90px;
-    height: 90px;
-    max-width: 100px;
+    width: 140px;
+    height: 140px;
+    max-width: 160px;
     object-fit: contain;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .site-footer h3, 
