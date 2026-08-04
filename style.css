@@ -3411,19 +3411,22 @@ label {
 }
 
 .pdf-step-img-box {
-    width: 100%;
+    width: 240px;
     height: 240px;
+    min-width: 240px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    background-color: #F8FAFC;
 }
 
 .pdf-step-large-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center !important;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
 }
 
 .pdf-step-img-box:hover .pdf-step-large-img {
