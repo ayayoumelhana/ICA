@@ -4778,3 +4778,21 @@ img, video {
 }
 
 
+
+
+/* Hero Backdrop Layers Perfect Subject Framing */
+.hero-backdrop-layer.bg-study {
+    background-position: right 20% center !important;
+}
+
+.hero-backdrop-layer.bg-immigration {
+    background-position: right 22% center !important;
+}
+
+.hero-backdrop-layer.bg-training {
+    background-position: right 18% center !important;
+}
+
+.hero-backdrop-layer.bg-default {
+    background-position: right 20% center !important;
+}
