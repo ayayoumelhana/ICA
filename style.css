@@ -4796,3 +4796,40 @@ img, video {
 .hero-backdrop-layer.bg-default {
     background-position: right 20% center !important;
 }
+
+
+/* Invisible High-Performance GPU Acceleration & Offscreen Rendering Optimization */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Offscreen Content Visibility Optimization for 144Hz Smooth Scrolling */
+.partners-pdf-section,
+.testimonial-pdf-section,
+.site-footer,
+.faq-accordion-item,
+.service-landing-hero + section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 600px;
+}
+
+/* Composite Layer Hardware Offloading */
+.site-header,
+.interactive-service-card,
+.expanding-card,
+.feature-card,
+.pdf-step-pill,
+.pdf-service-content-grid,
+.google-reviews-marquee-track,
+.hero-backdrop-layer {
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
