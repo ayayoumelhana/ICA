@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+const fs = require('fs');
+const path = require('path');
+
+const etudesHtml = `<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -373,4 +376,7 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync(path.join(__dirname, 'etudes.html'), etudesHtml, 'utf8');
+console.log('Successfully structured etudes.html with 4-step process grid and complete sections!');
