@@ -285,10 +285,10 @@ document.addEventListener('DOMContentLoaded', () => {
         new Swiper(el, {
             slidesPerView: 4,
             spaceBetween: 30,
-            loop: false,
+            loop: true,
             grabCursor: true,
             autoplay: {
-                delay: 4000,
+                delay: 2500,
                 disableOnInteraction: false,
             },
             pagination: {

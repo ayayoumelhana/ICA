@@ -4833,3 +4833,16 @@ body {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
+
+/* Partner Swiper Slide Alignment */
+.partners-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    padding: 10px;
+}
+.pdf-red-divider span {
+    color: #F20D0D !important;
+}
