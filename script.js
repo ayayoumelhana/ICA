@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animatableElements.forEach(el => observer.observe(el));
 
     /* ==========================================================================
-       Swiper.js Carousel for Partners
+       Swiper.js Carousel for Partners (Infinite Loop & Auto-Play Fixed)
        ========================================================================== */
     const partnersSwipers = document.querySelectorAll('.partners-swiper');
     partnersSwipers.forEach((el) => {
@@ -286,10 +286,13 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 4,
             spaceBetween: 30,
             loop: true,
+            loopAdditionalSlides: 4,
             grabCursor: true,
+            speed: 800,
             autoplay: {
-                delay: 2500,
+                delay: 2000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
             pagination: {
                 el: el.querySelector('.swiper-pagination'),
